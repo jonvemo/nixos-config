@@ -1,4 +1,8 @@
-{  
+{
+  imports = [
+    ./font.nix
+  ];
+  
   stylix.targets = {
     
     waybar = {

@@ -1,7 +1,7 @@
 {
   programs.helix = {
     enable = true;
-    settings = { theme = "horizon-dark"; };
+   # settings = { theme = "horizon-dark"; };
 
     defaultEditor = true;
   };

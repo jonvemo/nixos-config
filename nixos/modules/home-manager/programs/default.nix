@@ -4,11 +4,12 @@
   imports = [
 #    ./bash.nix
     ./kitty
-#    ./helix
+    ./helix
 #    ./starship
     ./ags.nix
 #    ./rofi.nix
     ./waybar.nix
     ./niri.nix
+    ./hyprland.nix
   ];
 }

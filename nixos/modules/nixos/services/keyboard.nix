@@ -1,13 +1,6 @@
-{ config, pkgs, ... }:
-
 {
-  services.xserver = {
-    enable = true;
-
-    xkb = {
-      layout = "latam";
-      variant = "deadtilde";
-    };
-    
+  services.xserver.xkb = {
+    layout = "latam";
+    variant = "deadtilde";
   };
 }

@@ -1,54 +1,67 @@
-{ config, pkgs, inputs, ... }:
+{ pkgs, inputs, ... }:
 
 {
-  imports =
-    [ # Include the results of the hardware scan.
-      ./hardware-configuration.nix
-    	inputs.home-manager.nixosModules.default
-#      inputs.niri-stable.nixosModules.niri
-      
-    ];
-#  nixpkgs.overlays = [ niri.overlays.niri ];
-	nix.settings.experimental-features = [ "nix-command" "flakes" ];
+  imports = [
+    ./hardware-configuration.nix
+    inputs.home-manager.nixosModules.default 
+  ];
+  
 
-  # Bootloader.
-  boot = {
-    loader.systemd-boot.enable = true;
-    loader.efi.canTouchEfiVariables = true;
-    kernelPackages = pkgs.linuxPackages_latest;
-  };
-
-  # Define a user account. Don't forget to set a password with ‘passwd’.
-  users.users.jonvemo = {
-    isNormalUser = true;
-    description = "John Verdugo";
-    extraGroups = [ "networkmanager" "wheel" ];
-    packages = with pkgs; [];
-  };
-
-  home-manager = {
-    extraSpecialArgs = { inherit inputs; };
-    users = { 
-      "jonvemo" = import ./home.nix;
+  # NOTE Main NixOS config
+  documentation.nixos.enable = false; # NOTE Disable Documentation Package
+  nixpkgs.config.allowUnfree = true; # NOTE Steam
+  
+	nix = {
+    settings = {
+      experimental-features = [ "nix-command" "flakes" ];
+      # auto-optimise-store = true;
     };
-  };
-
-  # Enable automatic login for the user.
-  services.getty.autologinUser = "jonvemo";
-
-  environment = {
-    systemPackages = with pkgs; [
-      # Starter Pack
-  	  kitty helix home-manager ags niri alacritty
-    ];
     
-    sessionVariables = {
-      NIXOS_OZONE_WL = "1";
-      NIXOS_XDG_OPEN_USE_PORTAL = "1";
+    ## NOTE Más información: https://nixos.wiki/wiki/Storage_optimization
+    optimise = {
+      automatic = true;
+      dates = [ "2:00" ];
+    };
+
+    gc = {
+      automatic = true;
+      dates = "weekly";
+      options = "--delete-older-than 15d";
     };
     
   };
   
+
+  # NOTE Bootloader config
+  boot = {
+    tmp.cleanOnBoot = true;
+    supportedFilesystems = ["ntfs"];
+    
+    loader = {
+      systemd-boot.enable = true;
+      efi.canTouchEfiVariables = true;
+    };
+    
+    kernelPackages = pkgs.linuxPackages_latest;
+  };
+  
+
+  # NOTE Permisos y Configuración de Usuario
+  # Es necesario configurar la contraseña con ‘passwd’
+  # Al habilitar el login de "ssdm" sin este tener configurado
+  # autologin será imposible de acceder
+  users.users.jonvemo = {
+    isNormalUser = true;
+    description = "John Verdugo";
+    extraGroups = [ "wheel" "video" "audio" "disk" "networkmanager" ];
+  };
+
+  home-manager = {
+    extraSpecialArgs = { inherit inputs; };
+    users.jonvemo = import ./home.nix;
+  };
+  
+  # NOTE Dont Change
   system.stateVersion = "23.11"; # Did you read the comment?
 
 }

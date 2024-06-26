@@ -9,8 +9,10 @@
 		nixpkgs-wayland.url = "github:nix-community/nixpkgs-wayland";
     hyprland.url = "github:hyprwm/Hyprland";
 
-#		niri-unstable.url = "github:YaLTeR/niri";
-#		niri-stable.url = "github:YaLTeR/niri/v0.1.6";
+		niri-unstable.url = "github:YaLTeR/niri";
+#    niri-unstable.flake = false;
+    niri-stable.url = "github:YaLTeR/niri/v0.1.6";
+#    niri-stable.flake = false;
 
 		# HomeManager
 		home-manager = {
@@ -26,24 +28,36 @@
 		# None
   };
 
-	outputs = { self, nixpkgs, home-manager, stylix, ... }@inputs: 
+ outputs = { self, nixpkgs, home-manager, stylix, ... }@inputs: 
 	{
-		# NixOS: Jonvemo
+		# NixOS
 		nixosConfigurations.jonvemo = nixpkgs.lib.nixosSystem {
 			system = "x86_64-linux";
 			
 			modules = [
-				## NixOS
 				./hosts/jonvemo/configuration.nix
 				./modules/nixos
-
-				## HomeManager
-				{	home-manager.users.jonvemo = import ./modules/home-manager;}
-				
+				stylix.nixosModules.stylix
+#				niri.homeModules.config
+				niri.nixosModule.config
 			];
 
 			specialArgs = { inherit inputs; };
+			
 		};
+		
+		# HomeManager
+		homeConfigurations.jonvemo = home-manager.lib.homeManagerConfiguration {
+		  pkgs = nixpkgs.legacyPackages."x86_64-linux";
+
+		  modules = [
+				./hosts/jonvemo/home.nix
+				./modules/home-manager/default.nix
+			];
+
+	  	extraSpecialArgs = { inherit inputs; };
+		};
+		
 	};
 	
 }

@@ -10,9 +10,6 @@
   # NOTE Minecraft
   # Minecraft: Offical don't work 1.19 or higher version, for olders versions require more packages
   # Prsmlauncher: Auth failed
-
-    # Wayland Compositor
-#    niri alacritty
     
     # GUI
     rofi-wayland waybar hyprpaper
@@ -20,25 +17,18 @@
     # File Manager
     gnome.nautilus
 
-    # for ags # gtksourceview webkitgtk accountsservice
-
     # Controls GUI
     networkmanagerapplet myxer
     # Controls CTL
-    brightnessctl playerctl grim slurp swappy wl-clipboard # wf-recorder 
+    brightnessctl playerctl grim slurp swappy wl-clipboard #  wl-clip-persist cliphist # wf-recorder 
 
     # Tools
     fastfetch git
     eartag /* Music Tagger */ parabolic /* Download Music */ 
     loupe /* Image Viewer*/ gnome.totem /* Video Player */ celluloid
-    gnome.gnome-sound-recorder
+    gnome.gnome-sound-recorder emote
 
-    emote
-    
-
-    # Notifications
-    mako libnotify # Por alguna razón sigue funcionando; está disponible dbus en los paquetes instalados por HomeManager
-    dbus libdbusmenu-gtk3
+    # rnote kooha multiplex komikku
 
     # Browsers
     microsoft-edge
@@ -49,18 +39,15 @@
     # Media
     spotify
 
-    # rnote # more interesting
-
-    # kooha multiplex komikku
-
-    # Desing
-    # figma-linux # problems in auth
-
     # Games
-    lunar-client 
+    lunar-client
 
     # Programming
-    python3 nodejs_22 vscode
+    python3 nodejs_22 
+    helix vscode
+
+    # Desing
+    figma-linux
 
     # Package Manager
     #cargo #flatpak #rpm

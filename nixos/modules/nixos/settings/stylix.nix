@@ -1,4 +1,4 @@
-{ config, inputs, pkgs, ... }:
+{ inputs, pkgs, ... }:
 
 { 
   imports = [ inputs.stylix.nixosModules.stylix ];
@@ -12,35 +12,38 @@
     # Misc
     cursor = {
       package = pkgs.catppuccin-cursors.mochaMauve;
-      name = "Catppuccin-Mocha-Mauve-Cursors";
-      size = 16;
+      # NOTE No parece funcionar; se habilita el Cursor de Hyprland.
+      name = "Catppucin-Mocha-Mauve-Cursors";
+      size = 24;
     };
     
     # Fonts
     fonts = {
+      # NOTE No permite seleccionar múltiples fonts, así que es paraciamente administrado HomeManager.
+
       emoji = {
-        package = pkgs.noto-fonts-emoji-blob-bin;
-        name = "Blobmoji";
+         package = pkgs.noto-fonts-emoji-blob-bin;
+         name = "Blobmoji";
+       };
+       monospace = {
+         package = pkgs.nerdfonts.override { fonts = ["JetBrainsMono"]; };
+         name = "JetBrainsMono Nerd Font";
       };
-      monospace = {
-        package = pkgs.nerdfonts.override { fonts = ["JetBrainsMono"]; };
-        name = "JetBrainsMono Nerd Font";
-      };
-      sansSerif = {
-        package = pkgs.noto-fonts;
-        name = "Noto Sans";
-      };
-      serif = {
-        package = pkgs.noto-fonts;
-        name = "Noto Serif";
-      };
+      # sansSerif = {
+      #   packages = pkgs.noto-fonts;
+      #   name = "Noto Sans";
+      # };
+      # serif = {
+      #   package = pkgs.noto-fonts;
+      #   name = "Noto Serif";
+      # };
 
       sizes = {
         applications = 12;
         desktop = 12;
         popups = 10;
         terminal = 10;
-      };
+     };
       
     };
 

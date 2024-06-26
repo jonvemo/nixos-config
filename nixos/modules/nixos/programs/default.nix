@@ -1,22 +1,12 @@
-{config, pkgs, inputs, ...}:
+{ pkgs, ...}:
 
 {
-  nixpkgs.config = { allowUnfree = true; };
-
-#  nixpkgs.overlays = [ inputs.niri.overlays.niri ];
-  
   programs = {
   
     hyprland = {
       enable = true;
       xwayland.enable = true;
-# #     systemd.enable = true;  
     };
-
-#    niri = {
-#      package = pkgs.niri;
-#      enable = true;
-#    };
 
     java = {
       enable = true;
@@ -31,4 +21,5 @@
     };
     
   };
+  
 }
