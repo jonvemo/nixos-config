@@ -9,7 +9,7 @@
 		nixpkgs-wayland.url = "github:nix-community/nixpkgs-wayland";
     hyprland.url = "github:hyprwm/Hyprland";
 
-#		niri-unstable.url = "github:YaLTeR/niri";
+#		niri-unstable.url = "github:YaLTeR/niri"; # NOTE No hay módulos disponibles
 #		niri-stable.url = "github:YaLTeR/niri/v0.1.6";
 
 		# HomeManager
@@ -18,8 +18,13 @@
 			inputs.nixpkgs.follows = "nixpkgs";
 		};
 
-		# Addtionals
-		stylix.url = "github:danth/stylix";
+		# Theme
+		stylix.url = "github:danth/stylix"; 
+		# WARN GTK Theme está en conflicto con otro package <adw>
+		# TODO Investigar cómo arreglarlo
+		# catppuccin.url = "github:catppuccin/nix";
+
+		# Additionals
 		ags.url = "github:Aylur/ags";
 
 		# APPs
@@ -38,7 +43,15 @@
 				./modules/nixos
 
 				## HomeManager
-				{	home-manager.users.jonvemo = import ./modules/home-manager;}
+				{
+					home-manager = {
+						extraSpecialArgs = { inherit inputs; };
+						users.jonvemo.imports = [ 
+							./hosts/jonvemo/home.nix
+							./modules/home-manager
+		        ];
+					};
+				}
 				
 			];
 

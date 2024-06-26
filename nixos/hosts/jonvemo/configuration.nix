@@ -55,11 +55,6 @@
     description = "John Verdugo";
     extraGroups = [ "wheel" "video" "audio" "disk" "networkmanager" ];
   };
-
-  home-manager = {
-    extraSpecialArgs = { inherit inputs; };
-    users.jonvemo = import ./home.nix;
-  };
   
   # NOTE Dont Change
   system.stateVersion = "23.11"; # Did you read the comment?

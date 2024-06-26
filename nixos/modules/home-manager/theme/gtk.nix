@@ -1,10 +1,17 @@
-{inputs, pkgs, ...}: {
-
+{inputs, ...}: 
+{
+  # imports = [ inputs.catppuccin.homeManagerModules.catppuccin ];
+  
   gtk = {
     enable = true;
-    theme = {
-      package = pkgs.catppuccin-gtk;
-      name = "catppuccin";
-    };
+    # catppuccin = {
+    #   enable = true;
+    #   flavor = "mocha";
+    #   accent = "pink";
+    #   size = "standard";
+    #   tweaks = [ "normal" ];
+    # };
+    
   };
+  
 }
