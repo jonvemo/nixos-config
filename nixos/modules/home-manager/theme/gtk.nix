@@ -1,16 +1,25 @@
-{inputs, ...}: 
+{ pkgs, ... }:
 {
-  # imports = [ inputs.catppuccin.homeManagerModules.catppuccin ];
-  
   gtk = {
     enable = true;
-    # catppuccin = {
-    #   enable = true;
-    #   flavor = "mocha";
-    #   accent = "pink";
-    #   size = "standard";
-    #   tweaks = [ "normal" ];
-    # };
+    
+    iconTheme = {
+      name = "Stylish-Adwaita";
+    };
+    
+    cursorTheme = {
+      # package = pkgs.qogir-icon-theme;
+      # name = "Qogir Cursors";
+      name = "Lifrim";
+      # size = 64;
+    };
+
+    gtk3.extraConfig.gtk-application-prefer-dark-theme = 1;
+
+    gtk4.extraConfig = {
+      gtk-application-prefer-dark-theme = 1;
+      # gtk-cursor-theme-name = "Qogir Cursors";
+    };
     
   };
   

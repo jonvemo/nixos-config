@@ -1,15 +1,16 @@
-{ config, pkgs, ...}:
-
 {
   imports = [
-#    ./bash.nix
+    # ./bash.nix
+    # ./starship
     ./kitty
     ./helix
-#    ./starship
+
+    # ./niri.nix
+    
     ./ags.nix
-#    ./rofi.nix
     ./waybar.nix
-    ./niri.nix
-    ./hyprland.nix
+    # ./rofi.nix
+    
+    ./yazi.nix
   ];
 }

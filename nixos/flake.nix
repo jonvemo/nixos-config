@@ -19,10 +19,7 @@
 		};
 
 		# Theme
-		stylix.url = "github:danth/stylix"; 
-		# WARN GTK Theme está en conflicto con otro package <adw>
-		# TODO Investigar cómo arreglarlo
-		# catppuccin.url = "github:catppuccin/nix";
+		stylix.url = "github:danth/stylix";
 
 		# Additionals
 		ags.url = "github:Aylur/ags";

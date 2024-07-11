@@ -1,4 +1,4 @@
-{ inputs, pkgs, ... }:
+{ config, inputs, pkgs, ... }:
 
 { 
   imports = [ inputs.stylix.nixosModules.stylix ];
@@ -10,12 +10,15 @@
     base16Scheme = "${pkgs.base16-schemes}/share/themes/horizon-terminal-dark.yaml";
 
     # Misc
-    cursor = {
-      package = pkgs.catppuccin-cursors.mochaMauve;
-      # NOTE No parece funcionar; se habilita el Cursor de Hyprland.
-      name = "Catppucin-Mocha-Mauve-Cursors";
-      size = 24;
-    };
+    # cursor = {
+    # NOTE Sólo admite cursor acompañado con el Package
+    # Actualmente gestionado por GTK para elementos personalizados
+    # Incompatible para ser gestionado por HomeManager, el cual también requiere Package
+      
+    #   package = pkgs.qogir-icon-theme;
+    #   name = "Qogir Cursors";
+
+    # };
     
     # Fonts
     fonts = {
@@ -47,7 +50,7 @@
       
     };
 
-    image = ./wallpapers/TM1.png;
+    image = ./wallpapers/TM3.jpg;
 #    image = config.lib.stylix.pixel "base0A";
 #    image = pkgs.fetchurl {
 #      url = "https://www.pixelstalk.net/wp-content/uploads/2016/05/Epic-Anime-Awesome-Wallpapers.jpg";
@@ -58,10 +61,11 @@
 
     opacity = {
       applications = 1;
-      desktop = 0.8;
-      popups = 0.8;
-      terminal = 0.8;
+      desktop = 0.9;
+      popups = 0.9;
+      terminal = 0.9;
     };
-    
+
   };
+    
 }

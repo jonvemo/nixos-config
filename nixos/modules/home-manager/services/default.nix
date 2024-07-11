@@ -1,6 +1,6 @@
-{ pkgs, config, ...}:
 {
   imports = [
     ./mpris-proxy.nix
+    ./keyboard.nix
   ];
 }

@@ -23,7 +23,7 @@
       }
       
       #workspaces button {
-        font-family: fontawesome, JetBrains Mono;
+        font-family: fontawesome;
         min-width: 24px;
         padding: 0 8px;
         margin: 0 2px;
@@ -57,7 +57,7 @@
 
         modules-left = [ "hyprland/workspaces" ];
         modules-center = [ "tray" "custom/media" ];
-        modules-right = [ "battery" "pulseaudio" "clock" "memory" "cpu" ];
+        modules-right = [ "battery" "pulseaudio" "clock" "memory" "cpu" "temperature" ];
 
         "hyprland/workspaces" = {
           "format" = "{windows} <sub>{icon}</sub>";
@@ -75,7 +75,6 @@
             "title<.*github.*>" = "";
             "title<.*reddit.*>" = "";
             "title<.*facebook.*>" = "";
-            # "title<.*x.com/*" = "";
             "title<.*instagram.*>" = "";
             "title<.*gmail.*" = "";
 
@@ -90,11 +89,13 @@
             "vesktop" = "";
             "spotify" = "";
             "steam" = "";
+            "g4music" = "";
+        
           };
         };
 
         "custom/media" = {
-          "format" = "{icon}{}";
+          "format" = "{icon} {}";
           "return-type" = "json";
           "format-icons" = {
             "Playing" = " ";
@@ -102,7 +103,7 @@
           };
           "max-length" = 28;
 #          "exec" = "playerctl -a metadata --format '{\"text\": \"{{playerName}}: {{artist}} - {{markup_escape(title)}}\", \"tooltip\": \"{{playerName}} : {{markup_escape(title)}}\", \"alt\": \"{{status}}\", \"class\": \"{{status}}\"}' -F";
-          "exec" = "playerctl -a metadata --format '{\"text\": \"{{artist}} - {{markup_escape(title)}}\", \"tooltip\": \"{{playerName}} : {{markup_escape(title)}}\", \"alt\": \"{{status}}\", \"class\": \"{{status}}\"}' -F";
+          "exec" = "playerctl -a metadata --format '{\"text\": \"{{artist}}\", \"tooltip\": \"{{markup_escape(title)}}\", \"alt\": \"{{status}}\", \"class\": \"{{status}}\"}' -F";
           "on-click" = "playerctl play-pause";
         };
 
@@ -116,6 +117,8 @@
             "default" = ["󰂎" "󰁺" "󰁻" "󰁼" "󰁽" "󰁾" "󰁿" "󰂀" "󰂁" "󰂂" "󰁹"];
             "charging" = ["󰢟" "󰢜" "󰂆" "󰂇" "󰂈" "󰢝" "󰂉" "󰢞" "󰂊" "󰂋" "󰂅" ];
           };
+
+          "tooltip-format" = "{capacity}% {timeTo} {health}";
 
           "states" = {
             "warning" = 30;

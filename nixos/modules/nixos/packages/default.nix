@@ -8,10 +8,10 @@
   # NOTE Root Packages
   environment.systemPackages = with pkgs; [
     # Starter Pack
-    home-manager ags
+    home-manager
     # NOTE Hyprland requiere Kitty
     kitty 
     # TEST Niri Wayland Compositor
-    niri alacritty
+    # niri alacritty
   ];
 }
