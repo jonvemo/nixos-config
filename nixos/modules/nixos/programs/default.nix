@@ -5,7 +5,7 @@
   
     hyprland = {
       enable = true;
-      xwayland.enable = true; # NOTE Es requerido para Steam, consume cerca de 87MB junto a 127MB para XServer
+      xwayland.enable = true; # NOTE Es requerido para Steam, consume cerca de 87MB
     };
 
     java = {
@@ -19,6 +19,8 @@
       remotePlay.openFirewall = true;
       dedicatedServer.openFirewall = true;
     };
+
+    fish.enable = true;
     
   };
   

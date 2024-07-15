@@ -13,7 +13,7 @@
   # Prsmlauncher: Auth failed
     
     # GUI
-    rofi-wayland waybar hyprpaper
+    waybar hyprpaper
 
     # File Manager
     gnome.nautilus # GUI
@@ -29,21 +29,17 @@
 
     # Desktop 
     loupe /* Image Viewer*/ celluloid emote
-    g4music onlyoffice-bin nwg-panel
+    g4music onlyoffice-bin foliate # nwg-panel /* Advanced bar */
     
     /* gnome.totem */ /* Video Player */ gnome.gnome-sound-recorder gnome.file-roller gnome.gnome-calculator
     gnome-connections
     snapshot tracker-miners /* Herramienta de Indexación de Gnome, sirve para Nautilus y Video Player principalmente */
     
-    newsflash iotas # valent
+    newsflash iotas /* Notes */ # rnote 
     cozy-drive
 
-    # kooha # WARN No Funciona
-    # multiplex # 9WARN No entiendo como funciona
-    # rnote
-
     # Browsers
-    microsoft-edge
+    microsoft-edge vivaldi
 
     # Chatting
     vesktop
@@ -55,13 +51,13 @@
     lunar-client
 
     # Programming
-    python3 nodejs_22
+    nodejs_22 # yarn # python3
 
-    # Desing
-    figma-linux
+    # Desing & Draw
+    figma-linux krita
 
     # Package Manager
-    #cargo #flatpak #rpm
+    #cargo #rpm
 
   ];
 

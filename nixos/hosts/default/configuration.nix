@@ -3,7 +3,7 @@
 {
   imports = [
     ./hardware-configuration.nix
-    inputs.home-manager.nixosModules.default 
+    inputs.home-manager.nixosModules.default
   ];
   
 
@@ -50,14 +50,12 @@
   # Es necesario configurar la contraseña con ‘passwd’
   # Al habilitar el login de "ssdm" sin este tener configurado
   # autologin será imposible de acceder
-  users.users.jonvemo = {
+  users.users.default = {
     isNormalUser = true;
-    description = "John Verdugo";
+    description = "Default";
     extraGroups = [ "wheel" "video" "audio" "disk" "networkmanager" ];
     shell = pkgs.fish;
   };
-    
-  # services.getty.autologinUser = "jonvemo";
   
   # NOTE Dont Change
   system.stateVersion = "23.11"; # Did you read the comment?

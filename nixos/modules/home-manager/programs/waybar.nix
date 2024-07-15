@@ -30,7 +30,15 @@
         border-radius: 4px;
       }
 
-      #battery, #pulseaudio, #clock, #memory, #cpu {
+      #tray {
+        background-color: #1C1E26;
+        min-width: 12px;
+        padding: 0 8px;
+        margin: 4px 0;
+        border-radius: 4px;
+      }
+
+      #battery, #pulseaudio, #clock, #memory, #cpu, #temperature {
         background-color: #E3E6EE;
         min-width: 12px;
         padding: 0 8px;
@@ -39,7 +47,7 @@
         color: #1C1E26;
       }
 
-      #cpu {margin-right: 4px;}
+      #temperature {margin-right: 4px;}
 
       
     '';
@@ -56,8 +64,8 @@
         reload_style_on_change = true;
 
         modules-left = [ "hyprland/workspaces" ];
-        modules-center = [ "tray" "custom/media" ];
-        modules-right = [ "battery" "pulseaudio" "clock" "memory" "cpu" "temperature" ];
+        modules-center = [ "custom/media" ];
+        modules-right = [ "tray" "battery" "pulseaudio" "clock" "memory" "cpu" "temperature" ];
 
         "hyprland/workspaces" = {
           "format" = "{windows} <sub>{icon}</sub>";
@@ -105,10 +113,6 @@
 #          "exec" = "playerctl -a metadata --format '{\"text\": \"{{playerName}}: {{artist}} - {{markup_escape(title)}}\", \"tooltip\": \"{{playerName}} : {{markup_escape(title)}}\", \"alt\": \"{{status}}\", \"class\": \"{{status}}\"}' -F";
           "exec" = "playerctl -a metadata --format '{\"text\": \"{{artist}}\", \"tooltip\": \"{{markup_escape(title)}}\", \"alt\": \"{{status}}\", \"class\": \"{{status}}\"}' -F";
           "on-click" = "playerctl play-pause";
-        };
-
-        "tray" = {
-          
         };
 
         "battery" = {

@@ -5,7 +5,7 @@
     ./packages
     ./programs
     ./services
-    ./settings
     ./theme
+    ./vars
   ];
 }

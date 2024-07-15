@@ -1,15 +1,15 @@
 {
   imports = [
-    # ./bash.nix
-    # ./starship
-    ./kitty
-    ./helix
-
-    # ./niri.nix
+    ./fish.nix
+    ./starship
     
-    ./ags.nix
+    ./terminal
+    
+    ./helix
+    
+    # ./ags.nix
     ./waybar.nix
-    # ./rofi.nix
+    ./wofi.nix
     
     ./yazi.nix
   ];

@@ -22,7 +22,7 @@
     
     # Fonts
     fonts = {
-      # NOTE No permite seleccionar múltiples fonts, así que es paraciamente administrado HomeManager.
+      # NOTE No permite seleccionar múltiples fonts, así que es paracialmente administrado por HomeManager.
 
       emoji = {
          package = pkgs.noto-fonts-emoji-blob-bin;
