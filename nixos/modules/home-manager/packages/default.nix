@@ -13,7 +13,7 @@
   # Prsmlauncher: Auth failed
     
     # GUI
-    waybar hyprpaper
+    waybar hyprpaper libnotify
 
     # File Manager
     gnome.nautilus # GUI
@@ -28,8 +28,9 @@
     eartag /* Music Tagger */ parabolic /* Download Music */
 
     # Desktop 
-    loupe /* Image Viewer*/ celluloid emote
-    g4music onlyoffice-bin foliate # nwg-panel /* Advanced bar */
+    loupe /* Image Viewer*/ celluloid emote g4music 
+    onlyoffice-bin #libreoffice 
+    foliate # nwg-panel /* Advanced bar */
     
     /* gnome.totem */ /* Video Player */ gnome.gnome-sound-recorder gnome.file-roller gnome.gnome-calculator
     gnome-connections

@@ -1,10 +1,3 @@
 {
-  stylix.targets = {
-    waybar = {
-      enable = true;
-      enableLeftBackColors = true; 
-    };
-    
-  };
-  
+  stylix.targets.waybar.enable = false;
 }
