@@ -13,7 +13,7 @@
   # Prsmlauncher: Auth failed
     
     # GUI
-    waybar hyprpaper libnotify
+    hyprpaper hyprlock hypridle waybar libnotify
 
     # File Manager
     gnome.nautilus # GUI
@@ -53,6 +53,13 @@
 
     # Programming
     nodejs_22 # yarn # python3
+
+    nodePackages.eslint
+    nodePackages.prettier
+    tailwindcss-language-server
+    emmet-ls
+    nodePackages.vscode-langservers-extracted
+    nodePackages.typescript-language-server
 
     # Desing & Draw
     figma-linux krita

@@ -85,6 +85,7 @@
       
       tooltip label {
         color: #E3E6EE;
+        text-shadow: none;
       }
       
     '';
@@ -104,9 +105,38 @@
         modules-center = [ "hyprland/workspaces" ];
         modules-right = [ "tray" "memory" "cpu" "temperature" ];
 
-        "clock" = {
-          "format" = "{:%I:%M %p}";
-        };
+#         "clock" = {
+#           "format" = "{:%I:%M %p}";
+# #          "tooltip-format" = "{:A% d%, b%. C%}";
+#           #"tooltip-format" = "{:I%}";
+#           "tooltip" = "true";
+#         };
+
+    "clock" = {
+        "format" = "{:%I:%M %p}";
+        "format-alt" = "{:%A, %B %d. %Y}";
+        "tooltip-format" = "<tt>{calendar}</tt>";
+        "calendar" = {
+                    "mode"          = "month";
+                    "mode-mon-col"  = 1;
+                    "weeks-pos"     = "right";
+                    "on-scroll"     = 1;
+                    "format" = {
+                              "months" =     "<span color='#e3e6ee'><b>{}</b></span>";
+                              "days" =       "<span color='#cbced0'><b>{}</b></span>";
+                              "weeks" =      "<span color='#26bbd9'><b>W{}</b></span>";
+                              "weekdays" =   "<span color='#fab795'><b>{}</b></span>";
+                              "today" =      "<span color='#e95678'><b><u>{}</u></b></span>";
+                              };
+                    };
+        "actions" =  {
+                    "on-click-right" = "mode";
+                    "on-click-forward" = "tz_up";
+                    "on-click-backward" = "tz_down";
+                    "on-scroll-up" = "shift_up";
+                    "on-scroll-down" = "shift_down";
+                    };
+    };
 
         "hyprland/workspaces" = {
           "format" = "{windows} <sub>{icon}</sub>";

@@ -1,39 +1,29 @@
-# { pkgs, ... }:
+{ pkgs, ... }:
 
 {
   programs.helix = {
-    enable = true;
-    # defaultEditor = true;
-
-    #  languages = {
-    #    language-server = {
-    #      typescript-language-server = with pkgs.nodePackages; {
-    #        command = "${typescript-language-server}/bin/typescript-language-server";
-    #        args = [ "--stdio" "--tsserver-path=${typescript}/lib/node_modules/typescript/lib" ];
-    #      };
-
-    #     vscode-css-languageserver-bin = with pkgs.nodePackages; {
-    #       command = "${vscode-css-languageserver-bin}/bin/css-languageserver";
-    #       args = [ "--stdio" "--css-server-path=${css}/lib/node_modules/css/lib" ];
-    #     };
-        
-    #   };
-
-    #   language = [{
-    #     name = "rust";
-    #     auto-format = false;
-    #   }];
-
-            
-    # };
-
-    # extraPackages = with pkgs; [
-    #   marksman
-    # ];
-
+  enable = true;
+  # settings = {
+  #   language-server = {
+  #     html = {
+  #       command = "${pkgs.nodePackages.vscode-langservers-extracted}/bin/vscode-html-languageserver --stdio";
+      
+  #       # command = "${pkgs.vscode-css-languageserver-bin}/bin/vscode-css-languageserver";
+  #     };
+  #     #css = {
+  #     #  command = "${pkgs.vscode-css-languageserver}/bin/vscode-css-languageserver --stdio";
+  #     #};
+  #     javascript = {
+  #       command = "${pkgs.nodePackages.vscode-langservers-extracted}/bin/vscode-json-languageserver --stdio";
+  #     };
+  #     typescript = {
+  #       command = "${pkgs.nodePackages.vscode-langservers-extracted}/bin/vscode-json-languageserver --stdio";
+  #     };
+  #   };
+  # };
   };
-  
- # home.file.".config/languages.toml".source = ./languages.toml;
-    
-  
+
+
+  home.file.".config/helix/languages.toml".source = ./languages.toml;
+
 }
