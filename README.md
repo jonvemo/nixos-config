@@ -29,7 +29,7 @@ También puedes probar "CTRL+SHIFT+T" para una nueva Tab
 ~~~
 programs.kitty = {
   enable = true;
-  shellIntegration.enableFishIntegration = true;
+  shellIntegration.enableFishIntegration = true; # Or Bash
   settings.allow_remote_control = "yes";
 };
 ~~~
