@@ -39,7 +39,21 @@ Si quieres habilitar starship (HomeManager):
 programs.starship.enable = true;
 home.file.".config/starship.toml".source = ./starship.toml;
 ~~~
+
 [TOML](https://github.com/jonvemo/nixos-config/blob/main/nixos/modules/home-manager/programs/starship/starship.toml)
+
+~~~
+programs.fish = { # Or Bash
+  enable = true;
+  shellInit = "starship init fish | source";
+  interactiveShellInit = "set -g fish_greeting";
+};
+~~~
+
+Puedes poner una nueva shell por defecto en tu archivo "configuration.nix"
+~~~
+users.users.name.shell = pkgs.fish;
+~~~
 
 ## Configuración mínima de Helix (HomeManager) [Config Completa](https://github.com/jonvemo/nixos-config/blob/main/nixos/modules/home-manager/programs/helix/default.nix)
 ~~~
