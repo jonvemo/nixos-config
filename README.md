@@ -41,5 +41,6 @@ programs.helix = {
   };
   
 };
-~~~
+
 home.file.".config/helix/languages.toml".source = ./languages.toml; [TOML](https://github.com/jonvemo/nixos-config/blob/main/nixos/modules/home-manager/programs/helix/languages.toml)
+~~~
