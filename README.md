@@ -21,7 +21,7 @@ Para:
 
 TIP: "CTRL+SHIFT+ENTER" Abre una ventana dentro de la terminal
 
-Dada esta configuración, al hacer "M+L" Abre una nueva ventana en la terminal ejecutando Lazygit en el directorio actual
+Dada esta configuración, al hacer "M+L" dentro de un archivo abierto en Helix abre una nueva ventana en la terminal ejecutando Lazygit en el directorio actual
 
 También puedes probar "CTRL+SHIFT+T" para una nueva Tab
 
