@@ -26,11 +26,13 @@ Dada esta configuración, al hacer "M+L" dentro de un archivo abierto en Helix a
 También puedes probar "CTRL+SHIFT+T" para una nueva Tab
 
 ## Configuración mínima de Kitty (HomeManager) [Config Completa](https://github.com/jonvemo/nixos-config/blob/main/nixos/modules/home-manager/programs/terminal/kitty.nix)
+~~~
 programs.kitty = {
   enable = true;
   shellIntegration.enableFishIntegration = true;
   settings.allow_remote_control = "yes";
 };
+~~~
 
 Si quieres habilitar starship (HomeManager):
 ~~~
