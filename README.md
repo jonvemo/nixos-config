@@ -1,6 +1,7 @@
 # Helix, Install resume
 ## Packages requeridos 
 Preferiblemente ser instalador dentro de:
+
 environment.systemPackages (Root)
 * emmet-ls
 * nodePackages.eslint
@@ -19,7 +20,9 @@ Para:
 ![Preview](https://cdn.discordapp.com/attachments/1225127458643251301/1263655389631615039/image.png?ex=669b064a&is=6699b4ca&hm=66963180a34dfdd0146b5a3afa05c1222e2346e3227a15742bff00442f03e0d1&)
 
 TIP: "CTRL+SHIFT+ENTER" Abre una ventana dentro de la terminal
+
 Dada esta configuración, al hacer "M+L" Abre una nueva ventana en la terminal ejecutando Lazygit en el directorio actual
+
 También puedes probar "CTRL+SHIFT+T" para una nueva Tab
 
 ## Configuración mínima de Kitty (HomeManager) [Config Completa](https://github.com/jonvemo/nixos-config/blob/main/nixos/modules/home-manager/programs/terminal/kitty.nix)
