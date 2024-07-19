@@ -1,3 +1,7 @@
 {
-  stylix.targets.waybar.enable = false;
+  stylix.targets = {
+    waybar.enable = false;
+    helix.enable = false;
+  };
+
 }

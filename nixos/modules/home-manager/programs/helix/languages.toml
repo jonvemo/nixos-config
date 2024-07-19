@@ -58,6 +58,13 @@ formatter = { command = "prettier", args = ["--stdin-filepath"] }
 language-servers = ["vscode-css-language-server"]
 auto-format = true
 
+[[language]]
+name = "markdown"
+formatter = { command = 'prettier', args = ["--parser", "markdown"] }
+language-servers = ["marksman", "markdown-oxide"]
+auto-format = true
+
+
 [language-server.vscode-html-language-server]
 args = ["--stdio"]
 command = "vscode-html-language-server"

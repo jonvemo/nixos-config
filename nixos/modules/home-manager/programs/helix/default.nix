@@ -2,25 +2,38 @@
 
 {
   programs.helix = {
-  enable = true;
-  # settings = {
-  #   language-server = {
-  #     html = {
-  #       command = "${pkgs.nodePackages.vscode-langservers-extracted}/bin/vscode-html-languageserver --stdio";
+    enable = true;
+    
+    settings = {
+      theme = "horizon-dark";
       
-  #       # command = "${pkgs.vscode-css-languageserver-bin}/bin/vscode-css-languageserver";
-  #     };
-  #     #css = {
-  #     #  command = "${pkgs.vscode-css-languageserver}/bin/vscode-css-languageserver --stdio";
-  #     #};
-  #     javascript = {
-  #       command = "${pkgs.nodePackages.vscode-langservers-extracted}/bin/vscode-json-languageserver --stdio";
-  #     };
-  #     typescript = {
-  #       command = "${pkgs.nodePackages.vscode-langservers-extracted}/bin/vscode-json-languageserver --stdio";
-  #     };
-  #   };
-  # };
+      editor = {
+        bufferline = "multiple"; # always|multiple|never
+  
+        statusline = {
+          left = [ "mode" "spinner" ];
+          center = [ "file-name" ];
+          right = [ "version-control" "diagnostics" "selections" "position" "file-encoding" "file-line-ending" "file-type" ];
+        };
+
+        indent-guides = {
+          render = true;
+          character = "╎";
+          skip-levels = 1;
+        };
+        
+      };
+      
+      keys.normal = {
+        space.w = ":w";
+        space.q = ":q";
+
+        m.l = ":sh kitty @ launch --type=window --cwd=current lazygit && kitty @ resize-window --match title:lazygit --axis=horizontal --increment=-20"; 
+        m.c = ":sh kitty @ close-window --match title:lazygit";
+      };
+      
+    };
+    
   };
 
 

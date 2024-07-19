@@ -9,6 +9,7 @@
     shellIntegration.enableFishIntegration = true;
 
     settings = {
+      allow_remote_control = "yes";
       scrollback_lines = 10000;
       copy_on_select = "yes";
       enabled_layouts = "grid";

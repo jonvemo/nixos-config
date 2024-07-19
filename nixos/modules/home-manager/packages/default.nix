@@ -6,25 +6,25 @@
   # TODO
   # Algunas Aplicaciones tienen que ser movidas
   # a módulos de HomeManager
-  # rofi fastfetch git waybar
+  # fastfetch git
 
   # NOTE Minecraft
   # Minecraft: Offical don't work 1.19 or higher version, for olders versions require more packages
   # Prsmlauncher: Auth failed
     
     # GUI
-    hyprpaper hyprlock hypridle waybar libnotify
+    hyprpaper hyprlock hypridle libnotify
 
     # File Manager
     gnome.nautilus # GUI
 
     # Controls GUI
-    networkmanagerapplet myxer # pavucontrol
+    networkmanagerapplet myxer lact # pavucontrol
     # Controls CTL
-    brightnessctl playerctl grim slurp swappy wl-clipboard # wf-recorder 
+    brightnessctl playerctl grim slurp swappy wl-clipboard # wf-recorder
 
     # Tools
-    fastfetch btop gopsuinfo git
+    fastfetch btop gopsuinfo
     eartag /* Music Tagger */ parabolic /* Download Music */
 
     # Desktop 
@@ -48,18 +48,28 @@
     # Media
     spotify
 
-    # Games
-    lunar-client
+    # Games & Web Stuff
+    lunar-client obs-studio
+
+    # Learning
+    remnote
 
     # Programming
     nodejs_22 # yarn # python3
 
+    ## Language Servers for Helix 
+    ## NOTE Se pueden instalar desde HomeManager pero obtuve algunos problemas con ello
+    ### Idealmente deben ser Instalados en Root
+    emmet-ls
     nodePackages.eslint
     nodePackages.prettier
     tailwindcss-language-server
-    emmet-ls
+    marksman markdown-oxide # Markdown
     nodePackages.vscode-langservers-extracted
     nodePackages.typescript-language-server
+
+    ## Tools
+    lazygit
 
     # Desing & Draw
     figma-linux krita
