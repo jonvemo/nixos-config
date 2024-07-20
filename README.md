@@ -5,7 +5,7 @@ Preferiblemente ser instalador dentro de:
 environment.systemPackages (Root)
 * emmet-ls
 * nodePackages.eslint
-* nodePackages.prettier
+* nodePackages.prettier # reemplazar por "dprint"
 * tailwindcss-language-server
 * marksman # Markdown
 * markdown-oxide
