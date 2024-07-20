@@ -4,7 +4,7 @@
 
 [[language]]
 name = "typescript"
-language-servers = [ "typescript-language-server", "tailwindcss-react", "eslint", "emmet-ls", "dprint" ]
+language-servers = [ "typescript-language-server", "tailwindcss-react", "eslint", "gpt", "emmet-ls", "dprint" ]
 # language-servers = [ "deno", "tailwindcss-react", "emmet-ls"]
 auto-format = true
 
@@ -46,13 +46,13 @@ provideFormatter = true
 [[language]]
 name = "html"
 language-servers = [ "vscode-html-language-server", "tailwindcss-react", "emmet-ls", "dprint"]
-auto-format = true
+auto-format = false
 
  
 [[language]]
 name = "css"
 language-servers = [ "vscode-css-language-server", "tailwindcss-react", "emmet-ls", "dprint"]
-auto-format = true
+auto-format = false
 
 [[language]]
 name = "scss"
@@ -72,6 +72,9 @@ command = "vscode-html-language-server"
 [language-server.vscode-css-language-server]
 args = ["--stdio"]
 command = "vscode-css-language-server"
+
+[language-server.gpt]
+command = "helix-gpt"
 
 [language-server.emmet-ls]
 args = ["--stdio"]
