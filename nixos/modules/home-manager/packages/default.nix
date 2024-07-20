@@ -24,7 +24,7 @@
     brightnessctl playerctl grim slurp swappy wl-clipboard # wf-recorder
 
     # Tools
-    fastfetch btop gopsuinfo
+    btop gopsuinfo
     eartag /* Music Tagger */ parabolic /* Download Music */
 
     # Desktop 
@@ -60,16 +60,19 @@
     ## Language Servers for Helix 
     ## NOTE Se pueden instalar desde HomeManager pero obtuve algunos problemas con ello
     ### Idealmente deben ser Instalados en Root
+    helix-gpt
     emmet-ls
     nodePackages.eslint
-    nodePackages.prettier
+    # nodePackages.prettier # NOTE dprint Hace de Prettier pero mejoh
+    dprint
+    # deno # NOTE Hace de typescript-language-server y viene con dprint nativo
     tailwindcss-language-server
     marksman markdown-oxide # Markdown
     nodePackages.vscode-langservers-extracted
     nodePackages.typescript-language-server
 
     ## Tools
-    lazygit
+    lazygit vscode
 
     # Desing & Draw
     figma-linux krita
