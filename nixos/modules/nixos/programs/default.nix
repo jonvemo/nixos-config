@@ -22,6 +22,11 @@
 
     fish = {
       enable = true;
+      # NOTE Para Helix-GPT
+      interactiveShellInit = ''
+        set -gx HANDLER codeium
+      '';
+      
       shellAliases = {
         npro = "cd /etc/nixos/modules/nixos/programs & sudo hx default.nix";
 
