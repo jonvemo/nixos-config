@@ -1,32 +1,36 @@
+# NOTE
+# Deno está wapo pero no es posible de configurar opciones de lint desde Helix
+# Deno tiene de forma nativa dprint así que, de activarlo no es necesario dprint
+
 [[language]]
 name = "typescript"
-language-servers = [  "typescript-language-server", "tailwindcss-react", "eslint", "emmet-ls"]
-formatter = { command = 'npx', args = ["prettier", "--parser", "typescript"] }
+language-servers = [ "typescript-language-server", "tailwindcss-react", "eslint", "emmet-ls", "dprint" ]
+# language-servers = [ "deno", "tailwindcss-react", "emmet-ls"]
 auto-format = true
 
 [[language]]
 name = "tsx"
-language-servers = [ "typescript-language-server", "tailwindcss-react", "eslint", "emmet-ls"]
-formatter = { command = 'npx', args = ["prettier", "--parser", "typescript"] }
+language-servers = [ "typescript-language-server", "tailwindcss-react", "eslint", "emmet-ls", "dprint"]
+# language-servers = [ "deno", "tailwindcss-react", "emmet-ls" ]
 auto-format = true
 
 [[language]]
 name = "jsx"
-language-servers = [ "typescript-language-server", "tailwindcss-react", "eslint", "emmet-ls"]
+language-servers = [ "typescript-language-server", "tailwindcss-react", "eslint", "emmet-ls", "dprint"]
+# language-servers = [ "deno", "tailwindcss-react", "emmet-ls" ]
 grammar = "javascript"
-formatter = { command = 'npx', args = ["prettier", "--parser", "typescript"] }
 auto-format = true
 
 [[language]]
 name = "javascript"
-language-servers = [ "typescript-language-server", "tailwindcss-react", "eslint", "emmet-ls"]
-formatter = { command = 'npx', args = ["prettier", "--parser", "typescript"] }
+language-servers = [ "typescript-language-server", "tailwindcss-react", "eslint", "emmet-ls", "dprint"]
+# language-servers = [ "deno", "tailwindcss-react", "emmet-ls" ]
 auto-format = true
 
 [[language]]
 name = "json"
-language-servers = [ "vscode-json-language-server" ]
-formatter = { command = 'npx', args = ["prettier", "--parser", "json"] }
+language-servers = [ "vscode-json-language-server", "dprint"]
+# language-servers = [ "deno"]
 auto-format = true
 
 [language-server.vscode-json-language-server.config]
@@ -41,27 +45,23 @@ provideFormatter = true
 
 [[language]]
 name = "html"
-formatter = { command = 'npx', args = ["prettier", "--parser", "html"] }
-language-servers = [ "vscode-html-language-server", "tailwindcss-react", "emmet-ls"]
+language-servers = [ "vscode-html-language-server", "tailwindcss-react", "emmet-ls", "dprint"]
 auto-format = true
 
  
 [[language]]
 name = "css"
-formatter = { command = 'npx', args = ["prettier", "--parser", "css"] }
-language-servers = [ "vscode-css-language-server", "tailwindcss-react", "emmet-ls"]
+language-servers = [ "vscode-css-language-server", "tailwindcss-react", "emmet-ls", "dprint"]
 auto-format = true
 
 [[language]]
 name = "scss"
-formatter = { command = "prettier", args = ["--stdin-filepath"] }
-language-servers = ["vscode-css-language-server"]
+language-servers = ["vscode-css-language-server", "dprint"]
 auto-format = true
 
 [[language]]
 name = "markdown"
-formatter = { command = 'prettier', args = ["--parser", "markdown"] }
-language-servers = ["marksman", "markdown-oxide"]
+language-servers = ["marksman", "markdown-oxide", "dprint"]
 auto-format = true
 
 
@@ -76,6 +76,10 @@ command = "vscode-css-language-server"
 [language-server.emmet-ls]
 args = ["--stdio"]
 command = "emmet-ls"
+
+# [language-server.deno-lsp]
+# args = ["lsp"]
+# command = "deno"
 
 [language-server.eslint]
 args = ["--stdio"]
