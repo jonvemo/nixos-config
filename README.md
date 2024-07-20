@@ -45,8 +45,11 @@ home.file.".config/starship.toml".source = ./starship.toml;
 ~~~
 programs.fish = { # Or Bash
   enable = true;
+  interactiveShellInit = ''
+    set -gx HANDLER codeium
+    set -g fish_greeting
+  '';
   shellInit = "starship init fish | source";
-  interactiveShellInit = "set -g fish_greeting";
 };
 ~~~
 
