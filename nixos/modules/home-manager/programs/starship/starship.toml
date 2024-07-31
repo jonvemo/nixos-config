@@ -1,18 +1,26 @@
 format = """
 [](white)\
-$username\
-[](fg:white bg:black)\
-$directory\
-[](fg:black bg:white)\
-$git_branch\
-$git_status\
-[](fg:white bg:black)\
+$cmd_duration\
+[](white)\
+"""
+
+#  
+
+right_format = """
+[](black)\
 $c\
 $golang\
 $java\
 $nodejs\
 $rust\
-[ ](black)\
+[](fg:white bg:black)\
+$git_branch\
+$git_status\
+[](fg:black bg:white)\
+$directory\
+[](fg:white bg:black)\
+$username\
+[](white)\
 """
 
 # Disable the blank line at the start of the prompt
@@ -22,7 +30,8 @@ add_newline = false
 palette = 'monochrome'
 
 [palettes.monochrome]
-white = '#e3e6ee'
+#e3e6ee 
+white = '#cbced0'
 black = '#2e303e'
 
 # You can also replace your username with a neat symbol like   or disable this
@@ -31,23 +40,23 @@ black = '#2e303e'
 show_always = true
 style_user = "fg:black bg:white"
 style_root = "fg:black bg:white"
-format = '[$user ](bold $style)'
+format = "[ $user ](bold $style)"
 disabled = false
 
 [directory] # Black
 style = "fg:white bg:black"
 format = "[ $path ]($style)"
 truncation_length = 2
-home_symbol = " "
-# fish_style_pwd_dir_length = 1 # NOTE No funciona
+home_symbol = "  "
+fish_style_pwd_dir_length = 3 # NOTE No funciona
 
 # Here is how you can shorten some long paths by text replacement
 # similar to mapped_locations in Oh My Posh:
 [directory.substitutions]
-"Documents" = "󰈙 "
-"Downloads" = " "
-"Music" = " "
-"Pictures" = " "
+"Documents" = " 󰈙 "
+"Downloads" = "  "
+"Music" = "  "
+"Pictures" = "  "
 # Keep in mind that the order matters. For example:
 # "Important Documents" = " 󰈙 "
 # will not be replaced, because "Documents" was already substituted before.
@@ -57,33 +66,39 @@ home_symbol = " "
 [git_branch]
 symbol = ""
 style = "fg:black bg:white"
-format = '[ $symbol $branch ](bold $style)'
+format = '[ $branch $symbol ](bold $style)'
 
 [git_status]
 style = "fg:black bg:white"
-format = '[ $all_status $ahead_behind ](bold $style)'
+format = '[ $all_status $ahead_behind ]($style)'
 
 [c] # Black
 symbol = ""
 style = "fg:white bg:black"
-format = '[ $symbol ($version) ]($style)'
+format = '[ ($version) $symbol  ]($style)'
 
 [golang]
 symbol = ""
 style = "fg:white bg:black"
-format = '[ $symbol ($version) ]($style)'
+format = '[ ($version) $symbol  ]($style)'
 
 [java]
 symbol = ""
 style = "fg:white bg:black"
-format = '[ $symbol ($version) ]($style)'
+format = '[ ($version) $symbol  ]($style)'
 
 [nodejs]
 symbol = ""
 style = "fg:white bg:black"
-format = '[ $symbol ($version) ]($style)'
+format = '[ ($version) $symbol  ]($style)'
 
 [rust]
 symbol = ""
 style = "fg:white bg:black"
-format = '[ $symbol ($version) ]($style)'
+format = '[ ($version) $symbol  ]($style)'
+
+[cmd_duration]
+disabled = false
+style = "bg:white"
+format = 'Took [$duration]($style) '
+show_milliseconds = true
