@@ -18,40 +18,14 @@
 		# Theme
 		stylix.url = "github:danth/stylix";
 
-		# Additionals
-		ags.url = "github:Aylur/ags";
-
 		# APPs
-		# None
+		helix.url = "github:helix-editor/helix";
+		
   };
 
 	outputs = { nixpkgs, home-manager, stylix, ... }@inputs:
 	# outputs = { nixpkgs, ... } @ inputs:
 	{
-		# NixOS: Default
-		nixosConfigurations.default = nixpkgs.lib.nixosSystem {
-			system = "x86_64-linux";
-			
-			modules = [
-				## NixOS
-				./hosts/default/configuration.nix
-			  ./modules/nixos
-
-				# HomeManager
-				 {
-				 	home-manager = {
-				 		extraSpecialArgs = { inherit inputs; };
-				 		users.default.imports = [ 
-				 			./hosts/default/home.nix
-				 			#./modules/home-manager
-		         ];
-				 	};
-				 }
-				
-			];
-
-			specialArgs = { inherit inputs; };
-		};
 
 		# NixOS: Jonvemo
 		nixosConfigurations.jonvemo = nixpkgs.lib.nixosSystem {

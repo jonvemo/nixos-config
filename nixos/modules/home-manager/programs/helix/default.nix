@@ -21,21 +21,41 @@
           character = "╎";
           skip-levels = 1;
         };
+
+        soft-wrap = {
+          enable = true;
+        };
         
       };
       
       keys.normal = {
-        space.w = ":w";
-        space.q = ":q";
+        m.w = ":w";
+        m.q = ":q";
 
-        m.l = ":sh kitty @ launch --type=window --cwd=current lazygit && kitty @ resize-window --match title:lazygit --axis=horizontal --increment=-20"; 
+        m.g = ":sh kitty @ launch --type=window --cwd=current lazygit && kitty @ resize-window --match title:lazygit --axis=horizontal --increment=-20"; 
         m.c = ":sh kitty @ close-window --match title:lazygit";
+        m.l = ":sh live-server";
+        m.z = ":sh pkill live-server";
       };
       
     };
+
+    extraPackages = with pkgs; [
+      helix-gpt
+      emmet-ls
+      dprint
+      nodePackages.live-server # mkcert
+      nodePackages.eslint
+      nodePackages.vscode-langservers-extracted
+      nodePackages.typescript-language-server
+      tailwindcss-language-server
+      marksman markdown-oxide # Markdown
+      
+      # deno # NOTE typescript-language-server & dprint
+      
+    ];
     
   };
-
 
   home.file.".config/helix/languages.toml".source = ./languages.toml;
 

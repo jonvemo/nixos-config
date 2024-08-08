@@ -101,7 +101,7 @@
 #        start_hidden = true;
         reload_style_on_change = true;
 
-        modules-left = [ "clock" "pulseaudio" "battery" "custom/media" ];
+        modules-left = [ "clock" "pulseaudio" "battery" "custom/media"];
         modules-center = [ "hyprland/workspaces" ];
         modules-right = [ "tray" "memory" "cpu" "temperature" ];
 
@@ -118,7 +118,7 @@
         "tooltip-format" = "<tt>{calendar}</tt>";
         "calendar" = {
                     "mode"          = "month";
-                    "mode-mon-col"  = 1;
+                    "mode-mon-col"  = 3;
                     "weeks-pos"     = "right";
                     "on-scroll"     = 1;
                     "format" = {
@@ -188,13 +188,14 @@
           "spacing" = 8;
         };
 
-        # "network" = {
-        #   "format-wifi" = "  {essid}";
-        #   "format-ethernet" = " {ifname}: {ipaddr}/{cidr}";
-        #   "format-disconnected" = "⚠ Disconnected";
-        #   "tooltip-format" = "{essid}: {signalStrength}%";
-        #   "max-length" = 6;
-        # };
+        "network" = {
+          "format-wifi" = "  {bandwidthDownBits}   {bandwidthUpBits}";
+          "format-ethernet" = " {ifname}: {ipaddr}/{cidr}";
+          "format-disconnected" = "⚠ Disconnected";
+          "tooltip-format" = "{essid}";
+          # "max-length" = 6;
+          "interval" = "10";
+        };
 
         "memory" = {
           "format" = "{used:0.1f}G ";
@@ -225,11 +226,13 @@
         "pulseaudio" = {
         # "scroll-step": 1, // %, can be a float
           "reverse-scrolling" = 1;
-          "format" = "{volume}% {icon} {format_source}";
-          # "format-bluetooth" = "{volume}% {icon}  {format_source}";
+          "format" = "{icon} {volume}% {format_source}";
+          # "format" = "{icon}  {format_source}";
+          # "format-bluetooth" = "{icon} {volume}%  {format_source}";
           # "format-bluetooth-muted" = "󰂲 {icon}  {format_source}";
           "format-muted" = " {format_source}";
-          "format-source" = "{volume}% ";
+          "format-source" = " {volume}%";
+          # "format-source" = "";
           "format-source-muted" = "";
           "format-icons" = {
             "headphone" = "";
@@ -238,8 +241,9 @@
             "phone" = "";
             "portable" = "";
             "car" = "";
-            "default" = ["" ""];
+            "default" = [" " " " "  "];
           };
+          "tooltip-format" = "Volume {volume}% \n{desc}";
           "on-click" = "myxer";
         };
 

@@ -1,10 +1,10 @@
-format = """
-[](white)\
-$cmd_duration\
-[](white)\
-"""
+# format = """
+# [](white)\
+# $cmd_duration\
+# [](white)\
+# """
 
-#  
+format = """"""
 
 right_format = """
 [](black)\
@@ -98,7 +98,7 @@ style = "fg:white bg:black"
 format = '[ ($version) $symbol  ]($style)'
 
 [cmd_duration]
-disabled = false
-style = "bg:white"
+disabled = true
+style = "fg:black bg:white"
 format = 'Took [$duration]($style) '
 show_milliseconds = true

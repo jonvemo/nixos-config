@@ -15,10 +15,11 @@
         "inode/directory" = [ "org.gnome.Nautilus.desktop" ];
         "inode/blockdevice" = [ "org.gnome.Nautilus.desktop" ];
         
-        "image/*" = [ "org.gnome.Loupe.desktop" ];
         "image/png" = [ "org.gnome.Loupe.desktop" ];
         "image/jpeg" = [ "org.gnome.Loupe.desktop" ];
         "image/gif" = [ "org.gnome.Loupe.desktop" ];
+        "image/webp" = [ "org.gnome.Loupe.desktop" ];
+        "image/avif" = [ "org.gnome.Loupe.desktop" ];
         
         "video/*" = [ "io.github.celluloid_player.Celluloid.desktop" ];
 

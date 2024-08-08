@@ -12,7 +12,7 @@
       prompt = "Search...";
       no_actions = true;
 
-      term = "kitty";
+      # term = "kitty";
     };
     style = ''
       #window {border-radius: 8px;}

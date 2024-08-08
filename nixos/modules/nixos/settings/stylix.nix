@@ -57,7 +57,7 @@
 #      sha256 = "enQo3wqhgf0FEPHj2coOCvo7DuZv+x5rL/WIo4qPI50=";
 #    };
 
-    polarity = "dark";
+    polarity = "dark"; # ¿No parece funcionar adecuamente?
 
     opacity = {
       applications = 1;

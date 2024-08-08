@@ -13,10 +13,10 @@
   # Prsmlauncher: Auth failed
     
     # GUI
-    hyprpaper hyprlock hypridle libnotify
+    hyprpaper hyprlock hypridle hyprcursor libnotify walker
 
     # File Manager
-    gnome.nautilus # GUI
+    nautilus # GUI
 
     # Controls GUI
     networkmanagerapplet myxer lact # pavucontrol
@@ -24,23 +24,22 @@
     brightnessctl playerctl grim slurp swappy wl-clipboard # wf-recorder
 
     # Tools
-    btop gopsuinfo
+    btop # gopsuinfo /* System Info */
     eartag /* Music Tagger */ parabolic /* Download Music */
 
     # Desktop 
-    loupe /* Image Viewer*/ celluloid emote g4music 
+    loupe /* Image Viewer*/ celluloid emote g4music pomodoro-gtk
     onlyoffice-bin #libreoffice 
     foliate # nwg-panel /* Advanced bar */
     
-    /* gnome.totem */ /* Video Player */ gnome.gnome-sound-recorder gnome.file-roller gnome.gnome-calculator
-    gnome-connections
+    gnome.gnome-sound-recorder file-roller gnome-calculator gnome-connections
     snapshot tracker-miners /* Herramienta de Indexación de Gnome, sirve para Nautilus y Video Player principalmente */
     
     newsflash iotas /* Notes */ # rnote 
     cozy-drive
 
     # Browsers
-    microsoft-edge vivaldi
+    microsoft-edge vivaldi google-chrome
 
     # Chatting
     vesktop
@@ -55,30 +54,22 @@
     remnote
 
     # Programming
-    nodejs_22 # yarn # python3
-
-    ## Language Servers for Helix 
-    ## NOTE Se pueden instalar desde HomeManager pero obtuve algunos problemas con ello
-    ### Idealmente deben ser Instalados en Root
-    helix-gpt
-    emmet-ls
-    nodePackages.eslint
-    # nodePackages.prettier # NOTE dprint Hace de Prettier pero mejoh
-    dprint
-    # deno # NOTE Hace de typescript-language-server y viene con dprint nativo
-    tailwindcss-language-server
-    marksman markdown-oxide # Markdown
-    nodePackages.vscode-langservers-extracted
-    nodePackages.typescript-language-server
+    nodejs_22
 
     ## Tools
-    lazygit vscode
+    ### IDE
+    vscode zed-editor
+    ### CTL
+    lazygit woff2
 
     # Desing & Draw
     figma-linux krita
 
     # Package Manager
     #cargo #rpm
+
+    # Dumb Stuff
+    kittysay premid
 
   ];
 

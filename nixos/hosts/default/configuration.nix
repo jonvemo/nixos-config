@@ -53,7 +53,7 @@
   users.users.default = {
     isNormalUser = true;
     description = "Default";
-    extraGroups = [ "wheel" "video" "audio" "disk" "networkmanager" ];
+    extraGroups = [ "wheel" "networkmanager" ];
     shell = pkgs.fish;
   };
   

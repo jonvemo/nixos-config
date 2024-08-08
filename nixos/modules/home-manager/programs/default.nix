@@ -1,15 +1,16 @@
 {
   imports = [
-    ./fish.nix
+    ./fish
     ./starship
     
     ./terminal
     
     ./helix
+    ./fastfetch.nix
 
     # ./ags.nix
     ./waybar.nix
-    ./wofi.nix
+    # ./wofi.nix
     
     ./yazi.nix
 

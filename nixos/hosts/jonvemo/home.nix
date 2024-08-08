@@ -1,5 +1,3 @@
-{ pkgs, ... }:
-
 {
   nixpkgs.config = {
     allowBroken = true; # NOTE Minecraft

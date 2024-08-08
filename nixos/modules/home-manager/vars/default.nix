@@ -1,6 +1,6 @@
 {
   home.sessionVariables = {
-    EDITOR = "helix";
+    EDITOR = "hx";
 #    WINE = "wine64 winetricks arial";
   };
 }
