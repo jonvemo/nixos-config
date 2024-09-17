@@ -1,0 +1,116 @@
+# format = """
+# [](white)\
+# $cmd_duration\
+# [](white)\
+# """
+
+# right_format = """
+# [](black)\
+# $c\
+# $golang\
+# $java\
+# $nodejs\
+# $rust\
+# [](fg:white bg:black)\
+# $git_branch\
+# $git_status\
+# [](fg:black bg:white)\
+# $directory\
+# [](fg:white bg:black)\
+# $username\
+# [](white)\
+# """
+
+format = """"""
+
+right_format = """
+$cmd_duration\
+[](white)\
+$git_branch\
+$git_status\
+[](fg:black bg:white)\
+$directory\
+[](fg:white bg:black)\
+$username\
+[](white)\
+"""
+
+# Disable the blank line at the start of the prompt
+add_newline = false
+
+# Set 'foo' as custom color palette
+palette = 'monochrome'
+
+[palettes.monochrome]
+#e3e6ee 
+white = '#cbced0'
+black = '#2e303e'
+
+# You can also replace your username with a neat symbol like   or disable this
+# and use the os module below
+[username]
+show_always = true
+style_user = "fg:black bg:white"
+style_root = "fg:black bg:white"
+format = "[ $user ](bold $style)"
+disabled = false
+
+[directory] # Black
+style = "fg:white bg:black"
+format = "[ $path ]($style)"
+truncation_length = 2
+home_symbol = "  "
+fish_style_pwd_dir_length = 3 # NOTE No funciona
+
+# Here is how you can shorten some long paths by text replacement
+# similar to mapped_locations in Oh My Posh:
+[directory.substitutions]
+"Documents" = " 󰈙 "
+"Downloads" = "  "
+"Music" = "  "
+"Pictures" = "  "
+# Keep in mind that the order matters. For example:
+# "Important Documents" = " 󰈙 "
+# will not be replaced, because "Documents" was already substituted before.
+# So either put "Important Documents" before "Documents" or use the substituted version:
+# "Important 󰈙 " = " 󰈙 "
+
+[git_branch]
+symbol = ""
+style = "fg:black bg:white"
+format = '[ $branch $symbol ](bold $style)'
+
+[git_status]
+style = "fg:black bg:white"
+format = '[$all_status $ahead_behind]($style)'
+
+# [c] # Black
+# symbol = ""
+# style = "fg:white bg:black"
+# format = '[ ($version) $symbol  ]($style)'
+
+# [golang]
+# symbol = ""
+# style = "fg:white bg:black"
+# format = '[ ($version) $symbol  ]($style)'
+
+# [java]
+# symbol = ""
+# style = "fg:white bg:black"
+# format = '[ ($version) $symbol  ]($style)'
+
+# [nodejs]
+# symbol = ""
+# style = "fg:white bg:black"
+# format = '[ ($version) $symbol  ]($style)'
+
+# [rust]
+# symbol = ""
+# style = "fg:white bg:black"
+# format = '[ ($version) $symbol  ]($style)'
+
+[cmd_duration]
+disabled = false
+style = "fg:white"
+format = '[ $duration ]($style)'
+show_milliseconds = true
