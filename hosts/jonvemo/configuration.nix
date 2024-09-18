@@ -36,7 +36,7 @@
   # NOTE Bootloader config
   boot = {
     tmp.cleanOnBoot = true;
-    supportedFilesystems = ["ntfs"];
+    # supportedFilesystems = ["ntfs"]; # NOTE Windows
     
     loader = {
       systemd-boot.enable = true;

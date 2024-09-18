@@ -7,10 +7,9 @@
       extraPortals = [ pkgs.xdg-desktop-portal-gtk ]; # NOTE Usar GTK/Hyprland # Hyprland mejora el contexto de ventanas # GTK Enlaces
       config.common.default = [ "gtk" ];
     };
-
+    
     mimeApps = {
       enable = true;
-      # NOTE MimeApps a Nivel de Sistema, por algún motivo no lo agarra bien Home-Manager
       defaultApplications = {
         "inode/directory" = [ "org.gnome.Nautilus.desktop" ];
         "inode/blockdevice" = [ "org.gnome.Nautilus.desktop" ];

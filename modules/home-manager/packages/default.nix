@@ -32,6 +32,7 @@
     vesktop
 
     # Media
+    spotube
     spotify
 
     # Games & Web Stuff
