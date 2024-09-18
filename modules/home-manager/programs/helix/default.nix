@@ -43,7 +43,7 @@
     extraPackages = with pkgs; [
       helix-gpt
       emmet-ls
-      # eslint
+      eslint
       dprint
       nodePackages.live-server # mkcert
       nodePackages.vscode-langservers-extracted
