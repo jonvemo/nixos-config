@@ -27,6 +27,7 @@
         # "file:///home/jonvemo/Videos"
         # "file:///home/jonvemo/Music"
         "file:///home/jonvemo/Cozy%20Drive"
+        "file:///home/jonvemo/Krita"
 
       ];
       # extraConfig.gtk-application-prefer-dark-theme = 1;
