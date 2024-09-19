@@ -4,8 +4,15 @@
     portal = {
       enable = true;
       xdgOpenUsePortal = true;
-      extraPortals = [ pkgs.xdg-desktop-portal-gtk ]; # NOTE Usar GTK/Hyprland # Hyprland mejora el contexto de ventanas # GTK Enlaces
-      config.common.default = [ "gtk" ];
+
+      # NOTE Usar GTK/Hyprland # Hyprland mejora el contexto de ventanas # GTK Enlaces
+      # Hyprland Portal no se instala automáticamente desde HomeManager
+      extraPortals = with pkgs; [ 
+        xdg-desktop-portal-hyprland
+        xdg-desktop-portal-gtk
+      ];
+      
+      config.hyprland.default = [ "hyprland" "gtk" ];
     };
     
     mimeApps = {

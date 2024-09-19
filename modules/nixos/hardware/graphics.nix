@@ -6,8 +6,7 @@
     extraPackages = with pkgs; [
       amdvlk
       mesa.drivers
-    ];
-        
+    ];    
   };
   
 }

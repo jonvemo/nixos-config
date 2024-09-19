@@ -7,7 +7,7 @@
     hyprpaper hyprlock hypridle hyprcursor libnotify walker
 
     # Controls GUI
-    networkmanagerapplet myxer lact # pavucontrol
+    networkmanagerapplet myxer lact
     # Controls CTL
     brightnessctl playerctl grim slurp swappy wl-clipboard # wf-recorder
 
@@ -31,24 +31,17 @@
     # Chatting
     vesktop
 
-    # Media
-    spotube
-    spotify
-
-    # Games & Web Stuff
+    # Games & Web Stuff & Media
     lunar-client osu-lazer-bin
     obs-studio
+    spotube
 
     # Learning
     remnote
 
     # Programming
     nodejs_22
-
-    ## Tools
-    ### IDE
     vscode zed-editor
-    ### CTL
     lazygit woff2 ffmpeg_7
 
     # Desing & Draw
