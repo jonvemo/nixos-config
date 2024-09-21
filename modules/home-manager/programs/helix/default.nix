@@ -8,6 +8,8 @@
       theme = "horizon-dark";
       
       editor = {
+        cursor-shape.insert = "bar";
+        
         bufferline = "multiple"; # always|multiple|never
   
         statusline = {
@@ -22,13 +24,13 @@
           skip-levels = 1;
         };
 
-        soft-wrap = {
-          enable = true;
-        };
+        soft-wrap.enable = true;
         
       };
       
       keys.normal = {
+        esc = [ "collapse_selection" "keep_primary_selection" ];
+        
         m.w = ":w";
         m.q = ":q";
 

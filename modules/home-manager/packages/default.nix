@@ -9,7 +9,7 @@
     # Controls GUI
     networkmanagerapplet myxer lact
     # Controls CTL
-    brightnessctl playerctl grim slurp swappy wl-clipboard # wf-recorder
+    brightnessctl playerctl grim slurp wl-clipboard # wf-recorder
 
     # Tools
     btop # gopsuinfo /* System Info */
@@ -19,10 +19,10 @@
     loupe /* Image Viewer*/ celluloid emote g4music
     foliate /* Ebook Reader */ # pomodoro-gtk # NOTE Está fallando
     
-    gnome-sound-recorder file-roller gnome-calculator gnome-connections
-    snapshot tracker-miners /* Herramienta de Indexación de Gnome, sirve para Nautilus y Video Player principalmente */
+    gnome-sound-recorder gnome-calculator gnome-connections
+    file-roller snapshot tracker-miners /* Herramienta de Indexación de Gnome, sirve para Nautilus y Video Player principalmente */
     
-    newsflash iotas /* Notes */ # rnote 
+    newsflash iotas /* Notes */
     cozy-drive
 
     # Browsers
@@ -34,7 +34,7 @@
     # Games & Web Stuff & Media
     lunar-client osu-lazer-bin
     obs-studio
-    spotube
+    spotube spotify
 
     # Learning
     remnote

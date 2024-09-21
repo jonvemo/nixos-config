@@ -27,7 +27,8 @@
       # "ctrl+shift+v" = "paste_from_clipboard"
       "ctrl+alt+left" = "previous_window";
       "ctrl+alt+right" = "next_window";
-      "f1" = "launch --type=window --cwd=current lazygit";
+      "f1" = "launch --type=window --cwd=current";
+      "f2" = "launch --type=window --cwd=current lazygit";
       
     };
     
