@@ -9,5 +9,4 @@
     # ./ssh.nix # NOTE Testing
     # ./flatpak.nix
   ];
-  
 }

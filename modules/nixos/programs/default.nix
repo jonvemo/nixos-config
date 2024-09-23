@@ -4,6 +4,7 @@
   imports = [
     ./fish.nix
     ./nautilus.nix
+    ./nh.nix
   ];
   
   programs = {

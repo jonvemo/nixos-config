@@ -1,3 +1,3 @@
 {
-  security.doas.enable = true;
+  security.doas.enable = false;
 }

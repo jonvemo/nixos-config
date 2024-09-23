@@ -12,7 +12,7 @@
     ";
 
     shellAliases = {
-        sudo = "doas";
+        # sudo = "doas";
         
         flake = "cd /etc/nixos/ & sudo hx flake.nix";
         flakeupdate = "sudo nix flake update";

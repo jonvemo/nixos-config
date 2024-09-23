@@ -24,11 +24,12 @@
       dates = [ "2:00" ];
     };
 
-    gc = {
-      automatic = true;
-      dates = "weekly";
-      options = "--delete-older-than 4d";
-    };
+    # NOTE Gestionado por NH program
+    # gc = {
+    #   automatic = true;
+    #   dates = "weekly";
+    #   options = "--delete-older-than 4d";
+    # };
     
   };
   
