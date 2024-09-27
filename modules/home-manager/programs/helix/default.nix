@@ -44,14 +44,15 @@
 
     extraPackages = with pkgs; [
       helix-gpt
-      emmet-ls
-      eslint
-      dprint
+      emmet-language-server # emmet-ls
+      biome dprint
+      marksman markdown-oxide
+      
       nodePackages.live-server # mkcert
       nodePackages.vscode-langservers-extracted
-      nodePackages.typescript-language-server
-      tailwindcss-language-server
-      marksman markdown-oxide # Markdown
+      
+      # nodePackages.typescript-language-server
+      # tailwindcss-language-server
       
       # deno # NOTE typescript-language-server & dprint
       

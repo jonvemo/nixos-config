@@ -1,69 +1,19 @@
-# NOTE
-# Deno está wapo pero no es posible de configurar opciones de lint desde Helix
-# Deno tiene de forma nativa dprint así que, de activarlo no es necesario dprint
+# NOTE LANGUAGE SERVER
 
-[[language]]
-name = "typescript"
-language-servers = [ "typescript-language-server", "tailwindcss-react", "eslint", "gpt", "emmet-ls", "dprint" ]
-# language-servers = [ "deno", "tailwindcss-react", "emmet-ls"]
-auto-format = true
+[language-server.biome]
+command = "biome"
+args = ["lsp-proxy"]
 
-[[language]]
-name = "tsx"
-language-servers = [ "typescript-language-server", "tailwindcss-react", "eslint", "emmet-ls", "dprint"]
-# language-servers = [ "deno", "tailwindcss-react", "emmet-ls" ]
-auto-format = true
+[language-server.gpt]
+command = "helix-gpt"
 
-[[language]]
-name = "jsx"
-language-servers = [ "typescript-language-server", "tailwindcss-react", "eslint", "emmet-ls", "dprint"]
-# language-servers = [ "deno", "tailwindcss-react", "emmet-ls" ]
-grammar = "javascript"
-auto-format = true
+[language-server.emmet]
+args = ["--stdio"]
+command = "emmet-language-server"
 
-[[language]]
-name = "javascript"
-language-servers = [ "typescript-language-server", "tailwindcss-react", "eslint", "gpt", "emmet-ls", "dprint"]
-# language-servers = [ "deno", "tailwindcss-react", "emmet-ls" ]
-auto-format = true
-
-[[language]]
-name = "json"
-language-servers = [ "vscode-json-language-server", "dprint"]
-# language-servers = [ "deno"]
-auto-format = true
-
-[language-server.vscode-json-language-server.config]
-json = { validate = { enable = true }, format = { enable = true } }
-provideFormatter = true
-
-[language-server.vscode-css-language-server.config]
-css = { validate = { enable = true } }
-scss = { validate = { enable = true } }
-less = { validate = { enable = true } }
-provideFormatter = true
-
-[[language]]
-name = "html"
-language-servers = [ "vscode-html-language-server", "tailwindcss-react", "emmet-ls", "dprint"]
-auto-format = false
-
- 
-[[language]]
-name = "css"
-language-servers = [ "vscode-css-language-server", "tailwindcss-react", "emmet-ls", "dprint"]
-auto-format = false
-
-[[language]]
-name = "scss"
-language-servers = ["vscode-css-language-server", "dprint"]
-auto-format = true
-
-[[language]]
-name = "markdown"
-language-servers = ["marksman", "markdown-oxide", "dprint"]
-auto-format = true
-
+[language-server.bun]
+command = "bun"
+args = ["lsp"]
 
 [language-server.vscode-html-language-server]
 args = ["--stdio"]
@@ -73,35 +23,51 @@ command = "vscode-html-language-server"
 args = ["--stdio"]
 command = "vscode-css-language-server"
 
-[language-server.gpt]
-command = "helix-gpt"
 
-[language-server.emmet-ls]
-args = ["--stdio"]
-command = "emmet-ls"
+# NOTE LANGUAGE
 
-# [language-server.deno-lsp]
-# args = ["lsp"]
-# command = "deno"
+[[language]]
+name = "typescript"
+language-servers = [ "bun", "biome", "gpt", "emmet" ]
+auto-format = true
 
-[language-server.eslint]
-args = ["--stdio"]
-command = "vscode-eslint-language-server"
+[[language]]
+name = "tsx"
+language-servers = [ "bun", "biome", "emmet" ]
+auto-format = true
 
-[language-server.eslint.config]
-format = { enable = true }
-nodePath = ""
-quiet = false
-rulesCustomizations = []
-run = "onType"
-validate = "on"
-codeAction = { disableRuleComment = { enable = true, location = "separateLine" }, showDocumentation = { enable = false } }
-codeActionsOnSave = { mode = "all", "source.fixAll.eslint" = true }
-experimental = { }
-problems = { shortenToSingleLine = false }
+[[language]]
+name = "jsx"
+language-servers = [ "bun", "biome", "emmet" ]
+grammar = "javascript"
+auto-format = true
 
-[language-server.tailwindcss-react]
-language-id = "typescriptreact"
-command = "tailwindcss-language-server"
-args = ["--stdio"]
-config = {}
+[[language]]
+name = "javascript"
+language-servers = [ "bun", "biome", "gpt", "emmet" ]
+auto-format = true
+
+[[language]]
+name = "json"
+language-servers = [ "biome" ]
+auto-format = true
+
+[[language]]
+name = "html"
+language-servers = [ "dprint", "emmet", "vscode-html-language-server" ]
+auto-format = false
+
+[[language]]
+name = "css"
+language-servers = [ "biome", "emmet", "vscode-css-language-server" ]
+auto-format = false
+
+[[language]]
+name = "scss"
+language-servers = [ "biome", "vscode-css-language-server" ]
+auto-format = true
+
+[[language]]
+name = "markdown"
+language-servers = [ "dprint", "marksman", "markdown-oxide" ]
+auto-format = true

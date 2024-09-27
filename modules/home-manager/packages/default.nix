@@ -40,15 +40,12 @@
     remnote
 
     # Programming
-    nodejs_22
-    vscode zed-editor
-    lazygit woff2 ffmpeg_7
+    bun                    # NOTE Package Manager
+    vscode zed-editor      # NOTE Editors
+    lazygit woff2 ffmpeg_7 # NOTE Tools
 
     # Desing & Draw
     figma-linux krita
-
-    # Package Manager
-    #cargo #rpm
 
     # Dumb Stuff
     kittysay premid 

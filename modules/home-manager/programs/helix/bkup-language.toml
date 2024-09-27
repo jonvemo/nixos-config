@@ -1,0 +1,107 @@
+# NOTE
+# Deno está wapo pero no es posible de configurar opciones de lint desde Helix
+# Deno tiene de forma nativa dprint así que, de activarlo no es necesario dprint
+
+[[language]]
+name = "typescript"
+language-servers = [ "typescript-language-server", "tailwindcss-react", "eslint", "gpt", "emmet-ls", "dprint" ]
+# language-servers = [ "deno", "tailwindcss-react", "emmet-ls"]
+auto-format = true
+
+[[language]]
+name = "tsx"
+language-servers = [ "typescript-language-server", "tailwindcss-react", "eslint", "emmet-ls", "dprint"]
+# language-servers = [ "deno", "tailwindcss-react", "emmet-ls" ]
+auto-format = true
+
+[[language]]
+name = "jsx"
+language-servers = [ "typescript-language-server", "tailwindcss-react", "eslint", "emmet-ls", "dprint"]
+# language-servers = [ "deno", "tailwindcss-react", "emmet-ls" ]
+grammar = "javascript"
+auto-format = true
+
+[[language]]
+name = "javascript"
+language-servers = [ "typescript-language-server", "tailwindcss-react", "eslint", "gpt", "emmet-ls", "dprint"]
+# language-servers = [ "deno", "tailwindcss-react", "emmet-ls" ]
+auto-format = true
+
+[[language]]
+name = "json"
+language-servers = [ "vscode-json-language-server", "dprint"]
+# language-servers = [ "deno"]
+auto-format = true
+
+[language-server.vscode-json-language-server.config]
+json = { validate = { enable = true }, format = { enable = true } }
+provideFormatter = true
+
+[language-server.vscode-css-language-server.config]
+css = { validate = { enable = true } }
+scss = { validate = { enable = true } }
+less = { validate = { enable = true } }
+provideFormatter = true
+
+[[language]]
+name = "html"
+language-servers = [ "vscode-html-language-server", "tailwindcss-react", "emmet-ls", "dprint"]
+auto-format = false
+
+ 
+[[language]]
+name = "css"
+language-servers = [ "vscode-css-language-server", "tailwindcss-react", "emmet-ls", "dprint"]
+auto-format = false
+
+[[language]]
+name = "scss"
+language-servers = ["vscode-css-language-server", "dprint"]
+auto-format = true
+
+[[language]]
+name = "markdown"
+language-servers = ["marksman", "markdown-oxide", "dprint"]
+auto-format = true
+
+
+[language-server.vscode-html-language-server]
+args = ["--stdio"]
+command = "vscode-html-language-server"
+
+[language-server.vscode-css-language-server]
+args = ["--stdio"]
+command = "vscode-css-language-server"
+
+[language-server.gpt]
+command = "helix-gpt"
+
+[language-server.emmet-ls]
+args = ["--stdio"]
+command = "emmet-ls"
+
+# [language-server.deno-lsp]
+# args = ["lsp"]
+# command = "deno"
+
+[language-server.eslint]
+args = ["--stdio"]
+command = "vscode-eslint-language-server"
+
+[language-server.eslint.config]
+format = { enable = true }
+nodePath = ""
+quiet = false
+rulesCustomizations = []
+run = "onType"
+validate = "on"
+codeAction = { disableRuleComment = { enable = true, location = "separateLine" }, showDocumentation = { enable = false } }
+codeActionsOnSave = { mode = "all", "source.fixAll.eslint" = true }
+experimental = { }
+problems = { shortenToSingleLine = false }
+
+[language-server.tailwindcss-react]
+language-id = "typescriptreact"
+command = "tailwindcss-language-server"
+args = ["--stdio"]
+config = {}

@@ -88,6 +88,7 @@
         t = "touch";
 
         build = "sudo nixos-rebuild switch --flake /etc/nixos#";
+        bnh = "nh os switch --ask /etc/nixos";
 
         # Git
         g = "git";
