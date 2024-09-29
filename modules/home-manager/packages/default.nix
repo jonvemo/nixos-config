@@ -7,7 +7,7 @@
     hyprpaper hyprlock hypridle hyprcursor libnotify walker
 
     # Controls GUI
-    networkmanagerapplet myxer lact
+    myxer lact
     # Controls CTL
     brightnessctl playerctl grim slurp wl-clipboard # wf-recorder
 
