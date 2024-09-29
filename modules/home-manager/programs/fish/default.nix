@@ -52,7 +52,6 @@
         grbc = "git rebase --continue";                            # NOTE Continúa el proceso de rebase después de resolver conflictos
         grbi = "git rebase --interactive";                         # NOTE Inicia un rebase interactivo para editar, reordenar o combinar commits
 
-        grst = "git restore --staged";                             # NOTE Restaura archivos del área de preparación al área de trabajo (LOCAL/HEAD)
         gundo = "git reset HEAD~1 --mixed";                        # NOTE Revertirá todos los cambios de confirmación en el área local sin preparación, para que pueda realizar modificaciones y agregarlas al área de almacenamiento provisional (INDEX/STAGING)
         gpristine = "git reset --hard && git clean --force -dfx";  # NOTE Restaura el repositorio al estado del último commit y elimina archivos no rastreados
 
@@ -96,6 +95,8 @@
         gsw = "git switch";                      # NOTE Cambiar de rama
         gswc = "git switch --create";            # NOTE Crea una nueva rama y entra en ella
         gdelb = "git branch -D";                 # NOTE Borra una rama; gdel feat/add-popup
+
+        grst = "git restore --staged";           # NOTE Restaura archivos del área de preparación al área de trabajo (LOCAL/HEAD)
         
         gpbo = "git push -u origin";             # NOTE Pushea nueva rama
         gdone = "git push origin HEAD";          # NOTE Pushea los cambios

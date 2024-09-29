@@ -8,7 +8,23 @@
   
 
   # NOTE NixOS config
-  documentation.nixos.enable = false; # NOTE Documentation Package
+  documentation = {
+    enable = false;
+    
+    nixos.enable = false; # NOTE Documentation Package
+
+    dev.enable = false; # NOTE Add more information for “doc”, “info” and “man”
+    
+    doc.enable = false;
+    info.enable = false;
+    man = {
+      enable = false;
+      generateCaches = false;
+      man-db.enable = false;
+      mandoc.enable = false;
+    };
+    
+  };
   
   nixpkgs.config.allowUnfree = true; # NOTE For Steam
   
