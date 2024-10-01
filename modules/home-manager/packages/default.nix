@@ -34,7 +34,6 @@
 
     # Games & Web Stuff & Media
     lunar-client osu-lazer-bin
-    obs-studio
     spotube spotify
 
     # Learning

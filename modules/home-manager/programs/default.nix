@@ -11,5 +11,7 @@
     ./waybar
     ./yazi.nix
     ./git.nix
+
+    ./obs-studio.nix
   ];
 }
