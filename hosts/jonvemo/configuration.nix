@@ -130,8 +130,6 @@
 
   # NOTE Permisos y Configuración de Usuario
   # Es necesario configurar la contraseña con ‘passwd’
-  # Al habilitar el login de "ssdm" sin este tener configurado
-  # autologin será imposible de acceder
   users.users.jonvemo = {
     isNormalUser = true;
     description = "John Verdugo";
@@ -139,14 +137,13 @@
     shell = pkgs.fish;
     packages = with pkgs; [
       # PKGS
-
+      home-manager
+      kitty
     ];
     
   };
-    
-  # services.getty.autologinUser = "jonvemo";
-  
+      
   # NOTE Dont Change
-  system.stateVersion = "23.11"; # Did you read the comment?
+  system.stateVersion = "24.05"; # Did you read the comment?
 
 }
