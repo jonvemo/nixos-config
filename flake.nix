@@ -17,10 +17,6 @@
 
 		# Theme
 		stylix.url = "github:danth/stylix";
-
-		# APPs
-		helix.url = "github:helix-editor/helix";
-		zed.url = "github:zed-industries/zed";
 		
   };
 

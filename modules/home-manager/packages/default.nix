@@ -7,9 +7,10 @@
     hyprpaper hyprlock hypridle hyprcursor libnotify walker
 
     # Controls GUI
-    myxer lact
+    myxer kooha lact
     # Controls CTL
-    brightnessctl playerctl grim slurp wl-clipboard # wf-recorder
+    brightnessctl playerctl grim slurp wl-clipboard
+    ani-cli
 
     # Tools
     btop # gopsuinfo /* System Info */
