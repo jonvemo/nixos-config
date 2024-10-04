@@ -13,17 +13,24 @@
 
     shellAliases = {
         # sudo = "doas";
-        
-        flake = "cd /etc/nixos/ & sudo hx flake.nix";
-        flakeupdate = "sudo nix flake update";
-                
-        jconfig = "cd /etc/nixos/hosts/jonvemo & sudo hx configuration.nix";
-        jhome = "cd /etc/nixos/hosts/jonvemo & sudo hx home.nix";
 
-        npac = "cd /etc/nixos/modules/nixos/packages & sudo hx default.nix";
-        hpac = "cd /etc/nixos/modules/home-manager/packages & sudo hx default.nix";
+        clean = "nh clean all";
+        bnh = "nh os switch --ask /etc/nixos";
+
+        fbuild = "flakeupdate && bnh && clean";
+        cbuild = "bnh && clean";
+        
+        flake = "cd /etc/nixos/ && hx flake.nix";
+        flakeupdate = "nix flake update /etc/nixos";
+                
+        jconfig = "cd /etc/nixos/hosts/jonvemo && hx configuration.nix";
+        jhome = "cd /etc/nixos/hosts/jonvemo && hx home.nix";
+
+        npac = "cd /etc/nixos/modules/nixos/packages && hx default.nix";
+        hpac = "cd /etc/nixos/modules/home-manager/packages && hx default.nix";
 
         sd = "sudo hx default.nix";
+        d = "hx default.nix";
         b = "cd ..";
 
         # GH
@@ -78,17 +85,16 @@
         npro = "cd /etc/nixos/modules/nixos/programs";
         hpro = "cd /etc/nixos/modules/home-manager/programs";
 
-        wp = "cd Documents/Work/GitHub/Projects";
-        wpa = "cd Documents/Work/GitHub/Projects/Active";
-        wpd = "cd Documents/Work/GitHub/Projects/Default";
-        wps = "cd Documents/Work/GitHub/Projects/Study";
+        wp = "cd Documents/Work/GitHub/";
+        wpa = "cd Desktop/Github";
+        wpd = "cd Documents/Work/GitHub/Default";
+        wps = "cd Documents/Work/GitHub/Study";
 
         s = "sudo hx";      
         t = "touch";
 
         build = "sudo nixos-rebuild switch --flake /etc/nixos#";
-        bnh = "nh os switch --ask /etc/nixos";
-
+        
         # Git
         g = "git";
         gcm = "git commit -m";

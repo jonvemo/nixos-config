@@ -11,8 +11,8 @@
       
   };
 
-  # DNS resolver
-  resolved.enable = true;
+    # DNS resolver
+    resolved.enable = true;
   
   };
   

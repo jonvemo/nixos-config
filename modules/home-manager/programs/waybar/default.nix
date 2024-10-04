@@ -6,8 +6,6 @@
 
     settings = {
       mainBar = {
-#        layer = "top";
-#        position = "top";
         width = 1358;
         height = 34;
         spacing = 4;

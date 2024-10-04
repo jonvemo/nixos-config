@@ -10,11 +10,6 @@
     pathsToLink = [
       "/share/nautilus-python/extensions"
     ];
-
-    systemPackages = with pkgs; [
-      nautilus
-      nautilus-python
-    ];
     
   };
   

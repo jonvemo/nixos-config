@@ -3,56 +3,52 @@
   font-size: 12px;
 }
 
-window#waybar {
-  background-color: transparent;
+#waybar {
   border: 0;
-  border-radius: 0 0 8px 8px;
-}
-
-window#waybar #window {
+  background-color: transparent;
   box-shadow: none;
 }
 
-#workspaces {
-  background-color: transparent;
-  padding: 0;
+.modules-left, .modules-center, .modules-right {
   margin: 4px 0 0 0;
+  border-radius: 16px;
+}
+
+.modules-left label, .modules-center label, .modules-right label, #tray {
+  padding: 0 12px;
+  border-radius: 8px;
+  background-color: #E3E6EE;
+  color: #1C1E26;
+}
+
+.modules-center #workspaces label {
+  padding: 0;
+  background-color: transparent;
 }
 
 #workspaces button {
+  padding: 0 12px;
+  margin-left: 4px;
+  border: none;
   background-color: #E3E6EE;
-  color: #1C1E26;
-  min-width: 20px;
-  padding: 2px 12px;
-  margin: 0 2px;
-  border-radius: 8px;
 }
 
-#workspaces button.active {
-  background-color: #cbced0;
+#workspaces button:hover, #workspaces button.active {
+  background-color: #CBCED0;
 }
 
 #tray {
   background-color: #1C1E26;
-  min-width: 8px;
-  padding: 2px 12px;
-  margin: 4px 0 0 0;
-  border-radius: 8px;
 }
 
-#battery,
-#pulseaudio,
-#clock,
-#memory,
-#cpu,
-#temperature,
-#network {
-  background-color: #E3E6EE;
-  min-width: 8px;
-  padding: 0 12px;
-  margin: 4px 0 0 0;
-  border-radius: 8px;
-  color: #1C1E26;
+#tray menu {
+  padding: 8px;
+}
+
+#tray menu label {
+  padding: 2px 0;
+  background-color: transparent;
+  color: #E3E6EE;
 }
 
 #battery.warning {
@@ -71,15 +67,8 @@ window#waybar #window {
   background-color: #e95678;
 }
 
-#custom-media {
-  background-color: #E3E6EE;
-  padding: 0 12px;
-  margin: 4px 0 0 0;
-  border-radius: 8px;
-  color: #1C1E26;
-}
-
 tooltip {
+  padding: 8px;
   background: #2E303E;
   border: none;
   border-radius: 8px;

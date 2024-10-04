@@ -18,8 +18,7 @@
       tab_bar_style = "powerline";
       tab_activity_symbol = "😼";
       tab_title_template = " {title[title.rfind('/')+1:]} {tab.active_exe} {activity_symbol}";
-      # action_alias = "launch_tab launch --type=tab --cwd=current"
-      
+      background_blur = "8";
     };
 
     keybindings = {

@@ -1,4 +1,3 @@
-{ pkgs, ... }:
 {
   programs.fastfetch = {
     enable = true;
@@ -27,6 +26,10 @@
         {
           type = "shell";
           key = "   Shell";
+        }
+        {
+          type = "packages";
+          key = "   Packages";
         }
         "break"
         {
