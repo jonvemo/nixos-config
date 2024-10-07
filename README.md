@@ -22,16 +22,21 @@ sudo nixos-rebuild switch
 git clone https://github.com/jonvemo/nixos-config.git
 ```
 
-4. Copy the files except for `hardware-configuration.nix` to /etc/nixos/
+4. Copy the files except for `hardware-configuration.nix` to /etc/nixos/ and move the one created by NixOS to /hosts/USER/
 
-5. Modify the user in `configuration.nix` and `flake.nix`
+5. Modify the user in `configuration.nix`, `flake.nix`, `hosts/USER/home.nix` and `modules/home-manager/settings/gtk.nix`
 
 ## Preview
-![Screenshot 2024 10-01 at 20:20:12](https://github.com/user-attachments/assets/c7b06249-0757-42e9-a68a-e0894c57e3c7)
-![Screenshot 2024 10-01 at 20:21:01](https://github.com/user-attachments/assets/833f54c0-cbf0-4f7e-aaf6-65efcb0a1940)
-![Screenshot 2024 10-01 at 20:21:38](https://github.com/user-attachments/assets/af5dfc0e-3563-409e-b3e0-7b91d3aef3fa)
-![Screenshot 2024 10-01 at 20:22:16](https://github.com/user-attachments/assets/2ad7387a-e448-41a7-90ef-9e6ccccac73e)
-
+<table>
+    <tr>
+        <td><img src="https://github.com/user-attachments/assets/c7b06249-0757-42e9-a68a-e0894c57e3c7" width="500" height="281"/></td>
+        <td><img src="https://github.com/user-attachments/assets/af77ce40-51f4-477d-a6a7-a29064adab07" width="500" height="281"/></td>
+    </tr>
+    <tr>
+        <td><img src="https://github.com/user-attachments/assets/fcf2bf68-2de9-41b8-9957-6039802179da" width="500" height="281"/></td>
+        <td><img src="https://github.com/user-attachments/assets/c3e76b21-3c72-41ba-b5fb-cfa62f77daa9" width="500" height="281"/></td>
+    </tr>
+</table>
 
 ## Hyprland
 [Hyprland Config](https://github.com/jonvemo/config-hypr)
@@ -43,13 +48,15 @@ git clone https://github.com/jonvemo/nixos-config.git
 * FileManager: Nautilus
 * Terminal: Kitty
 * Shell: Fish
-* Editor: Helix, Zed, and VSCode
+* Editor: Helix and Zed
 * Volume: Myxer
 * ScreenRecorder: Kooha
 * Cloud: Cozy Drive
 
+* Browser: Microsoft Edge
 * Video: Celluloid
 * Music: Gapples
 * Image Viewer: Loupe
+* Notes: Sticky Notes
 
 And more...
