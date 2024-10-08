@@ -1,9 +1,5 @@
 {
-  nixpkgs.config = {
-    allowBroken = false; # NOTE Minecraft
-    allowUnsupportedSystem = false; # NOTE ArcBrowser
-    allowUnfree = true;
-  };
+  nixpkgs.config.allowUnfree = true;
   
   home = {
     username = "jonvemo";

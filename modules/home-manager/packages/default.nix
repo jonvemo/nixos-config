@@ -22,7 +22,7 @@
     
     gnome-sound-recorder gnome-calculator gnome-connections
     file-roller snapshot tracker-miners /* Herramienta de Indexación de Gnome, sirve para Nautilus y Video Player principalmente */
-    nautilus nautilus-python
+    nautilus nautilus-python bluetuith
     newsflash 
 
     # Browsers

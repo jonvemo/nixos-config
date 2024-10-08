@@ -86,7 +86,7 @@
         hpro = "cd /etc/nixos/modules/home-manager/programs";
 
         wp = "cd Documents/Work/GitHub/";
-        wpa = "cd Desktop/Github";
+        wpa = "cd Desktop/GitHub";
         wpd = "cd Documents/Work/GitHub/Default";
         wps = "cd Documents/Work/GitHub/Study";
 
