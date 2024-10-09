@@ -7,11 +7,9 @@
   
   programs = {
   
-    hyprland = {
-      enable = true;
-      xwayland.enable = true; # NOTE Es requerido para Steam, consume cerca de 87MB, ahora 102MB
+    hyprland.enable = true;
 
-    };
+    xwayland.enable = true; # NOTE Es requerido para Steam, consume cerca de 87MB, ahora 102MB
 
     steam = {
       enable = true;
