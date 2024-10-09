@@ -26,9 +26,14 @@
 
 		# NixOS: Jonvemo
 		nixosConfigurations = {
-			jonvemo = nixpkgs.lib.nixosSystem {
+			jonvemo = nixpkgs.lib.nixosSystem rec {
 				system = "x86_64-linux";
-			
+
+				pkgs = import nixpkgs {
+        	inherit system;
+          config.allowUnfree = true;
+        };
+						
 				modules = [
 					## NixOS
 					./hosts/jonvemo/configuration.nix
@@ -46,6 +51,7 @@
 								./hosts/jonvemo/home.nix
 								./modules/home-manager
 			        ];
+							
 						};
 					}
 				

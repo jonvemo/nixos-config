@@ -14,7 +14,6 @@
     nixos.enable = false; # NOTE Documentation Package
 
     dev.enable = false; # NOTE Add more information for “doc”, “info” and “man”
-    
     doc.enable = false;
     info.enable = false;
     man = {
@@ -26,26 +25,15 @@
     
   };
   
-  nixpkgs.config.allowUnfree = true; # NOTE For Steam
   
 	nix = {
-    settings = {
-      experimental-features = [ "nix-command" "flakes" ];
-      # auto-optimise-store = true;
-    };
+    settings.experimental-features = [ "nix-command" "flakes" ];
     
     # NOTE Más información: https://nixos.wiki/wiki/Storage_optimization
     optimise = {
       automatic = true;
       dates = [ "2:00" ];
     };
-
-    # NOTE Gestionado por NH program
-    # gc = {
-    #   automatic = true;
-    #   dates = "weekly";
-    #   options = "--delete-older-than 4d";
-    # };
     
   };
   
@@ -53,7 +41,6 @@
   # NOTE Bootloader config
   boot = {
     tmp.cleanOnBoot = true;
-    # supportedFilesystems = ["ntfs"]; # NOTE Windows
     
     loader = {
       systemd-boot.enable = true;
@@ -128,22 +115,16 @@
   };
   
 
-  # NOTE Permisos y Configuración de Usuario
-  # Es necesario configurar la contraseña con ‘passwd’
+  # NOTE User Permissions and Configuration
   users.users.jonvemo = {
     isNormalUser = true;
     description = "John Verdugo";
     extraGroups = [ "wheel" ];
     shell = pkgs.fish;
-    packages = with pkgs; [
-      # PKGS
-      home-manager
-      kitty
-    ];
     
   };
       
-  # NOTE Dont Change
+  # NOTE Don't Change
   system.stateVersion = "24.05"; # Did you read the comment?
 
 }

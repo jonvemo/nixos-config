@@ -1,6 +1,4 @@
-{
-  nixpkgs.config.allowUnfree = true;
-  
+{  
   home = {
     username = "jonvemo";
     homeDirectory = "/home/jonvemo";
@@ -10,5 +8,4 @@
 
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
-
 }
