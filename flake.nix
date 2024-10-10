@@ -5,10 +5,6 @@
 		# NixOS
 	  nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
 
-		# Window Manager
-		nixpkgs-wayland.url = "github:nix-community/nixpkgs-wayland";
-    hyprland.url = "github:hyprwm/Hyprland";
-
 		# HomeManager
 		home-manager = {
 			url = "github:nix-community/home-manager";
@@ -17,11 +13,10 @@
 
 		# Theme
 		stylix.url = "github:danth/stylix";
-		
+
   };
 
-	outputs = inputs@{ nixpkgs, home-manager, stylix, ... }:
-	# outputs = { nixpkgs, ... } @ inputs:
+	outputs = { nixpkgs, ... } @ inputs:
 	{
 
 		# NixOS: Jonvemo

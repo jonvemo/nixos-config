@@ -2,15 +2,15 @@
   imports = [
     ./fish
     ./starship
+    ./fastfetch.nix
     
     ./terminal
     
     ./helix
-    ./fastfetch.nix
+    ./git.nix
 
     ./waybar
     ./yazi.nix
-    ./git.nix
 
     ./obs-studio.nix
   ];

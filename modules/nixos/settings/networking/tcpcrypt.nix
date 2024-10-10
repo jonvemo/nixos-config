@@ -1,0 +1,3 @@
+{
+  networking.tcpcrypt.enable = true;
+}

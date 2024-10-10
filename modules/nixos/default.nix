@@ -1,5 +1,6 @@
 {
   imports = [
+    ./system
     ./hardware
     ./services
     ./security

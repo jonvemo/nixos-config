@@ -1,6 +1,6 @@
 {
   imports = [
-    ./networking.nix
+    ./networking
     ./time.nix
     ./locale.nix
     ./font.nix

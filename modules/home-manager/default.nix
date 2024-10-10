@@ -4,6 +4,5 @@
     ./programs
     ./services
     ./settings
-    ./vars
   ];
 }
