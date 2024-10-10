@@ -6,7 +6,6 @@
     ./security
     ./settings
     ./programs
-    ./packages
     ./vars
   ];
 

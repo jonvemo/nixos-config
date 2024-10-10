@@ -6,10 +6,10 @@
     # Hyprland
     hyprpaper hyprlock hypridle hyprcursor
     
-    # GUI & CTL
+    # GUI & CTL & TUI
     myxer kooha lact
     brightnessctl playerctl grim slurp wl-clipboard cliphist
-    ani-cli
+    ani-cli bluetuith impala
 
     # Tools
     btop tagger /* Music Tagger */ parabolic /* Download Music */
@@ -21,9 +21,8 @@
     cozy-drive
     
     gnome-sound-recorder gnome-calculator gnome-connections
-    file-roller snapshot tracker-miners /* Herramienta de Indexación de Gnome, sirve para Nautilus y Video Player principalmente */
-    nautilus nautilus-python bluetuith
-    newsflash 
+    nautilus nautilus-python tracker-miners /* Herramienta de Indexación de Gnome, sirve para Nautilus y Video Player principalmente */
+    file-roller snapshot newsflash
 
     # Browsers & Chatting
     microsoft-edge # chromium # google-chrome # vivaldi # brave

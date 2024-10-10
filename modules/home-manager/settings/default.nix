@@ -1,9 +1,8 @@
 {
   imports = [
-    ./font.nix
-    ./gtk.nix
-    ./stylix.nix
-
-    ./xdg.nix
+    ./xdg
+    ./font
+    ./gtk
+    ./stylix
   ];
 }

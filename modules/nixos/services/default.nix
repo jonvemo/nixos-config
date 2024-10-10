@@ -1,8 +1,8 @@
 {
   imports = [
-    ./sound.nix
-    ./login.nix
-    ./trash.nix
-    # ./flatpak.nix
+    ./sound
+    ./login
+    ./trash
+    # ./flatpak
   ];
 }

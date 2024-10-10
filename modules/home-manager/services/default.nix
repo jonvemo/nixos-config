@@ -1,7 +1,7 @@
 {
   imports = [
-    ./mpris-proxy.nix
-    ./mako.nix
-    ./hyprpaper.nix
+    ./mpris-proxy
+    ./mako
+    ./hyprpaper
   ];
 }
