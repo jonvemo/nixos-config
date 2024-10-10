@@ -25,21 +25,18 @@
     nautilus nautilus-python bluetuith
     newsflash 
 
-    # Browsers
+    # Browsers & Chatting
     microsoft-edge # chromium # google-chrome # vivaldi # brave
-
-    # Chatting
     vesktop
 
     # Games & Web Stuff & Media
     lunar-client osu-lazer-bin
-    spotube spotify
+    spotube
 
     # Learning
     remnote
 
     # Programming
-    bun                    # NOTE Package Manager
     zed-editor             # NOTE Editors
     lazygit woff2 ffmpeg_7 # NOTE Tools
 

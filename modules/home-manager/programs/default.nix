@@ -13,5 +13,6 @@
     ./yazi.nix
 
     ./obs-studio.nix
+    ./bun.nix
   ];
 }
