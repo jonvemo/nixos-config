@@ -10,9 +10,6 @@
         height = 34;
         spacing = 4;
 
-#        start_hidden = true;
-        reload_style_on_change = true;
-
         modules-left = [ "clock" "pulseaudio" "battery" "custom/media"];
         modules-center = [ "hyprland/workspaces" ];
         modules-right = [ "tray" "memory" "cpu" "temperature" ];
@@ -171,5 +168,5 @@
     
   };
 
-  home.file.".config/waybar/style.css".source = ./style.css;
+  xdg.configFile."waybar/style.css".source = ./style.css;
 }

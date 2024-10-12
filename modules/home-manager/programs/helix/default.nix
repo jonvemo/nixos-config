@@ -44,22 +44,20 @@
 
     extraPackages = with pkgs; [
       helix-gpt
-      emmet-language-server # emmet-ls
+      emmet-language-server
       biome dprint
       marksman markdown-oxide
       
-      nodePackages.live-server # mkcert
+      nodePackages.live-server
       nodePackages.vscode-langservers-extracted
       
-      # nodePackages.typescript-language-server
       # tailwindcss-language-server
-      
-      # deno # NOTE typescript-language-server & dprint
+      # deno
       
     ];
     
   };
 
-  home.file.".config/helix/languages.toml".source = ./languages.toml;
-
+  xdg.configFile."helix/languages.toml".source = ./languages.toml;
+  
 }
