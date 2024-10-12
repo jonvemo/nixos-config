@@ -16,16 +16,12 @@ inputs.nixpkgs.lib.nixosSystem rec {
     
     {
       home-manager = {
-        extraSpecialArgs = { inherit inputs; };
-        
         useGlobalPkgs = true;
         useUserPackages = true;
-        
         users.jonvemo.imports = [
           ./home.nix
           ../../modules/home-manager
         ];
-        
       };
     }
     

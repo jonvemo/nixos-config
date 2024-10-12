@@ -9,10 +9,12 @@
     ./helix
     ./git
 
+    ./hyprland
+    ./hyprlock
     ./waybar
     ./yazi
 
-    ./obs
     ./bun
+    ./obs
   ];
 }

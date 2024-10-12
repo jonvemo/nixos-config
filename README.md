@@ -24,7 +24,7 @@ git clone https://github.com/jonvemo/nixos-config.git
 
 4. Copy the files except for `hardware-configuration.nix` to /etc/nixos/ and move the one created by NixOS to /hosts/USER/
 
-5. Modify the user in `configuration.nix`, `flake.nix`, `hosts/USER/home.nix` and `modules/home-manager/settings/gtk.nix`
+5. Modify the user in `configuration.nix`, `flake.nix`, `hosts/USER/home.nix`, `hosts/USER/default.nix` and `modules/home-manager/settings/gtk.nix`
 
 ## Preview
 <table>
@@ -37,9 +37,6 @@ git clone https://github.com/jonvemo/nixos-config.git
         <td><img src="https://github.com/user-attachments/assets/c3e76b21-3c72-41ba-b5fb-cfa62f77daa9" width="500" height="281"/></td>
     </tr>
 </table>
-
-## Hyprland
-[Hyprland Config](https://github.com/jonvemo/config-hypr)
 
 ## APPs
 * OS: NixOS Unstable

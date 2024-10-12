@@ -3,5 +3,6 @@
     ./mpris-proxy
     ./mako
     ./hyprpaper
+    ./hypridle
   ];
 }
