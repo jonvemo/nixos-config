@@ -1,7 +1,8 @@
 #!/usr/bin/env fish
 
-set name $argv[1]
-mkdir $name
-cd $name
-touch default.nix
-hx default.nix
+function create_module
+    set -l name $argv[1]
+    mkdir $name && cd $name && touch default.nix && hx default.nix
+end
+
+create_module $argv[1]
