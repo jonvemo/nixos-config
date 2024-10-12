@@ -5,18 +5,15 @@
   
   stylix = {
     enable = true;
-    homeManagerIntegration.autoImport = true;
-    homeManagerIntegration.followSystem = true;
     base16Scheme = "${pkgs.base16-schemes}/share/themes/horizon-terminal-dark.yaml";
 
     # Misc
     # cursor = {
-    # NOTE Sólo admite cursor acompañado con el Package
-    # Actualmente gestionado por GTK para elementos personalizados
-    # Incompatible para ser gestionado por HomeManager, el cual también requiere Package
+      # NOTE Sólo admite cursor acompañado con el Package
+      # Actualmente gestionado por GTK para elementos personalizados
       
-    #   package = pkgs.qogir-icon-theme;
-    #   name = "Qogir Cursors";
+      # package = pkgs.qogir-icon-theme;
+      # name = "Qogir Cursors";
 
     # };
     
@@ -32,14 +29,6 @@
          package = pkgs.nerdfonts.override { fonts = ["JetBrainsMono"]; };
          name = "JetBrainsMono Nerd Font";
       };
-      # sansSerif = {
-      #   packages = pkgs.noto-fonts;
-      #   name = "Noto Sans";
-      # };
-      # serif = {
-      #   package = pkgs.noto-fonts;
-      #   name = "Noto Serif";
-      # };
 
       sizes = {
         applications = 12;
