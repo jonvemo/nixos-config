@@ -35,7 +35,7 @@ slider {
 #search {
   padding: 8px 16px;
   background: @headerbar_bg_color;
-  border-radius: 16px;
+  border-radius: 32px;
 }
 
 
@@ -46,7 +46,7 @@ slider {
 
 #typeahead > *, #input > * {
   color: @headerbar_fg_color;
-  margin-right: 8px;
+  margin-right: 16px;
 }
 
 #spinner {

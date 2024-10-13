@@ -1,19 +1,20 @@
 #!/usr/bin/env fish
 
-# Nombre de la carpeta para guardar los archivos comprimidos
-set FOLDER fonts
+function compress_fonts
+    set -l FOLDER fonts
 
-# Crea la carpeta si no existe
-mkdir -p $FOLDER
+    # Create the folder if it doesn't exist
+    mkdir -p $FOLDER
 
-# Encuentra todos los archivos en la carpeta actual con la extensión .ttff
-for FILE in *.ttf
-    # Aplica woff2_compress al archivo
-    woff2_compress "$FILE"
+    # Find all files in the current directory with the .ttf extension
+    for FILE in *.ttf
+        # Apply woff2_compress to the file
+        woff2_compress "$FILE"
 
-    # Cambia la extensión del archivo a .woff2
-    set FILE_COMPRESSED (string replace ".ttf" ".woff2" -- $FILE)
+        # Change the file extension to .woff2
+        set FILE_COMPRESSED (string replace ".ttf" ".woff2" -- $FILE)
 
-    # Mueve el archivo comprimido a la carpeta destino
-    mv "$FILE_COMPRESSED" $FOLDER
+        # Move the compressed file to the destination folder
+        mv "$FILE_COMPRESSED" $FOLDER
+    end
 end
