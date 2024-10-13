@@ -1,0 +1,101 @@
+#window,
+#box,
+#search,
+#password,
+#input,
+#typeahead,
+#spinner,
+#list,
+child,
+scrollbar,
+slider,
+#item,
+#text,
+#label,
+#sub,
+#activationlabel {
+  all: unset;
+}
+
+#box {
+  background: @window_bg_color;
+  padding: 16px;
+  border-radius: 8px;
+}
+
+scrollbar {
+  padding-left: 8px;
+}
+
+slider {
+  min-width: 2px;
+  background: @scrollbar_outline_color;
+}
+
+#search {
+  padding: 8px 16px;
+  background: @headerbar_bg_color;
+  border-radius: 16px;
+}
+
+
+#input > *:last-child,
+#typeahead > *:last-child {
+  color: @headerbar_fg_color;
+}
+
+#typeahead > *, #input > * {
+  color: @headerbar_fg_color;
+  margin-right: 8px;
+}
+
+#spinner {
+  color: @headerbar_fg_color;
+}
+
+#list {
+}
+
+child {
+  border-radius: 8px;
+  color: @card_fg_color;
+  padding: 4px 8px;
+}
+
+child:selected,
+child:hover {
+  background: @shade_color;
+}
+
+#item {
+}
+
+#icon {
+}
+
+#text {
+}
+
+#label {
+  font-weight: bold;
+  color: @card_fg_color;
+}
+
+#sub {
+  opacity: 0.5;
+  color: @card_fg_color;
+}
+
+#activationlabel {
+  opacity: 0.5;
+}
+.activation #activationlabel {
+  font-weight: bold;
+  color: @accent_bg_color;
+  opacity: 1;
+}
+
+.activation #text,
+.activation #icon,
+.activation #search {
+}

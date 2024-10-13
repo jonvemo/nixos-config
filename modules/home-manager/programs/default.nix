@@ -16,5 +16,6 @@
 
     ./bun
     ./obs
+    ./walker
   ];
 }
