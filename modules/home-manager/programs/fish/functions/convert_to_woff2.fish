@@ -1,6 +1,6 @@
 #!/usr/bin/env fish
 
-function compress_fonts
+function convert_to_woff2
     set -l FOLDER fonts
 
     # Create the folder if it doesn't exist

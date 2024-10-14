@@ -39,7 +39,7 @@
       
     };
 
-    image = ./wallpapers/TM2.png;
+    image = ./wallpapers/A1.png;
 #    image = config.lib.stylix.pixel "base0A";
 #    image = pkgs.fetchurl {
 #      url = "https://www.pixelstalk.net/wp-content/uploads/2016/05/Epic-Anime-Awesome-Wallpapers.jpg";

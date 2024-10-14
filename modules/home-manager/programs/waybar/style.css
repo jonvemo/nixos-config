@@ -17,8 +17,8 @@
 .modules-left label, .modules-center label, .modules-right label, #tray {
   padding: 0 12px;
   border-radius: 8px;
-  background-color: #E3E6EE;
-  color: #1C1E26;
+  background-color: @card_fg_color;
+  color: @card_bg_color;
 }
 
 .modules-center #workspaces label {
@@ -30,15 +30,19 @@
   padding: 0 12px;
   margin-left: 4px;
   border: none;
-  background-color: #E3E6EE;
+  background-color: @card_fg_color;
 }
 
 #workspaces button:hover, #workspaces button.active {
-  background-color: #CBCED0;
+  background-color: @view_bg_color;
+}
+
+#workspaces button:hover label, #workspaces button.active label {
+  color: @view_fg_color;
 }
 
 #tray {
-  background-color: #1C1E26;
+  background-color: @view_bg_color;
 }
 
 #tray menu {
@@ -48,33 +52,29 @@
 #tray menu label {
   padding: 2px 0;
   background-color: transparent;
-  color: #E3E6EE;
-}
-
-#battery.warning {
-  background-color: #fac29a;
-}
-
-#battery.critical {
-  background-color: #e95678;
+  color: @view_fg_color;
 }
 
 #battery.charging {
-  background-color: #29D398;
+  background-color: @green_1;
 }
 
-#temperature.critical {
-  background-color: #e95678;
+#battery.warning {
+  background-color: @yellow_1;
+}
+
+#battery.critical, #temperature.critical {
+  background-color: @red_1;
 }
 
 tooltip {
   padding: 8px;
-  background: #2E303E;
+  background: @card_bg_color;
   border: none;
   border-radius: 8px;
 }
 
 tooltip label {
-  color: #E3E6EE;
+  color: @card_fg_color;
   text-shadow: none;
 }

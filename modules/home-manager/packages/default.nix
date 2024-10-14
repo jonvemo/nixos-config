@@ -29,7 +29,7 @@
     vesktop
 
     # Games & Web Stuff & Media
-    lunar-client osu-lazer-bin
+    lunar-client osu-lazer-bin r2modman /* Mod fot Lethal Company */
     spotube
 
     # Learning

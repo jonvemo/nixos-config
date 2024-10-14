@@ -28,7 +28,7 @@
                                   "days" =       "<span color='#cbced0'><b>{}</b></span>";
                                   "weeks" =      "<span color='#26bbd9'><b>W{}</b></span>";
                                   "weekdays" =   "<span color='#fab795'><b>{}</b></span>";
-                                  "today" =      "<span color='#e95678'><b><u>{}</u></b></span>";
+                                  "today" =      "<span color='#e95678'><b>{}</b></span>";
                                   };
                         };
             "actions" =  {
@@ -122,7 +122,7 @@
             "charging" = ["󰢟" "󰢜" "󰂆" "󰂇" "󰂈" "󰢝" "󰂉" "󰢞" "󰂊" "󰂋" "󰂅" ];
           };
 
-          "tooltip-format" = "{capacity}% \n{timeTo} \nHealth: {health}";
+          "tooltip-format" = "{timeTo} \nHealth {health} \nBattery {capacity}%";
 
           "states" = {
             "warning" = 40;

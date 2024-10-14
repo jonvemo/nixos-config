@@ -33,7 +33,7 @@ slider {
 }
 
 #search {
-  padding: 8px 16px;
+  padding: 4px 16px;
   background: @headerbar_bg_color;
   border-radius: 32px;
 }
@@ -87,10 +87,10 @@ child:hover {
 }
 
 #activationlabel {
+  font-weight: bold;
   opacity: 0.5;
 }
 .activation #activationlabel {
-  font-weight: bold;
   color: @accent_bg_color;
   opacity: 1;
 }
