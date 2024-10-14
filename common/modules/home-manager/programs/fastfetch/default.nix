@@ -4,7 +4,7 @@
     settings = {
       logo = {
         # source = "nixos";
-        source = /etc/nixos/modules/nixos/settings/stylix/wallpapers/TM1.png;
+        source = /etc/nixos/common/modules/nixos/settings/stylix/wallpapers/TM1.png;
         type = "kitty-direct";
         width = 48;
         height = 22;
