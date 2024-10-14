@@ -17,12 +17,14 @@
     
       flake = "cd /etc/nixos/ && hx flake.nix";
       flakeupdate = "nix flake update /etc/nixos";
-            
-      jconfig = "cd /etc/nixos/hosts/jonvemo && hx configuration.nix";
-      jhome = "cd /etc/nixos/hosts/jonvemo && hx home.nix";
+      
+      config = "cd /etc/nixos/hosts && hx configuration.nix";
+    
+      npac = "cd /etc/nixos/common/modules/nixos/packages && hx default.nix";
+      hpac = "cd /etc/nixos/common/modules/home-manager/packages && hx default.nix";
 
-      npac = "cd /etc/nixos/modules/nixos/packages && hx default.nix";
-      hpac = "cd /etc/nixos/modules/home-manager/packages && hx default.nix";
+      jhome = "cd /etc/nixos/hosts/jonvemo && hx home.nix";
+      jhpac = "cd /etc/nixos/hosts/jonvemo/modules/packages && hx default.nix";
 
       sd = "sudo hx default.nix";
       d = "hx default.nix";
@@ -70,11 +72,14 @@
       };
 
       shellAbbrs = {
-        n = "cd /etc/nixos/modules/nixos/";
-        h = "cd /etc/nixos/modules/home-manager/";
+        n = "cd /etc/nixos/common/modules/nixos/";
+        h = "cd /etc/nixos/common/modules/home-manager/";
 
-        npro = "cd /etc/nixos/modules/nixos/programs/";
-        hpro = "cd /etc/nixos/modules/home-manager/programs/";
+        npro = "cd /etc/nixos/common/modules/nixos/programs/";
+        hpro = "cd /etc/nixos/common/modules/home-manager/programs/";
+
+        jnpro = "cd /etc/nixos/hosts/jonvemo/modules/programs/";
+        jhpro = "cd /etc/nixos/hosts/jonvemo/modules/programs/";
 
         wp = "cd Documents/Work/GitHub/";
         wpa = "cd Desktop/GitHub/";
