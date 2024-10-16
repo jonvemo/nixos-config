@@ -55,16 +55,16 @@
   color: @view_fg_color;
 }
 
-#battery.charging {
-  background-color: @green_1;
-}
-
 #battery.warning {
   background-color: @yellow_1;
 }
 
 #battery.critical, #temperature.critical {
   background-color: @red_1;
+}
+
+#battery.charging {
+  background-color: @green_1;
 }
 
 tooltip {
