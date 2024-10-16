@@ -12,32 +12,32 @@
 
         modules-left = [ "custom/media" ];
         modules-center = [ "hyprland/workspaces" ];
-        modules-right = [ "tray" "clock" "pulseaudio" "network" "battery" "temperature" ];
+        modules-right = [ "tray" "clock" "pulseaudio" "network" "bluetooth" "battery" "temperature" ];
 
         "clock" = {
-            "format" = "{:%I:%M %p}";
-            "format-alt" = "{:%A, %B %d. %Y}";
-            "tooltip-format" = "<tt>{calendar}</tt>";
-            "calendar" = {
-                        "mode"          = "month";
-                        "mode-mon-col"  = 3;
-                        "weeks-pos"     = "right";
-                        "on-scroll"     = 1;
-                        "format" = {
-                                  "months" =     "<span color='#e3e6ee'><b>{}</b></span>";
-                                  "days" =       "<span color='#cbced0'><b>{}</b></span>";
-                                  "weeks" =      "<span color='#26bbd9'><b>W{}</b></span>";
-                                  "weekdays" =   "<span color='#fab795'><b>{}</b></span>";
-                                  "today" =      "<span color='#e95678'><b>{}</b></span>";
-                                  };
-                        };
-            "actions" =  {
-                        "on-click-right" = "mode";
-                        "on-click-forward" = "tz_up";
-                        "on-click-backward" = "tz_down";
-                        "on-scroll-up" = "shift_up";
-                        "on-scroll-down" = "shift_down";
-                        };
+          "format" = "{:%I:%M %p}";
+          "format-alt" = "{:%A, %B %d. %Y}";
+          "tooltip-format" = "<tt>{calendar}</tt>";
+          "calendar" = {
+            "mode"          = "month";
+            "mode-mon-col"  = 3;
+            "weeks-pos"     = "right";
+            "on-scroll"     = 1;
+            "format" = {
+              "months" =     "<span color='#e3e6ee'><b>{}</b></span>";
+              "days" =       "<span color='#cbced0'><b>{}</b></span>";
+              "weeks" =      "<span color='#26bbd9'><b>W{}</b></span>";
+              "weekdays" =   "<span color='#fab795'><b>{}</b></span>";
+              "today" =      "<span color='#e95678'><b>{}</b></span>";
+            };
+          };
+          "actions" =  {
+            "on-click-right" = "mode";
+            "on-click-forward" = "tz_up";
+            "on-click-backward" = "tz_down";
+            "on-scroll-up" = "shift_up";
+            "on-scroll-down" = "shift_down";
+          };
         };
 
         "hyprland/workspaces" = {
@@ -88,8 +88,8 @@
           "max-length" = 14;
           "exec" = "playerctl -a metadata --format '{\"text\": \"{{artist}}\", \"tooltip\": \"{{artist}} - {{markup_escape(title)}} {{album}}\", \"alt\": \"{{status}}\", \"class\": \"{{status}}\"}' -F";
           "on-click" = "playerctl play-pause";
-          "on-double-click" = "playerctl next";
-          "on-triple-click" = "playerctl previous";
+          "on-double-click" = "playerctl previous";
+          "on-click-right" = "playerctl next";
         };
 
         "tray" =  {
@@ -97,15 +97,24 @@
           "spacing" = 8;
         };
 
+        "bluetooth" = {
+          "format" = "";
+        	"format-disabled" = "";
+        	"format-connected" = "";
+        	"tooltip-format" = "{controller_alias}\t{controller_address}";
+        	"tooltip-format-connected" = "{controller_alias}\t{controller_address}\n\n{device_enumerate}";
+        	"tooltip-format-enumerate-connected" = "{device_alias}\t{device_address}";
+          "on-click" = "kitty bluetuith";
+        };
+
         "network" = {
           "format-wifi" = "{icon} ";
           "format-ethernet" = " {ifname}: {ipaddr}/{cidr}";
           "format-icons" = ["󰤯" "󰤟" "󰤢" "󰤥" "󰤨"];
           "format-disconnected" = "󰖪";
-          "format-alt" = "󱛇";
           "tooltip-format" = "{essid}";
-          # "max-length" = 6;
           "interval" = "10";
+          "on-click" = "kitty impala";
         };
 
         "battery" = {
@@ -118,8 +127,8 @@
           "tooltip-format" = "Battery {capacity}% \n{timeTo} \nHealth: {health}";
 
           "states" = {
-            "warning" = 40;
-            "critical" = 25;
+            "warning" = 30;
+            "critical" = 15;
           };
           
         };
@@ -152,5 +161,5 @@
     
   };
 
-  home.file.".config/waybar/style.css".source = ./style.css;
+  xdg.configFile."waybar/style.css".source = ./style.css;
 }
