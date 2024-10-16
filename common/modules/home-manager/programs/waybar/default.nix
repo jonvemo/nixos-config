@@ -1,5 +1,3 @@
-{ config, pkgs, ...}:
-
 {
   programs.waybar = {
     enable = true;
@@ -8,11 +6,13 @@
       mainBar = {
         width = 1358;
         height = 34;
-        spacing = 4;
+        spacing = 0;
 
-        modules-left = [ "clock" "pulseaudio" "battery" "custom/media"];
+        reload_style_on_change = true;
+
+        modules-left = [ "custom/media" ];
         modules-center = [ "hyprland/workspaces" ];
-        modules-right = [ "tray" "memory" "cpu" "temperature" ];
+        modules-right = [ "tray" "clock" "pulseaudio" "network" "battery" "temperature" ];
 
         "clock" = {
             "format" = "{:%I:%M %p}";
@@ -42,7 +42,7 @@
 
         "hyprland/workspaces" = {
           "format" = "{windows} <sub>{icon}</sub>";
-          "format-window-separator" = "  " /* "\n" */;
+          "format-window-separator" = "  ";
           "window-rewrite-default" = "";
           "window-rewrite" = {
             # Desktop
@@ -76,6 +76,10 @@
             "class<g4music>" = "";
         
           };
+          
+          "persistent-workspaces" = {
+            "eDP-1" = [ 1 10 ];
+          };
         };
 
         "custom/media" = {
@@ -94,8 +98,7 @@
         };
 
         "network" = {
-          "format-wifi" = "{icon}";
-          # "format-wifi" = "{icon} {essid} ⇣ {bandwidthDownBits}  ⇡ {bandwidthUpBits}";
+          "format-wifi" = "{icon} ";
           "format-ethernet" = " {ifname}: {ipaddr}/{cidr}";
           "format-icons" = ["󰤯" "󰤟" "󰤢" "󰤥" "󰤨"];
           "format-disconnected" = "󰖪";
@@ -105,16 +108,6 @@
           "interval" = "10";
         };
 
-        "memory" = {
-          "format" = "{used:0.1f}G ";
-          "tooltip" = false;
-        };
-
-        "cpu" = {
-          "format" = "{usage}%  ";
-          "tooltip" = false;
-        };
-
         "battery" = {
           "format" = "{icon}";
           "format-icons" = {
@@ -122,7 +115,7 @@
             "charging" = ["󰢟" "󰢜" "󰂆" "󰂇" "󰂈" "󰢝" "󰂉" "󰢞" "󰂊" "󰂋" "󰂅" ];
           };
 
-          "tooltip-format" = "{timeTo} \nHealth {health} \nBattery {capacity}%";
+          "tooltip-format" = "Battery {capacity}% \n{timeTo} \nHealth: {health}";
 
           "states" = {
             "warning" = 40;
@@ -132,16 +125,8 @@
         };
 
         "pulseaudio" = {
-        # "scroll-step": 1, // %, can be a float
-          "reverse-scrolling" = 1;
-          "format" = "{icon} {volume}% {format_source}";
-          # "format" = "{icon}  {format_source}";
-          # "format-bluetooth" = "{icon} {volume}%  {format_source}";
-          # "format-bluetooth-muted" = "󰂲 {icon}  {format_source}";
-          "format-muted" = " {format_source}";
-          "format-source" = " {volume}%";
-          # "format-source" = "";
-          "format-source-muted" = "";
+          "format" = "{icon}";
+          "format-muted" = "";
           "format-icons" = {
             "headphone" = "";
             "hands-free" = "";
@@ -149,7 +134,7 @@
             "phone" = "";
             "portable" = "";
             "car" = "";
-            "default" = [" " " " "  "];
+            "default" = ["" "" ""];
           };
           "tooltip-format" = "Volume {volume}% \n{desc}";
           "on-click" = "myxer";
@@ -157,9 +142,8 @@
 
         "temperature" = {
           "critical-threshold" = 80;
-          "format" = "{temperatureC}°C {icon}";
+          "format" = "{icon}";
           "format-icons" = ["" "" "" "" ""];
-          "tooltip" = false;
         };
         
       };
@@ -168,5 +152,5 @@
     
   };
 
-  xdg.configFile."waybar/style.css".source = ./style.css;
+  home.file.".config/waybar/style.css".source = ./style.css;
 }

@@ -12,37 +12,45 @@
 .modules-left, .modules-center, .modules-right {
   margin: 4px 0 0 0;
   border-radius: 16px;
+  background-color: @headerbar_bg_color;
 }
 
-.modules-left label, .modules-center label, .modules-right label, #tray {
+.modules-left label, .modules-center label, .modules-right label {
   padding: 0 12px;
-  border-radius: 8px;
-  background-color: @card_fg_color;
-  color: @card_bg_color;
-}
-
-.modules-center #workspaces label {
-  padding: 0;
   background-color: transparent;
+  border-radius: 16px;
+  color: @headerbar_fg_color;
 }
 
 #workspaces button {
   padding: 0 12px;
-  margin-left: 4px;
-  border: none;
-  background-color: @card_fg_color;
+  background-color: transparent;
+  border-radius: 0;
+  color: @view_fg_color;
+  opacity: .5;
+}
+
+#workspaces button:not(:last-child) {
+  border-right: .25px solid;
+}
+
+#workspaces button:first-child {
+  border-radius: 16px 0 0 16px;
+}
+
+#workspaces button:last-child {
+  border-radius: 0 16px 16px 0;
 }
 
 #workspaces button:hover, #workspaces button.active {
   background-color: @view_bg_color;
-}
-
-#workspaces button:hover label, #workspaces button.active label {
-  color: @view_fg_color;
+  opacity: 1;
 }
 
 #tray {
+  padding: 8px 12px;
   background-color: @view_bg_color;
+  border-radius: 16px;
 }
 
 #tray menu {
@@ -57,19 +65,22 @@
 
 #battery.warning {
   background-color: @yellow_1;
+  color: @accent_fg_color;
 }
 
 #battery.critical, #temperature.critical {
   background-color: @red_1;
+  color: @accent_fg_color;
 }
 
 #battery.charging {
   background-color: @green_1;
+  color: @accent_fg_color;
 }
 
 tooltip {
   padding: 8px;
-  background: @card_bg_color;
+  background-color: @card_bg_color;
   border: none;
   border-radius: 8px;
 }
