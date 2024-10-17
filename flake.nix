@@ -20,7 +20,7 @@
 
   outputs = { nixpkgs, ... } @ inputs: {
     nixosConfigurations = {
-      jonvemo = import ./hosts { inherit inputs; };
+      jonvemo = import ./host { inherit inputs; };
     };
 
   };

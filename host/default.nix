@@ -22,13 +22,13 @@ inputs.nixpkgs.lib.nixosSystem rec {
         useUserPackages = true;
         users = {
           jonvemo.imports = [
-            ./jonvemo
+            ../home/jonvemo
             ../common/modules/home-manager
           ];
 
           # WARN Untested
           # salieri.imports = [
-          #   ./salieri
+          #   ../home/salieri
           #   ../common/modules/home-manager
           # ];  
         };
