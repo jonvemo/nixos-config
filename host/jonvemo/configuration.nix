@@ -10,20 +10,19 @@
   users.users = {
     jonvemo = {
       isNormalUser = true;
-      # home = "/home/jonvemo"
+      home = "/home/jonvemo";
       description = "John Verdugo";
       extraGroups = [ "wheel" ];
       shell = pkgs.fish;
     };
 
-    # WARN Untested
-    # salieri = {
-    #   isNormalUser = true;
-    #   home = "/home/salieri"
-    #   description = "Antonio Salieri";
-    #   extraGroups = [ "wheel" ];
-    #   shell = pkgs.fish;
-    # };
+    salieri = {
+      isNormalUser = true;
+      home = "/home/salieri";
+      description = "Antonio Salieri";
+      extraGroups = [ "wheel" ];
+      shell = pkgs.fish;
+    };
     
   };
       

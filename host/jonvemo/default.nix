@@ -12,7 +12,7 @@ inputs.nixpkgs.lib.nixosSystem rec {
   
   modules = [
     ./configuration.nix
-    ../common/modules/nixos
+    ../../common/modules/nixos
     
     {
       home-manager = {
@@ -22,15 +22,14 @@ inputs.nixpkgs.lib.nixosSystem rec {
         useUserPackages = true;
         users = {
           jonvemo.imports = [
-            ../home/jonvemo
-            ../common/modules/home-manager
+            ../../home/jonvemo
+            ../../common/modules/home-manager
           ];
 
-          # WARN Untested
-          # salieri.imports = [
-          #   ../home/salieri
-          #   ../common/modules/home-manager
-          # ];  
+          salieri.imports = [
+            ../../home/salieri
+            ../../common/modules/home-manager
+          ];  
         };
         
       };
