@@ -26,6 +26,7 @@
         "image/gif" = [ "org.gnome.Loupe.desktop" ];
         "image/webp" = [ "org.gnome.Loupe.desktop" ];
         "image/avif" = [ "org.gnome.Loupe.desktop" ];
+        "image/heic" = [ "org.gnome.Loupe.desktop" ];
         
         "video/mp4" = [ "io.github.celluloid_player.Celluloid.desktop" ];
         "video/webm" = [ "io.github.celluloid_player.Celluloid.desktop" ];

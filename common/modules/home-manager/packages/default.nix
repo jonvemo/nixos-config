@@ -12,7 +12,7 @@
     ani-cli bluetuith impala
 
     # Tools
-    # btop tagger /* Music Tagger */ parabolic /* Download Music */
+    btop tagger /* Music Tagger */ parabolic /* Download Music */
     walker
 
     # Desktop 

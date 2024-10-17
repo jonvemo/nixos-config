@@ -1,6 +1,6 @@
 #!/usr/bin/env fish
 
-function convert_to_webp
+function convert_images
     if test (count $argv) -ne 2
         echo 'Usage: convert_images "<input_formats>" <output_format>'
         return 1
