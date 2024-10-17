@@ -102,6 +102,7 @@
         
         gpbo = "git push -u origin";             # NOTE Pushea nueva rama
         gdone = "git push origin HEAD";          # NOTE Pushea los cambios
+        gpull = "git pull origin HEAD";
         gresetall = "git reset origin/  --hard"; # NOTE Borra todos los cambios y regresa al origin de la rama
 
         glog = "git log --pretty=format:\"%C(magenta)%h%Creset -%C(red)%d%Creset %s %C(dim green)(%cr) [%an]\" --abbrev-commit -30";

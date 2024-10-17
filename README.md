@@ -22,11 +22,16 @@ sudo nixos-rebuild switch
 git clone https://github.com/jonvemo/nixos-config.git
 ```
 
-4. Copy the files except for `hardware-configuration.nix` to /etc/nixos/ and move the one created by NixOS to /hosts/USER/
+4. Copy the files except for `hardware-configuration.nix` to /etc/nixos/ and move the one created by NixOS to /host/USER/
 
-5. Modify the user in `configuration.nix`, `flake.nix`, `hosts/USER/home.nix`, `hosts/USER/default.nix` and `modules/home-manager/settings/gtk.nix`
+5. Modify the user or users and host in `flake.nix`, `host/HOST/default.nix`, `host/HOST/configuration.nix`, `home/USER/default.nix` and `common/modules/home-manager/settings/gtk.nix`
+
+> [!NOTE]
+> Icons Theme and Cursor are not available at the time of installing this repository, you can changeit on .icons folder. Changing also, if you use other icons or cursor, in the `settings/gtk/default.nix` folder and in `programs/hyprland/hyprland.nix`
 
 ## Preview
+> [!NOTE]
+> Preview images may be outdated
 <table>
     <tr>
         <td><img src="https://github.com/user-attachments/assets/c7b06249-0757-42e9-a68a-e0894c57e3c7" width="500" height="281"/></td>
