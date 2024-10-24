@@ -8,7 +8,7 @@
     
     # GUI & CTL & TUI
     myxer kooha lact
-    brightnessctl playerctl grim slurp wl-clipboard # cliphist
+    brightnessctl playerctl grim slurp wl-clipboard cliphist
     ani-cli bluetuith impala
 
     # Tools
