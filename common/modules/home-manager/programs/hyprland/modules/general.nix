@@ -23,9 +23,11 @@ let
 
       rounding = $round
 
-      drop_shadow = false
-      # col.shadow = $bg
-      # col.shadow_inactive = $inactiveBg
+      shadow { 
+        enabled = false
+        # color = $bg
+        # color_inactive = $inactiveBg
+      }
 
       blur {
         enabled = true

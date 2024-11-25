@@ -21,7 +21,7 @@
     cozy-drive
     
     gnome-sound-recorder gnome-calculator gnome-connections
-    nautilus nautilus-python tracker-miners /* Herramienta de Indexación de Gnome, sirve para Nautilus y Video Player principalmente */
+    nautilus nautilus-python localsearch
     file-roller snapshot newsflash
 
     # Browsers & Chatting
@@ -29,14 +29,16 @@
     vesktop
 
     # Games & Web Stuff & Media
-    lunar-client osu-lazer-bin r2modman /* Mod fot Lethal Company */
+    lunar-client prismlauncher 
+    osu-lazer-bin r2modman /* Mod fot Lethal Company */ 
+    lutris
     spotube
 
     # Learning
     remnote
 
     # Programming
-    zed-editor             # NOTE Editors
+    # zed-editor             # NOTE Editors
     lazygit woff2 ffmpeg_7 # NOTE Tools
 
     # Desing & Draw
