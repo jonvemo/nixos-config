@@ -4,9 +4,21 @@
 	},
 	"as_window": false,
 	"builtins": {
+		"ai": {
+			"anthropic": {
+				"max_tokens": 1000,
+				"model": "claude-3-5-sonnet-20241022"
+			},
+			"icon": "accessories-calculator",
+			"name": "ai",
+			"placeholder": "AI",
+			"switcher_only": true,
+			"weight": 4
+		},
 		"applications": {
 			"actions": true,
 			"context_aware": true,
+			"hide_actions_with_empty_query": true,
 			"name": "applications",
 			"placeholder": "Applications",
 			"prioritize_new": true,
@@ -25,6 +37,8 @@
 			"weight": 4
 		},
 		"clipboard": {
+			"avoid_line_breaks": true,
+			"exec": "wl-copy",
 			"image_height": 256,
 			"max_entries": 12,
 			"name": "clipboard",
@@ -44,21 +58,23 @@
 			"name": "custom_commands",
 			"placeholder": "Custom Commands",
 			"switcher_only": true,
-			"weight": 5
+			"weight": 4
 		},
 		"dmenu": {
 			"name": "dmenu",
 			"placeholder": "Dmenu",
 			"switcher_only": true,
-			"weight": 5
+			"weight": 4
 		},
 		"emojis": {
+			"exec": "wl-copy",
 			"history": true,
 			"name": "emojis",
 			"placeholder": "Emojis",
+			"show_unqualified": false,
 			"switcher_only": true,
 			"typeahead": true,
-			"weight": 5
+			"weight": 4
 		},
 		"finder": {
 			"concurrency": 8,
@@ -68,7 +84,7 @@
 			"placeholder": "Finder",
 			"refresh": true,
 			"switcher_only": true,
-			"weight": 5
+			"weight": 4
 		},
 		"runner": {
 			"generic_entry": false,
@@ -79,7 +95,7 @@
 			"switcher_only": true,
 			"refresh": true,
 			"typeahead": true,
-			"weight": 5
+			"weight": 4
 		},
 		"ssh": {
 			"history": true,
@@ -88,13 +104,13 @@
 			"placeholder": "SSH",
 			"refresh": true,
 			"switcher_only": true,
-			"weight": 5
+			"weight": 4
 		},
 		"switcher": {
 			"name": "switcher",
 			"placeholder": "Switcher",
 			"prefix": "?",
-			"weight": 5
+			"weight": 4
 		},
 		"websearch": {
 			"engines": ["google"],
@@ -102,14 +118,14 @@
 			"name": "websearch",
 			"placeholder": "Websearch",
 			"switcher_only": true,
-			"weight": 5
+			"weight": 4
 		},
 		"windows": {
 			"icon": "view-restore",
 			"name": "windows",
 			"placeholder": "Windows",
 			"switcher_only": true,
-			"weight": 5
+			"weight": 4
 		}
 	},
 	"disable_click_to_close": false,
@@ -121,8 +137,6 @@
 	},
 	"search": {
 		"delay": 0,
-		"force_keyboard_focus": true,
-		"history": true,
 		"placeholder": "Search..."
 	},
 	"theme": "gtk"
