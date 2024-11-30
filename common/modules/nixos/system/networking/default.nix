@@ -5,7 +5,7 @@
     ./ssh.nix
     ./resolved.nix
     ./optimize.nix
-    # ./blocker.nix
+    ./blocker.nix
     # ./tcpcrypt.nix
   ];
 }
