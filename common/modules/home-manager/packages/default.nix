@@ -28,21 +28,9 @@
     microsoft-edge # chromium # google-chrome # vivaldi # brave
     vesktop
 
-    # Games & Web Stuff & Media
-    lunar-client prismlauncher 
-    osu-lazer-bin r2modman /* Mod fot Lethal Company */ 
-    lutris
+    # Media & Draw
     spotube
-
-    # Learning
-    remnote
-
-    # Programming
-    # zed-editor             # NOTE Editors
-    lazygit woff2 ffmpeg_7 # NOTE Tools
-
-    # Desing & Draw
-    figma-linux krita
+    krita
 
     # Dumb Stuff
     kittysay
