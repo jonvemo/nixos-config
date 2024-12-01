@@ -7,7 +7,7 @@
     enableDefaultPackages = false;
 
     packages = with pkgs; [
-      (nerdfonts.override { fonts = [ "JetBrainsMono" ]; })
+      nerd-fonts.jetbrains-mono
       font-awesome
       noto-fonts
       noto-fonts-cjk-sans
