@@ -1,15 +1,26 @@
-{ pkgs, ...}:
+{ lib, pkgs, pkgs-small, ...}:
 
 {
-  home.packages = with pkgs; [
+  home.packages = lib.concatLists [ (with pkgs; [ 
+  
     # Learning
     remnote
 
-    # Programming
-    zed-editor           # NOTE Editors
-    lazygit woff2 ffmpeg_7 # NOTE Tools
+    ])
+     
+    # Last Update (nixos-unstable-small)
+    (with pkgs-small; [
 
-    # Desing
-    figma-linux
+      # Programming
+      zed-editor           # NOTE Editors
+      lazygit woff2 ffmpeg_7 # NOTE Tools
+
+      # Desing
+      figma-linux
+
+      # Temporal; in case an unstable package (nixos-unstable) fails
+    
+    ])  
   ];
+
 }

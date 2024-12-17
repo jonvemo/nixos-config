@@ -16,7 +16,16 @@ inputs.nixpkgs.lib.nixosSystem rec {
     
     {
       home-manager = {
-        extraSpecialArgs = { inherit inputs; };
+        extraSpecialArgs = {
+          inherit inputs;
+
+          # Enable packages of nixos-unstable-small for HomeManager
+          pkgs-small = import inputs.nixpkgs-small {
+            inherit system;
+            config.allowUnfree = true;
+          };
+
+        };
 
         useGlobalPkgs = true;
         useUserPackages = true;

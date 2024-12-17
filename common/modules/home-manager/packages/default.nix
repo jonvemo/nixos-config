@@ -1,8 +1,8 @@
-{ pkgs, ...}:
+{ lib, pkgs, pkgs-small, ...}:
 
 {
-  home.packages = with pkgs; [
-    
+  home.packages = lib.concatLists [ (with pkgs; [ 
+
     # Hyprland
     hyprpaper hyprlock hypridle hyprcursor
     
@@ -13,7 +13,6 @@
 
     # Tools
     btop tagger /* Music Tagger */ parabolic /* Download Music */
-    walker
 
     # Desktop 
     loupe /* Image Viewer*/ celluloid g4music
@@ -24,16 +23,33 @@
     nautilus nautilus-python localsearch
     file-roller snapshot newsflash
 
-    # Browsers & Chatting
-    microsoft-edge # chromium # google-chrome # vivaldi # brave
-    vesktop
-
-    # Media & Draw
-    spotube
-    krita
-
     # Dumb Stuff
     kittysay
+    
+    ])
+    
+    # Last Update (nixos-unstable-small)
+    (with pkgs-small; [
+
+      # Browsers & Chatting
+      microsoft-edge # chromium # google-chrome # vivaldi # brave
+      vesktop
+
+      # Tools
+      walker
+
+      # Media & Draw
+      spotube
+      krita
+
+      # Games
+      lunar-client prismlauncher 
+      osu-lazer-bin r2modman /* Mods for Lethal Company and others */ 
+      lutris
+
+      # Temporal; in case an unstable package (nixos-unstable) fails
+    
+    ])  
   ];
 
 }
