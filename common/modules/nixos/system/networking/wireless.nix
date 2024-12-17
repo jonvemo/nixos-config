@@ -5,10 +5,11 @@
     settings = {
       Scan.DisablePeriodicScan = false;
       Settings.AutoConnect = true;
+      IPv6.Enabled = true;
 
       General = {
-      #  AddressRandomization = "network";
-      #  AddressRandomizationRange = "full";
+        AddressRandomization = "network";
+        AddressRandomizationRange = "full";
         EnableNetworkConfiguration = true;
         RoamRetryInterval = 15;
       };
