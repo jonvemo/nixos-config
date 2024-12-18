@@ -1,30 +1,32 @@
 { lib, pkgs, pkgs-small, ...}:
 
 {
-  home.packages = lib.concatLists [ (with pkgs; [ 
+  home.packages = lib.concatLists [ 
+  
+    (with pkgs; [ 
 
-    # Hyprland
-    hyprpaper hyprlock hypridle hyprcursor
+      # Hyprland
+      hyprpaper hyprlock hypridle hyprcursor
     
-    # GUI & CTL & TUI
-    myxer kooha lact
-    brightnessctl playerctl grim slurp wl-clipboard cliphist
-    ani-cli bluetuith impala
+      # GUI & CTL & TUI
+      myxer kooha lact
+      brightnessctl playerctl grim slurp wl-clipboard cliphist
+      ani-cli bluetuith impala
 
-    # Tools
-    btop tagger /* Music Tagger */ parabolic /* Download Music */
+      # Tools
+      btop tagger /* Music Tagger */ parabolic /* Download Music */
 
-    # Desktop 
-    loupe /* Image Viewer*/ celluloid g4music
-    foliate /* Ebook Reader */ sticky-notes pomodoro-gtk
-    cozy-drive
+      # Desktop 
+      loupe /* Image Viewer*/ celluloid g4music
+      foliate /* Ebook Reader */ sticky-notes pomodoro-gtk
+      cozy-drive
     
-    gnome-sound-recorder gnome-calculator gnome-connections
-    nautilus nautilus-python localsearch
-    file-roller snapshot newsflash
+      gnome-sound-recorder gnome-calculator gnome-connections
+      nautilus nautilus-python localsearch
+      file-roller snapshot newsflash
 
-    # Dumb Stuff
-    kittysay
+      # Dumb Stuff
+      kittysay
     
     ])
     

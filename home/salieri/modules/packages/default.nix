@@ -1,7 +1,9 @@
 { lib, pkgs, pkgs-small, ...}:
 
 {
-  home.packages = lib.concatLists [ (with pkgs; [
+  home.packages = lib.concatLists [ 
+  
+    (with pkgs; [
 
     ])
      
