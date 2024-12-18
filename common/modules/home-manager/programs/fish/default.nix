@@ -29,6 +29,8 @@
       d = "hx default.nix";
       b = "cd ..";
 
+      pkgs = "nix-store --query --requisites /run/current-system | cut -d- -f2- | sort -u";
+
       # GH
       ghs = "gh auth switch";
       
@@ -89,6 +91,8 @@
         t = "touch";
 
         build = "sudo nixos-rebuild switch --flake /etc/nixos#";
+        
+        vpkg = "nix-store --query --requisites /run/current-system | cut -d- -f2- | sort -u | grep";
         
         # Git
         g = "git";
