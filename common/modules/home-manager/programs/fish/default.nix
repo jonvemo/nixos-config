@@ -16,8 +16,8 @@
       cbuild = "bnh && clean";
     
       flake = "cd /etc/nixos/ && hx flake.nix";
-      flakeupdate = "nix flake update --flake /etc/nixos";
-         
+      flakeupdt = "nix flake update --flake /etc/nixos";
+               
       npac = "cd /etc/nixos/common/modules/nixos/packages && hx default.nix";
       hpac = "cd /etc/nixos/common/modules/home-manager/packages && hx default.nix";
 
@@ -91,6 +91,7 @@
         t = "touch";
 
         build = "sudo nixos-rebuild switch --flake /etc/nixos#";
+        flakeupdti = "nix flake update --update-input";
         
         vpkg = "nix-store --query --requisites /run/current-system | cut -d- -f2- | sort -u | grep";
         
