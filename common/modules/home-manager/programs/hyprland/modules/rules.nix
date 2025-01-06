@@ -15,7 +15,7 @@ let
 
     windowrulev2 = float, title:(DevTools)
     windowrulev2 = size 348 512, title:(DevTools)
-    windowrulev2 = move 1014 38 title:(DevTools)
+    windowrulev2 = move 1014 38, title:(DevTools)
 
     windowrulev2 = float, title:($pomodoro)
     windowrulev2 = pin, title:($pomodoro)

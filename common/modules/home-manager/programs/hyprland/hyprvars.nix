@@ -35,11 +35,11 @@ let
     $bar = waybar
     $menu = walker
     $fileManager = nautilus
-    $browser = microsoft-edge
+    $browser = zen
     $player = spotube
     $discord = vesktop
     $pomodoro = Pomodoro
-    $miniscreen = Imagen en imagen # Imagen en imagen / Picture in picture
+    $miniscreen = Picture-in-Picture # Imagen en imagen # Picture in picture
 
     # Classes for WindowsRules
     $calculator = org.gnome.Calculator
