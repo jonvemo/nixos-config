@@ -6,5 +6,6 @@
     ./xwayland
     ./nautilus
     ./steam
+    ./zen
   ];
 }
