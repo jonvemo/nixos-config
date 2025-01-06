@@ -14,7 +14,9 @@
       ani-cli bluetuith impala
 
       # Tools
-      btop tagger /* Music Tagger */ parabolic /* Download Music */
+      btop #tagger /* Music Tagger */ 
+      parabolic /* Download Music */
+      walker
 
       # Desktop 
       loupe /* Image Viewer*/ celluloid g4music
@@ -25,8 +27,20 @@
       nautilus nautilus-python localsearch
       file-roller snapshot newsflash
 
+      # Media & Draw
+      spotube
+      krita
+
       # Dumb Stuff
       kittysay
+
+      # Games
+      lutris
+      lunar-client prismlauncher /* Mods for Lethal Company and others */ 
+      osu-lazer-bin
+      r2modman
+
+      # Broken on small  
     
     ])
     
@@ -36,18 +50,6 @@
       # Browsers & Chatting
       microsoft-edge # chromium # google-chrome # vivaldi # brave
       vesktop
-
-      # Tools
-      walker
-
-      # Media & Draw
-      spotube
-      krita
-
-      # Games
-      lunar-client prismlauncher 
-      osu-lazer-bin r2modman /* Mods for Lethal Company and others */ 
-      lutris
 
       # Temporal; in case an unstable package (nixos-unstable) fails
     
