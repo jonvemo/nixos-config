@@ -91,7 +91,7 @@
         t = "touch";
 
         build = "sudo nixos-rebuild switch --flake /etc/nixos#";
-        flakeupdti = "nix flake update --update-input";
+        flakeupdti = "nix flake update --flake /etc/nixos";
         
         vpkg = "nix-store --query --requisites /run/current-system | cut -d- -f2- | sort -u | grep";
         
