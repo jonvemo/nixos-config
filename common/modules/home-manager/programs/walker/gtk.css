@@ -1,10 +1,13 @@
 #window,
 #box,
+#aiScroll,
+#aiList,
 #search,
 #password,
 #input,
+#prompt,
+#clear,
 #typeahead,
-#spinner,
 #list,
 child,
 scrollbar,
@@ -12,6 +15,7 @@ slider,
 #item,
 #text,
 #label,
+#bar,
 #sub,
 #activationlabel {
   all: unset;
@@ -38,22 +42,17 @@ slider {
   border-radius: 32px;
 }
 
-
-#input > *:last-child,
-#typeahead > *:last-child {
-  color: @headerbar_fg_color;
-}
-
 #typeahead > *, #input > * {
   color: @headerbar_fg_color;
-  margin-right: 16px;
+  margin-left: 8px;
 }
 
-#spinner {
+#prompt, #spinner, #clear {
   color: @headerbar_fg_color;
 }
 
 #list {
+  margin-top: 16px;
 }
 
 child {
@@ -71,6 +70,7 @@ child:hover {
 }
 
 #icon {
+  margin-right: 8px;
 }
 
 #text {
@@ -87,6 +87,7 @@ child:hover {
 }
 
 #activationlabel {
+  text-transform: uppercase;
   font-weight: bold;
   opacity: 0.5;
 }
@@ -98,4 +99,18 @@ child:hover {
 .activation #text,
 .activation #icon,
 .activation #search {
+}
+
+.aiItem {
+  padding: 4px 8px;
+  border-radius: 8px;
+  color: @card_fg_color;
+}
+
+.aiItem.user {
+  padding: auto 0 auto 0;
+}
+
+.aiItem.assistant {
+  background: @headerbar_bg_color;
 }

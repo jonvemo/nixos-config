@@ -29,6 +29,7 @@ inputs.nixpkgs.lib.nixosSystem rec {
 
         useGlobalPkgs = true;
         useUserPackages = true;
+        backupFileExtension = "baku";
         users = {
           jonvemo.imports = [
             ../../home/jonvemo
