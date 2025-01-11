@@ -20,6 +20,8 @@
       defaultApplications = {
         "inode/directory" = [ "org.gnome.Nautilus.desktop" ];
         "inode/blockdevice" = [ "org.gnome.Nautilus.desktop" ];
+
+        "text/plain" = [ "dev.zed.Zed" ];
         
         "image/png" = [ "org.gnome.Loupe.desktop" ];
         "image/jpeg" = [ "org.gnome.Loupe.desktop" ];
