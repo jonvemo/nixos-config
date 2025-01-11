@@ -9,6 +9,8 @@
     ./helix
     ./git
 
+    ./btop
+
     ./hyprland
     ./hyprlock
     ./waybar

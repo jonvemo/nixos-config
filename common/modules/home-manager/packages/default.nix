@@ -14,7 +14,7 @@
       ani-cli bluetuith impala
 
       # Tools
-      btop #tagger /* Music Tagger */ 
+      #tagger /* Music Tagger */ 
       parabolic /* Download Music */
       walker
 
