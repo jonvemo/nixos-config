@@ -4,7 +4,7 @@ let
     # See https://wiki.hyprland.org/Configuring/Keywords/ for more
 
     # Execute your favorite apps at launch
-    exec-once = hyprctl setcursor Anya 32 & hyprpaper & hypridle & waybar
+    exec-once = hyprctl setcursor Anya 32 & hyprpaper & hypridle & waybar & wl-paste --watch cliphist store
 
     # VARS
     source = ~/.config/hypr/hyprvars.conf
