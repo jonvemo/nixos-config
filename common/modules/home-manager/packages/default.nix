@@ -12,11 +12,11 @@
       myxer kooha lact
       brightnessctl playerctl grim slurp wl-clipboard cliphist
       ani-cli bluetuith impala
+      internetarchive
 
       # Tools
       parabolic /* Download Music */ #tagger /* Music Tagger */
-      satty
-      walker
+      satty /* Photo Editor */
 
       # Desktop 
       loupe /* Image Viewer*/ celluloid g4music
@@ -50,6 +50,9 @@
       # Browsers & Chatting
       microsoft-edge # chromium # google-chrome # vivaldi # brave
       vesktop
+
+      # Tools
+      walker
 
       # Temporal; in case an unstable package (nixos-unstable) fails
     
