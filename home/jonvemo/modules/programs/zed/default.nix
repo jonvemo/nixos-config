@@ -6,7 +6,7 @@
 
     extensions = [ "nix" ];
     extraPackages = with pkgs; [
-      biome dprint live-server
+      biome live-server
       marksman markdown-oxide
 
       emmet-language-server
@@ -18,16 +18,23 @@
     ];
     
     userSettings = {
-      "features" = {
-        "inline_completion_provider" = "supermaven";
+    
+      features = {
+        inline_completion_provider = "supermaven";
       };
-      "telemetry" = {
-        "diagnostics" = false;
-        "metrics" = false;
+      
+      telemetry = {
+        diagnostics = false;
+        metrics = false;
       };
-      "vim_mode" = true;
+      
+      vim_mode = true;
+      
+      prettier.allowed = false;
 
+      formatter = import ./formatter.nix;
       languages = import ./languages.nix;
+      #lsp = import ./lsp.nix
        
     };
     

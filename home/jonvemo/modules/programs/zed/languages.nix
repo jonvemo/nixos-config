@@ -1,8 +1,7 @@
 {
   Nix = {
     language_servers = [
-      "nil"
-      "!nixd"
+      "nil" "!nixd"
     ];
     formatter = {
       external = {
@@ -10,4 +9,11 @@
       };
     };
   };
+
+  Markdown = {
+    language_servers = [
+      "marksman" "markdown-oxide"
+    ];
+  };
+  
 }
