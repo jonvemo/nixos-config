@@ -1,29 +1,29 @@
-{ pkgs, ...}:
-
-{
+{pkgs, ...}: {
   programs.zed-editor = {
     enable = true;
 
-    extensions = [ "nix" ];
+    extensions = ["nix"];
     extraPackages = with pkgs; [
-      biome live-server
-      marksman markdown-oxide
+      biome
+      live-server
+      marksman
+      markdown-oxide
 
       emmet-language-server
       nodePackages.live-server
       nodePackages.vscode-langservers-extracted
-      
-      nixd nil nixfmt-classic
-      
+
+      nixd
+      nil
+      alejandra
     ];
-    
+
     userSettings = {
-              
       telemetry = {
         diagnostics = false;
         metrics = false;
       };
-      
+
       vim_mode = true;
 
       features = {
@@ -36,9 +36,6 @@
       #lsp = import ./lsp.nix
       languages = import ./languages.nix;
       assistant = import ./assistant.nix;
-       
     };
-    
   };
-  
 }
