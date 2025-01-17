@@ -15,7 +15,7 @@
       internetarchive
 
       # Tools
-      parabolic /* Download Music */ #tagger /* Music Tagger */
+      parabolic /* Download Music */ tagger /* Music Tagger */
       satty /* Photo Editor */
 
       # Desktop 
