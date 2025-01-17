@@ -18,23 +18,24 @@
     ];
     
     userSettings = {
-    
-      features = {
-        inline_completion_provider = "supermaven";
-      };
-      
+              
       telemetry = {
         diagnostics = false;
         metrics = false;
       };
       
       vim_mode = true;
-      
+
+      features = {
+        inline_completion_provider = "supermaven";
+      };
+
       prettier.allowed = false;
 
       formatter = import ./formatter.nix;
-      languages = import ./languages.nix;
       #lsp = import ./lsp.nix
+      languages = import ./languages.nix;
+      assistant = import ./assistant.nix;
        
     };
     
