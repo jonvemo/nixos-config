@@ -14,8 +14,8 @@
     
     gtk3 = {
       bookmarks = [
-        "file:///home/jonvemo/Cozy%20Drive"
-        "file:///home/jonvemo/Cozy%20Drive/Krita"
+        "file:///home/jonvemo/OneDrive"
+        "file:///home/jonvemo/OneDrive/Krita"
         "file:///home/jonvemo/Desktop/GitHub"
       ];
     };

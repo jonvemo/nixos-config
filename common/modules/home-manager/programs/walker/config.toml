@@ -1,5 +1,5 @@
 app_launch_prefix = ""
-terminal_title_flag = ""
+terminal_title_flag = "foot"
 locale = ""
 close_when_open = false
 theme = "gtk"
@@ -101,7 +101,7 @@ icon = "help-browser"
 switcher_only = true
 
 [[builtins.ai.anthropic.prompts]]
-model = "claude-3-5-sonnet-20241022"
+model = "claude-3-5-sonnet-latest"
 temperature = 1
 max_tokens = 1_000
 label = "General Assistant"
@@ -144,6 +144,16 @@ weight = 4
 icon = "utilities-terminal"
 name = "custom_commands"
 placeholder = "Custom Commands"
+
+[[builtins.custom_commands.commands]]
+name = "OneDrive Sync"
+cmd = "onedrive --sync"
+terminal = true
+
+[[builtins.custom_commands.commands]]
+name = "OneDrive Monitor"
+cmd = "onedrive --monitor"
+terminal = true
 
 [builtins.emojis]
 exec = "wl-copy"
