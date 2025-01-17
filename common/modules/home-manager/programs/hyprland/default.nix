@@ -1,7 +1,7 @@
 {
   xdg.configFile = {
     "hypr/hyprland.conf".source = ./hyprland.conf;
-    "hypr/hyprvars.conf".source = ./modules/hyprvars.conf;
+    "hypr/hyprvars.conf".source = ./hyprvars.conf;
     "hypr/modules/animations.conf".source = ./modules/animations.conf;
     "hypr/modules/controls.conf".source = ./modules/controls.conf;
     "hypr/modules/cursors.conf".source = ./modules/cursors.conf;
