@@ -4,5 +4,6 @@
     ./login
     ./trash
     # ./flatpak
+    ./onedrive
   ];
 }

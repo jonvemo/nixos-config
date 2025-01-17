@@ -21,7 +21,6 @@
       # Desktop 
       loupe /* Image Viewer*/ celluloid g4music
       foliate /* Ebook Reader */ sticky-notes pomodoro-gtk
-      cozy-drive
     
       gnome-sound-recorder gnome-calculator gnome-connections
       file-roller snapshot newsflash
