@@ -3,6 +3,7 @@
     ./fish
     ./nh
     ./hyprland
+    ./niri
     ./xwayland
     ./nautilus
     ./steam
