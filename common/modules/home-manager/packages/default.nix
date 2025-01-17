@@ -24,7 +24,6 @@
       cozy-drive
     
       gnome-sound-recorder gnome-calculator gnome-connections
-      nautilus nautilus-python localsearch
       file-roller snapshot newsflash
 
       # Media & Draw
