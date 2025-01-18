@@ -30,9 +30,9 @@
         inline_completion_provider = "supermaven";
       };
 
-      prettier.allowed = false;
+      prettier.allowed = true;
 
-      formatter = import ./formatter.nix;
+      #formatter = import ./formatter.nix;
       #lsp = import ./lsp.nix
       languages = import ./languages.nix;
       assistant = import ./assistant.nix;
