@@ -22,6 +22,11 @@
         jetbrains-mono
         
       ])
+
+      (with pkgs.texlivePackages; [
+        nunito
+        
+      ])
       
     ];
     
