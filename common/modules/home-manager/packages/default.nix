@@ -39,7 +39,7 @@
       r2modman
 
       # Broken on small  
-    
+    discordo 
     ])
     
     # Last Update (nixos-unstable-small)
