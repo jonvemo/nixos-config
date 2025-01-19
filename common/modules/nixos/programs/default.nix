@@ -8,5 +8,6 @@
     ./nautilus
     ./steam
     ./zen
+    ./curd
   ];
 }
