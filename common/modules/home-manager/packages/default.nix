@@ -11,7 +11,7 @@
       # GUI & CTL & TUI
       myxer kooha lact
       brightnessctl playerctl grim slurp wl-clipboard cliphist
-      ani-cli bluetuith impala
+      bluetuith impala
       internetarchive
 
       # Tools
@@ -50,7 +50,6 @@
       vesktop
 
       # Tools
-      walker
 
       # Temporal; in case an unstable package (nixos-unstable) fails
     
