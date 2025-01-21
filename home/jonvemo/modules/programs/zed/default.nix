@@ -2,7 +2,7 @@
   programs.zed-editor = {
     enable = true;
 
-    extensions = ["nix"];
+    extensions = ["html" "nix" "log" "git-firefly"];
     extraPackages = with pkgs; [
       biome
       live-server
@@ -16,6 +16,9 @@
       nixd
       nil
       alejandra
+
+      go
+      gopls
     ];
 
     userSettings = {
