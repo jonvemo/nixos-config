@@ -8,13 +8,19 @@ function rename_photos
 
     set FILE_FORMATS (string split ' ' $argv[1])
 
+    # Inicializar el contador
+    set COUNTER 1
+
     for FORMAT in $FILE_FORMATS
         for FILE in *.$FORMAT
             # Get the creation date of the image
             set CREATION_DATE (stat --format='%y' $FILE | cut -d'.' -f1 | sed 's/[:\t]/ /g' | awk '{print $1" "$2$3$4}')
 
-            # Rename the image with the creation date
-            mv $FILE "$CREATION_DATE.$FORMAT"
+            # Rename the image with the creation date and the incremental suffix
+            mv $FILE "Y2K-$COUNTER $CREATION_DATE.$FORMAT"
+
+            # Incrementar el contador
+            set COUNTER (math $COUNTER + 1)
         end
     end
 end
