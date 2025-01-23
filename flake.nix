@@ -17,7 +17,7 @@
 
     # APPs
     zen-browser.url = "github:0xc000022070/zen-browser-flake";
-    curd.url = "github:jonvemo/curd";
+    curd.url = "github:Wraient/curd";
     walker.url = "github:abenz1267/walker";
 
   };
