@@ -10,5 +10,6 @@
     ./zen
     ./curd
     ./umu
+    ./anime-games
   ];
 }
