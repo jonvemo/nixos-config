@@ -9,5 +9,6 @@
     ./steam
     ./zen
     ./curd
+    ./umu
   ];
 }

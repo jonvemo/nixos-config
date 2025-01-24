@@ -29,25 +29,24 @@
       spotube
       krita
 
-      # Dumb Stuff
-      kittysay
-
       # Games
-      lutris
-      lunar-client prismlauncher /* Mods for Lethal Company and others */ 
+      lunar-client prismlauncher
       osu-lazer-bin
-      r2modman
+      r2modman /* Mods for Lethal Company and others */  
 
+      # Browsers & Chatting
+      # microsoft-edge # google-chrome # vivaldi # brave
+      vesktop discordo
+      
       # Broken on small  
-    discordo 
+
     ])
     
     # Last Update (nixos-unstable-small)
     (with pkgs-small; [
 
-      # Browsers & Chatting
-      microsoft-edge # chromium # google-chrome # vivaldi # brave
-      vesktop
+      # Dumb Stuff
+      kittysay
 
       # Tools
 
