@@ -2,6 +2,7 @@
   nix = {
     settings = {
       experimental-features = [ "nix-command" "flakes" ];
+      trusted-users = [ "root" "jonvemo" ];
       substituters = import ./substituters;
       trusted-public-keys = import ./trusted-public-keys;
     };
@@ -14,4 +15,5 @@
     
   };
 
+  programs.command-not-found.enable = false;
 }

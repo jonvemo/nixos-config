@@ -5,5 +5,6 @@
     ./trash
     # ./flatpak
     ./onedrive
+    ./cachix
   ];
 }
