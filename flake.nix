@@ -22,9 +22,23 @@
 
   };
 
-  outputs = { ... } @ inputs: {
+  outputs = { ... } @ inputs: let
+    system = "x86_64-linux";
+
+    pkgs = import inputs.nixpkgs {
+      inherit system;
+      config.allowUnfree = true;
+    };
+
+    # Enable packages of nixos-unstable-small for HomeManager
+    pkgs-small = import inputs.nixpkgs-small {
+      inherit system;
+      config.allowUnfree = true;
+    };
+
+  in {
     nixosConfigurations = {
-      jonvemo = import ./host/jonvemo { inherit inputs; };
+      jonvemo = import ./host/jonvemo { inherit system inputs pkgs pkgs-small; };
     };
 
   };

@@ -1,6 +1,6 @@
-{ inputs, ... }:
+{ inputs, system, ... }:
 {
   environment.systemPackages = [
-    inputs.zen-browser.packages."x86_64-linux".beta
+    inputs.zen-browser.packages.${system}.beta
   ];
 }

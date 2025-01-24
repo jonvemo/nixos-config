@@ -1,14 +1,9 @@
-{ inputs, ... }:
+{ system, inputs, pkgs, pkgs-small, ... }:
 
 inputs.nixpkgs.lib.nixosSystem rec {
-  system = "x86_64-linux";
-  
-  pkgs = import inputs.nixpkgs {
-    inherit system;
-    config.allowUnfree = true;
-  };
 
-  specialArgs = { inherit inputs; };
+  inherit pkgs;
+  specialArgs = { inherit system inputs pkgs-small; };
   
   modules = [
     ./configuration.nix
@@ -16,20 +11,13 @@ inputs.nixpkgs.lib.nixosSystem rec {
     
     {
       home-manager = {
-        extraSpecialArgs = {
-          inherit inputs;
-
-          # Enable packages of nixos-unstable-small for HomeManager
-          pkgs-small = import inputs.nixpkgs-small {
-            inherit system;
-            config.allowUnfree = true;
-          };
-
-        };
+        extraSpecialArgs = { inherit inputs pkgs-small; };
+        
+        backupFileExtension = "testdsj";
 
         useGlobalPkgs = true;
         useUserPackages = true;
-        backupFileExtension = "bak";
+        
         users = {
           jonvemo.imports = [
             ../../home/jonvemo
