@@ -1,6 +1,6 @@
 { system, inputs, pkgs, pkgs-small, ... }:
 
-inputs.nixpkgs.lib.nixosSystem rec {
+inputs.nixpkgs.lib.nixosSystem {
 
   inherit pkgs;
   specialArgs = { inherit system inputs pkgs-small; };
