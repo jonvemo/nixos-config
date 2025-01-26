@@ -1,9 +1,9 @@
 name: Update Flake
 
 on:
-  workflow_dispatch: # allows manual triggering
+  workflow_dispatch:
   schedule:
-    - cron: '00 23 * * 5' # runs weekly on Friday at 23:00
+    - cron: '00 23 * * 5'
 
 permissions:
   contents: write
@@ -17,20 +17,25 @@ jobs:
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v3
+
       - name: Install Nix
         uses: DeterminateSystems/nix-installer-action@v11
         with:
           nix-package-url: https://releases.nixos.org/nix/nix-2.18.4/nix-2.18.4-x86_64-linux.tar.xz
+
       - name: Check Nixpkgs Inputs
         uses: DeterminateSystems/flake-checker-action@v7
+
       - name: Add Nix Cache
         uses: DeterminateSystems/magic-nix-cache-action@v6
+
       - name: Update flake.lock
         uses: DeterminateSystems/update-flake-lock@v23
         id: update
         with:
-          pr-title: "Update flake.lock" # Title of PR to be created
-          pr-labels: |                  # Labels to be set on the PR
+          commit-message: "chore(flake): update flake.lock"  
+          pr-title: "chore(flake): update flake.lock"
+          pr-labels: |
             dependencies
             automated
           pr-body: |
@@ -39,9 +44,11 @@ jobs:
             ```
             {{ env.GIT_COMMIT_MESSAGE }}
             ```
+
       - name: Check the Flake
         id: check
         run: nix flake check
+
       - name: Update Check Status
         uses: LouisBrunner/checks-action@v1.6.1
         if: always()
@@ -51,6 +58,7 @@ jobs:
           conclusion: ${{ job.status }}
           output: |
             {"summary":"${{ steps.check.outputs.stdout }}"}
+
       - name: Enable Pull Request Automerge
         if: success()
         run: |
@@ -60,6 +68,7 @@ jobs:
             ${{ steps.update.outputs.pull-request-number }}
         env:
           GH_TOKEN: ${{ github.token }}
+
       - name: Close Pull Request If Failed
         if: failure()
         run: |
