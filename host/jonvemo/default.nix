@@ -13,7 +13,7 @@ inputs.nixpkgs.lib.nixosSystem {
       home-manager = {
         extraSpecialArgs = { inherit inputs pkgs-small; };
         
-        backupFileExtension = "testdsj";
+        backupFileExtension = "test2";
 
         useGlobalPkgs = true;
         useUserPackages = true;
