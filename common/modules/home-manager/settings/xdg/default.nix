@@ -1,58 +1,73 @@
-{ pkgs, ... }:
-{
+{ config, ... }: let
+  audio = [ "com.github.neithern.g4music.desktop" ];
+  image = [ "org.gnome.Loupe.desktop" ];
+  video = [ "io.github.celluloid_player.Celluloid.desktop" ];
+  fileManager = [ "org.gnome.Nautilus.desktop" ];
+  fileArchiver = [ "org.gnome.FileRoller.desktop" ];
+  browser = [ "userapp-Zen-LC7JZ2.desktop" ];
+  editor = [ "dev.zed.Zed" ];
+in {
   xdg = {
-    portal = {
-      enable = true;
-      xdgOpenUsePortal = true;
-
-      # NOTE Usar GTK/Hyprland # Hyprland mejora el contexto de ventanas # GTK Enlaces
-      # Hyprland Portal no se instala automáticamente desde HomeManager
-      extraPortals = with pkgs; [ 
-        xdg-desktop-portal-hyprland
-        xdg-desktop-portal-gtk
-      ];
-      
-      config.hyprland.default = [ "hyprland" "gtk" ];
-    };
-    
     mimeApps = {
       enable = true;
       defaultApplications = {
-        "inode/directory" = [ "org.gnome.Nautilus.desktop" ];
-        "inode/blockdevice" = [ "org.gnome.Nautilus.desktop" ];
 
-        "text/plain" = [ "dev.zed.Zed" ];
+        "image/png" = image;
+        "image/jpeg" = image;
+        "image/gif" = image;
+        "image/webp" = image;
+        "image/avif" = image;
+        "image/heic" = image;
+
+        "video/mp4" = video;
+        "video/webm" = video;
+        "video/mkv" = video;
         
-        "image/png" = [ "org.gnome.Loupe.desktop" ];
-        "image/jpeg" = [ "org.gnome.Loupe.desktop" ];
-        "image/gif" = [ "org.gnome.Loupe.desktop" ];
-        "image/webp" = [ "org.gnome.Loupe.desktop" ];
-        "image/avif" = [ "org.gnome.Loupe.desktop" ];
-        "image/heic" = [ "org.gnome.Loupe.desktop" ];
+        "audio/mp3" = audio;
+        "audio/m4a" = audio;
+        "audio/flac" = audio;
+
+        "inode/directory" = fileManager;
+        "inode/blockdevice" = fileManager;
         
-        "video/mp4" = [ "io.github.celluloid_player.Celluloid.desktop" ];
-        "video/webm" = [ "io.github.celluloid_player.Celluloid.desktop" ];
-        "video/mkv" = [ "io.github.celluloid_player.Celluloid.desktop" ];
+        "application/zip" = fileArchiver;
+        "application/rar" = fileArchiver;
+        "application/7z" = fileArchiver;
+        "application/*tar" = fileArchiver;
 
-        "audio/mp3" = [ "com.github.neithern.g4music.desktop"];
-        "audio/m4a" = [ "com.github.neithern.g4music.desktop"];
-        "audio/flac" = [ "com.github.neithern.g4music.desktop"];
+        "text/html" = browser;
+        "x-scheme-handler/http" = browser;
+        "x-scheme-handler/https" = browser;
+        "x-scheme-handler/ftp" = browser;
+        "x-scheme-handler/about" = browser;
+        "x-scheme-handler/unknown" = browser;
+        "application/xhtml+xml" = browser;
+        "application/x-extension-htm" = browser;
+        "application/x-extension-html" = browser;
+        "application/x-extension-shtml" = browser;
+        "application/x-extension-xhtml" = browser;
+        "application/x-extension-xht" = browser;
 
-        "application/zip" = [ "org.gnome.FileRoller.desktop" ];
-        "application/rar" = [ "org.gnome.FileRoller.desktop" ];
-        "application/7z" = [ "org.gnome.FileRoller.desktop" ];
-        "application/*tar" = [ "org.gnome.FileRoller.desktop" ];
-     };
-      
+        "application/json" = editor;
+        "application/xml" = editor;
+        "text/plain" = editor;
+        "text/markdown" = editor;
+        "text/csv" = editor;
+      };
     };
 
     userDirs = {
       enable = true;
       createDirectories = true;
-
+      
+      publicShare = null;
+      templates = null;
+      
+      extraConfig = {
+        XDG_SCREENSHOTS_DIR = "${config.xdg.userDirs.pictures}/Screenshots";
+      };
+      
     };
-
     
   };
-   
 }
