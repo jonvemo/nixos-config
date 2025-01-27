@@ -11,8 +11,8 @@ function convert_images
 
     # Format settings
     set RESTRICTED_INPUTS heic heif avif
-    set ALLOWED_OUTPUTS jpg jpeg png y4m
-    set INTERMEDIATE_FORMAT png # Default intermediate format
+    set RESTRICTED_OUTPUTS heic heif avif
+    set INTERMEDIATE_FORMAT png
 
     # Create destination folder
     set FOLDER converted_$OUTPUT_FORMAT
@@ -21,10 +21,10 @@ function convert_images
     # Process files
     for FORMAT in $INPUT_FORMATS
         for FILE in *.$FORMAT
-            set FILE_CONVERTED (string replace ".$FORMAT" ".$OUTPUT_FORMAT" -- $FILE)
+            set FILE_CONVERTED "$FOLDER/"(string replace ".$FORMAT" ".$OUTPUT_FORMAT" -- $FILE)
 
             # Check if you need two-step conversion
-            if contains -- $FORMAT $RESTRICTED_INPUTS; and not contains -- $OUTPUT_FORMAT $ALLOWED_OUTPUTS
+            if contains -- $FORMAT $RESTRICTED_INPUTS; or contains -- $OUTPUT_FORMAT $RESTRICTED_OUTPUTS
                 set INTERMEDIATE_FILE (string replace ".$FORMAT" ".$INTERMEDIATE_FORMAT" -- $FILE)
 
                 # Step 1: Conversion to intermediate format
@@ -32,6 +32,8 @@ function convert_images
                     heif-dec "$FILE" "$INTERMEDIATE_FILE"
                 else if contains -- $FORMAT avif
                     avifdec "$FILE" "$INTERMEDIATE_FILE"
+                else
+                    ffmpeg -i "$FILE" "$INTERMEDIATE_FILE"
                 end
 
                 if not test -f "$INTERMEDIATE_FILE"
@@ -51,22 +53,12 @@ function convert_images
                 rm -f "$INTERMEDIATE_FILE"
             else
                 # Direct conversion for other cases
-                if contains -- $FORMAT heic heif
-                    heif-dec "$FILE" "$FILE_CONVERTED"
-                else if contains -- $FORMAT avif
-                    avifdec "$FILE" "$FILE_CONVERTED"
-                else if contains -- $OUTPUT_FORMAT heic heif
-                    heif-enc "$FILE" "$FILE_CONVERTED"
-                else if contains -- $OUTPUT_FORMAT avif
-                    avifenc "$FILE" "$FILE_CONVERTED"
-                else
-                    ffmpeg -i "$FILE" "$FILE_CONVERTED"
-                end
+                ffmpeg -i "$FILE" "$FILE_CONVERTED"
             end
 
-            # Move converted file
+            # Move converted file and preserve original timestamp
             if test -f "$FILE_CONVERTED"
-                mv "$FILE_CONVERTED" $FOLDER
+                exiftool -TagsFromFile "$FILE" "-All:All>All:All" "$FILE_CONVERTED" -overwrite_original -P
                 echo "Converted: $FILE -> $FOLDER/$FILE_CONVERTED"
             else
                 echo "Conversion Error: $FILE"
