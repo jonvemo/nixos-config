@@ -5,6 +5,7 @@
   
   stylix = {
     enable = true;
+    /* If you want an auto-generated theme from the wallpaper comment this. It's only possible from png, jpg and gif formats */
     base16Scheme = "${pkgs.base16-schemes}/share/themes/horizon-terminal-dark.yaml";
 
     # Misc
@@ -39,7 +40,7 @@
       
     };
 
-    image = ./wallpapers/A1.png;
+    image = ./wallpapers/A4.webp;
 #    image = config.lib.stylix.pixel "base0A";
 #    image = pkgs.fetchurl {
 #      url = "https://www.pixelstalk.net/wp-content/uploads/2016/05/Epic-Anime-Awesome-Wallpapers.jpg";
