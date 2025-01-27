@@ -9,7 +9,7 @@
       hyprpaper hyprlock hypridle hyprcursor
     
       # GUI & CTL & TUI
-      myxer kooha lact
+      pwvucontrol kooha lact
       brightnessctl playerctl grim slurp wl-clipboard cliphist
       bluetuith impala
       internetarchive

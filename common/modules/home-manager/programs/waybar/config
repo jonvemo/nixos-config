@@ -1,0 +1,183 @@
+[
+  {
+    "battery": {
+      "format": "{icon}",
+      "format-icons": {
+        "charging": [
+          "󰢟",
+          "󰢜",
+          "󰂆",
+          "󰂇",
+          "󰂈",
+          "󰢝",
+          "󰂉",
+          "󰢞",
+          "󰂊",
+          "󰂋",
+          "󰂅"
+        ],
+        "default": [
+          "󰂎",
+          "󰁺",
+          "󰁻",
+          "󰁼",
+          "󰁽",
+          "󰁾",
+          "󰁿",
+          "󰂀",
+          "󰂁",
+          "󰂂",
+          "󰁹"
+        ]
+      },
+      "states": {
+        "critical": 15,
+        "warning": 30
+      },
+      "tooltip-format": "Battery {capacity}% \n{timeTo} \nHealth: {health}"
+    },
+    "bluetooth": {
+      "format": "",
+      "format-connected": "",
+      "format-disabled": "",
+      "on-click": "kitty bluetuith",
+      "tooltip-format": "{controller_alias}\t{controller_address}",
+      "tooltip-format-connected": "{controller_alias}\t{controller_address}\n\n{device_enumerate}",
+      "tooltip-format-enumerate-connected": "{device_alias}\t{device_address}"
+    },
+    "clock": {
+      "actions": {
+        "on-click-backward": "tz_down",
+        "on-click-forward": "tz_up",
+        "on-click-right": "mode",
+        "on-scroll-down": "shift_down",
+        "on-scroll-up": "shift_up"
+      },
+      "calendar": {
+        "format": {
+          "days": "<span color='#cbced0'><b>{}</b></span>",
+          "months": "<span color='#e3e6ee'><b>{}</b></span>",
+          "today": "<span color='#e95678'><b>{}</b></span>",
+          "weekdays": "<span color='#fab795'><b>{}</b></span>",
+          "weeks": "<span color='#26bbd9'><b>W{}</b></span>"
+        },
+        "mode": "month",
+        "mode-mon-col": 3,
+        "on-scroll": 1,
+        "weeks-pos": "right"
+      },
+      "format": "{:%I:%M %p}",
+      "format-alt": "{:%A, %B %d. %Y}",
+      "tooltip-format": "<tt>{calendar}</tt>"
+    },
+    "custom/media": {
+      "exec": "playerctl -a metadata --format '{\"text\": \"{{artist}}\", \"tooltip\": \"{{artist}} - {{markup_escape(title)}} {{album}}\", \"alt\": \"{{status}}\", \"class\": \"{{status}}\"}' -F",
+      "format": "󰎇 {}",
+      "max-length": 14,
+      "on-click": "playerctl play-pause",
+      "on-click-right": "playerctl next",
+      "on-double-click": "playerctl previous",
+      "return-type": "json"
+    },
+    "height": 34,
+    "hyprland/workspaces": {
+      "format": "{windows} <sub>{icon}</sub>",
+      "format-window-separator": "  ",
+      "persistent-workspaces": {
+        "eDP-1": [
+          1,
+          10
+        ]
+      },
+      "window-rewrite": {
+        "class<RemNote>": "RN",
+        "class<code>": "󰨞",
+        "class<figma-linux>": "",
+        "class<g4music>": "",
+        "class<io.github.celluloid_player.Celluloid>": "",
+        "class<kitty>": "",
+        "class<microsoft-edge>": "",
+        "class<microsoft-edge> title<*.facebook.*>": "",
+        "class<microsoft-edge> title<*.youtube.*>": "",
+        "class<org.gnome.Loupe>": "",
+        "class<org.gnome.Nautilus>": "",
+        "class<spotify>": "",
+        "class<steam>": "",
+        "class<vesktop>": "",
+        "title<*.github.*>": "",
+        "title<*.gmail.*": "",
+        "title<*.instagram.*>": "",
+        "title<*.reddit.*>": ""
+      },
+      "window-rewrite-default": ""
+    },
+    "modules-center": [
+      "niri/workspaces", "hyprland/workspaces"
+    ],
+    "modules-left": [
+      "custom/media"
+    ],
+    "modules-right": [
+      "tray",
+      "clock",
+      "wireplumber",
+      "network",
+      "bluetooth",
+      "battery",
+      "temperature"
+    ],
+    "network": {
+      "format-disconnected": "󰖪",
+      "format-ethernet": " {ifname}: {ipaddr}/{cidr}",
+      "format-icons": [
+        "󰤯",
+        "󰤟",
+        "󰤢",
+        "󰤥",
+        "󰤨"
+      ],
+      "format-wifi": "{icon} ",
+      "interval": "10",
+      "on-click": "kitty impala",
+      "tooltip-format": "{essid}"
+    },
+    "wireplumber": {
+      "format": "{icon}",
+      "format-icons": {
+        "car": "",
+        "default": [
+          "",
+          "",
+          ""
+        ],
+        "hands-free": "",
+        "headphone": "",
+        "headset": "",
+        "phone": "",
+        "portable": ""
+      },
+      "format-muted": "",
+      "on-click": "pwvucontrol",
+      "tooltip-format": "Volume {volume}% \n{desc}"
+    },
+    "reload_style_on_change": true,
+    "spacing": 0,
+    "temperature": {
+      "critical-threshold": 80,
+      "format": "{icon}",
+      "format-icons": [
+        "",
+        "",
+        "",
+        "",
+        ""
+      ]
+    },
+    "tray": {
+      "icon-size": 12,
+      "spacing": 8
+    },
+    "width": 1358
+  }
+]
+

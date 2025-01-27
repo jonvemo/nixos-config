@@ -11,12 +11,19 @@ inputs.nixpkgs.lib.nixosSystem {
     
     {
       home-manager = {
-        extraSpecialArgs = { inherit inputs pkgs-small; };
-        
         backupFileExtension = "test2";
 
         useGlobalPkgs = true;
         useUserPackages = true;
+
+        extraSpecialArgs = {
+          dotfiles = {
+            programs = "/etc/nixos/common/modules/home-manager/programs/";
+            services = "/etc/nixos/common/modules/home-manager/services/";
+          };
+
+          inherit inputs pkgs-small;
+        };
         
         users = {
           jonvemo.imports = [
