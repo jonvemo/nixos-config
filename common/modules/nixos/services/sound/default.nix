@@ -5,13 +5,13 @@
       enable = true;
       wireplumber.enable = true;
 
-      /* Compatibility */
+      /* Compatibility - All can run only with this, restart required. Wayland */
       pulse.enable = true;
 
       /* Specific Use */
       jack.enable = false;
 
-      /* Enable Device Sound and a lot of Packages*/
+      /* Enable Main Device Sound and a lot of Packages */
       alsa = {
         enable = false;
         support32Bit = lib.mkDefault false;
