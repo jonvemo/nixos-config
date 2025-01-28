@@ -10,9 +10,24 @@ function convert_images
     set OUTPUT_FORMAT $argv[2]
 
     # Format settings
-    set RESTRICTED_INPUTS heic heif avif
-    set RESTRICTED_OUTPUTS heic heif avif
+    set ALLOW_FORMATS png jpg jpeg webp avif heic
+    set RESTRICTED_INPUTS heic avif
+    set RESTRICTED_OUTPUTS heic avif
+    set SUPPORTED_ENCODER_INPUTS png jpg jpeg
     set INTERMEDIATE_FORMAT png
+
+    # Check allowed formats
+    for FORMAT in $INPUT_FORMATS
+        if not contains -- $FORMAT $ALLOW_FORMATS
+            echo "Error: Input format '$FORMAT' not supported"
+            return 1
+        end
+    end
+
+    if not contains -- $OUTPUT_FORMAT $ALLOW_FORMATS
+        echo "Error: Output format '$OUTPUT_FORMAT' not supported"
+        return 1
+    end
 
     # Create destination folder
     set FOLDER converted_$OUTPUT_FORMAT
@@ -23,12 +38,16 @@ function convert_images
         for FILE in *.$FORMAT
             set FILE_CONVERTED "$FOLDER/"(string replace ".$FORMAT" ".$OUTPUT_FORMAT" -- $FILE)
 
-            # Check if you need two-step conversion
-            if contains -- $FORMAT $RESTRICTED_INPUTS; or contains -- $OUTPUT_FORMAT $RESTRICTED_OUTPUTS
-                set INTERMEDIATE_FILE (string replace ".$FORMAT" ".$INTERMEDIATE_FORMAT" -- $FILE)
+            # Condition corrected using begin/end
+            if contains -- $FORMAT $RESTRICTED_INPUTS; or begin
+                    contains -- $OUTPUT_FORMAT $RESTRICTED_OUTPUTS
+                    and not contains -- $FORMAT $SUPPORTED_ENCODER_INPUTS
+                end
+                echo "Using two-step conversion for: $FILE"
+                set INTERMEDIATE_FILE "$FOLDER/"(string replace ".$FORMAT" ".$INTERMEDIATE_FORMAT" -- $FILE)
 
                 # Step 1: Conversion to intermediate format
-                if contains -- $FORMAT heic heif
+                if contains -- $FORMAT heic
                     heif-dec "$FILE" "$INTERMEDIATE_FILE"
                 else if contains -- $FORMAT avif
                     avifdec "$FILE" "$INTERMEDIATE_FILE"
@@ -41,8 +60,8 @@ function convert_images
                     continue
                 end
 
-                # Step 2: Convert to final format with appropriate encoder
-                if contains -- $OUTPUT_FORMAT heic heif
+                #Step 2: Final Conversion
+                if contains -- $OUTPUT_FORMAT heic
                     heif-enc "$INTERMEDIATE_FILE" "$FILE_CONVERTED"
                 else if contains -- $OUTPUT_FORMAT avif
                     avifenc "$INTERMEDIATE_FILE" "$FILE_CONVERTED"
@@ -52,16 +71,27 @@ function convert_images
 
                 rm -f "$INTERMEDIATE_FILE"
             else
-                # Direct conversion for other cases
-                ffmpeg -i "$FILE" "$FILE_CONVERTED"
+                # Direct conversion
+                echo "Using direct conversion for: $FILE"
+                if contains -- $OUTPUT_FORMAT $RESTRICTED_OUTPUTS
+                    if contains -- $OUTPUT_FORMAT heic
+                        heif-enc "$FILE" "$FILE_CONVERTED"
+                    else if contains -- $OUTPUT_FORMAT avif
+                        avifenc "$FILE" "$FILE_CONVERTED"
+                    else
+                        ffmpeg -i "$FILE" "$FILE_CONVERTED"
+                    end
+                else
+                    ffmpeg -i "$FILE" "$FILE_CONVERTED"
+                end
             end
 
-            # Move converted file and preserve original timestamp
+            # Preserve metadata
             if test -f "$FILE_CONVERTED"
                 exiftool -TagsFromFile "$FILE" "-All:All>All:All" "$FILE_CONVERTED" -overwrite_original -P
-                echo "Converted: $FILE -> $FOLDER/$FILE_CONVERTED"
+                echo "Converted: $FILE -> $FILE_CONVERTED"
             else
-                echo "Conversion Error: $FILE"
+                echo "Conversion error: $FILE"
             end
         end
     end
