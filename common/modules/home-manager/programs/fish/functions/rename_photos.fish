@@ -7,19 +7,18 @@ function rename_photos
     end
 
     set FILE_FORMATS (string split ' ' $argv[1])
-
-    # Inicializar el contador
     set COUNTER 1
 
     for FORMAT in $FILE_FORMATS
         for FILE in *.$FORMAT
-            # Get the creation date of the image
-            set CREATION_DATE (stat --format='%y' $FILE | cut -d'.' -f1 | sed 's/[:\t]/ /g' | awk '{print $1" "$2$3$4}')
+            # Get Original Date with EXIF
+            set EXIF_DATE (exiftool -DateTimeOriginal -d "%Y-%m-%d %H%M%S" "$FILE" | cut -d':' -f2- | string trim)
 
-            # Rename the image with the creation date and the incremental suffix
-            mv $FILE "Y2K-$COUNTER $CREATION_DATE.$FORMAT"
+            if test -z "$EXIF_DATE"
+                set EXIF_DATE (stat --format='%y' $FILE | cut -d'.' -f1 | sed 's/[:\t]/ /g' | awk '{print $1" "$2$3$4}')
+            end
 
-            # Incrementar el contador
+            mv -v "$FILE" "Y2K-$COUNTER $EXIF_DATE.$FORMAT"
             set COUNTER (math $COUNTER + 1)
         end
     end
