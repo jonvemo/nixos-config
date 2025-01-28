@@ -1,17 +1,13 @@
 #!/usr/bin/env fish
 
 function rename_photos
-    if test (count $argv) -ne 1
-        echo 'Usage: rename_photos "<file_format1> <file_format2> ..."'
-        return 1
-    end
-
-    set FILE_FORMATS (string split ' ' $argv[1])
+    set IMAGE_FORMATS jpg jpeg png gif webp avif heic tiff bmp
     set COUNTER 1
+    set FOUND_FILES false
 
-    for FORMAT in $FILE_FORMATS
+    for FORMAT in $IMAGE_FORMATS
         for FILE in *.$FORMAT
-            # Get Original Date with EXIF
+            set FOUND_FILES true
             set EXIF_DATE (exiftool -DateTimeOriginal -d "%Y-%m-%d %H%M%S" "$FILE" | cut -d':' -f2- | string trim)
 
             if test -z "$EXIF_DATE"
@@ -21,5 +17,11 @@ function rename_photos
             mv -v "$FILE" "Y2K-$COUNTER $EXIF_DATE.$FORMAT"
             set COUNTER (math $COUNTER + 1)
         end
+    end
+
+    if not $FOUND_FILES
+        echo "Error: files not found"
+        echo "Supported formats: "(string join ', ' $IMAGE_FORMATS) >&2
+        return 1
     end
 end
