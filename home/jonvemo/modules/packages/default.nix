@@ -19,8 +19,7 @@
     (with pkgs-small; [
 
       # Programming
-      lazygit woff2 ffmpeg libheif libavif
-
+      lazygit woff2
       # Temporal; in case an unstable package (nixos-unstable) fails
     
     ])  

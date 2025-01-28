@@ -49,6 +49,7 @@
       kittysay
 
       # Tools
+      ffmpeg libheif libavif exiftool
 
       # Temporal; in case an unstable package (nixos-unstable) fails
     
