@@ -5,8 +5,8 @@
   version = "2";
 
   default_model = {
-    provider = "zed.dev";
-    model = "claude-3-5-sonnet-latest";
+    provider = "google";            # ollama
+    model = "gemini-2.0-flash-exp"; # deepseek-r1:1.5b/7b
   };
   # inline_alternatives = [
   #   {
@@ -14,5 +14,5 @@
   #     model = "o1-mini";
   #   }
   # ];
-
+  # 
 }

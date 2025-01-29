@@ -1,6 +1,7 @@
-{pkgs, ...}: {
+{pkgs, pkgs-small, ...}: {
   programs.zed-editor = {
     enable = true;
+    package = pkgs-small.zed-editor;
 
     extensions = ["html" "nix" "log" "git-firefly"];
     extraPackages = with pkgs; [
