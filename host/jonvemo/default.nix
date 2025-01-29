@@ -22,7 +22,7 @@ inputs.nixpkgs.lib.nixosSystem {
             services = "/etc/nixos/common/modules/home-manager/services/";
           };
 
-          inherit inputs pkgs-small;
+          inherit system inputs pkgs-small;
         };
         
         users = {
