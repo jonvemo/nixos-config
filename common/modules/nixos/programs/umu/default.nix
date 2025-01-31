@@ -2,6 +2,5 @@
 {
   environment.systemPackages = with pkgs; [
     umu-launcher
-    wine64Packages.unstable
   ];
 }
