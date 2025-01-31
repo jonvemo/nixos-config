@@ -128,7 +128,7 @@
     ],
     "network": {
       "format-disconnected": "󰖪",
-      "format-ethernet": " {ifname}: {ipaddr}/{cidr}",
+      "format-ethernet": " {ifname}",
       "format-icons": [
         "󰤯",
         "󰤟",
