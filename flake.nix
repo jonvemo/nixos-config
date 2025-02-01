@@ -32,16 +32,13 @@
   outputs = { ... } @ inputs: let
     system = "x86_64-linux";
 
-    pkgs = import inputs.nixpkgs {
+    common = {
       inherit system;
       config.allowUnfree = true;
     };
 
-    # Enable packages of nixos-unstable-small for HomeManager
-    pkgs-small = import inputs.nixpkgs-small {
-      inherit system;
-      config.allowUnfree = true;
-    };
+    pkgs = import inputs.nixpkgs common;
+    pkgs-small = import inputs.nixpkgs-small common;
 
   in {
     nixosConfigurations = {
