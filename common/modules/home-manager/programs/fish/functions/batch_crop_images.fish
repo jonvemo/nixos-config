@@ -1,39 +1,37 @@
 #!/usr/bin/env fish
 
 function batch_crop_images
-    # Input folder is the current directory
-    set INPUT_FOLDER (pwd)
-    set OUTPUT_FOLDER satty # Folder to save edited images
+    set FOLDER satty # Folder to save edited images
+    set FORMATS png # Only PNG zzz
 
     # Ensure the output folder exists
-    mkdir -p $OUTPUT_FOLDER
+    mkdir -p $FOLDER
 
     # Get a list of images from the input folder
-    set IMAGES (ls $INPUT_FOLDER/*.png)
 
     # Check if there are any images to process
-    if test (count $IMAGES) -eq 0
-        echo "No PNG images found in $INPUT_FOLDER."
+    if test (count $FORMATS) -eq 0
+        echo "No (png/jpg/jpeg) images found"
         return 1
     end
 
-    # Iterate over each image
-    for IMAGE in $IMAGES
-        set BASENAME (basename $IMAGE)
-        set OUTPUT_FILE "$OUTPUT_FOLDER/$BASENAME"
+    for FORMAT in $FORMATS
+        for IMAGE in *.$FORMAT
+            set OUTPUT_FILE "$FOLDER/"(basename $IMAGE)
 
-        echo "Editing: $IMAGE"
+            echo "Editing: $IMAGE"
 
-        # Open the image with satty
-        satty -f $IMAGE -o $OUTPUT_FILE --fullscreen --early-exit --initial-tool crop
+            # Open the image with satty
+            satty -f $IMAGE -o $OUTPUT_FILE --fullscreen --early-exit --initial-tool crop
 
-        # Check if the command was successful
-        if test $status -ne 0
-            echo "An error occurred while editing. Exiting function."
-            return 1
+            # Check if the command was successful
+            if test $status -ne 0
+                echo "An error occurred while editing. Exiting function."
+                return 1
+            end
+
+            echo "Saved to: $OUTPUT_FILE"
         end
-
-        echo "Saved to: $OUTPUT_FILE"
     end
 
     echo "All images have been processed."
