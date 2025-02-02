@@ -1,3 +1,4 @@
+{ pkgs, ... }:
 {
   imports = [
     ./fish
@@ -12,4 +13,12 @@
     ./umu
     ./anime-games
   ];
+
+  programs.command-not-found.enable = false;
+
+  environment.defaultPackages = with pkgs; [
+    # Per Default Install
+    # perl rsync strace
+  ];
+
 }
