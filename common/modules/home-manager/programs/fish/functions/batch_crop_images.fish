@@ -7,17 +7,23 @@ function batch_crop_images
     # Ensure the output folder exists
     mkdir -p $FOLDER
 
-    # Get a list of images from the input folder
-
     # Check if there are any images to process
-    if test (count $FORMATS) -eq 0
-        echo "No (png/jpg/jpeg) images found"
+    set HAS_IMAGES false
+    for FORMAT in $FORMATS
+        if count *.$FORMAT >/dev/null
+            set HAS_IMAGES true
+            break
+        end
+    end
+
+    if not $HAS_IMAGES
+        echo "No images found with the specified formats"
         return 1
     end
 
     for FORMAT in $FORMATS
         for IMAGE in *.$FORMAT
-            set OUTPUT_FILE "$FOLDER/"(basename $IMAGE)
+            set OUTPUT_FILE "$FOLDER/$IMAGE"
 
             echo "Editing: $IMAGE"
 
