@@ -17,4 +17,7 @@ function create_module
     }" default.nix
 
     hx $NAME/default.nix
+
+    # Makes the new module trackable by git
+    git add $NAME
 end
