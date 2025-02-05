@@ -14,7 +14,10 @@
     ./anime-games
   ];
 
-  programs.command-not-found.enable = false;
+  programs = {
+    command-not-found.enable = false;
+    appimage.enable = true;
+  };
 
   environment.defaultPackages = with pkgs; [
     # Per Default Install
