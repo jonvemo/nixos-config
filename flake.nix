@@ -24,7 +24,10 @@
       url = "github:abenz1267/walker";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    curd.url = "github:Wraient/curd";
+    curd = {
+      url = "github:Wraient/curd";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
     aagl.url = "github:ezKEa/aagl-gtk-on-nix";
 
   };
