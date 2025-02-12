@@ -1,6 +1,6 @@
 {
   programs.hyprland = {
     enable = true;
-    xwayland.enable = false;
+    xwayland.enable = true;
   };
 }
