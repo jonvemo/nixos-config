@@ -1,4 +1,15 @@
 {
+  Rust = {
+    language_servers = [
+      "rust-analyzer"
+    ];
+    formatter = {
+      external = {
+        command = "rustfmt";
+      };
+    };
+  };
+
   Nix = {
     language_servers = [
       "nil" "!nixd"

@@ -6,13 +6,13 @@
 
   default_model = {
     provider = "google";            # ollama
-    model = "gemini-2.0-flash-exp"; # deepseek-r1:1.5b/7b
+    model = "gemini-2.0-flash-thinking-exp"; # deepseek-r1:1.5b/7b
   };
-  # inline_alternatives = [
-  #   {
-  #     provider = "openai";
-  #     model = "o1-mini";
-  #   }
-  # ];
-  # 
+  inline_alternatives = [
+    {
+      provider = "openai";
+      model = "o3-mini";
+    }
+  ];
+  
 }

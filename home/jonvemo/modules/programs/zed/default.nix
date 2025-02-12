@@ -3,7 +3,7 @@
     enable = true;
     package = pkgs-small.zed-editor;
 
-    extensions = ["html" "nix" "log" "git-firefly"];
+    extensions = ["html" "nix" "fish" "toml" "log" "git-firefly"];
     extraPackages = with pkgs; [
       biome
       live-server
@@ -14,12 +14,19 @@
       nodePackages.live-server
       nodePackages.vscode-langservers-extracted
 
+      /* Nix */
       nixd
       nil
       alejandra
 
+      /* Go */
       go
       gopls
+
+      /* Rust */
+      rust-analyzer
+      clippy
+      rustfmt
     ];
 
     userSettings = {
@@ -29,10 +36,6 @@
       };
 
       vim_mode = true;
-
-      features = {
-        inline_completion_provider = "supermaven";
-      };
 
       prettier.allowed = true;
 
