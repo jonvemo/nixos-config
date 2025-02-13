@@ -20,11 +20,12 @@
         "[](white)"
       ];
 
-      palette = "monochrome";
-      palettes.monochrome = {
-        white = "#cbced0";
-        black = "#2e303e";  
-      };
+      /* Takes the colors from the terminal if it is commented */
+      # palette = "monochrome";
+      # palettes.monochrome = {
+      #   white = "#cbced0";
+      #   black = "#2e303e";  
+      # };
 
       username = {
         show_always = true;
