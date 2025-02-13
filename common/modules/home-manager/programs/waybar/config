@@ -128,7 +128,6 @@
     ],
     "network": {
       "format-disconnected": "󰖪",
-      "format-ethernet": " {ifname}",
       "format-icons": [
         "󰤯",
         "󰤟",
@@ -137,9 +136,11 @@
         "󰤨"
       ],
       "format-wifi": "{icon} ",
+      "format-ethernet": "",
       "interval": "10",
       "on-click": "kitty impala",
-      "tooltip-format": "{essid}"
+      "tooltip-format-wifi": "{essid}",
+      "tooltip-format-ethernet": "{ifname}"
     },
     "wireplumber": {
       "format": "{icon}",
