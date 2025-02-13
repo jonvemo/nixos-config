@@ -159,7 +159,7 @@
       },
       "format-muted": "",
       "on-click": "pwvucontrol",
-      "tooltip-format": "Volume {volume}% \n{desc}"
+      "tooltip-format": "Volume {volume}%"
     },
     "reload_style_on_change": true,
     "spacing": 0,
