@@ -9,7 +9,7 @@
     
     cursorTheme = {
       name = "Anya";
-      size = 24;
+      size = 32;
     };
     
     gtk3 = {
