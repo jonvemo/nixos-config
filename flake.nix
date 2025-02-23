@@ -25,7 +25,7 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
     curd = {
-      url = "github:Wraient/curd";
+      url = "github:Wraient/curd?ref=v1.0.8";
       inputs.nixpkgs.follows = "nixpkgs";
     };
     aagl.url = "github:ezKEa/aagl-gtk-on-nix";
