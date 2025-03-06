@@ -5,13 +5,13 @@
   
   stylix = {
     enable = true;
-    /* If you want an auto-generated theme from the wallpaper comment this. It's only possible from png, jpg and gif formats */
+    
+    # NOTE If you want an auto-generated theme from the wallpaper comment this. It's only possible from png, jpg and gif formats
     base16Scheme = "${pkgs.base16-schemes}/share/themes/horizon-terminal-dark.yaml";
 
     # Misc
-    # cursor = {
-      # NOTE Sólo admite cursor acompañado con el Package
-      # Actualmente gestionado por GTK para elementos personalizados
+    # cursor = 
+      # NOTE Managed by GTK
       
       # package = pkgs.qogir-icon-theme;
       # name = "Qogir Cursors";
@@ -20,7 +20,7 @@
     
     # Fonts
     fonts = {
-      # NOTE No permite seleccionar múltiples fonts, así que es paracialmente administrado por HomeManager.
+      # NOTE It does not allow selecting multiple fonts, so it is partially managed by HomeManager.
 
       emoji = {
          package = pkgs.noto-fonts-emoji-blob-bin;
@@ -40,14 +40,9 @@
       
     };
 
-    image = ./wallpapers/A4.webp;
-#    image = config.lib.stylix.pixel "base0A";
-#    image = pkgs.fetchurl {
-#      url = "https://www.pixelstalk.net/wp-content/uploads/2016/05/Epic-Anime-Awesome-Wallpapers.jpg";
-#      sha256 = "enQo3wqhgf0FEPHj2coOCvo7DuZv+x5rL/WIo4qPI50=";
-#    };
+    image = ./wallpapers/A1.png;
 
-    polarity = "dark"; # ¿No parece funcionar adecuamente?
+    polarity = "dark";
 
     opacity = {
       applications = 1;
