@@ -291,6 +291,7 @@
         "owner": "nix-community",
         "repo": "home-manager",
         "rev": "486b066025dccd8af7fbe5dd2cc79e46b88c80da",
+        "type": "github"
       },
       "original": {
         "owner": "nix-community",
@@ -342,6 +343,7 @@
         "owner": "NixOS",
         "repo": "nixpkgs",
         "rev": "7498c779d088e9aa62efd73f1145449ae1a90e0c",
+        "type": "github"
       },
       "original": {
         "owner": "NixOS",
@@ -357,6 +359,7 @@
         "owner": "NixOS",
         "repo": "nixpkgs",
         "rev": "d69ab0d71b22fa1ce3dbeff666e6deb4917db049",
+        "type": "github"
       },
       "original": {
         "owner": "NixOS",
@@ -443,6 +446,7 @@
         "owner": "danth",
         "repo": "stylix",
         "rev": "11780517948f214b9f93d1bf5a2d29bc181d3a33",
+        "type": "github"
       },
       "original": {
         "owner": "danth",
