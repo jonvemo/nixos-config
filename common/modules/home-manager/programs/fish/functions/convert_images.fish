@@ -38,7 +38,6 @@ function convert_images
         for FILE in *.$FORMAT
             set FILE_CONVERTED "$FOLDER/"(string replace ".$FORMAT" ".$OUTPUT_FORMAT" -- $FILE)
 
-            # Condition corrected using begin/end
             if contains -- $FORMAT $RESTRICTED_INPUTS; or begin
                     contains -- $OUTPUT_FORMAT $RESTRICTED_OUTPUTS
                     and not contains -- $FORMAT $SUPPORTED_ENCODER_INPUTS
@@ -61,15 +60,19 @@ function convert_images
                 end
 
                 #Step 2: Final Conversion
-                if contains -- $OUTPUT_FORMAT heic
-                    heif-enc "$INTERMEDIATE_FILE" "$FILE_CONVERTED"
-                else if contains -- $OUTPUT_FORMAT avif
-                    avifenc "$INTERMEDIATE_FILE" "$FILE_CONVERTED"
+                if not contains -- $OUTPUT_FORMAT png
+                    if contains -- $OUTPUT_FORMAT heic
+                        heif-enc "$INTERMEDIATE_FILE" "$FILE_CONVERTED"
+                    else if contains -- $OUTPUT_FORMAT avif
+                        avifenc "$INTERMEDIATE_FILE" "$FILE_CONVERTED"
+                    else
+                        ffmpeg -i "$INTERMEDIATE_FILE" "$FILE_CONVERTED"
+                    end
+                    rm -f "$INTERMEDIATE_FILE"
                 else
-                    ffmpeg -i "$INTERMEDIATE_FILE" "$FILE_CONVERTED"
+                    set FILE_CONVERTED "$INTERMEDIATE_FILE"
                 end
 
-                rm -f "$INTERMEDIATE_FILE"
             else
                 # Direct conversion
                 echo "Using direct conversion for: $FILE"
