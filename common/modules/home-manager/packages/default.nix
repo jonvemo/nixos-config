@@ -50,7 +50,7 @@
 
       # Tools
       ffmpeg libheif libavif exiftool
-      libaom svt-av1
+      libaom svt-av1 rav1e
 
       # Temporal; in case an unstable package (nixos-unstable) fails
     
