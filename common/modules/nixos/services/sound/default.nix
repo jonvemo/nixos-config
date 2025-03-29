@@ -13,7 +13,7 @@
 
       /* Enable Main Device Sound and a lot of Packages */
       alsa = {
-        enable = false;
+        enable = true; # WARN osu!lazer required
         support32Bit = lib.mkDefault false;
       };
     };
