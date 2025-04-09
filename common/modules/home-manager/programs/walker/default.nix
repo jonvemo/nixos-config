@@ -1,10 +1,11 @@
-{ inputs, config, lib, dotfiles, ... }:
+{ inputs, pkgs, config, lib, dotfiles, ... }:
 {  
   imports = [ inputs.walker.homeManagerModules.default ];
   nix.settings = inputs.walker.nixConfig; # Set Up Cachix
 
   programs.walker = {
     enable = true;
+    package = pkgs.walker;
   };
   xdg.configFile = {
     "walker/themes/gtk.css".source = config.lib.file.mkOutOfStoreSymlink "${dotfiles.programs}walker/gtk.css";
