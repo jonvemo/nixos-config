@@ -4,7 +4,7 @@
   video = [ "io.github.celluloid_player.Celluloid.desktop" ];
   fileManager = [ "org.gnome.Nautilus.desktop" ];
   fileArchiver = [ "org.gnome.FileRoller.desktop" ];
-  browser = [ "userapp-Zen-LC7JZ2.desktop" ];
+  browser = [ "zen-beta.desktop" ];
   editor = [ "dev.zed.Zed" ];
 in {
   xdg = {
