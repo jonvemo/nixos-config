@@ -123,6 +123,7 @@ window-rule {
 }
 
 window-rule {
+    open-maximized true
     geometry-corner-radius 8
     clip-to-geometry true
 }
@@ -264,8 +265,9 @@ binds {
     // Mod+Ctrl+1 { move-window-to-workspace 1; }
 
     // Switches focus between the current and the previous workspace.
-    // Mod+Tab { focus-workspace-previous; }
+    Mod+Tab { focus-workspace-previous; }
 
+    Mod+W { toggle-column-tabbed-display; }
     // Consume one window from the right into the focused column.
     Mod+Comma  { consume-window-into-column; }
     // Expel one window from the focused column to the right.
