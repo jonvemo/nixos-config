@@ -129,8 +129,9 @@ window-rule {
 
 binds {
     Mod+Shift+Slash { show-hotkey-overlay; }
-    Mod+Shift+W { spawn "foot" "impala";}
-    Mod+Shift+B { spawn "foot" "bluetuith";}
+    Mod+Shift+W { spawn "foot" "impala"; }
+    Mod+Shift+B { spawn "foot" "bluetuith"; }
+    Mod+B { spawn "zen"; }
     Mod+T { spawn "kitty"; }
     Mod+D { spawn "walker"; }
     Super+Alt+L { spawn "hyprlock"; }
