@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ pkgs, lib, ... }:
 
 {
   programs.helix = {
@@ -42,18 +42,19 @@
       
     };
 
-    extraPackages = with pkgs; [
-      helix-gpt
-      emmet-language-server
-      biome dprint
-      marksman markdown-oxide
-      
-      nodePackages.live-server
-      nodePackages.vscode-langservers-extracted
-      
-      # tailwindcss-language-server
-      # deno
-      
+    extraPackages = lib.concatLists [ 
+      (with pkgs; [ 
+        helix-gpt
+        biome dprint
+        markdown-oxide
+        
+       ])
+  
+      (with pkgs.nodePackages; [
+        live-server
+        vscode-langservers-extracted
+  
+      ])  
     ];
     
   };

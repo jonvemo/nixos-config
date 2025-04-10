@@ -7,10 +7,6 @@ args = ["lsp-proxy"]
 [language-server.gpt]
 command = "helix-gpt"
 
-[language-server.emmet]
-args = ["--stdio"]
-command = "emmet-language-server"
-
 [language-server.bun]
 command = "bun"
 args = ["lsp"]
@@ -28,23 +24,23 @@ command = "vscode-css-language-server"
 
 [[language]]
 name = "typescript"
-language-servers = [ "bun", "biome", "gpt", "emmet" ]
+language-servers = [ "bun", "biome", "gpt" ]
 auto-format = true
 
 [[language]]
 name = "tsx"
-language-servers = [ "bun", "biome", "emmet" ]
+language-servers = [ "bun", "biome" ]
 auto-format = true
 
 [[language]]
 name = "jsx"
-language-servers = [ "bun", "biome", "emmet" ]
+language-servers = [ "bun", "biome" ]
 grammar = "javascript"
 auto-format = true
 
 [[language]]
 name = "javascript"
-language-servers = [ "bun", "biome", "gpt", "emmet" ]
+language-servers = [ "bun", "biome", "gpt" ]
 auto-format = true
 
 [[language]]
@@ -54,12 +50,12 @@ auto-format = true
 
 [[language]]
 name = "html"
-language-servers = [ "dprint", "emmet", "vscode-html-language-server" ]
+language-servers = [ "dprint", "vscode-html-language-server" ]
 auto-format = false
 
 [[language]]
 name = "css"
-language-servers = [ "biome", "emmet", "vscode-css-language-server" ]
+language-servers = [ "biome", "vscode-css-language-server" ]
 auto-format = false
 
 [[language]]
@@ -69,5 +65,5 @@ auto-format = true
 
 [[language]]
 name = "markdown"
-language-servers = [ "dprint", "marksman", "markdown-oxide" ]
+language-servers = [ "dprint", "markdown-oxide" ]
 auto-format = true
