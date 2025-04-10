@@ -36,7 +36,6 @@
 
       # Browsers & Chatting
       # microsoft-edge # google-chrome # vivaldi # brave
-      vesktop
       
       # Broken on small  
 
