@@ -3,42 +3,45 @@
 let
   cfg = config.gaming;
 
-  conditionalPackageDefs = [
-    { cond = cfg.programs.minecraft; pkg = pkgs.prismlauncher;  }
-    { cond = cfg.programs.osu;       pkg = pkgs.osu-lazer-bin; }
-    { cond = cfg.programs.r2modman;  pkg = pkgs.r2modman;      }
-    { cond = cfg.programs.umu;       pkg = pkgs.umu-launcher;  }
-  ];
-  conditionalPkgs = lib.concatMap (p: if p.cond then [ p.pkg ] else []) conditionalPackageDefs;
-  extraPkgs = lib.map (pkgName: builtins.getAttr pkgName pkgs) cfg.extraPackages;
+  gameNames = lib.attrNames cfg.games;
+
+  conditionalPkgs = lib.concatMap (gameName:
+    let gameOpts = cfg.games.${gameName};
+    in if gameOpts.enable then [ gameOpts.package ] else []
+  ) gameNames;
+
+  extraPkgs = cfg.extraPackages;
 
 in {
   options.gaming = {
     enable = lib.mkEnableOption "Enable the gaming configuration module.";
 
-    programs = {
-      minecraft = lib.mkOption {
-        type = lib.types.bool;
-        default = false;
-        description = "Install Prism Launcher.";
+    games = {
+      minecraft = {
+        enable = lib.mkOption {
+          type = lib.types.bool;
+          default = false;
+          description = "Enable installation of the Minecraft launcher.";
+        };
+        package = lib.mkOption {
+          type = lib.types.package;
+          default = pkgs.prismlauncher;
+          description = "The package to install for Minecraft (default: Prism Launcher).";
+          example = lib.literalExpression "pkgs.lunar-client";
+        };
       };
 
-      osu = lib.mkOption {
-        type = lib.types.bool;
-        default = false;
-        description = "Install osu-lazer-bin.";
-      };
-
-      r2modman = lib.mkOption {
-        type = lib.types.bool;
-        default = false;
-        description = "Install r2modman.";
-      };
-
-      umu = lib.mkOption {
-        type = lib.types.bool;
-        default = false;
-        description = "Install UMU Launcher.";
+      osu = {
+        enable = lib.mkOption {
+          type = lib.types.bool;
+          default = false;
+          description = "Enable installation of osu!.";
+        };
+        package = lib.mkOption {
+          type = lib.types.package;
+          default = pkgs.osu-lazer-bin;
+          description = "The package to install for osu! (default: osu-lazer-bin).";
+        };
       };
     };
 
@@ -51,17 +54,16 @@ in {
     };
 
     extraPackages = lib.mkOption {
-      type = lib.types.listOf lib.types.str;
+      type = lib.types.listOf lib.types.package;
       default = [];
-      description = "List of additional package names (from pkgs) to install when the gaming module is enabled.";
-      example = [ "lutris" "heroic-games-launcher" ];
+      description = "List of additional packages (e.g., pkgs.lutris) to install when the gaming module is enabled.";
+      example = lib.literalExpression "[ pkgs.lutris pkgs.heroic-games-launcher ]";
     };
   };
 
   config = lib.mkIf cfg.enable {
 
-    environment.systemPackages =
-      conditionalPkgs ++ extraPkgs;
+    environment.systemPackages = conditionalPkgs ++ extraPkgs;
 
     programs.steam = {
       enable = cfg.steam.enable;

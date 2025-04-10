@@ -1,12 +1,15 @@
+{pkgs,...}:
+
 {
   gaming = {
     enable = true;
 
-    programs = {
-      minecraft = true;
-      osu = true;
-      r2modman = true;
+    games = {
+      minecraft.enable = true;
+      osu.enable = true;
     };
+
+    extraPackages = with pkgs; [ r2modman ];
     
   };
 }
