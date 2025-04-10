@@ -7,10 +7,9 @@
     ./niri
     ./xwayland
     ./nautilus
-    ./steam
     ./zen
     ./curd
-    ./umu
+    ./steam
     ./anime-games
   ];
 
