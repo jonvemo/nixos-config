@@ -66,49 +66,55 @@ cursor {
 animations {}
 
 window-rule {
+    open-maximized true
+    geometry-corner-radius 8
+    clip-to-geometry true
+}
+
+window-rule {
     match app-id="zen" title="Picture-in-Picture"
     open-floating true
     default-floating-position x=4 y=4 relative-to="top-right"
-    max-width 320
-    max-height 180
+    default-column-width { fixed 320; }
+    default-window-height { fixed 180; }
+
 }
 
 window-rule {
     match app-id="zen" title="Developer Tools"
     open-floating true
-    default-floating-position x=4 y=4 relative-to="bottom-right"
-    max-width 348
-    max-height 512
+    default-column-width { fixed 348; }
+    default-window-height { fixed 512; }
 }
 
 window-rule {
     match title="impala"
     open-floating true
-    max-width 512
-    max-height 640
+    default-column-width { fixed 576; }
+    default-window-height { fixed 704; }
 }
 
 window-rule {
     match title="bluetuith"
     open-floating true
-    max-width 512
-    max-height 512
+    default-column-width { fixed 512; }
+    default-window-height { fixed 512; }
 }
 
 window-rule {
     match app-id="com.vixalien.sticky"
     open-floating true
     default-floating-position x=4 y=4 relative-to="bottom-right"
-    max-width 416
-    max-height 348
+    default-column-width { fixed 416; }
+    default-window-height { fixed 348; }
 }
 
 window-rule {
     match app-id="io.gitlab.idevecore.Pomodoro"
     open-floating true
     default-floating-position x=4 y=4 relative-to="top-right"
-    max-width 302
-    max-height 418
+    default-column-width { fixed 302; }
+    default-window-height { fixed 418; }
 }
 
 window-rule {
@@ -120,12 +126,6 @@ window-rule {
 window-rule {
     match app-id=r#"^org\.gnome\.World\.Secrets$"#
     block-out-from "screen-capture"
-}
-
-window-rule {
-    open-maximized true
-    geometry-corner-radius 8
-    clip-to-geometry true
 }
 
 binds {
