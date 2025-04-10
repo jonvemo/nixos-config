@@ -12,6 +12,7 @@
     ./btop
 
     ./hyprland
+    ./niri
     ./hyprlock
     ./waybar
     ./yazi
