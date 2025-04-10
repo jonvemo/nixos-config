@@ -9,7 +9,6 @@
     ./nautilus
     ./zen
     ./curd
-    ./umu
     ./anime-games
     ./gaming
   ];

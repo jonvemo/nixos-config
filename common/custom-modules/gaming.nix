@@ -1,17 +1,16 @@
-# gaming-module.nix
 { config, pkgs, lib, ... }:
 
 let
   cfg = config.gaming;
 
-  conditionalPackages = [
-    { cond = cfg.programs.minecraft; pkg = pkgs.prismlauncher; }
+  conditionalPackageDefs = [
+    { cond = cfg.programs.minecraft; pkg = pkgs.prismlauncher;  }
     { cond = cfg.programs.osu;       pkg = pkgs.osu-lazer-bin; }
     { cond = cfg.programs.r2modman;  pkg = pkgs.r2modman;      }
     { cond = cfg.programs.umu;       pkg = pkgs.umu-launcher;  }
   ];
-
-  extraPkgs = lib.map (pkgName: pkgs.${pkgName}) cfg.extraPackages;
+  conditionalPkgs = lib.concatMap (p: if p.cond then [ p.pkg ] else []) conditionalPackageDefs;
+  extraPkgs = lib.map (pkgName: builtins.getAttr pkgName pkgs) cfg.extraPackages;
 
 in {
   options.gaming = {
@@ -62,10 +61,10 @@ in {
   config = lib.mkIf cfg.enable {
 
     environment.systemPackages =
-      (lib.mapMaybe (p: if p.cond then p.pkg else null) conditionalPackages) ++ extraPkgs;
+      conditionalPkgs ++ extraPkgs;
 
-    programs.steam = lib.mkIf cfg.steam.enable {
-      enable = true;
+    programs.steam = {
+      enable = cfg.steam.enable;
       gamescopeSession.enable = true;
       remotePlay.openFirewall = false;
       dedicatedServer.openFirewall = false;
