@@ -2,30 +2,13 @@
   programs.zed-editor = {
     enable = true;
 
-    extensions = ["html" "nix" "fish" "toml" "log" "git-firefly"];
+    extensions = [
+      "html" "nix" "fish" "toml"
+      "biome" "liveserver" "emmet" "marksman" "markdown-oxide"
+      "log" "git-firefly"
+    ];
+    
     extraPackages = with pkgs; [
-      biome
-      live-server
-      marksman
-      markdown-oxide
-
-      emmet-language-server
-      nodePackages.live-server
-      nodePackages.vscode-langservers-extracted
-
-      /* Nix */
-      nixd
-      nil
-      alejandra
-
-      /* Go */
-      go
-      gopls
-
-      /* Rust */
-      rust-analyzer
-      clippy
-      rustfmt
     ];
 
     userSettings = {
