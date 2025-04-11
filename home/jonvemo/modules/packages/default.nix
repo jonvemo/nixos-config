@@ -4,7 +4,6 @@
   home.packages = lib.concatLists [ 
   
     (with pkgs; [
-      figma-linux
     
     ])
      
