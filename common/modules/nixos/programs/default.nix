@@ -3,7 +3,6 @@
   imports = [
     ./fish
     ./nh
-    ./hyprland
     ./niri
     ./xwayland
     ./nautilus
