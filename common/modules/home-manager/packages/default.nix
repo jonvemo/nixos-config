@@ -10,7 +10,7 @@
     
       # GUI & CTL & TUI
       pwvucontrol kooha lact
-      brightnessctl playerctl grim slurp wl-clipboard cliphist
+      brightnessctl playerctl grim wl-clipboard cliphist
       bluetuith impala
       internetarchive
 
