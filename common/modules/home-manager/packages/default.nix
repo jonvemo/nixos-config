@@ -44,9 +44,6 @@
     # Last Update (nixos-unstable-small)
     (with pkgs-small; [
 
-      # Dumb Stuff
-      kittysay
-
       # Tools
       ffmpeg libheif libavif exiftool
       libaom svt-av1 rav1e

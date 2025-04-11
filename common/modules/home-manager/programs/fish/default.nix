@@ -2,9 +2,9 @@
   programs.fish = {
     enable = true;
     
-    # NOTE Borra el Mensaje de Bienvenida de Fish y añade el Handler para que HelixGPT funcione
+    # NOTE Remove Fish greeting and add HelixGPT env Handler
     interactiveShellInit = "
-      set -g fish_greeting | kittysay -c 3 7 -t 'meow mrrrow mrrrp nyaaa nya nyaaa meow meowwww nyaaa meowwww'
+      set -g fish_greeting
       set -gx HANDLER codeium
     ";
 
@@ -77,7 +77,7 @@
         h = "cd /etc/nixos/common/modules/home-manager/";
 
         npro = "cd /etc/nixos/common/modules/nixos/programs/";
-        hpro = "cd /etc/nixos/common/modules/home-manager/programs";
+        hpro = "cd /etc/nixos/common/modules/home-manager/programs/";
         
         jhpro = "cd /etc/nixos/home/jonvemo/modules/programs/";
         jhset = "cd /etc/nixos/home/jonvemo/modules/settings/";
