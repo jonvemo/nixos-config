@@ -9,6 +9,7 @@
     ];
     
     extraPackages = with pkgs; [
+     nixd nil
     ];
 
     userSettings = {
@@ -23,7 +24,7 @@
 
       #formatter = import ./formatter.nix;
       #lsp = import ./lsp.nix
-      languages = import ./languages.nix;
+      #languages = import ./languages.nix;
       assistant = import ./assistant.nix;
     };
   };
