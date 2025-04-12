@@ -103,7 +103,8 @@
         gdelb = "git branch -D";                 # NOTE Borra una rama; gdel feat/add-popup
 
         grst = "git restore --staged";           # NOTE Restaura archivos del área de preparación al área de trabajo (LOCAL/HEAD)
-        
+
+        gir = "git init && git remote add origin https://github.com/user/repo.git";
         gpbo = "git push -u origin";             # NOTE Pushea nueva rama
         gdone = "git push origin HEAD";          # NOTE Pushea los cambios
         gpull = "git pull origin HEAD";
