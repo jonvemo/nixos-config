@@ -57,7 +57,8 @@
       grbc = "git rebase --continue";                            # NOTE Continúa el proceso de rebase después de resolver conflictos
       grbi = "git rebase --interactive";                         # NOTE Inicia un rebase interactivo para editar, reordenar o combinar commits
 
-      gundo = "git reset HEAD~1 --mixed";                        # NOTE Revertirá todos los cambios de confirmación en el área local sin preparación, para que pueda realizar modificaciones y agregarlas al área de almacenamiento provisional (INDEX/STAGING)
+      gundo = "git reset --mixed HEAD~1";                        # NOTE Elimina el último commit manteniendo cambios
+      gsundo = "git reset --soft HEAD~1";                        # NOTE Elimina el último commit manteniendo cambios listos para un nuevo commit
       gpristine = "git reset --hard && git clean --force -dfx";  # NOTE Restaura el repositorio al estado del último commit y elimina archivos no rastreados
 
       gsh = "git show";                                          # NOTE Muestra información sobre un objeto de Git (commit, tag, etc.)
