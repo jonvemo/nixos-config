@@ -146,6 +146,10 @@ icon = "utilities-terminal"
 name = "custom_commands"
 placeholder = "Custom Commands"
 
+[[builtins.custom_commands.commands]]
+name = "XWayland Support"
+cmd = "xwayland-satellite"
+
 [builtins.emojis]
 exec = "wl-copy"
 weight = 4
