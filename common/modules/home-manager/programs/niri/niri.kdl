@@ -139,6 +139,7 @@ binds {
     Mod+T { spawn "kitty"; }
     Mod+Y { spawn "foot"; }
     Mod+D { spawn "walker"; }
+    Mod+Shift+D { spawn "walker" "-m" "custom_commands"; }
     Mod+E { spawn "nautilus"; }
     Super+Alt+L { spawn "hyprlock"; }
 
