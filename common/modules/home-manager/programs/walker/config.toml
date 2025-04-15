@@ -146,16 +146,6 @@ icon = "utilities-terminal"
 name = "custom_commands"
 placeholder = "Custom Commands"
 
-[[builtins.custom_commands.commands]]
-name = "OneDrive Sync"
-cmd = "onedrive --sync"
-terminal = true
-
-[[builtins.custom_commands.commands]]
-name = "OneDrive Monitor"
-cmd = "onedrive --monitor"
-terminal = true
-
 [builtins.emojis]
 exec = "wl-copy"
 weight = 4
