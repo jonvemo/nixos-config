@@ -3,9 +3,8 @@
     ./sound
     ./login
     ./trash
-    # ./flatpak
+    ./flatpak
     ./onedrive
-    ./cachix
     ./ollama
   ];
 }
