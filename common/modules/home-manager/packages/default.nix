@@ -32,7 +32,6 @@
       # Games
       prismlauncher
       osu-lazer-bin
-      r2modman /* Mods for Lethal Company and others */  
 
       # Browsers & Chatting
       # microsoft-edge # google-chrome # vivaldi # brave
