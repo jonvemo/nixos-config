@@ -16,7 +16,7 @@
 
       # Tools
       parabolic /* Download Music */ tagger /* Music Tagger */
-      satty /* Photo Editor */ cherry-studio /* IA */
+      satty /* Photo Editor */
 
       # Desktop 
       loupe /* Image Viewer*/ celluloid g4music
