@@ -11,7 +11,7 @@ inputs.nixpkgs.lib.nixosSystem {
     
     {
       home-manager = {
-        backupFileExtension = "test2";
+        backupFileExtension = "backup";
 
         useGlobalPkgs = true;
         useUserPackages = true;
@@ -29,12 +29,7 @@ inputs.nixpkgs.lib.nixosSystem {
           jonvemo.imports = [
             ../../home/jonvemo
             ../../common/modules/home-manager
-          ];
-
-          salieri.imports = [
-            ../../home/salieri
-            ../../common/modules/home-manager
-          ];  
+          ]; 
         };
         
       };

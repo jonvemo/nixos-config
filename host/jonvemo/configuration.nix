@@ -6,7 +6,6 @@
     inputs.home-manager.nixosModules.default 
   ];  
 
-  # NOTE User Permissions and Configuration
   users.users = {
     jonvemo = {
       isNormalUser = true;
@@ -14,16 +13,7 @@
       description = "John Verdugo";
       extraGroups = [ "wheel" ];
       shell = pkgs.fish;
-    };
-
-    salieri = {
-      isNormalUser = true;
-      home = "/home/salieri";
-      description = "Antonio Salieri";
-      extraGroups = [ "wheel" ];
-      shell = pkgs.fish;
-    };
-    
+    };    
   };
       
   # NOTE Don't Change
