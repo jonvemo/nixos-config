@@ -6,7 +6,6 @@
     ./niri
     ./xwayland
     ./nautilus
-    ./zen
     ./curd
     ./steam
     ./anime-games

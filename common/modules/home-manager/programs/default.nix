@@ -19,5 +19,6 @@
     ./bun
     ./obs
     ./walker
+    ./zen
   ];
 }
