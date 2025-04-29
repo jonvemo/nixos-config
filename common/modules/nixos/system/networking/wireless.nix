@@ -5,7 +5,7 @@
     settings = {
       Scan.DisablePeriodicScan = false;
       Settings.AutoConnect = true;
-      IPv6.Enabled = true;
+      # IPv6.Enabled = true;
 
       General = {
         # AddressRandomization = "network";
@@ -15,7 +15,7 @@
       };
 
       Network = {
-        EnableIPv6 = true;
+        # EnableIPv6 = true;
         RoutePriorityOffset = 300;
       };
       
