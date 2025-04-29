@@ -41,7 +41,6 @@ layout {
     }
 }
 
-spawn-at-startup "hyprpaper"
 spawn-at-startup "waybar"
 
 environment {

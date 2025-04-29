@@ -6,7 +6,7 @@
     (with pkgs; [ 
 
       # Hyprland
-      hyprpaper hyprlock hypridle
+      hyprlock hypridle
     
       # GUI & CTL & TUI
       pwvucontrol kooha lact
