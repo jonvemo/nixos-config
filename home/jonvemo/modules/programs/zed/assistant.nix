@@ -8,8 +8,7 @@
 
 let
   main-provider = "google";
-  main-model = "gemini-2.0-flash";
-  main-reasoner-model = "gemini-2.0-flash-thinking-exp";
+  main-model = "gemini-2.5-flash-preview-04-17";
   
 in {
   enabled = true;
@@ -19,11 +18,11 @@ in {
 
   default_model = {
     provider = main-provider;
-    model = main-reasoner-model;
+    model = main-model;
   };
   editor_model = {
     provider = main-provider;
-    model = main-reasoner-model;
+    model = main-model;
   };
   inline_assistant_model = {
     provider = main-provider;
