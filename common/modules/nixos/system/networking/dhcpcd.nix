@@ -1,0 +1,5 @@
+{
+  networking.dhcpcd = {
+    wait = "background";
+  };
+}
