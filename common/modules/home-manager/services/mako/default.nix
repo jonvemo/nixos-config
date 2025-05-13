@@ -1,12 +1,15 @@
 {
   services.mako = {
     enable = true;
-    defaultTimeout = 8000;
 
-    borderSize = 0;
-    borderRadius = 8;
-    padding = "16";
-    margin = "12";
+    settings = {
+      default-timeout = 8000;
+      
+      border-size = 0;
+      border-radius = 8;
+      padding = "16";
+      margin = "12";
+    };
     
   };
   
