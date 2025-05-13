@@ -8,7 +8,7 @@
     ./nautilus
     ./curd
     ./steam
-    ./anime-games
+    ./zzz
   ];
 
   programs = {
