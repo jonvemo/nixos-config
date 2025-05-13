@@ -1,6 +1,8 @@
-{pkgs, ...}: {
+{pkgs, inputs, system, ...}: {
+    
   programs.zed-editor = {
     enable = true;
+    package = inputs.zed-editor.packages.${system}.zed-editor-bin-fhs;
 
     extensions = [
       "html" "nix" "fish" "toml"

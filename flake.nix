@@ -24,6 +24,10 @@
       url = "github:abenz1267/walker";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    zed-editor = {
+      url = "github:HPsaucii/zed-editor-flake";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
     curd = {
       url = "github:Wraient/curd";
       inputs.nixpkgs.follows = "nixpkgs";
