@@ -8,6 +8,8 @@
       set -gx HANDLER codeium
     ";
 
+    generateCompletions = false;
+
     shellAliases = {
       clean = "nh clean all";
       bnh = "nh os switch --ask /etc/nixos";
