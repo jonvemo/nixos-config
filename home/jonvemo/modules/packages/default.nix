@@ -4,11 +4,11 @@
   home.packages = lib.concatLists [ 
   
     (with pkgs; [
-    
+      lazygit woff2
     ])
      
     (with pkgs-small; [
-      lazygit woff2
+      # Temporal; in case an unstable package (nixos-unstable) fails
     
     ])  
   ];
