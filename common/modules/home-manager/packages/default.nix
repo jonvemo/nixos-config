@@ -36,16 +36,17 @@
       # Browsers & Chatting
       # microsoft-edge # google-chrome # vivaldi # brave
       
+      # Tools
+      ffmpeg libheif libavif exiftool
+      libaom svt-av1 rav1e
+
+      
       # Broken on small  
 
     ])
     
     # Last Update (nixos-unstable-small)
     (with pkgs-small; [
-
-      # Tools
-      ffmpeg libheif libavif exiftool
-      libaom svt-av1 rav1e
 
       # Temporal; in case an unstable package (nixos-unstable) fails
     
