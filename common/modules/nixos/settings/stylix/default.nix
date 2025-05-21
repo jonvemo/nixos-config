@@ -9,26 +9,23 @@
     # NOTE If you want an auto-generated theme from the wallpaper comment this. It's only possible from png, jpg and gif formats
     base16Scheme = "${pkgs.base16-schemes}/share/themes/horizon-terminal-dark.yaml";
 
-    # Misc
-    # cursor = 
-      # NOTE Managed by GTK
-      
-      # package = pkgs.qogir-icon-theme;
-      # name = "Qogir Cursors";
-
-    # };
-    
-    # Fonts
     fonts = {
-      # NOTE It does not allow selecting multiple fonts, so it is partially managed by HomeManager.
 
       emoji = {
-         package = pkgs.noto-fonts-emoji-blob-bin;
-         name = "Blobmoji";
-       };
-       monospace = {
-         package = pkgs.nerd-fonts.jetbrains-mono;
-         name = "JetBrainsMono Nerd Font";
+        package = pkgs.noto-fonts-emoji-blob-bin;
+        name = "Blobmoji";
+      };
+      monospace = {
+        package = pkgs.nerd-fonts.jetbrains-mono;
+        name = "JetBrainsMono Nerd Font";
+      };
+      serif = {
+        package = pkgs.noto-fonts;
+        name = "Noto Serif";
+      };
+      sansSerif = {
+        package = pkgs.texlivePackages.nunito;
+        name = "Nunito";
       };
 
       sizes = {

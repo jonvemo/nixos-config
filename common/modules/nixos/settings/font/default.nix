@@ -2,8 +2,6 @@
 
 {
   fonts = {
-    # NOTE Instala DejaVu Fonts por defecto
-    # https://github.com/NixOS/nixpkgs/blob/nixos-23.11/nixos/modules/config/fonts/fontconfig.nix
     enableDefaultPackages = false;
 
     packages = lib.concatLists [ 
@@ -29,6 +27,17 @@
       ])
       
     ];
+
+    fontconfig = {
+      enable = true;
+
+      defaultFonts = {
+        emoji = [ "Blobmoji" ];
+        monospace = [ "JetBrainsMono Nerd Font" "DejaVu Sans Mono"];
+        serif = [ "Noto Serif" "Noto Serif Japanese" "Noto Serif Korean" "Noto Serif Chinese" "DejaVu Serif"];
+        sansSerif = [ "Nunito" "Noto Sans" "Noto Sans Japanese" "Noto Sans Korean" "Noto Sans Chinese" "DejaVu Sans"];
+      };
+    };
     
   };
 }
