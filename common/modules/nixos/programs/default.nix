@@ -9,6 +9,7 @@
     ./curd
     ./steam
     ./zzz
+    ./starship
   ];
 
   programs = {

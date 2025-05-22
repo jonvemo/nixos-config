@@ -1,7 +1,6 @@
 {
   imports = [
     ./fish
-    ./starship
     ./fastfetch
     
     ./terminal
