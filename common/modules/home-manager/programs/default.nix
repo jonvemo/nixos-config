@@ -13,7 +13,6 @@
     ./niri
     ./hyprlock
     ./waybar
-    ./yazi
 
     ./walker
     ./zen
