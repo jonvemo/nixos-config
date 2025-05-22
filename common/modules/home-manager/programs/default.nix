@@ -15,8 +15,6 @@
     ./waybar
     ./yazi
 
-    ./bun
-    ./obs
     ./walker
     ./zen
   ];

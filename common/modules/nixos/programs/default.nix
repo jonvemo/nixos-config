@@ -10,6 +10,8 @@
     ./steam
     ./zzz
     ./starship
+    ./obs
+    ./yazi
   ];
 
   programs = {
