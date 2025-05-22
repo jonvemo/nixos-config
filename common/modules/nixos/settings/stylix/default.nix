@@ -37,8 +37,6 @@
       
     };
 
-    image = ./wallpapers/A1.png;
-
     polarity = "dark";
 
     opacity = {
