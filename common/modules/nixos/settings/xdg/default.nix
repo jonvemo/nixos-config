@@ -8,7 +8,7 @@
   editor = [ "dev.zed.Zed" ];
 in {
   xdg = {
-    mimeApps = {
+    mime = {
       enable = true;
       defaultApplications = {
 
@@ -47,6 +47,7 @@ in {
         "application/x-extension-shtml" = browser;
         "application/x-extension-xhtml" = browser;
         "application/x-extension-xht" = browser;
+        "application/pdf" = browser;
 
         "application/json" = editor;
         "application/xml" = editor;
@@ -54,19 +55,6 @@ in {
         "text/markdown" = editor;
         "text/csv" = editor;
       };
-    };
-
-    userDirs = {
-      enable = true;
-      createDirectories = true;
-      
-      publicShare = null;
-      templates = null;
-      
-      extraConfig = {
-        XDG_SCREENSHOTS_DIR = "${config.xdg.userDirs.pictures}/Screenshots";
-      };
-      
     };
     
   };

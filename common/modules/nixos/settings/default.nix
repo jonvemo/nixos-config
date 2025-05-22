@@ -5,5 +5,6 @@
     # ./keyboard
     ./font
     ./stylix
+    ./xdg
   ];
 }

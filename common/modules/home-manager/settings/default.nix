@@ -1,6 +1,5 @@
 {
   imports = [
-    ./xdg
     ./gtk
     ./stylix
   ];
