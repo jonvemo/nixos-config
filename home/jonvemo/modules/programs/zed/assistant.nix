@@ -8,7 +8,7 @@
 
 let
   main-provider = "google";
-  main-model = "gemini-2.5-flash-preview-04-17";
+  main-model = "gemini-2.5-flash-preview-05-20";
   
 in {
   enabled = true;
