@@ -148,7 +148,7 @@ placeholder = "Custom Commands"
 
 [[builtins.custom_commands.commands]]
 name = "XWayland Support"
-cmd = "xwayland-satellite"
+cmd = "Xwayland"
 
 [builtins.emojis]
 exec = "wl-copy"
