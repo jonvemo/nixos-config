@@ -8,7 +8,6 @@
     ./nautilus
     ./curd
     ./steam
-    ./zzz
     ./starship
     ./obs
     ./yazi
