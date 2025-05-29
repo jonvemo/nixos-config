@@ -43,10 +43,9 @@
     };
 
     extraPackages = lib.concatLists [ 
-      (with pkgs; [ 
+      (with pkgs; [
         helix-gpt
-        biome dprint
-        markdown-oxide
+        dprint
         
        ])
   

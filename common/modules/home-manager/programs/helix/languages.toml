@@ -1,15 +1,7 @@
 # NOTE LANGUAGE SERVER
 
-[language-server.biome]
-command = "biome"
-args = ["lsp-proxy"]
-
 [language-server.gpt]
 command = "helix-gpt"
-
-[language-server.bun]
-command = "bun"
-args = ["lsp"]
 
 [language-server.vscode-html-language-server]
 args = ["--stdio"]
@@ -24,28 +16,28 @@ command = "vscode-css-language-server"
 
 [[language]]
 name = "typescript"
-language-servers = [ "bun", "biome", "gpt" ]
+language-servers = [ "dprint", "gpt" ]
 auto-format = true
 
 [[language]]
 name = "tsx"
-language-servers = [ "bun", "biome" ]
+language-servers = [ "dprint" ]
 auto-format = true
 
 [[language]]
 name = "jsx"
-language-servers = [ "bun", "biome" ]
+language-servers = [ "dprint" ]
 grammar = "javascript"
 auto-format = true
 
 [[language]]
 name = "javascript"
-language-servers = [ "bun", "biome", "gpt" ]
+language-servers = [ "dprint", "gpt" ]
 auto-format = true
 
 [[language]]
 name = "json"
-language-servers = [ "biome" ]
+language-servers = [ "dprint" ]
 auto-format = true
 
 [[language]]
@@ -55,15 +47,10 @@ auto-format = false
 
 [[language]]
 name = "css"
-language-servers = [ "biome", "vscode-css-language-server" ]
+language-servers = [ "dprint", "vscode-css-language-server" ]
 auto-format = false
 
 [[language]]
 name = "scss"
-language-servers = [ "biome", "vscode-css-language-server" ]
-auto-format = true
-
-[[language]]
-name = "markdown"
-language-servers = [ "dprint", "markdown-oxide" ]
+language-servers = [ "dprint", "vscode-css-language-server" ]
 auto-format = true
