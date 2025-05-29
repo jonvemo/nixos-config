@@ -40,7 +40,7 @@
       "format": "",
       "format-connected": "",
       "format-disabled": "",
-      "on-click": "kitty bluetuith",
+      "on-click": "foot -e -T=bluetuith bluetuith",
       "tooltip-format": "{controller_alias}\t{controller_address}",
       "tooltip-format-connected": "{controller_alias}\t{controller_address}\n\n{device_enumerate}",
       "tooltip-format-enumerate-connected": "{device_alias}\t{device_address}"
@@ -138,7 +138,7 @@
       "format-wifi": "{icon} ",
       "format-ethernet": "",
       "interval": "10",
-      "on-click": "kitty impala",
+      "on-click": "foot -e -T=impala impala",
       "tooltip-format-wifi": "{essid}",
       "tooltip-format-ethernet": "{ifname}"
     },
