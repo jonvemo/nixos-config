@@ -80,39 +80,8 @@
       "return-type": "json"
     },
     "height": 34,
-    "hyprland/workspaces": {
-      "format": "{windows} <sub>{icon}</sub>",
-      "format-window-separator": "  ",
-      "persistent-workspaces": {
-        "eDP-1": [
-          1,
-          10
-        ]
-      },
-      "window-rewrite": {
-        "class<RemNote>": "RN",
-        "class<code>": "󰨞",
-        "class<figma-linux>": "",
-        "class<g4music>": "",
-        "class<io.github.celluloid_player.Celluloid>": "",
-        "class<kitty>": "",
-        "class<microsoft-edge>": "",
-        "class<microsoft-edge> title<*.facebook.*>": "",
-        "class<microsoft-edge> title<*.youtube.*>": "",
-        "class<org.gnome.Loupe>": "",
-        "class<org.gnome.Nautilus>": "",
-        "class<spotify>": "",
-        "class<steam>": "",
-        "class<vesktop>": "",
-        "title<*.github.*>": "",
-        "title<*.gmail.*": "",
-        "title<*.instagram.*>": "",
-        "title<*.reddit.*>": ""
-      },
-      "window-rewrite-default": ""
-    },
     "modules-center": [
-      "niri/workspaces", "hyprland/workspaces"
+      "niri/workspaces"
     ],
     "modules-left": [
       "custom/media"
