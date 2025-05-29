@@ -39,6 +39,8 @@
       # Tools
       ffmpeg libheif libavif exiftool
       libaom svt-av1 rav1e
+      woff2
+      lazygit
 
       
       # Broken on small  
