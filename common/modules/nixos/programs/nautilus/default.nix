@@ -1,20 +1,12 @@
 { pkgs, ... }:
 {
-  environment = {
-    systemPackages = with pkgs; [
-      nautilus nautilus-python
-    ];
-  
-    sessionVariables.NAUTILUS_4_EXTENSION_DIR = "${pkgs.nautilus-python}/lib/nautilus/extensions-4";
-    pathsToLink = [
-      "/share/nautilus-python/extensions"
-    ];
+  environment.systemPackages = with pkgs; [
+    nautilus
+  ];
     
-  };
-
   programs.nautilus-open-any-terminal = {
     enable = true;
     terminal = "kitty";
-  };
+  };  
   
 }
