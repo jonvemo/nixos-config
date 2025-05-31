@@ -1,0 +1,95 @@
+{
+  "logo": {
+    "height": 22,
+    "padding": {
+      "right": 4
+    },
+    "source": "nixos",
+    "type": "kitty-direct",
+    "width": 48
+  },
+  "modules": [
+    {
+      "format": "System Information",
+      "type": "custom"
+    },
+    {
+      "key": "OS  ",
+      "type": "os"
+    },
+    {
+      "key": "   Kernel",
+      "type": "kernel"
+    },
+    {
+      "key": "   Shell",
+      "type": "shell"
+    },
+    {
+      "key": "   Packages",
+      "type": "packages"
+    },
+    "break",
+    {
+      "format": "Desktop Environment",
+      "type": "custom"
+    },
+    {
+      "key": "󰉼   Theme",
+      "type": "Theme"
+    },
+    {
+      "key": "   Icons",
+      "type": "icons"
+    },
+    {
+      "key": "   Font",
+      "type": "font"
+    },
+    {
+      "key": "   Cursor",
+      "type": "cursor"
+    },
+    {
+      "key": "   WM",
+      "type": "wm"
+    },
+    {
+      "key": "   Terminal",
+      "type": "terminal"
+    },
+    {
+      "key": "   TerminalFont",
+      "type": "terminalFont"
+    },
+    "break",
+    {
+      "format": "Hardware Information",
+      "type": "custom"
+    },
+    {
+      "key": "   CPU",
+      "type": "cpu"
+    },
+    {
+      "key": "   GPU",
+      "type": "gpu"
+    },
+    {
+      "key": "   RAM",
+      "type": "memory"
+    },
+    {
+      "type": "swap"
+    },
+    {
+      "type": "disk"
+    },
+    "break",
+    {
+      "symbol": "circle",
+      "type": "colors"
+    },
+    "colors"
+  ]
+}

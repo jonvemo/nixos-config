@@ -8,6 +8,7 @@ inputs.nixpkgs.lib.nixosSystem {
   modules = [
     ./configuration.nix
     ../../common/modules/nixos
+    ../../home
     
     {
       home-manager = {

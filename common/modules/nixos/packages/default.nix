@@ -1,7 +1,7 @@
 { lib, pkgs, pkgs-small, ...}:
 
 {
-  home.packages = lib.concatLists [ 
+  environment.systemPackages = lib.concatLists [ 
   
     (with pkgs; [ 
 
@@ -16,7 +16,7 @@
 
       # Tools
       parabolic /* Download Music */ tagger /* Music Tagger */
-      satty /* Photo Editor */
+      satty /* Photo Editor */ fastfetch
 
       # Desktop 
       loupe /* Image Viewer*/ celluloid g4music
@@ -37,7 +37,7 @@
       # Browsers & Chatting
       # microsoft-edge # google-chrome # vivaldi # brave
       
-      # Tools
+      # DevTools
       ffmpeg libheif libavif exiftool
       libaom svt-av1 rav1e
       woff2

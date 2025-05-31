@@ -11,6 +11,7 @@
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    hjem.url = "github:feel-co/hjem";
 
     # Theme
     stylix.url = "github:danth/stylix";
