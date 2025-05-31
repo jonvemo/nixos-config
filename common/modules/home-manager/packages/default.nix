@@ -32,6 +32,7 @@
       # Games
       prismlauncher
       osu-lazer-bin
+      mindustry
 
       # Browsers & Chatting
       # microsoft-edge # google-chrome # vivaldi # brave
