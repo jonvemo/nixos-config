@@ -1,0 +1,5 @@
+default-timeout=8000
+border-radius=8
+border-size=0
+margin=12
+padding=16

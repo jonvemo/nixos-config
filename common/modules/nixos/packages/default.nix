@@ -11,7 +11,7 @@
       # GUI & CTL & TUI
       pwvucontrol kooha lact
       brightnessctl playerctl
-      bluetuith impala
+      bluetuith impala mako
       internetarchive
 
       # Tools
