@@ -3,7 +3,6 @@
   image = [ "org.gnome.Loupe.desktop" ];
   video = [ "io.github.celluloid_player.Celluloid.desktop" ];
   fileManager = [ "org.gnome.Nautilus.desktop" ];
-  fileArchiver = [ "org.gnome.FileRoller.desktop" ];
   browser = [ "zen-beta.desktop" ];
   editor = [ "dev.zed.Zed" ];
 in {
@@ -30,11 +29,6 @@ in {
         "inode/directory" = fileManager;
         "inode/blockdevice" = fileManager;
         
-        "application/zip" = fileArchiver;
-        "application/rar" = fileArchiver;
-        "application/7z" = fileArchiver;
-        "application/*tar" = fileArchiver;
-
         "text/html" = browser;
         "x-scheme-handler/http" = browser;
         "x-scheme-handler/https" = browser;
