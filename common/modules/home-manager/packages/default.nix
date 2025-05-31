@@ -23,7 +23,7 @@
       foliate /* Ebook Reader */ sticky-notes pomodoro-gtk
     
       gnome-sound-recorder gnome-calculator gnome-connections
-      snapshot newsflash
+      snapshot newsflash ouch
 
       # Media & Draw
       spotube
