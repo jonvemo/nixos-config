@@ -7,6 +7,7 @@
     ./settings
     ./programs
     ./vars
+    ./packages
   ];
 
 }

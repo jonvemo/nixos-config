@@ -1,30 +1,9 @@
-{ lib, pkgs, pkgs-small, ...}:
-
+{lib,pkgs,pkgs-small,...}:
 {
   home.packages = lib.concatLists [ 
   
     (with pkgs; [ 
-
-      # Hyprland
-      hyprlock
     
-      # GUI & CTL & TUI
-      pwvucontrol kooha lact
-      brightnessctl playerctl
-      bluetuith impala
-      internetarchive
-
-      # Tools
-      parabolic /* Download Music */ tagger /* Music Tagger */
-      satty /* Photo Editor */
-
-      # Desktop 
-      loupe /* Image Viewer*/ celluloid g4music
-      foliate /* Ebook Reader */ sticky-notes pomodoro-gtk
-    
-      gnome-sound-recorder gnome-calculator gnome-connections
-      snapshot newsflash ouch
-
       # Media & Draw
       spotube
       krita
@@ -33,16 +12,6 @@
       prismlauncher
       osu-lazer-bin
       mindustry
-
-      # Browsers & Chatting
-      # microsoft-edge # google-chrome # vivaldi # brave
-      
-      # Tools
-      ffmpeg libheif libavif exiftool
-      libaom svt-av1 rav1e
-      woff2
-      lazygit
-
       
       # Broken on small  
 
