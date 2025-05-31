@@ -70,52 +70,51 @@
       gsta = "git stash push";                                   # NOTE Guarda los cambios actuales en un stash
       gstp = "git stash pop";                                    # NOTE Aplica los cambios del stash más reciente y lo elimina de la lista
 
-      gbr = "git branch --format='%(HEAD) %(color:yellow)%(refname:short)%(color:reset) - %(contents:subject) %(color:green)(%(committerdate:relative)) [%(authorname)]' --sort=-committerdate"; 
-                                                                 # NOTE Enumerará todas las ramas y las ordenará por fecha de confirmación, mostrando primero la rama de git más reciente, en función de las confirmaciones realizadas en ella
-              
-      };
+      gbr = "git branch --format='%(HEAD) %(color:yellow)%(refname:short)%(color:reset) - %(contents:subject) %(color:green)(%(committerdate:relative)) [%(authorname)]' --sort=-committerdate";                    # NOTE Enumera todas las ramas en ordenen de fecha de confirmación
+      
+     }; 
 
-      shellAbbrs = {
-        n = "cd /etc/nixos/common/modules/nixos/";
-        h = "cd /etc/nixos/common/modules/home-manager/";
+    shellAbbrs = {
+      n = "cd /etc/nixos/common/modules/nixos/";
+      h = "cd /etc/nixos/common/modules/home-manager/";
 
-        npro = "cd /etc/nixos/common/modules/nixos/programs/";
-        hpro = "cd /etc/nixos/common/modules/home-manager/programs/";
-        
-        jhpro = "cd /etc/nixos/home/jonvemo/modules/programs/";
-        jhset = "cd /etc/nixos/home/jonvemo/modules/settings/";
+      npro = "cd /etc/nixos/common/modules/nixos/programs/";
+      hpro = "cd /etc/nixos/common/modules/home-manager/programs/";
+      
+      jhpro = "cd /etc/nixos/home/jonvemo/modules/programs/";
+      jhset = "cd /etc/nixos/home/jonvemo/modules/settings/";
 
-        wp = "cd Documents/Work/GitHub/";
-        wpa = "cd Desktop/GitHub/";
-        wpd = "cd Documents/Work/GitHub/Default/";
-        wps = "cd Documents/Work/GitHub/Study/";
+      wp = "cd Documents/Work/GitHub/";
+      wpa = "cd Desktop/GitHub/";
+      wpd = "cd Documents/Work/GitHub/Default/";
+      wps = "cd Documents/Work/GitHub/Study/";
 
-        s = "sudo hx";      
-        t = "touch";
+      s = "sudo hx";      
+      t = "touch";
 
-        build = "sudo nixos-rebuild switch --flake /etc/nixos#";
-        flakeupdti = "nix flake update --flake /etc/nixos";
-        
-        vpkg = "nix-store --query --requisites /run/current-system | cut -d- -f2- | sort -u | grep";
-        
-        # Git
-        g = "git";
-        gcm = "git commit -m";
-        gsw = "git switch";                      # NOTE Cambiar de rama
-        gswc = "git switch --create";            # NOTE Crea una nueva rama y entra en ella
-        gdelb = "git branch -D";                 # NOTE Borra una rama; gdel feat/add-popup
+      build = "sudo nixos-rebuild switch --flake /etc/nixos#";
+      flakeupdti = "nix flake update --flake /etc/nixos";
+      
+      vpkg = "nix-store --query --requisites /run/current-system | cut -d- -f2- | sort -u | grep";
+      
+      # Git
+      g = "git";
+      gcm = "git commit -m";
+      gsw = "git switch";                      # NOTE Cambiar de rama
+      gswc = "git switch --create";            # NOTE Crea una nueva rama y entra en ella
+      gdelb = "git branch -D";                 # NOTE Borra una rama; gdel feat/add-popup
 
-        grst = "git restore --staged";           # NOTE Restaura archivos del área de preparación al área de trabajo (LOCAL/HEAD)
+      grst = "git restore --staged";           # NOTE Restaura archivos del área de preparación al área de trabajo (LOCAL/HEAD)
 
-        gir = "git init && git remote add origin https://github.com/user/repo.git";
-        gpbo = "git push -u origin";             # NOTE Pushea nueva rama
-        gdone = "git push origin HEAD";          # NOTE Pushea los cambios
-        gpull = "git pull origin HEAD";
-        gresetall = "git reset origin/  --hard"; # NOTE Borra todos los cambios y regresa al origin de la rama
+      gir = "git init && git remote add origin https://github.com/user/repo.git";
+      gpbr = "git push -u origin branch";      # NOTE Pushea nueva rama
+      gdone = "git push origin HEAD";          # NOTE Pushea los cambios
+      gpull = "git pull origin HEAD";
+      gresetall = "git reset origin/  --hard"; # NOTE Borra todos los cambios y regresa al origin de la rama
 
-        glog = "git log --pretty=format:\"%C(magenta)%h%Creset -%C(red)%d%Creset %s %C(dim green)(%cr) [%an]\" --abbrev-commit -30";
-        
-      };
+      glog = "git log --pretty=format:\"%C(magenta)%h%Creset -%C(red)%d%Creset %s %C(dim green)(%cr) [%an]\" --abbrev-commit -30";
+      
+    };
     
   };
 
