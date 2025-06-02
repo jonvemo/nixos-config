@@ -19,7 +19,7 @@
       foliate /* Ebook Reader */ sticky-notes pomodoro-gtk
     
       gnome-sound-recorder gnome-calculator gnome-connections
-      snapshot newsflash ouch
+      snapshot ouch
 
       # Browsers & Chatting
       # microsoft-edge # google-chrome # vivaldi # brave
