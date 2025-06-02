@@ -55,7 +55,7 @@
       },
       "calendar": {
         "format": {
-          "days": "<span color='#cbced0'><b>{}</b></span>",
+          "days": "<span color='#cbced0'>{}</span>",
           "months": "<span color='#e3e6ee'><b>{}</b></span>",
           "today": "<span color='#e95678'><b>{}</b></span>",
           "weekdays": "<span color='#fab795'><b>{}</b></span>",
