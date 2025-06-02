@@ -28,7 +28,7 @@
         };
       };
 
-      SanatizeOnShutdown = {
+      SanitizeOnShutdown = {
         Cache = true;
       };
 
