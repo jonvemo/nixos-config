@@ -42,6 +42,14 @@
           install_url = "https://addons.mozilla.org/firefox/downloads/latest/ublock-origin/latest.xpi";
           private_browsing = true;
         };
+        "sponsorBlocker@ajay.app" = {
+          installation_mode = "normal_installed";
+          install_url = "https://addons.mozilla.org/firefox/downloads/latest/sponsorblock/latest.xpi";
+        };
+        "support@premid.app" = {
+          installation_mode = "normal_installed";
+          install_url = "https://dl.premid.app/PreMiD.xpi";
+        };
       };
 
       "3rdparty" = {
