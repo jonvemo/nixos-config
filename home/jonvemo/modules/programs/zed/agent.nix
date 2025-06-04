@@ -9,22 +9,19 @@
 let
   main-provider = "google";
   main-model = "gemini-2.5-flash-preview-05-20";
-  
+
 in {
   enabled = true;
-  default_width = 384;
-  dock = "right";
   version = "2";
+  dock = "right";
+  default_width = 384;
+  preferred_completion_mode = "normal";
 
   default_model = {
     provider = main-provider;
     model = main-model;
   };
   editor_model = {
-    provider = main-provider;
-    model = main-model;
-  };
-  inline_assistant_model = {
     provider = main-provider;
     model = main-model;
   };
@@ -36,12 +33,15 @@ in {
     provider = main-provider;
     model = main-model;
   };
-  
+  inline_assistant_model = {
+    provider = main-provider;
+    model = main-model;
+  };
   inline_alternatives = [
     {
       provider = "zed.dev";
       model = "claude-3-7-sonnet-lastest";
     }
   ];
-  
+
 }

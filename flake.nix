@@ -25,7 +25,7 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
     zed-editor = {
-      url = "github:HPsaucii/zed-editor-flake";
+      url = "github:jonvemo/zed-editor-flake";
       inputs.nixpkgs.follows = "nixpkgs";
     };
     curd = {
