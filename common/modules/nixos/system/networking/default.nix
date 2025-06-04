@@ -6,7 +6,6 @@
     ./resolved.nix
     ./optimize.nix
     ./blocker.nix
-    # ./tcpcrypt.nix
     ./dhcpcd.nix
   ];
 }
