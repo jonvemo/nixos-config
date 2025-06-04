@@ -4,11 +4,12 @@
     settings = {
       logo = {
         # source = "nixos";
-        source = ../../../nixos/settings/stylix/wallpapers/TM1.png;
-        type = "kitty-direct";
-        width = 48;
-        height = 22;
-        padding.right = 4;
+        source = ../../../nixos/settings/stylix/wallpapers/TM1.webp;
+        type = "kitty";
+        padding = {
+          left = 3;
+          right = 3;
+        };
       };
       modules = [
         {
@@ -91,9 +92,7 @@
         {
           type = "colors";
           symbol = "circle";
-          # circle.range.range-items = [1 3 5 7 9 11 13 15]; # Idk
         }
-        "colors"
       ];
 
     };
