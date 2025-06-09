@@ -6,5 +6,6 @@
     ./flatpak
     ./onedrive
     ./ollama
+    ./tlp
   ];
 }
