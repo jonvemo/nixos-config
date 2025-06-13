@@ -21,6 +21,10 @@
   border-radius: 16px;
 }
 
+.modules-left label, .modules-right {
+  padding: 0 12px;
+}
+
 #workspaces button {
   padding: 0 12px;
   background-color: transparent;

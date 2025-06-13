@@ -104,7 +104,7 @@
         "󰤥",
         "󰤨"
       ],
-      "format-wifi": "{icon} ",
+      "format-wifi": "{icon}",
       "format-ethernet": "",
       "interval": "10",
       "on-click": "foot -e -T=impala impala",
