@@ -21,7 +21,11 @@
   border-radius: 16px;
 }
 
-.modules-left label, .modules-right {
+.modules-left label {
+  padding: 0 24px;  
+}
+
+.modules-right {
   padding: 0 12px;
 }
 
