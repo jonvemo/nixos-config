@@ -127,7 +127,7 @@
         "portable": ""
       },
       "format-muted": "",
-      "on-click": "pwvucontrol",
+      "on-click": "foot -e -T=wiremix wiremix",
       "tooltip-format": "Volume {volume}%"
     },
     "reload_style_on_change": true,

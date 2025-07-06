@@ -5,9 +5,9 @@
     (with pkgs; [ 
     
       # GUI & CTL & TUI
-      pwvucontrol kooha lact hyprlock
+      kooha lact hyprlock
       brightnessctl playerctl
-      bluetuith impala
+      wiremix bluetuith impala
       internetarchive
 
       # Tools

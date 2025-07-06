@@ -84,6 +84,13 @@ window-rule {
 }
 
 window-rule {
+    match title="wiremix"
+    open-floating true
+    default-column-width { fixed 704; }
+    default-window-height { fixed 512; }
+}
+
+window-rule {
     match title="impala"
     open-floating true
     default-column-width { fixed 576; }
@@ -115,7 +122,6 @@ window-rule {
 
 window-rule {
     match app-id="org.gnome.Calculator"
-    match app-id="com.saivert.pwvucontrol"
     open-floating true
 }
 
@@ -135,6 +141,7 @@ hotkey-overlay {
 
 binds {
     Mod+Shift+Slash { show-hotkey-overlay; }
+    Mod+Shift+A { spawn "foot" "-e" "-T=wiremix" "wiremix"; }
     Mod+Shift+W { spawn "foot" "-e" "-T=impala" "impala"; }
     Mod+Shift+B { spawn "foot" "-e" "-T=bluetuith" "bluetuith"; }
     Mod+Shift+K { spawn "kooha"; }
