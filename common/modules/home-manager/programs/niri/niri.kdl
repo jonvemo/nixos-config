@@ -141,9 +141,9 @@ hotkey-overlay {
 
 binds {
     Mod+Shift+Slash { show-hotkey-overlay; }
-    Mod+Shift+A { spawn "foot" "-e" "-T=wiremix" "wiremix"; }
-    Mod+Shift+W { spawn "foot" "-e" "-T=impala" "impala"; }
-    Mod+Shift+B { spawn "foot" "-e" "-T=bluetuith" "bluetuith"; }
+    Mod+Shift+A { spawn "footclient" "-T=wiremix" "wiremix"; }
+    Mod+Shift+W { spawn "footclient" "-T=impala" "impala"; }
+    Mod+Shift+B { spawn "footclient" "-T=bluetuith" "bluetuith"; }
     Mod+Shift+K { spawn "kooha"; }
     Mod+B { spawn "zen"; }
     Mod+T { spawn "kitty"; }

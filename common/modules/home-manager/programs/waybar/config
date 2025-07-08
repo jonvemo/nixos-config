@@ -40,7 +40,7 @@
       "format": "",
       "format-connected": "",
       "format-disabled": "",
-      "on-click": "foot -e -T=bluetuith bluetuith",
+      "on-click": "footclient -T=bluetuith bluetuith",
       "tooltip-format": "{controller_alias}\t{controller_address}",
       "tooltip-format-connected": "{controller_alias}\t{controller_address}\n\n{device_enumerate}",
       "tooltip-format-enumerate-connected": "{device_alias}\t{device_address}"
@@ -107,7 +107,7 @@
       "format-wifi": "{icon}",
       "format-ethernet": "",
       "interval": "10",
-      "on-click": "foot -e -T=impala impala",
+      "on-click": "footclient -T=impala impala",
       "tooltip-format-wifi": "{essid}",
       "tooltip-format-ethernet": "{ifname}"
     },
@@ -127,7 +127,7 @@
         "portable": ""
       },
       "format-muted": "",
-      "on-click": "foot -e -T=wiremix wiremix",
+      "on-click": "footclient -T=wiremix wiremix",
       "tooltip-format": "Volume {volume}%"
     },
     "reload_style_on_change": true,
