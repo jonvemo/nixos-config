@@ -98,7 +98,7 @@ window-rule {
 }
 
 window-rule {
-    match title="bluetuith"
+    match title="bluetui"
     open-floating true
     default-column-width { fixed 512; }
     default-window-height { fixed 512; }
@@ -143,7 +143,7 @@ binds {
     Mod+Shift+Slash { show-hotkey-overlay; }
     Mod+Shift+A { spawn "footclient" "-T=wiremix" "wiremix"; }
     Mod+Shift+W { spawn "footclient" "-T=impala" "impala"; }
-    Mod+Shift+B { spawn "footclient" "-T=bluetuith" "bluetuith"; }
+    Mod+Shift+B { spawn "footclient" "-T=bluetui" "bluetui"; }
     Mod+Shift+K { spawn "kooha"; }
     Mod+B { spawn "zen"; }
     Mod+T { spawn "kitty"; }

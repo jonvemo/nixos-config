@@ -7,7 +7,7 @@
       # GUI & CTL & TUI
       kooha lact hyprlock
       brightnessctl playerctl
-      wiremix bluetuith impala
+      wiremix bluetui impala
       internetarchive
 
       # Tools
