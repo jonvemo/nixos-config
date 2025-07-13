@@ -4,5 +4,6 @@
     ./mako
     ./hypridle
     ./swww
+    ./mpd
   ];
 }

@@ -9,6 +9,7 @@
       brightnessctl playerctl
       wiremix bluetui impala
       internetarchive
+      rmpc /* Music Player */
 
       # Tools
       parabolic /* Download Music */ tagger /* Music Tagger */
