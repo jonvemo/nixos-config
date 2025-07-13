@@ -14,6 +14,7 @@
     ./hyprlock
     ./waybar
 
+    ./thunar
     ./walker
     ./zen
   ];

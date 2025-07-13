@@ -5,7 +5,7 @@
     ./nh
     ./niri
     ./xwayland
-    ./nautilus
+    ./thunar
     ./curd
     ./steam
     ./starship

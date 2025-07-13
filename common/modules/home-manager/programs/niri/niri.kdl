@@ -150,7 +150,7 @@ binds {
     Mod+Y { spawn "foot"; }
     Mod+D { spawn "walker"; }
     Mod+Shift+D { spawn "walker" "-m" "custom_commands"; }
-    Mod+E { spawn "nautilus"; }
+    Mod+E { spawn "thunar"; }
     Super+Alt+L { spawn "hyprlock"; }
 
     XF86AudioRaiseVolume  allow-when-locked=true { spawn "wpctl" "set-volume" "@DEFAULT_AUDIO_SINK@" "0.1+"; }

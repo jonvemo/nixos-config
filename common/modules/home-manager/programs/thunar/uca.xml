@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<actions>
+<action>
+	<icon>utilities-terminal</icon>
+	<name>Open Terminal Here</name>
+	<submenu></submenu>
+	<unique-id>1752391814736139-1</unique-id>
+	<command>kitty --directory %f</command>
+	<description>Open Kitty</description>
+	<range></range>
+	<patterns>*</patterns>
+	<startup-notify/>
+	<directories/>
+</action>
+<action>
+	<icon></icon>
+	<name>Compress to TAR.GZ</name>
+	<submenu></submenu>
+	<unique-id>1752394146580652-1</unique-id>
+	<command>ouch compress %N %n.tar.gz</command>
+	<description>Compress to TAT.GZ with Ouch</description>
+	<range>*</range>
+	<patterns>*</patterns>
+	<directories/>
+	<audio-files/>
+	<image-files/>
+	<other-files/>
+	<text-files/>
+	<video-files/>
+</action>
+<action>
+	<icon></icon>
+	<name>Compress to ZIP</name>
+	<submenu></submenu>
+	<unique-id>1752396970300035-3</unique-id>
+	<command>ouch compress %N %n.tar.gz</command>
+	<description>Compress to ZIP with Ouch</description>
+	<range>*</range>
+	<patterns>*</patterns>
+	<directories/>
+	<audio-files/>
+	<image-files/>
+	<other-files/>
+	<text-files/>
+	<video-files/>
+</action>
+<action>
+	<icon></icon>
+	<name>Decompress</name>
+	<submenu></submenu>
+	<unique-id>1752394411850834-2</unique-id>
+	<command>ouch decompress %f</command>
+	<description>Decompress with Ouch</description>
+	<range>*</range>
+	<patterns>*.zip;*.tar;*.gz;*.rar;*.7z;*.tgz;*.bz2;*.xz;*.zst</patterns>
+	<other-files/>
+</action>
+</actions>
+
