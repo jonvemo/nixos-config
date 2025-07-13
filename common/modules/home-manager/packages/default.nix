@@ -5,7 +5,6 @@
     (with pkgs; [ 
     
       # Media & Draw
-      spotube
       krita
 
       # Games
