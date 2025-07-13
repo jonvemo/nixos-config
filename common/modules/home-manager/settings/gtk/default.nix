@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ pkgs, config, ... }:
 {
   gtk = {
     enable = true;
@@ -14,9 +14,9 @@
     
     gtk3 = {
       bookmarks = [
-        "file:///home/jonvemo/OneDrive"
-        "file:///home/jonvemo/OneDrive/Krita"
-        "file:///home/jonvemo/Desktop/GitHub"
+        "file:///${config.home.homeDirectory}/OneDrive"
+        "file:///${config.home.homeDirectory}/OneDrive/Krita"
+        "file:///${config.home.homeDirectory}/Desktop/GitHub"
       ];
     };
     

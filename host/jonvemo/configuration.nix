@@ -9,7 +9,6 @@
   users.users = {
     jonvemo = {
       isNormalUser = true;
-      home = "/home/jonvemo";
       description = "John Verdugo";
       extraGroups = [ "wheel" ];
       shell = pkgs.fish;

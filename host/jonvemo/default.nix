@@ -1,9 +1,9 @@
-{ system, inputs, pkgs, pkgs-small, ... }:
+{ system, users, inputs, pkgs, pkgs-small, ... }:
 
 inputs.nixpkgs.lib.nixosSystem {
 
   inherit pkgs;
-  specialArgs = { inherit system inputs pkgs-small; };
+  specialArgs = { inherit system users inputs pkgs-small; };
   
   modules = [
     ./configuration.nix
@@ -22,12 +22,12 @@ inputs.nixpkgs.lib.nixosSystem {
             services = "/etc/nixos/common/modules/home-manager/services/";
           };
 
-          inherit system inputs pkgs-small;
+          inherit system users inputs pkgs-small;
         };
         
         users = {
-          jonvemo.imports = [
-            ../../home/jonvemo
+          "${users.primary}".imports = [
+            ../../home/${users.primary}
             ../../common/modules/home-manager
           ]; 
         };

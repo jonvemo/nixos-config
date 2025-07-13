@@ -37,6 +37,9 @@
 
   outputs = inputs: let
     system = "x86_64-linux";
+    users = {
+      primary = "jonvemo";
+    };
 
     common = {
       inherit system;
@@ -48,7 +51,7 @@
 
   in {
     nixosConfigurations = {
-      jonvemo = import ./host/jonvemo { inherit system inputs pkgs pkgs-small; };
+      "${users.primary}" = import ./host/${users.primary} { inherit system users inputs pkgs pkgs-small; };
   };
 
   };
