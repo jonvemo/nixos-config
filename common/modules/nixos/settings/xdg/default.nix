@@ -1,10 +1,10 @@
 { config, ... }: let
   audio = [ "com.github.neithern.g4music.desktop" ];
   image = [ "org.gnome.Loupe.desktop" ];
-  video = [ "io.github.celluloid_player.Celluloid.desktop" ];
+  video = [ "org.gnome.Showtime.desktop" ];
   fileManager = [ "org.gnome.Nautilus.desktop" ];
   browser = [ "zen-beta.desktop" ];
-  editor = [ "dev.zed.Zed" ];
+  editor = [ "dev.zed.Zed-Preview.desktop" ];
 in {
   xdg = {
     mime = {

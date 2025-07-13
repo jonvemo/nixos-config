@@ -15,7 +15,7 @@
       parabolic /* Download Music */ tagger /* Music Tagger */
 
       # Desktop 
-      loupe /* Image Viewer*/ celluloid g4music
+      loupe /* Image Viewer*/ showtime g4music
       foliate /* Ebook Reader */ sticky-notes pomodoro-gtk
     
       gnome-sound-recorder gnome-calculator gnome-connections
