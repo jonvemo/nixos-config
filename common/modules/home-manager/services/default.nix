@@ -1,3 +1,4 @@
+{ config,... }:
 {
   imports = [
     ./mpris-proxy
@@ -5,4 +6,11 @@
     ./hypridle
     ./swww
   ];
+
+  services.mpd = {
+    enable = true;
+    network.startWhenNeeded = true;  
+    musicDirectory = "${config.home.homeDirectory}/Music";
+  };
+
 }
