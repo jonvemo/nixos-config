@@ -16,7 +16,7 @@
 
       # Desktop 
       loupe /* Image Viewer*/ showtime g4music
-      foliate /* Ebook Reader */ sticky-notes pomodoro-gtk
+      sticky-notes pomodoro-gtk
     
       gnome-sound-recorder gnome-calculator gnome-connections
       snapshot ouch
