@@ -1,93 +1,59 @@
+{pkgs,...}:
 {
   programs.fastfetch = {
     enable = true;
+    package = pkgs.fastfetchMinimal;
+
     settings = {
-      logo = {
-        # source = "nixos";
-        source = ../../../nixos/settings/stylix/wallpapers/TM1.webp;
-        type = "kitty";
-        padding = {
-          left = 3;
-          right = 3;
+      logo.source = "none";
+      
+      display = {
+        key = {
+          width = 22;
+          type = "both";
         };
+          
+        separator = "";
       };
+      
       modules = [
+        "break"
         {
           type = "custom";
           format = "System Information";
         }
-        {
-          type = "os";
-          key = "OS  ";
-        }
-        {
-          type = "kernel";
-          key = "   Kernel";
-        }
-        {
-          type = "shell";
-          key = "   Shell";
-        }
-        {
-          type = "packages";
-          key = "   Packages";
-        }
+        
+        "os"
+        "kernel"
+        "shell"
+        "packages"
+        
         "break"
         {
           type = "custom";
           format = "Desktop Environment";
         }
-        {
-          type = "Theme";
-          key = "󰉼   Theme";
-        }
-        {
-          type = "icons";
-          key = "   Icons";
-        }
-        {
-          type = "font";
-          key = "   Font";
-        }
-        {
-          type = "cursor";
-          key = "   Cursor";
-        }
-        {
-          type = "wm";
-          key = "   WM";
-        }
-        {
-          type = "terminal";
-          key = "   Terminal";
-        }
-        {
-          type = "terminalFont";
-          key = "   TerminalFont";
-        }
+        
+        "theme"
+        "icons"
+        "font"
+        "cursor"
+        "wm"
+        "terminal"
+        "terminalfont"
+        
         "break"
         {
           type = "custom";
           format = "Hardware Information";
         }
-        {
-          type = "cpu";
-          key = "   CPU";
-        }
-        {
-          type = "gpu";
-          key = "   GPU";
-        }
-        {
-          type = "memory";
-          key = "   RAM";
-        }
-        {
-          type = "swap";
-        }
-        {
-          type = "disk";
-        }
+
+        "cpu"
+        "gpu"
+        "memory"
+        "swap"
+        "disk"
+
         "break"
         {
           type = "colors";
