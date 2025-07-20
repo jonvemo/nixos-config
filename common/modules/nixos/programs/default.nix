@@ -11,6 +11,7 @@
     ./starship
     ./obs
     ./yazi
+    ./walker
   ];
 
   programs = {
