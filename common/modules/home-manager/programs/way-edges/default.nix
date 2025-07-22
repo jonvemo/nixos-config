@@ -104,7 +104,7 @@ in {
               text-transition-ms = 600;
               preset = {
                 type = "battery";
-                update-interval = 30000;
+                update-interval = 15000;
               };
             }
             /*--- Temperature ---*/
@@ -122,7 +122,7 @@ in {
               preset = {
                 type = "custom";
                 cmd = "awk '{print $1 / 100000}' /sys/class/thermal/thermal_zone0/temp";
-                update-interval = 30000;
+                update-interval = 15000;
               };
             }
             /*--- RAM ---*/
@@ -139,7 +139,7 @@ in {
               text-transition-ms = 600;
               preset = {
                 type = "ram";
-                update-interval = 30000;
+                update-interval = 15000;
               };
             }
             
