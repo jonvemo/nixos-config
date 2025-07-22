@@ -22,7 +22,7 @@
       snapshot ouch
 
       # Browsers & Chatting
-      # microsoft-edge # google-chrome # vivaldi # brave
+      microsoft-edge # google-chrome # vivaldi # brave
       
       # DevTools
       ffmpeg libheif libavif exiftool
