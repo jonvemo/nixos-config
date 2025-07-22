@@ -12,6 +12,7 @@
     ./obs
     ./yazi
     ./walker
+    ./hyprlock
   ];
 
   programs = {
