@@ -41,7 +41,7 @@ layout {
     }
 }
 
-spawn-at-startup "waybar"
+spawn-at-startup "way-edges"
 
 environment {
     DISPLAY ":0"

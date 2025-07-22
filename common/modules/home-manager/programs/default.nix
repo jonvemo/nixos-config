@@ -12,7 +12,7 @@
 
     ./niri
     ./hyprlock
-    ./waybar
+    ./way-edges
 
     ./zen
   ];
