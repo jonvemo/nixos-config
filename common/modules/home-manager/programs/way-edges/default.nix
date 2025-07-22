@@ -17,7 +17,7 @@ in {
           edge = "top";
           layer = "overlay";
           position = "top";
-          thickness = 24;
+          thickness = 8;
           length = "25%";
 
           default-color = "#${theme.base02}fc";
