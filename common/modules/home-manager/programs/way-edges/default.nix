@@ -20,12 +20,14 @@ in {
           thickness = 24;
           length = "25%";
 
-          default-color = "#${theme.base02}"; # WARN: DON'T WORK
-          active-color = "#${theme.base00}"; # WARN: DON'T WORK
+          default-color = "#${theme.base02}fc";
+          active-color = "#${theme.base00}fc";
+          hover-color = "#${theme.base00}fc";
+          focus-color = "#${theme.base00}fc";
           
           border-width = 0;
-          border-radius = 4;
-          gap = 4;
+          border-radius = 0;
+          gap = 0;
           preset.type = "niri";
         }
 
