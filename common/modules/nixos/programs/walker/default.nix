@@ -4,7 +4,7 @@
 
   programs.walker = {
     enable = true;
-    package = pkgs.walker;
+    # package = pkgs.walker;
 
     config = {
       theme = "nixos";
@@ -26,9 +26,9 @@
           width = 512;
 
           scroll.list = {
-            max_height = 256;
+            max_height = 184;
             min_width = 448;
-            height = 256;
+            height = 184;
             width = 448;
           };
           
