@@ -76,7 +76,7 @@ in {
           edge = "right";
           layer = "overlay";
           position = "top";
-          margins.top = 28;
+          margins.top = 36;
           gap = 4;
 
           outlook = {
