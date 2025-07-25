@@ -7,5 +7,6 @@
     ./onedrive
     ./ollama
     ./tlp
+    ./gnome-keyring
   ];
 }
