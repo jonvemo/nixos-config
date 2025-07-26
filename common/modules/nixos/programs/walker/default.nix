@@ -4,7 +4,7 @@
 
   programs.walker = {
     enable = true;
-    # package = pkgs.walker;
+    package = pkgs.walker;
 
     config = {
       theme = "nixos";
