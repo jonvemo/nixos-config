@@ -12,7 +12,7 @@
       builtins.custom_commands.commands = [
         {
           name = "XWayland Support";
-          cmd = "Xwayland";
+          cmd = "xwayland-satellite";
         }
       ];
     };
