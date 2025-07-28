@@ -23,6 +23,9 @@
 
       # Browsers & Chatting
       microsoft-edge # google-chrome # vivaldi # brave
+
+      # Media & Draw
+      krita
       
       # DevTools
       ffmpeg libheif libavif exiftool

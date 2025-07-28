@@ -4,9 +4,6 @@
   
     (with pkgs; [ 
     
-      # Media & Draw
-      krita
-
       # Games
       prismlauncher
       osu-lazer-bin
