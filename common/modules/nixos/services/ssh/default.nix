@@ -5,9 +5,7 @@
       UseDns = true;
       PasswordAuthentication = false;
       PermitRootLogin = "no";
-    
     };
-  
   };
 
 }

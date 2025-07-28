@@ -1,8 +1,8 @@
 {
   imports = [
-    ./kernel.nix
-    ./loader.nix
-    ./general.nix
+    ./kernel
+    ./loader
+    ./misc
   ];
   
 }

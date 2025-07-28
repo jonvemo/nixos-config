@@ -8,5 +8,7 @@
     ./ollama
     ./tlp
     ./gnome-keyring
+    ./resolved
+    ./ssh
   ];
 }
