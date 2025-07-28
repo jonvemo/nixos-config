@@ -84,9 +84,9 @@
               filterLists = [
                 "ublock-privacy"
                 "ublock-badware"
-                "ublock-filters"
                 "ublock-quick-fixes"
                 "ublock-unbreak"
+                "easylist"
               ];
             };
             disabledPopupPanelParts = [
