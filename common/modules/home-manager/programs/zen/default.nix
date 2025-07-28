@@ -86,6 +86,7 @@
                 "ublock-badware"
                 "ublock-quick-fixes"
                 "ublock-unbreak"
+                "ublock-filters"
                 "easylist"
               ];
             };
