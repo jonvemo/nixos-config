@@ -32,10 +32,6 @@
       url = "github:jonvemo/zed-editor-flake";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    curd = {
-      url = "github:Wraient/curd";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
 
   };
 

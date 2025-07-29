@@ -6,7 +6,6 @@
     ./niri
     ./xwayland
     ./nautilus
-    ./curd
     ./steam
     ./starship
     ./obs
