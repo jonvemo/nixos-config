@@ -1,4 +1,4 @@
-{ pkgs, inputs, ... }:
+{ inputs,users,pkgs,... }:
 
 {
   imports = [
@@ -7,7 +7,7 @@
   ];  
 
   users.users = {
-    jonvemo = {
+    ${users.primary} = {
       isNormalUser = true;
       description = "John Verdugo";
       extraGroups = [ "wheel" ];
@@ -15,7 +15,6 @@
     };    
   };
       
-  # NOTE Don't Change
-  system.stateVersion = "24.05"; # Did you read the comment?
+  system.stateVersion = "24.05";
 
 }
