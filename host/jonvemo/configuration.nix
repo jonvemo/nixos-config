@@ -1,4 +1,4 @@
-{ inputs,users,pkgs,... }:
+{ inputs,hosts,stateVersion,pkgs,... }:
 
 {
   imports = [
@@ -7,14 +7,13 @@
   ];  
 
   users.users = {
-    ${users.primary} = {
+    ${hosts.primary.users.primary.name} = {
       isNormalUser = true;
-      description = "John Verdugo";
+      description = "${hosts.primary.users.primary.description}";
       extraGroups = [ "wheel" ];
       shell = pkgs.fish;
     };    
   };
-      
-  system.stateVersion = "24.05";
 
+  system.stateVersion = "${stateVersion}";
 }

@@ -1,16 +1,12 @@
-{ users, ...}:
+{ hosts,stateVersion,... }:
 {
   imports = [ 
     ./modules
   ];
 
   home = {
-    username = "${users.primary}";
-    # homeDirectory = "/home/jonvemo";
-    stateVersion = "24.05";
-    
+    username = "${hosts.primary.users.primary.name}";
+    stateVersion = "${stateVersion}"; 
   };
 
-  # Let Home Manager install and manage itself.
-  programs.home-manager.enable = true;
 }

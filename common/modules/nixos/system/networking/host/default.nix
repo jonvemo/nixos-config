@@ -1,4 +1,4 @@
-{ users,... }:
+{ hosts,... }:
 {
-  networking.hostName = "${users.primary}";
+  networking.hostName = "${hosts.primary.name}";
 }
