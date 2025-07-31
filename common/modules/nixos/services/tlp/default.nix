@@ -1,3 +1,3 @@
 {
-  services.tlp.enable = true;
+  services.tlp.enable = false;
 }
