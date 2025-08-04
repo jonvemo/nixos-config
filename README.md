@@ -41,7 +41,6 @@ git clone https://github.com/jonvemo/nixos-config.git
 ![FastFetch Preview](assets/fastfetch.png)
 ![Nautilus, Loupe, Sticky Notes and PomodoroGTK Preview](assets/nautilus-loupe-sticky-pomodoro.png)
 ![Gnome Calculator, Gapless and Kooha Preview](assets/calculator-kooha-gapless.png)
-![Pwvucontrol and Celluloid Preview](assets/pwvucontrol-celluloid.png)
 
 </details>
 
@@ -52,20 +51,20 @@ git clone https://github.com/jonvemo/nixos-config.git
 | **Window Manager**      | [Niri](https://github.com/YaLTeR/niri)                                                                                      |
 | **Theme Manager**       | [Stylix](https://github.com/danth/stylix)                                                                                   |
 | **File Manager**        | [Nautilus](https://gitlab.gnome.org/GNOME/nautilus)                                                                         |
-| **Status Bar**          | [Waybar](https://github.com/Alexays/Waybar)                                                                                 |
+| **Status Bar**          | [Way-edges](https://github.com/way-edges/way-edges)                                                                         |
 | **App Launcher**        | [Walker](https://github.com/abenz1267/walker)                                                                               |
 | **Terminal Emulator(s)**| [Kitty](https://github.com/kovidgoyal/kitty), [Foot](https://codeberg.org/dnkl/foot)                                        |
 | **Shell**               | [Fish](https://github.com/fish-shell/fish-shell)                                                                            |
 | **Shell Prompt**        | [Starship](https://github.com/starship/starship)                                                                            |
 | **Code Editor**         | [Zed](https://github.com/zed-industries/zed)                                                                                |
 | **Terminal Editor**     | [Helix](https://github.com/helix-editor/helix)                                                                              |
-| **Bluetooth Manager**   | [Bluetuith](https://github.com/bluetuith-org/bluetuith)                                                                     |
+| **Bluetooth Manager**   | [Bluetui](https://github.com/pythops/bluetui)                                                                               |
 | **Network Manager**     | [Impala](https://github.com/pythops/impala)                                                                                 |
-| **Volume Control**      | [Pwvucontrol](https://github.com/saivert/pwvucontrol)                                                                       |
+| **Volume Control**      | [Wiremix](https://github.com/tsowell/wiremix)                                                                               |
 | **Screen Recorder**     | [Kooha](https://github.com/SeaDve/Kooha)                                                                                    |
 | **Cloud Storage**       | One Drive ( Unofficial client: [abraunegg/onedrive](https://github.com/abraunegg/onedrive))                                 |
 | **Web Browser**         | [Zen Browser](https://github.com/zen-browser)                                                                               |
-| **Music Player(s)**     | [G4Music](https://gitlab.gnome.org/neithern/g4music), [Spotube](https://github.com/KRTirtho/spotube)                        |
-| **Video Player**        | [Celluloid](https://github.com/celluloid-player/celluloid)                                                                  |
+| **Music Player(s)**     | [G4Music](https://gitlab.gnome.org/neithern/g4music), [RMPC](https://github.com/mierak/rmpc)                                |
+| **Video Player**        | [Showtime](https://gitlab.gnome.org/GNOME/showtime)                                                                         |
 | **Image Viewer**        | [Loupe](https://gitlab.gnome.org/GNOME/loupe)                                                                               |
 | **Notes**               | [Sticky](https://github.com/vixalien/sticky)                                                                                |
