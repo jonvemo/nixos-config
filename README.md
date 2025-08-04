@@ -1,4 +1,4 @@
-# NixOSi Dotfiles
+# NixOS Dotfiles
 
 ![Main Desktop with Walker Preview](assets/desktop-walker.png)
 
@@ -26,7 +26,7 @@ git clone https://github.com/jonvemo/nixos-config.git
 
 4. Copy the files except for `hardware-configuration.nix` to /etc/nixos/ and move the one created by NixOS to /host/USER/
 
-5. Modify the users and hosts in `flake.nix`, `host/HOST/default.nix`, `host/HOST/configuration.nix`, `home/USER/default.nix` and `common/modules/home-manager/settings/gtk.nix`
+5. Modify the users and hosts in `flake.nix`, `host/HOST/default.nix`, `host/HOST/configuration.nix` and `home/USER/default.nix`
 
 > [!NOTE]
 > Icons Theme and Cursor are not available at the time of installing this repository, you can changeit on .icons folder. Changing also, if you use other icons or cursor, in the `settings/gtk/default.nix` folder and in `programs/niri/niri.kdl`
