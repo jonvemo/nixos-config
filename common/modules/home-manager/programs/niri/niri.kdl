@@ -144,13 +144,14 @@ binds {
     Mod+Shift+A { spawn "footclient" "-T=wiremix" "wiremix"; }
     Mod+Shift+W { spawn "footclient" "-T=impala" "impala"; }
     Mod+Shift+B { spawn "footclient" "-T=bluetui" "bluetui"; }
+    Mod+Shift+T { spawn "footclient" "-T=btop" "btop"; }
     Mod+Shift+K { spawn "kooha"; }
     Mod+B { spawn "zen"; }
     Mod+T { spawn "kitty"; }
     Mod+Y { spawn "foot"; }
+    Mod+E { spawn "nautilus"; }
     Mod+D { spawn "walker"; }
     Mod+Shift+D { spawn "walker" "-m" "custom_commands"; }
-    Mod+E { spawn "nautilus"; }
     Super+Alt+L { spawn "hyprlock"; }
 
     XF86AudioRaiseVolume  allow-when-locked=true { spawn "wpctl" "set-volume" "@DEFAULT_AUDIO_SINK@" "0.1+"; }
