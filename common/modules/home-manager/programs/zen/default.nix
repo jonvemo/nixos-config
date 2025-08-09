@@ -33,8 +33,17 @@
       };
 
       Cookies = {
-        Behavior = "reject-tracker-and-partition-foreign";
-      };
+        Behavior = "reject";
+        BehaviorPrivateBrowsing = "reject";
+        Allow = [
+          "https://google.com/"
+          "https://youtube.com/"
+          "https://github.com/"
+          "https://discord.com/"
+          "https://facebook.com/"
+          "https://x.com/"
+        ];
+      };      
 
       SearchEngines.Add = [
         {
