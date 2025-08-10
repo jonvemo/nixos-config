@@ -1,9 +1,24 @@
-{inputs,pkgs,...}:
+{ inputs,pkgs,hosts,... }:
 {
   imports = [ inputs.zen-browser.homeModules.beta ];
 
   programs.zen-browser = {
     enable = true;
+
+    profiles."${hosts.primary.users.primary.name}" = {
+      containers = {
+        "personal" = {
+          id = 1;
+          color = "blue";
+          icon = "fingerprint";
+        };
+        "work" = {
+          id = 2;
+          color = "yellow";
+          icon = "briefcase";
+        };
+      };
+    };
     
     policies = {
       DisplayBookmarksToolbar = "newtab";
