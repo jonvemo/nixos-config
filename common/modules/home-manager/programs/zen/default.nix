@@ -41,6 +41,9 @@
           Value = false;
           Status = "user";
         };
+        "places.history.expiration.max_pages" = {
+          Value = 2000;
+        };
       };
 
       SanitizeOnShutdown = {
