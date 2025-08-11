@@ -64,6 +64,7 @@
         AllowSession = [
           "https://vercel.com/"
           "https://linkedin.com/"
+          "https://yahoo.com/"
           "https://hapi.trade/"
         ];
       };      
