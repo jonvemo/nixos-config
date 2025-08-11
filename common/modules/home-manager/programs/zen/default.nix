@@ -58,14 +58,16 @@
           "https://youtube.com/"
           "https://github.com/"
           "https://discord.com/"
-          "https://facebook.com/"
-          "https://x.com/"
         ];
         AllowSession = [
           "https://vercel.com/"
           "https://linkedin.com/"
           "https://yahoo.com/"
           "https://hapi.trade/"
+          "https://cinny.in/"
+          "https://matrix.org/"
+          "https://facebook.com/"
+          "https://x.com/"
         ];
       };      
 
