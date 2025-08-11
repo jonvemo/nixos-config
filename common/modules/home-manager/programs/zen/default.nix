@@ -61,6 +61,10 @@
           "https://facebook.com/"
           "https://x.com/"
         ];
+        AllowSession = [
+          "https://vercel.com/"
+          "https://linkedin.com/"
+        ];
       };      
 
       SearchEngines.Add = [
