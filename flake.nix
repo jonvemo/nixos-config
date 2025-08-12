@@ -13,7 +13,7 @@
     };
 
     # Theme
-    stylix.url = "github:danth/stylix";
+    stylix.url = "github:nix-community/stylix";
 
     # APPs
     zen-browser = {
