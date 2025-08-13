@@ -18,7 +18,7 @@
       loupe /* Image Viewer*/ showtime g4music
       sticky-notes pomodoro-gtk
     
-      gnome-sound-recorder gnome-calculator gnome-connections
+      gnome-sound-recorder gnome-calculator # gnome-connections
       snapshot ouch
 
       # Browsers & Chatting
