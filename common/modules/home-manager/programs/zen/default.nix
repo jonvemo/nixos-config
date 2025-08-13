@@ -56,11 +56,12 @@
         Allow = [
           "https://google.com/"
           "https://youtube.com/"
-          "https://github.com/"
           "https://discord.com/"
         ];
         AllowSession = [
+          "https://namecheap.com/"
           "https://vercel.com/"
+          "https://github.com/"
           "https://linkedin.com/"
           "https://yahoo.com/"
           "https://hapi.trade/"
