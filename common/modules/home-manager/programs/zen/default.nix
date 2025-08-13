@@ -68,6 +68,8 @@
           "https://matrix.org/"
           "https://facebook.com/"
           "https://x.com/"
+          "https://pornhub.com/"
+          "https://nhentai.net/"
         ];
       };      
 
