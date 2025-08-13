@@ -31,7 +31,6 @@
       
       jhpac = "cd /etc/nixos/home/jonvemo/modules/packages && hx default.nix";
 
-      sd = "sudo hx default.nix";
       d = "hx default.nix";
       b = "cd ..";
 
@@ -92,7 +91,6 @@
       wpd = "cd Documents/Work/GitHub/Default/";
       wps = "cd Documents/Work/GitHub/Study/";
 
-      s = "sudo hx";      
       t = "touch";
 
       build = "sudo nixos-rebuild switch --flake /etc/nixos#";
