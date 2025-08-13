@@ -6,7 +6,6 @@
     
       # Games
       prismlauncher
-      osu-lazer-bin
       mindustry
       
       # Broken on small  
