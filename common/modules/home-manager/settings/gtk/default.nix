@@ -11,7 +11,9 @@
       name = "Anya";
       size = 32;
     };
-    
+
+    gtk2.configLocation = "${config.xdg.configHome}/gtk-2.0/gtkrc";
+
     gtk3 = {
       bookmarks = [
         "file:///${config.home.homeDirectory}/OneDrive"
