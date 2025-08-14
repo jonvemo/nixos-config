@@ -5,7 +5,7 @@
     (with pkgs; [ 
     
       # GUI & CTL & TUI
-      kooha lact hyprlock
+      kooha lact
       brightnessctl playerctl
       wiremix bluetui impala
       internetarchive
