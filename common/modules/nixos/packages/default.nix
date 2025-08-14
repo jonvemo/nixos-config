@@ -12,7 +12,7 @@
       rmpc /* Music Player */
 
       # Tools
-      parabolic /* Download Music */ tagger /* Music Tagger */
+      parabolic /* Download Music */
 
       # Desktop 
       loupe /* Image Viewer*/ showtime g4music
