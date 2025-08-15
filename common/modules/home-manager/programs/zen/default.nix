@@ -35,6 +35,7 @@
       DontCheckDefaultBrowser = true;
       OfferToSaveLogins = false;
       HttpsOnlyMode = "enabled";
+      AutofillCreditCardEnabled = false;
 
       Preferences = {
         "browser.translations.automaticallyPopup" = {
@@ -71,6 +72,7 @@
           "https://x.com/"
           "https://pornhub.com/"
           "https://nhentai.net/"
+          "https://modrinth.com/"
         ];
       };      
 
