@@ -71,6 +71,7 @@
           "https://x.com/"
           "https://pornhub.com/"
           "https://nhentai.net/"
+          "https://modrinth.com/"
         ];
       };      
 

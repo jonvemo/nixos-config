@@ -1,0 +1,1233 @@
+############################################################
+# +------------------------------------------------------+ #
+# |                       Notas                          | #
+# +------------------------------------------------------+ #
+############################################################
+
+# Este es el archivo de configuración para EssentialsX.
+# Esta configuración fue generada para la versión 2.21.2.
+# Consulta la configuración predeterminada actualizada en https://git.io/JG4z1
+# Si necesitas ayuda, puedes unirte a la comunidad de EssentialsX: https://essentialsx.net/community.html
+
+############################################################
+# +------------------------------------------------------+ #
+# |                 EssentialsX (Global)                 | #
+# +------------------------------------------------------+ #
+############################################################
+
+# Un código de color entre 0-9 o a-f. Establécelo en 'none' para deshabilitar.
+# En 1.16+, también puedes usar códigos de color hexadecimales aquí (por ejemplo, #613e1d es marrón).
+ops-name-color: '4'
+
+# Los caracteres que prefijan todos los apodos, para que sepas que no son nombres de usuario verdaderos.
+# Los jugadores con 'essentials.nick.hideprefix' no serán prefijados con los caracteres.
+nickname-prefix: ''
+
+# La longitud máxima permitida en los apodos. El prefijo del apodo no se incluye en esto.
+max-nick-length: 15
+
+# El patrón de regex usado para determinar si un apodo solicitado debe ser permitido.
+# Si el apodo solicitado no coincide con este patrón, el apodo será rechazado.
+# Los jugadores con 'essentials.nick.allowunsafe' podrán omitir esta comprobación.
+allowed-nicks-regex: '^[a-zA-Z_0-9§]+$'
+
+# Una lista de frases que no se pueden usar en apodos. Puedes incluir expresiones regulares aquí.
+# Los jugadores con 'essentials.nick.blacklist.bypass' podrán omitir este filtro.
+nick-blacklist:
+  # - Notch
+
+# Cuando esta opción está habilitada, la comprobación de la longitud del apodo excluirá los códigos de color en los nombres de los jugadores.
+# Por ejemplo, si "&6Notch" tiene 7 caracteres (2 son parte de un código de color), se usa una longitud de 5 cuando esta opción se establece en verdadero.
+ignore-colors-in-max-nick-length: false
+
+# Cuando esta opción está habilitada, los nombres de visualización para jugadores ocultos no se mostrarán. Esto evita que los jugadores puedan
+# ver que están en línea mientras están invisibles.
+hide-displayname-in-vanish: true
+
+# Deshabilita esto si tienes cualquier otro plugin que modifique el nombre de visualización de un jugador.
+change-displayname: true
+
+# Esta opción hará que Essentials muestre los nombres de visualización de los jugadores en lugar de los nombres de usuario al autocompletar comandos de Essentials.
+# Si tus autocompletados de tabulación incluyen prefijos y sufijos, establece esta opción en falso.
+change-tab-complete-name: false
+
+# Si el destino del teletransporte no es seguro, ¿deberían los jugadores ser teletransportados a la ubicación segura más cercana?
+# Si esto se establece en true, Essentials intentará teletransportar a los jugadores cerca del destino previsto.
+# Si esto se establece en false, los intentos de teletransportes a ubicaciones inseguras serán cancelados con una advertencia.
+teleport-safety: true
+
+# Esto deshabilita forzosamente las comprobaciones de seguridad de teletransporte sin una advertencia si se intenta teletransportar a ubicaciones inseguras.
+# Tanto 'teleport-safety' arriba como esta opción deben estar en true para forzar la teletransportación a ubicaciones peligrosas.
+force-disable-teleport-safety: false
+
+# Si un jugador se teletransporta a una ubicación insegura en modo creativo, aventura o dios, no será teletransportado a una
+# ubicación segura. Si quieres que los jugadores sean teletransportados a una ubicación segura todo el tiempo, establece esta opción en true.
+force-safe-teleport-location: false
+
+# Considerar los bloques de agua como "seguros", permitiendo así a los jugadores teletransportarse
+# usando comandos como /home o /spawn a una ubicación ocupada por bloques de agua.
+is-water-safe: true
+
+# Si un jugador tiene pasajeros, el teletransporte fallará. ¿Deberían sus pasajeros ser desmontados antes de ser teletransportados?
+# Si esto se establece en true, Essentials desmontará a los pasajeros del jugador antes de teletransportarse.
+# Si esto se establece en false, los intentos de teletransporte serán cancelados con una advertencia.
+teleport-passenger-dismount: true
+
+# El retraso, en segundos, requerido entre /home, /tp, etc.
+teleport-cooldown: 0
+
+# El retraso, en segundos, antes de que un jugador se teletransporte realmente.
+# Si el jugador se mueve o es atacado en este plazo, el teletransporte se cancela.
+teleport-delay: 4
+
+# El retraso, en segundos, durante el cual un jugador no puede ser atacado por otros jugadores después de ser teletransportado por un comando.
+# Esto también evita que el jugador ataque a otros.
+teleport-invulnerability: 4
+
+# Si todas las teletransportaciones deben ir al centro del bloque, donde las coordenadas x y z se convierten en .5.
+teleport-to-center: true
+
+# El retraso, en segundos, requerido entre intentos de /heal o /feed.
+heal-cooldown: 90
+
+# ¿Deben eliminarse los efectos de poción al curar a un jugador?
+remove-effects-on-heal: true
+
+# El radio predeterminado cuando se usa /near.
+near-radius: 200
+
+# Qué impedir de /item y /give.
+# Ejemplo: item-spawn-blacklist: lava_bucket,tnt,end_crystal
+item-spawn-blacklist:
+
+# Establece esto en true si quieres reglas de aparición de objetos basadas en permisos.
+# Nota: 'item-spawn-blacklist' arriba será ignorado si se establece en true.
+# Ejemplos de permisos (estos van en tu administrador de permisos):
+#  - essentials.itemspawn.item-all
+#  - essentials.itemspawn.item-[nombre_del_objeto]
+#  - essentials.give.item-all
+#  - essentials.give.item-[nombre_del_objeto]
+#  - essentials.unlimited.item-all
+#  - essentials.unlimited.item-[nombre_del_objeto]
+#  - essentials.unlimited.item-waterbucket (Colocación ilimitada de agua)
+#
+# Para más información, visita https://wiki.ess3.net/wiki/Command_Reference/ICheat#Item.2FGive
+permission-based-item-spawn: false
+
+# El número máximo de entidades que pueden ser generadas por cada uso del comando /spawnmob.
+spawnmob-limit: 8
+
+# ¿Debe Essentials notificar a los jugadores "golpeados" cuando se usa /lightning?
+warn-on-smite: false
+
+# ¿Deben los objetos caer a los pies de un jugador si su inventario está lleno en lugar de no dar los objetos?
+drop-items-if-full: false
+
+# ¿Debe Essentials notificar a los jugadores si no tienen correo nuevo?
+notify-no-new-mail: false
+
+# Especifica la duración del cooldown, en segundos, entre las notificaciones de correo para un jugador.
+# Útil para servidores con mucho tráfico de correo.
+notify-player-of-mail-cooldown: 60
+
+# Cuando un comando entra en conflicto con otro plugin, Essentials, por defecto, intentará forzar que el OTRO plugin tenga prioridad.
+# Añadir comandos a esta lista le dirá a Essentials que no "ceda" el comando a otros plugins.
+# En este estado, qué plugin "gana" puede parecer casi aleatorio.
+#
+# Si tienes dos plugins con el mismo comando y quieres forzar a Essentials a tomar el control, debes establecer un alias.
+# Para forzar a Essentials a manejar '/god', alias 'god' a 'essentials:god $1-' en el archivo 'commands.yml' ubicado en la carpeta raíz de tu servidor.
+# Consulta https://breezewiki.com/bukkit/wiki/Commands.yml#aliases para más información.
+overridden-commands:
+  #- god
+  #- info
+
+# Deshabilitar comandos aquí evitará que Essentials maneje el comando; esto no afectará los conflictos de comandos.
+# No deberías necesitar deshabilitar comandos usados por otros plugins, ya que automáticamente obtendrán prioridad.
+# Consulta https://breezewiki.com/bukkit/wiki/Commands.yml#aliases para mapear comandos a otros plugins.
+disabled-commands:
+  #- nick
+  #- clear
+  # 
+
+# Si Essentials debe mostrar usos detallados de los comandos.
+# Si se establece en false, Essentials agrupará todos los usos en un único mensaje de uso.
+verbose-command-usages: true
+
+# Estos comandos se mostrarán a los jugadores con SocialSpy habilitado.
+# Puedes añadir comandos de otros plugins para rastrear.
+# Elimina cualquier comando que no quieras espiar.
+# Elimina el # de '*' para escuchar todos los comandos posibles.
+socialspy-commands:
+  #- '*'
+  - action
+  - describe
+  - eaction
+  - edescribe
+  - email
+  - eme
+  - emsg
+  - er
+  - ereply
+  - etell
+  - ewhisper
+  - m
+  - mail
+  - msg
+  - pm
+  - r
+  - reply
+  - t
+  - tell
+  - w
+  - whisper
+
+# Si los mensajes privados y públicos de jugadores silenciados deben aparecer en SocialSpy.
+# Si es true, se diferenciarán de los mensajes enviados por jugadores normales.
+socialspy-listen-muted-players: true
+
+# Si SocialSpy debe espiar mensajes privados además de los comandos de la lista anterior.
+# Si es false, solo monitoreará los comandos de la lista anterior.
+socialspy-messages: true
+
+# Si SocialSpy debe usar nombres de visualización formateados, que pueden incluir color.
+# Si es false, usará solo los nombres reales de los jugadores.
+socialspy-uses-displaynames: true
+
+# Las siguientes configuraciones de mundo escuchan cuando un jugador cambia de mundo.
+# Si usas otro plugin para controlar la velocidad y el vuelo, deberías cambiarlas a false.
+
+# Cuando un jugador cambia de mundo, ¿debe Essentials resetear su vuelo?
+# Esto deshabilitará el vuelo si el jugador no tiene 'essentials.fly'.
+world-change-fly-reset: true
+
+# A partir de la 1.17, Minecraft ya no conserva las habilidades de un jugador cuando cambia de mundo.
+# Al establecer esto en true, Essentials conservará el estado de vuelo de un jugador cuando cambie de mundo.
+# Esto solo funcionará si el jugador tiene el permiso 'essentials.fly'.
+world-change-preserve-flying: true
+
+# Cuando un jugador cambia de mundo, ¿debe Essentials resetear su velocidad según sus permisos?
+# Esto resetea la velocidad del jugador al valor predeterminado si no tiene 'essentials.speed'.
+# Si el jugador no tiene 'essentials.speed.bypass', su velocidad se reseteará a los valores máximos
+# especificados en 'max-walk-speed' y 'max-fly-speed' a continuación.
+world-change-speed-reset: true
+
+# Estos comandos serán deshabilitados cuando un jugador esté silenciado.
+# Essentials ya deshabilita los comandos de mensajería de Essentials por defecto.
+# Solo le importa el comando raíz, no los argumentos posteriores (ve '/f chat' igual que '/f').
+# Quita el # de '*' para deshabilitar todos los comandos mientras esté silenciado.
+mute-commands:
+  #- '*'
+  - kittycannon
+
+# Si no deseas usar un sistema de permisos, puedes definir una lista de "permisos de jugador" a continuación.
+# Esta lista no tiene efecto si estás utilizando un sistema de permisos compatible.
+# Si estás utilizando un sistema de permisos no compatible, simplemente elimina esta sección.
+# Lista blanca los comandos y permisos que deseas dar a los jugadores por defecto (todo lo demás es solo para OP).
+# Estos son los permisos sin la parte 'essentials.'.
+#
+# Para habilitar esta característica, asegúrate de que 'use-bukkit-permissions' a continuación esté establecido en false.
+player-commands:
+  - afk
+  - afk.auto
+  - back
+  - back.ondeath
+  - balance
+  - balance.others
+  - balancetop
+  - build
+  - chat.color
+  - chat.format
+  - chat.shout
+  - chat.question
+  - clearinventory
+  - compass
+  - depth
+  - delhome
+  - getpos
+  - geoip.show
+  - help
+  - helpop
+  - home
+  - home.others
+  - ignore
+  - info
+  - itemdb
+  - kit
+  - kits.tools
+  - list
+  - mail
+  - mail.send
+  - me
+  - motd
+  - msg
+  - msg.color
+  - nick
+  - near
+  - pay
+  - ping
+  - protect
+  - r
+  - rules
+  - renamehome
+  - realname
+  - seen
+  - sell
+  - sethome
+  - setxmpp
+  - signs.create.protection
+  - signs.create.trade
+  - signs.break.protection
+  - signs.break.trade
+  - signs.use.balance
+  - signs.use.buy
+  - signs.use.disposal
+  - signs.use.enchant
+  - signs.use.free
+  - signs.use.gamemode
+  - signs.use.heal
+  - signs.use.info
+  - signs.use.kit
+  - signs.use.mail
+  - signs.use.protection
+  - signs.use.repair
+  - signs.use.sell
+  - signs.use.time
+  - signs.use.trade
+  - signs.use.warp
+  - signs.use.weather
+  - spawn
+  - suicide
+  - time
+  - tpa
+  - tpaccept
+  - tpahere
+  - tpdeny
+  - warp
+  - warp.list
+  - world
+  - worth
+  - xmpp
+
+# Usa esta opción para forzar el manejador de permisos basado en superperms independientemente del plugin de permisos instalado detectado.
+# Esto es útil si quieres permisos basados en superperms (con comodines) para plugins de permisos personalizados.
+# Si deseas usar los permisos incorporados de Essentials utilizando la sección 'player-commands' anterior, establece esto en false.
+use-bukkit-permissions: true
+
+# Cuando esta opción está habilitada, los kits de un solo uso (es decir, delay < 0) serán
+# eliminados de '/kit list' cuando un jugador ya no pueda usarlos.
+skip-used-one-time-kits-from-kit-list: false
+
+# Cuando está habilitada, la armadura de los kits se equipará automáticamente siempre que los espacios de armadura del jugador estén vacíos.
+kit-auto-equip: false
+
+# Determina la funcionalidad del comando /createkit.
+# Si es true, /createkit dará al usuario un enlace con el código del kit.
+# Si es false, /createkit añadirá el kit directamente al archivo de configuración 'kits.yml'.
+pastebin-createkit: false
+
+# Determina si /createkit generará kits usando la serialización de ítems NBT.
+# Si esto es true, /createkit almacenará los ítems como NBT. De lo contrario, utilizará el formato de ítems legible por humanos de Essentials.
+# Al usar la serialización NBT, /createkit puede almacenar ítems con metadatos complejos como cajas shulker y armas con atributos personalizados.
+# ADVERTENCIA: Esta opción solo funciona en servidores Paper 1.15.2+, y omitirá cualquier serializador personalizado de otros plugins como Magic.
+# ADVERTENCIA: Al crear kits a través de /createkit con esta opción habilitada, no podrás degradar tu servidor con estos ítems de kit.
+# Esta opción solo afecta a /createkit - aún puedes crear kits a mano en 'kits.yml' usando el formato de ítems legible por humanos de Essentials.
+use-nbt-serialization-in-createkit: false
+
+# Para habilitar los carteles, quita el símbolo #. Para deshabilitar todos los carteles, comenta o elimina cada cartel.
+# Consulta https://wiki.ess3.net/wiki/Sign_Tutorial para obtener instrucciones sobre cómo usarlos.
+# El soporte de Essentials para carteles de colores se habilitará cuando se habilite cualquier tipo de cartel.
+# Nota: 'color' no es un tipo de cartel real; habilita el uso de códigos de color en los carteles cuando se otorgan los permisos correctos.
+enabledSigns:
+  #- color
+  #- balance
+  #- buy
+  #- free
+  #- sell
+  #- trade
+  #- enchant
+  #- repair
+  #- gamemode
+  #- heal
+  #- info
+  #- kit
+  #- mail
+  #- randomteleport
+  #- warp
+  #- anvil
+  #- cartography
+  #- disposal
+  #- grindstone
+  #- loom
+  #- smithing
+  #- workbench
+  #- spawnmob
+  #- time
+  #- weather
+
+# Esto define cuántas veces por segundo se pueden interactuar con los carteles de Essentials por jugador.
+# Los valores deben estar entre 1 y 20, siendo 20 prácticamente sin protección contra el lag.
+# Números más bajos reducirán la posibilidad de lag, pero pueden molestar a los jugadores.
+sign-use-per-second: 4
+
+# Permitir IDs de ítems en carteles preexistentes en 1.13 y superiores.
+# No puedes usar IDs de ítems en carteles nuevos, pero esto permitirá a los jugadores interactuar con carteles que
+# fueron colocados antes de la 1.13.
+allow-old-id-signs: false
+
+# Lista de nombres de carteles que Essentials no debe proteger. Esta característica es especialmente útil cuando
+# otro plugin proporciona un cartel que Essentials también proporciona, pero Essentials lo sobrescribe.
+# Por ejemplo, si un plugin proporciona un cartel [kit], y deseas usar el suyo en lugar del
+# de Essentials, simplemente añade 'kit' a continuación y Essentials no lo protegerá.
+#
+# Consulta https://github.com/drtshock/Essentials/pull/699 para más información.
+unprotected-sign-names:
+  #- kit
+
+# La copia de seguridad ejecuta un comando de lote/bash personalizado a un intervalo especificado.
+# El servidor guardará el mundo antes de ejecutar el comando de copia de seguridad, y deshabilitará
+# el guardado durante la copia de seguridad para evitar la corrupción del mundo u otros conflictos.
+# Las copias de seguridad también pueden ser activadas manualmente con /backup.
+backup:
+  # El intervalo en minutos.
+  interval: 30
+  # Si es true, la tarea de copia de seguridad se ejecutará incluso si no hay jugadores en línea.
+  always-run: false
+  # A menos que añadas un comando o script de copia de seguridad válido aquí, esta característica será inútil.
+  # El comando de ejemplo a continuación utiliza rdiff-backup: https://rdiff-backup.net
+  #command: 'rdiff-backup World1 backups/World1'
+
+# Establece esto en true para habilitar permisos por warp.
+per-warp-permission: false
+
+# Ordenar la salida del comando /list por grupos.
+# Puedes ocultar y fusionar los grupos mostrados en /list definiendo el comportamiento deseado aquí.
+# Las instrucciones detalladas y ejemplos se pueden encontrar en la wiki: https://wiki.ess3.net/wiki/List
+list:
+    # Para fusionar grupos bajo un solo nombre en /list, lista cada grupo en una línea, separados por espacios.
+    #Staff: owner admin moderator
+    Admins: owner admin
+    # Para truncar listas de grupos, establece un límite máximo de jugadores.
+    #builder: 20
+    # Para ocultar grupos, establece el grupo como hidden.
+    #default: hidden
+    # Descomenta la línea de abajo para simplemente listar todos los jugadores sin agrupar.
+    #Players: '*'
+
+# Muestra nombres reales en /list junto a los jugadores que están usando un apodo.
+real-names-on-list: false
+
+# Más salida a la consola.
+debug: false
+
+# Establece la localización para todos los mensajes.
+# Si no lo estableces, se utilizará la localización predeterminada del servidor.
+# Por ejemplo, para establecer el idioma en inglés, establece locale en 'en'. Entonces se usará el archivo 'messages_en.properties'.
+# No olvides quitar el # delante de la línea.
+# Para más información, visita https://essentialsx.net/wiki/Locale.html
+locale: es
+
+# ¿Debe Essentials usar el idioma del jugador en lugar del del servidor al enviar mensajes?
+# Esto es útil si quieres usar un idioma diferente para tu servidor que para tus jugadores.
+# Por ejemplo, si tu servidor está configurado en inglés y un jugador habla francés, puedes establecer esto en true.
+# Essentials enviará entonces mensajes en francés al jugador, mientras que los mensajes en la consola permanecerán en inglés.
+# Si el idioma de un jugador no se conoce, se utilizará el idioma del servidor (o uno definido anteriormente).
+per-player-locale: true
+
+# Cambia los colores primario y secundario predeterminados utilizados en los mensajes de Essentials.
+# Algunos mensajes pueden usar colores personalizados, que deben editarse en los archivos de mensajes apropiados.
+# Para más información sobre cómo personalizar mensajes, consulta https://essentialsx.net/wiki/Locale.html
+message-colors:
+  primary: '#ffaa00'
+  secondary: '#ff5555'
+
+# Desactiva el modo dios cuando el jugador abandona el servidor.
+remove-god-on-disconnect: true
+
+# Después de este tiempo de espera en segundos, el jugador se establecerá como AFK.
+# Esta característica requiere que el jugador tenga el permiso 'essentials.afk.auto'.
+# Establece en -1 para no tener tiempo de espera.
+auto-afk: 300
+
+# Después de este tiempo de espera en segundos, el jugador será expulsado del servidor.
+# El permiso 'essentials.afk.kickexempt' anula esta característica.
+# Establece en -1 para no tener tiempo de espera.
+auto-afk-kick: -1
+
+# Establece esto en true si quieres congelar a los jugadores cuando estén AFK.
+# Otros jugadores o monstruos no podrán sacarlos del modo AFK.
+# Esto también habilitará el modo dios temporal para el jugador AFK.
+# El jugador debe usar el comando /afk para salir del modo AFK.
+freeze-afk-players: false
+
+# Cuando un jugador está AFK, ¿debería poder recoger objetos?
+# Habilita esto si quieres evitar que la gente se quede inactiva en trampas de mobs.
+disable-item-pickup-while-afk: false
+
+# Esta configuración controla si un jugador se marca como activo al interactuar.
+cancel-afk-on-interact: true
+
+# ¿Debe Essentials eliminar automáticamente el estado AFK cuando un jugador se mueve?
+# Los jugadores saldrán de AFK al chatear o usar comandos, independientemente de esta configuración.
+# Deshabilita esto para reducir el lag del servidor.
+cancel-afk-on-move: true
+
+# ¿Debe Essentials eliminar automáticamente el estado AFK cuando un jugador envía un mensaje de chat?
+cancel-afk-on-chat: true
+
+# ¿Deben ignorarse los jugadores AFK cuando otros jugadores intentan dormir?
+# Cuando esta configuración es false, los jugadores no podrán saltarse la noche si algunos jugadores están AFK.
+# Los jugadores con el permiso 'essentials.sleepingignored' siempre serán ignorados.
+sleep-ignores-afk-players: true
+
+# ¿Deben ignorarse los jugadores invisibles cuando otros jugadores intentan dormir?
+# Cuando esta configuración es false, los jugadores no podrán saltarse la noche si los jugadores invisibles no están durmiendo.
+# Los jugadores con el permiso 'essentials.sleepingignored' siempre serán ignorados.
+sleep-ignores-vanished-player: true
+
+# Cambia el nombre del jugador en /list cuando está AFK. Esto es ninguno por defecto, lo que especifica que Essentials
+# no debe interferir con el nombre de /list del jugador AFK.
+# Puedes usar códigos de color, {USERNAME} para el nombre del jugador, o {PLAYER} para el nombre de visualización del jugador.
+afk-list-name: "none"
+
+# Cuando un jugador entra o sale del modo AFK, ¿debe transmitirse la notificación AFK
+# a todo el servidor, o solo al jugador?
+# Cuando esta configuración es false, solo el jugador será notificado al cambiar su estado AFK.
+broadcast-afk-message: true
+
+# Puedes deshabilitar los mensajes de muerte de Minecraft aquí.
+death-messages: true
+
+# ¿Cómo debe manejar Essentials a los jugadores con el permiso 'essentials.keepinv' que tienen objetos con
+# Maldición de Desaparición cuando mueren?
+# Las opciones válidas son: 'keep' (mantener), 'drop' (soltar), y 'delete' (eliminar).
+vanishing-items-policy: keep
+
+# ¿Cómo debe manejar Essentials a los jugadores con el permiso 'essentials.keepinv' que tienen objetos con
+# Maldición de Vinculación cuando mueren?
+# Las opciones válidas son: 'keep' (mantener), 'drop' (soltar), y 'delete' (eliminar).
+binding-items-policy: keep
+
+# Cuando los jugadores mueren, ¿deberían recibir las coordenadas donde murieron?
+send-info-after-death: false
+
+# ¿Deben los jugadores con permisos poder unirse y salir silenciosamente?
+# Puedes controlar esto con los permisos 'essentials.silentjoin' y 'essentials.silentquit' si está habilitado.
+# Además, las personas con 'essentials.silentjoin.vanish' se volverán invisibles al unirse.
+allow-silent-join-quit: false
+
+# Puedes establecer mensajes de entrada y salida personalizados aquí. Establécelo en "none" para usar el mensaje predeterminado de Minecraft,
+# o establécelo en "" para ocultar el mensaje por completo.
+#
+# Marcadores de posición disponibles:
+# {PLAYER} - Nombre de visualización del jugador.
+# {USERNAME} - Nombre de usuario del jugador.
+# {PREFIX} - Prefijo del jugador.
+# {SUFFIX} - Sufijo del jugador.
+# {ONLINE} - Número de jugadores en línea.
+# {UNIQUE} - Número de jugadores únicos que se han unido al servidor.
+# {UPTIME} - Tiempo que el servidor ha estado en línea.
+custom-join-message: "none"
+custom-quit-message: "none"
+
+# Puedes establecer un mensaje de unión personalizado para los jugadores que se unan con un nombre de usuario actualizado aquí.
+# Este mensaje solo se usará si un jugador se ha unido antes y ha cambiado su nombre de usuario desde entonces.
+# Se mostrará EN LUGAR de 'custom-join-message' anterior, así que si quieres que sean similares, asegúrate de que coincidan.
+# Establécelo en "none" para usar la configuración 'custom-join-message' para cada unión.
+#
+# Marcadores de posición disponibles:
+# {PLAYER} - Nombre de visualización del jugador.
+# {USERNAME} - Nombre de usuario del jugador.
+# {OLDUSERNAME} - Antiguo nombre de usuario del jugador.
+# {PREFIX} - Prefijo del jugador.
+# {SUFFIX} - Sufijo del jugador.
+# {ONLINE} - Número de jugadores en línea.
+# {UNIQUE} - Número de jugadores únicos que se han unido al servidor.
+# {UPTIME} - Tiempo que el servidor ha estado en línea.
+custom-new-username-message: "none"
+
+# ¿Debe Essentials anular el mensaje de "Servidor lleno" de vainilla con el suyo propio del archivo de idioma?
+# Establécelo en false para mantener el mensaje de vainilla.
+use-custom-server-full-message: true
+
+# Puedes deshabilitar los mensajes de entrada y salida cuando el recuento de jugadores alcanza un cierto límite.
+# Cuando el recuento de jugadores esté por debajo de este número, los mensajes de entrada/salida siempre se mostrarán.
+# Establécelo en -1 para mostrar siempre los mensajes de entrada y salida, independientemente del recuento de jugadores.
+hide-join-quit-messages-above: -1
+
+# Agrega mundos a esta lista si quieres deshabilitar automáticamente el modo dios en ellos.
+no-god-in-worlds:
+  #- world_nether
+
+# Establece en true para habilitar permisos por mundo para teletransportarse entre mundos con comandos de Essentials.
+# Esto aplica a /world, /back, /tp[a|o|here|all] pero no a los warps.
+# Da a alguien permiso para teletransportarse a un mundo con 'essentials.worlds.<nombre_del_mundo>'.
+# Esto no afecta al comando /home; usa 'world-home-permissions' a continuación.
+world-teleport-permissions: false
+
+# El número de objetos dados si el parámetro de cantidad se omite en /item o /give.
+# Si este número es inferior a 1, se da el tamaño máximo de pila. Si 'oversized-stacksize' a continuación
+# no se cambia, cualquier número superior al tamaño máximo de pila resultará en múltiples pilas.
+default-stack-size: -1
+
+# Las pilas sobredimensionadas son pilas que ignoran el tamaño máximo normal de pila.
+# Se pueden obtener usando /give y /item si el jugador tiene el permiso 'essentials.oversizedstacks'.
+# ¿Cuántos objetos debe haber en una pila sobredimensionada?
+oversized-stacksize: 64
+
+# Permitir la reparación de armas y armaduras encantadas.
+# Si estableces esto en false, aún puedes permitirlo para ciertos jugadores
+# usando el permiso 'essentials.repair.enchanted'.
+repair-enchanted: true
+
+# Permitir encantamientos "inseguros" en kits y aparición de objetos.
+# ADVERTENCIA: Mezclar y sobre-nivelar algunos encantamientos puede causar problemas con clientes, servidores y plugins.
+unsafe-enchantments: false
+
+# La distancia máxima en bloques desde el jugador en la que los comandos /tree y /bigtree pueden generar árboles.
+tree-command-range-limit: 300
+
+# ¿Debe Essentials rastrear la ubicación anterior de un jugador para /back en el listener de teletransporte?
+# Si estableces esto en true, cualquier plugin que use teletransporte tendrá la ubicación anterior registrada.
+register-back-in-listener: false
+
+# El retraso, en segundos, antes de que las personas puedan causar daño de ataque después de iniciar sesión.
+# Esto evita que los jugadores exploten la invulnerabilidad temporal que reciben al unirse.
+login-attack-delay: 5
+
+# Establece las velocidades máximas de caminar y volar a cualquier valor entre 0.1 y 1.0.
+# Nota: Estos valores actúan como proporciones a los niveles de velocidad en el juego, que van de 0 a 10.
+# Por ejemplo, si la velocidad máxima se establece en 0.8 y un jugador usa '/speed 10', su velocidad real será 0.8.
+max-walk-speed: 0.8
+max-fly-speed: 0.8
+
+# Establece la cantidad máxima de correo que se puede enviar en un minuto.
+mails-per-minute: 1000
+
+# Establece la duración máxima, en segundos, para la que se puede aplicar /mute.
+# Establece en -1 para deshabilitar el límite. Los jugadores con el permiso 'essentials.mute.unlimited' pueden omitir esta restricción.
+max-mute-time: -1
+
+# Establece la duración máxima, en segundos, para la que se puede aplicar /tempban.
+# Establece en -1 para deshabilitar el límite. Los jugadores con el permiso 'essentials.tempban.unlimited' pueden omitir esta restricción.
+max-tempban-time: -1
+
+# Cambia la funcionalidad predeterminada de /reply. Esto se puede cambiar por jugador usando /rtoggle.
+# Si es true, /r va a la persona a la que enviaste el último mensaje, de lo contrario a la primera persona que te envió un mensaje.
+# Si es false, /r va a la última persona que te envió un mensaje.
+last-message-reply-recipient: true
+
+# Si 'last-message-reply-recipient' está habilitado para un jugador en particular,
+# esto especifica la duración, en segundos, que debería transcurrir para que el
+# destinatario de la respuesta se actualice al recibir un mensaje.
+# 180 segundos = 3 minutos
+last-message-reply-recipient-timeout: 180
+
+# Cambia la funcionalidad predeterminada de /reply.
+# Si es true, /reply no verificará si la persona a la que le estás respondiendo está invisible.
+# Si es false, los jugadores no podrán /responder a jugadores invisibles que no puedan ver.
+last-message-reply-vanished: false
+
+# Alterna si hacer clic izquierdo en mobs con un cubo de leche los convierte en bebés.
+milk-bucket-easter-egg: true
+
+# Alterna si el mensaje de estado de vuelo debe enviarse a los jugadores al unirse.
+send-fly-enable-on-join: true
+
+# Establece en true para habilitar permisos por mundo para establecer la hora de mundos individuales con comandos de Essentials.
+# Esto aplica a los comandos /time, /day y /night.
+# Da a alguien permiso para establecer la hora en un mundo con 'essentials.time.world.<nombre_del_mundo>'.
+world-time-permissions: false
+
+# Especifica los tiempos de espera tanto para los comandos de Essentials como para los comandos externos.
+# Los comandos no comienzan con una barra inclinada (/). Por ejemplo, en lugar de '/msg', escribe 'msg'.
+#
+# Se admiten comodines. Por ejemplo,
+# - '*i*': 50
+# añade un tiempo de espera de 50 segundos a todos los comandos que incluyen la letra "i".
+#
+# Essentials admite regex al iniciar el comando con un acento circunflejo (^).
+# Por ejemplo, para apuntar a comandos que comienzan con "ban" pero no "banip", usa:
+#  '^ban([^ip])( .*)?': 60 # 60 segundos de tiempo de espera para /ban
+# Nota: Si tienes un comando que comienza con ^, escápalo usando una barra invertida (\). Por ejemplo, \^command: 123
+command-cooldowns:
+  #feed: 100 # 100 segundos de tiempo de espera en el comando /feed
+  #'*': 5 # 5 segundos de tiempo de espera en todos los comandos
+
+# Si los tiempos de espera de los comandos deben persistir a través de los cierres del servidor.
+command-cooldown-persistence: true
+
+# Si los saldos de los NPC deben incluirse en las características de clasificación de saldo como /balancetop.
+# Los saldos de los NPC pueden incluir características como facciones del plugin FactionsUUID.
+npcs-in-balance-ranking: false
+
+# Permitir la compra y venta a granel con carteles mientras el jugador está agachado.
+# Esto es útil cuando un cartel compra o vende un solo objeto a la vez y el jugador quiere vender muchos a la vez.
+allow-bulk-buy-sell: true
+
+# Permitir la venta de artículos con nombres personalizados con el comando /sell.
+# Esto puede ayudar a evitar que los jugadores vendan accidentalmente artículos con nombre.
+allow-selling-named-items: false
+
+# El retraso, en milisegundos, para mostrar el MOTD a los jugadores al unirse.
+# Esto no tiene efecto si el comando o permiso MOTD está deshabilitado.
+# Establece en -1 para deshabilitar el MOTD de unión por completo.
+delay-motd: 0
+
+# Una lista de comandos que deberían tener sus comandos de confirmación complementarios habilitados por defecto.
+# Esto está vacío por defecto. Para la lista más reciente de comandos válidos, consulta el 'config.yml' más reciente.
+default-enabled-confirm-commands:
+  #- pay
+  #- clearinventory
+
+# ¿A dónde debe teletransportar Essentials a los jugadores cuando son liberados de la cárcel?
+# Establécelo en 'back' para teletransportarlos a su ubicación anterior antes de ser encarcelados,
+# 'spawn' para enviarlos al punto de aparición, o 'off' para deshabilitar la teletransportación al ser liberados.
+teleport-when-freed: back
+
+# Si el tiempo de prisión solo debe contarse mientras el jugador está en línea.
+# Si es true, el tiempo de un jugador encarcelado solo disminuirá cuando esté en línea.
+jail-online-time: false
+
+# Establece el tiempo de espera, en segundos, para que los jugadores acepten una solicitud de teletransporte antes de que sea cancelada.
+# Establécelo en 0 para no tener tiempo de espera.
+tpa-accept-cancellation: 120
+
+# El número máximo de solicitudes de teletransporte simultáneas que pueden estar pendientes para cualquier jugador.
+# Una vez superado este umbral, las solicitudes antiguas caducarán instantáneamente.
+tpa-max-requests: 5
+
+# Permitir a los jugadores ponerse sombreros haciendo clic en su ranura de casco con un objeto.
+allow-direct-hat: true
+
+# Permitir a los jugadores en el juego especificar un mundo al ejecutar /broadcastworld.
+# Si es false, ejecutar /broadcastworld en el juego siempre enviará un mensaje al mundo actual del jugador.
+# Esto no afecta la ejecución del comando desde la consola, donde siempre se requiere un mundo.
+allow-world-in-broadcastworld: true
+
+# ¿Debe el usermap intentar sanitizar los nombres de usuario antes de guardarlos?
+# Solo debes cambiar esto a false si usas Minecraft China.
+safe-usermap-names: true
+
+# ¿Debe Essentials generar registros cuando un bloque de comandos ejecuta un comando?
+# Ejemplo: Bloque de comandos en <x>,<y>,<z> emitió el comando del servidor: /<comando>
+log-command-block-commands: true
+
+# Establece la velocidad máxima para los proyectiles generados con /fireball.
+max-projectile-speed: 8
+
+# Establece la cantidad máxima de líneas de lore que un usuario puede establecer con el comando /itemlore.
+# Los jugadores con el permiso 'essentials.itemlore.bypass' podrán omitir este límite.
+max-itemlore-lines: 10
+
+# ¿Debe Essentials buscar actualizaciones?
+# Si se establece en true, Essentials mostrará notificaciones cuando haya una nueva versión disponible.
+# Esto utiliza la API pública de GitHub y no se envía ni se almacena información de identificación.
+update-check: true
+
+############################################################
+# +------------------------------------------------------+ #
+# |                        Hogares                       | #
+# +------------------------------------------------------+ #
+############################################################
+
+# Permite a las personas establecer su cama durante el día.
+# Esta configuración no tiene efecto en Minecraft 1.15+, ya que Minecraft siempre permitirá al jugador establecer la ubicación de su cama durante el día.
+update-bed-at-daytime: true
+
+# Establece en true para habilitar permisos por mundo para usar hogares para teletransportarse entre mundos.
+# Esto aplica solo al comando /home.
+# Da a alguien permiso para teletransportarse a un mundo con 'essentials.worlds.<nombre_del_mundo>'.
+world-home-permissions: false
+
+# Permitir a los jugadores tener múltiples hogares.
+# Los jugadores necesitan 'essentials.sethome.multiple' antes de poder tener más de 1 hogar.
+# Puedes establecer el número predeterminado de hogares múltiples usando el rango 'default' a continuación.
+# Para eliminar el límite de hogares por completo, da a las personas 'essentials.sethome.multiple.unlimited'.
+#
+# Para otorgar diferentes cantidades de hogares a diferentes personas, debes definir un "rango de hogar" a continuación.
+# Una vez creado, otorga el permiso correspondiente: 'essentials.sethome.multiple.<rango_de_hogar>'.
+# Nota: Los "rangos de hogar" definidos a continuación no necesitan coincidir con los nombres de grupo de tu plugin de permisos.
+#
+# En este ejemplo, alguien con 'essentials.sethome.multiple' y 'essentials.sethome.multiple.vip' tendrá 5 hogares.
+# Recuerda, deben tener AMBOS nodos de permiso para poder establecer múltiples hogares.
+# Para más información, visita https://wiki.ess3.net/wiki/Multihome
+sethome-multiple:
+  default: 3
+  vip: 5
+  staff: 10
+
+# Controla si los jugadores necesitan el permiso 'essentials.home.compass' para apuntar
+# la brújula del jugador hacia su primer hogar.
+# Dejar esto en false mantendrá el comportamiento original de Essentials, que es siempre
+# cambiar la dirección de la brújula para que apunte hacia el primer hogar del jugador.
+compass-towards-home-perm: false
+
+# Si no hay un hogar establecido, ¿quiere enviar al jugador al spawn?
+# Si se establece en false, los jugadores no serán teletransportados cuando ejecuten /home sin haber establecido un hogar primero.
+spawn-if-no-home: true
+
+# ¿Se debe pedir a los jugadores que confirmen los hogares que intentan sobrescribir?
+confirm-home-overwrite: false
+
+############################################################
+# +------------------------------------------------------+ #
+# |                       Economía                       | #
+# +------------------------------------------------------+ #
+############################################################
+
+# Para más información, visita https://wiki.ess3.net/wiki/Essentials_Economy
+
+# Puedes controlar los valores de los artículos que se venden al servidor usando el comando /setworth y 'worth.yml'.
+
+# Define el saldo con el que empiezan los nuevos jugadores.
+starting-balance: 0
+
+# Define el costo para usar los comandos dados POR USO.
+# Algunos comandos como /repair tienen sub-costos. Consulta la wiki para más información.
+command-costs:
+  # Para que /example cueste $1000 POR USO:
+  #example: 1000
+  # Para que '/kit tools' cueste $1500 POR USO:
+  #kit-tools: 1500
+
+# Establece esto a un símbolo de moneda que quieras usar.
+# Recuerda, si quieres usar caracteres especiales en este documento, como letras acentuadas,
+# DEBES guardar el archivo como UTF-8, no ANSI.
+currency-symbol: '$'
+
+# Habilita esto para que el símbolo de moneda aparezca al final de la cantidad en lugar de al principio.
+# Por ejemplo, el símbolo del euro suele aparecer después de la cantidad actual.
+currency-symbol-suffix: false
+
+# Establece la cantidad máxima de dinero que un jugador puede tener.
+# Nota: Números extremadamente grandes pueden tener consecuencias no deseadas.
+max-money: 10000000000000
+
+# Establece la cantidad mínima de dinero que un jugador puede tener (debe ser mayor que el valor negativo de max-money).
+# Establecer esto en 0 deshabilitará por completo los sobregiros/préstamos.
+# Los jugadores necesitan el permiso 'essentials.eco.loan' para tener un saldo negativo.
+min-money: -10000
+
+# Habilita esto para registrar todas las interacciones con carteles de compra/venta/intercambio y el comando de venta.
+economy-log-enabled: false
+
+# Habilita esto para registrar también todas las transacciones de otros plugins a través de Vault.
+# Esto puede hacer que el registro de la economía se llene rápidamente, por lo que solo debe habilitarse para fines de prueba.
+economy-log-update-enabled: false
+
+# La cantidad mínima aceptable para usar en /pay.
+minimum-pay-amount: 0.001
+
+# Habilita esto para bloquear a los jugadores que intenten /pagar a alguien que los está ignorando.
+pay-excludes-ignore-list: false
+
+# Si los jugadores con un saldo de $0 o menos deben mostrarse en la lista superior de saldos.
+# Establecer esto en false ocultará los saldos con $0 o menos.
+# Nota: Después de recargar la configuración, ejecuta '/baltop force' para que los cambios surtan efecto.
+show-zero-baltop: true
+
+# Requisitos que los jugadores deben cumplir para que su nombre se muestre en la lista superior de saldos.
+# El tiempo de juego se mide en segundos.
+baltop-requirements:
+  minimum-balance: 0
+  minimum-playtime: 0
+
+# El formato de la moneda, excluyendo los símbolos. Para la configuración de símbolos, consulta 'currency-symbol-format-locale' a continuación.
+#
+# "#,##0.00" es como la mayoría de los países muestran la moneda.
+#currency-format: "#,##0.00"
+
+# Formato de los símbolos de moneda. Algunas localizaciones usan , y . indistintamente.
+# Ciertos formatos pueden no mostrarse correctamente en el juego debido a problemas de renderizado de fuentes de Minecraft.
+#
+# Ejemplos de localizaciones:
+#  - de-DE para 1.234,50
+#  - en-US para 1,234.50
+#  - fr-CH para 1'234,50
+#
+# O consulta https://www.iban.com/country-codes para todos los códigos de país Alpha-2.
+#currency-symbol-format-locale: en-US
+
+# Permitir a los jugadores recibir multiplicadores por los artículos vendidos con /sell o el cartel de venta.
+# Puedes establecer el multiplicador predeterminado usando el rango 'default' a continuación.
+#
+# Para otorgar diferentes multiplicadores a diferentes personas, debes definir un "rango de multiplicador" a continuación.
+# Una vez creado, otorga el permiso correspondiente: 'essentials.sell.multiplier.<rango_de_multiplicador>'.
+# Nota: Los "rangos de multiplicador" definidos a continuación no necesitan coincidir con los nombres de grupo de tu plugin de permisos.
+sell-multipliers:
+  default: 1.0
+  double: 2.0
+  triple: 3.0
+
+############################################################
+# +------------------------------------------------------+ #
+# |                         Ayuda                        | #
+# +------------------------------------------------------+ #
+############################################################
+
+# Mostrar comandos de otros plugins en la lista de ayuda de Essentials.
+non-ess-in-help: true
+
+# Ocultar plugins que los jugadores no tienen permiso para usar.
+# Puedes anular esto añadiendo el permiso 'essentials.help.<plugin>' a un jugador o grupo.
+# Los jugadores con 'essentials.*' o '*' verán toda la ayuda sin importar.
+# También puedes usar permisos negativos para eliminar el acceso a la ayuda de un plugin específico si esto está habilitado.
+hide-permissionless-help: true
+
+############################################################
+# +------------------------------------------------------+ #
+# |                   EssentialsX Chat                   | #
+# +------------------------------------------------------+ #
+############################################################
+
+# Necesitas instalar el módulo EssentialsX Chat para que esta sección funcione.
+# Consulta https://essentialsx.net/wiki/Module-Breakdown.html para más información.
+
+chat:
+
+  # Si Essentials Chat está instalado, esto establece cuántos bloques viajará el chat de un jugador. Establécelo en 0 para chat global.
+  # Los jugadores con 'essentials.chat.spy' verán todo, independientemente de esta configuración.
+  # Los jugadores con 'essentials.chat.shout' pueden anular esto prefijando su mensaje con un signo de exclamación (!).
+  # Los jugadores con 'essentials.chat.question' pueden anular esto prefijando su mensaje con un signo de interrogación (?).
+  # Puedes añadir costos de comando para shout/question añadiendo 'chat-shout' y 'chat-question' a la sección 'command-costs' anterior.
+  radius: 0
+
+  # El formato del chat se puede configurar de dos maneras:
+  #  - Un formato estándar para todo el chat (sección 'format')
+  #  - Formatos de chat específicos para cada grupo para una variación adicional (sección 'group-formats')
+  #
+  # Puedes usar permisos para controlar si los jugadores pueden usar códigos de formato en sus mensajes de chat.
+  # Consulta https://essentialsx.net/wiki/Color-Permissions.html para más información.
+  #
+  # También puedes especificar un subformato para cada tipo de chat.
+  # Para más información sobre el formato de chat, visita la wiki: https://wiki.ess3.net/wiki/Chat_Formatting#Chat_Formatting
+  #
+  # Marcadores de posición disponibles:
+  # {MESSAGE} - El contenido del mensaje de chat.
+  # {USERNAME} - El nombre de usuario del remitente.
+  # {DISPLAYNAME} - El nombre de visualización del remitente.
+  # {NICKNAME} - El apodo de Essentials del remitente. Si el remitente no tiene apodo, se muestra el nombre de usuario.
+  # {PREFIX} - El prefijo del remitente, proporcionado por un plugin de permisos.
+  # {SUFFIX} - El sufijo del remitente, proporcionado por un plugin de permisos.
+  # {GROUP} - El nombre del grupo principal del remitente, proporcionado por un plugin de permisos.
+  # {WORLD} - El alias del mundo actual del remitente. Consulta la sección world-aliases a continuación para obtener detalles.
+  # {WORLDNAME} - El nombre completo del mundo actual del remitente.
+  # {SHORTWORLDNAME} - El primer carácter del mundo actual del remitente.
+  # {TEAMNAME} - El nombre del equipo del remitente en el scoreboard.
+  # {TEAMPREFIX} - El prefijo del equipo del remitente en el scoreboard.
+  # {TEAMSUFFIX} - El sufijo del equipo del remitente en el scoreboard.
+  #
+  # Nota: El marcador de posición {DISPLAYNAME} incluye {PREFIX} y {SUFFIX} por defecto.
+  # Usarlos juntos puede resultar en prefijos/sufijos duplicados en el chat.
+
+  format: '<{DISPLAYNAME}> {MESSAGE}'
+  #format: '&7[{GROUP}]&r {DISPLAYNAME}&7:&r {MESSAGE}'
+  #format: '&7{PREFIX}&r {NICKNAME}&r &7{SUFFIX}&r: {MESSAGE}'
+
+  # También puedes especificar un formato para cada tipo de chat.
+  #format:
+  #  normal: '{WORLDNAME} {DISPLAYNAME}&7:&r {MESSAGE}'
+  #  question: '{WORLDNAME} &4{DISPLAYNAME}&7:&r {MESSAGE}'
+  #  shout: '{WORLDNAME} &c[{GROUP}]&r &4{DISPLAYNAME}&7:&c {MESSAGE}'
+
+  # También puedes especificar un formato para cada grupo.
+  # Si usas formatos de grupo, elimina el # para activar la configuración.
+  # Nota: Los nombres de grupo distinguen entre mayúsculas y minúsculas, por lo que debes hacer que coincidan con tu plugin de permisos.
+  # Nota: Si se establece un nombre de visualización (alias) de grupo de LuckPerms, debes usarlo en lugar del nombre de grupo original.
+  group-formats:
+    #default: '{WORLDNAME} {DISPLAYNAME}&7:&r {MESSAGE}'
+    #admins: '{WORLDNAME} &c[{GROUP}]&r {DISPLAYNAME}&7:&c {MESSAGE}'
+
+    # También puedes especificar un formato para cada tipo de chat para cada grupo.
+    #admins:
+    #  question: '{WORLDNAME} &4{DISPLAYNAME}&7:&r {MESSAGE}'
+    #  shout: '{WORLDNAME} &c[{GROUP}]&r &4{DISPLAYNAME}&7:&c {MESSAGE}'
+
+  # Los alias de mundo te permiten reemplazar el nombre del mundo con algo diferente en el formato de chat.
+  # Si usas alias de mundo, elimina el # para activar la configuración.
+  world-aliases:
+    #plots: "&dP&r"
+    #creative: "&eC&r"
+
+  # Si los jugadores deben ser puestos en modo de grito por defecto.
+  shout-default: false
+
+  # Si el modo de grito de un jugador debe persistir después de los reinicios.
+  persist-shout: false
+
+  # Si las preguntas del chat deben estar habilitadas.
+  question-enabled: true
+
+  # Si Essentials debe usar el sistema moderno de eventos de chat de Paper en 1.16.5+.
+  # Esto es necesario para características de chat modernas como eventos de hover y eventos de clic.
+  # Si experimentas problemas con otros plugins que usan el sistema de eventos de chat, puedes deshabilitar esto.
+  # Debes reiniciar tu servidor después de cambiar esta configuración.
+  paper-chat-events: true
+
+############################################################
+# +------------------------------------------------------+ #
+# |                  EssentialsX Protect                 | #
+# +------------------------------------------------------+ #
+############################################################
+
+# Necesitas instalar el módulo EssentialsX Protect para que esta sección funcione.
+# Consulta https://essentialsx.net/wiki/Module-Breakdown.html y https://wiki.ess3.net/wiki/AntiBuild para más información.
+
+protect:
+
+  # Modificaciones generales de física/comportamiento. Establécelos en true para deshabilitar los comportamientos.
+  prevent:
+    lava-flow: false
+    water-flow: false
+    water-bucket-flow: false
+    fire-spread: true
+    lava-fire-spread: true
+    lava-itemdamage: false
+    flint-fire: false
+    lightning-fire-spread: true
+    portal-creation: false
+    tnt-explosion: false
+    tnt-playerdamage: false
+    tnt-itemdamage: false
+    tnt-minecart-explosion: false
+    tnt-minecart-playerdamage: false
+    tnt-minecart-itemdamage: false
+    fireball-explosion: false
+    fireball-fire: false
+    fireball-playerdamage: false
+    fireball-itemdamage: false
+    witherskull-explosion: false
+    witherskull-playerdamage: false
+    witherskull-itemdamage: false
+    wither-spawnexplosion: false
+    wither-blockreplace: false
+    creeper-explosion: false
+    creeper-playerdamage: false
+    creeper-itemdamage: false
+    creeper-blockdamage: false
+    ender-crystal-explosion: false
+    enderdragon-blockdamage: true
+    enderman-pickup: false
+    villager-death: false
+    bed-explosion: false
+    respawn-anchor-explosion: false
+    # Evitar que los monstruos sigan a los jugadores.
+    # El permiso 'essentials.protect.entitytarget.bypass' deshabilita esto.
+    entitytarget: false
+    # Evitar que los zombis derriben puertas.
+    zombie-door-break: false
+    # Evitar que los ravagers roben bloques.
+    ravager-thief: false
+    # Evitar que las ovejas conviertan la hierba en tierra.
+    sheep-eat-grass: false
+    transformation:
+      # Evitar que los creepers se carguen al ser alcanzados por un rayo.
+      charged-creeper: false
+      # Evitar que los aldeanos se conviertan en aldeanos zombi.
+      zombie-villager: false
+      # Evitar que los aldeanos zombi se curen.
+      villager: false
+      # Evitar que los aldeanos se conviertan en brujas al ser alcanzados por un rayo.
+      witch: false
+      # Evitar que los cerdos se conviertan en piglins zombificados al ser alcanzados por un rayo.
+      zombie-pigman: false
+      # Evitar que los zombis se conviertan en ahogados, y los cáscaras en zombis.
+      drowned: false
+      # Evitar que las mooshrooms cambien de color al ser alcanzadas por un rayo.
+      mooshroom: false
+    # Evitar la aparición de criaturas. Si falta una criatura, puedes añadirla siguiendo el formato siguiente.
+    spawn:
+      creeper: false
+      skeleton: false
+      spider: false
+      giant: false
+      zombie: false
+      slime: false
+      ghast: false
+      pig_zombie: false
+      enderman: false
+      cave_spider: false
+      silverfish: false
+      blaze: false
+      magma_cube: false
+      ender_dragon: false
+      pig: false
+      sheep: false
+      cow: false
+      chicken: false
+      squid: false
+      wolf: false
+      mushroom_cow: false
+      snowman: false
+      ocelot: false
+      iron_golem: false
+      villager: false
+      wither: false
+      bat: false
+      witch: false
+      horse: false
+      phantom: false
+
+  # La altura máxima a la que un creeper puede explotar. -1 les permite explotar en cualquier lugar.
+  # Establece 'creeper-explosion' arriba en true si quieres deshabilitar las explosiones de creeper por completo.
+  creeper:
+    max-height: -1
+
+  # Deshabilitar varias físicas/comportamientos predeterminados.
+  disable:
+    # ¿Debe deshabilitarse el daño por caída?
+    fall: false
+
+    # ¿Debe deshabilitarse el PvP?
+    # Los jugadores con el permiso 'essentials.protect.pvp' aún podrán atacarse entre sí si esto se establece en true.
+    # Sin embargo, no podrán atacar a los jugadores sin el nodo de permiso.
+    pvp: false
+
+    # ¿Debe deshabilitarse el daño por ahogamiento?
+    drown: false
+
+    # ¿Debe deshabilitarse la asfixia en bloques?
+    suffocate: false
+
+    # ¿Debe deshabilitarse el daño por lava?
+    # Los objetos que caen en lava seguirán quemándose. ;)
+    lavadmg: false
+
+    # ¿Debe deshabilitarse el daño por proyectiles, como las flechas?
+    projectiles: false
+
+    # ¿Debe deshabilitarse el daño por contacto?
+    # Esto incluye tocar cactus, espeleotemas, arbustos de bayas, etc.
+    contactdmg: false
+
+    # ¡Arde, bebé, arde! ¿Debe deshabilitarse el daño por fuego?
+    firedmg: false
+
+    # ¿Debe deshabilitarse el daño por ser alcanzado por un rayo?
+    lightning: false
+
+    # ¿Debe deshabilitarse el daño de Wither?
+    wither: false
+
+    # ¿Deben deshabilitarse estos tipos de clima?
+    weather:
+      storm: false
+      thunder: false
+      lightning: false
+
+############################################################
+# +------------------------------------------------------+ #
+# |                 EssentialsX AntiBuild                | #
+# +------------------------------------------------------+ #
+############################################################
+
+  # Necesitas instalar el módulo EssentialsX AntiBuild para que esta sección funcione.
+  # Consulta https://essentialsx.net/wiki/Module-Breakdown.html y https://wiki.ess3.net/wiki/AntiBuild para más información.
+
+    # ¿Debe deshabilitarse la construcción para aquellos sin el permiso 'essentials.build'?
+    # Establecer esto en false significa que Essentials AntiBuild nunca impedirá que los jugadores construyan.
+    build: true
+
+    # ¿Se debe impedir que las personas sin el permiso 'essentials.build' usen objetos?
+    # Establecer esto en false significa que Essentials AntiBuild nunca impedirá que los jugadores usen objetos.
+    use: true
+
+    # ¿Debe Essentials enviar un mensaje a las personas cuando no se les permite construir?
+    warn-on-build-disallow: true
+
+  # ¿Para qué tipos de bloques te gustaría ser alertado?
+  # Puedes encontrar una lista de elementos en https://hub.spigotmc.org/javadocs/spigot/org/bukkit/Material.html
+  alert:
+    on-placement: LAVA,TNT,LAVA_BUCKET
+    on-use: LAVA_BUCKET
+    on-break:
+
+  blacklist:
+
+    # ¿Qué bloques deben impedirse que la gente coloque?
+    placement: LAVA,TNT,LAVA_BUCKET
+
+    # ¿Qué elementos se debe impedir que la gente use?
+    usage: LAVA_BUCKET
+
+    # ¿Qué bloques debe impedirse que la gente rompa?
+    break:
+
+    # ¿Qué bloques no deben ser movidos por pistones?
+    piston:
+
+    # ¿Qué bloques no deben ser dispensados por dispensadores?
+    dispenser:
+
+############################################################
+# +------------------------------------------------------+ #
+# |            EssentialsX Spawn + Nuevos Jugadores      | #
+# +------------------------------------------------------+ #
+############################################################
+
+# Necesitas instalar el módulo EssentialsX Spawn para que esta sección funcione.
+# Consulta https://essentialsx.net/wiki/Module-Breakdown.html para más información.
+
+newbies:
+  # ¿Debe Essentials anunciar al servidor cuando alguien inicia sesión por primera vez?
+  # {DISPLAYNAME} será reemplazado por el nombre del jugador.
+  # Establécelo en '' para deshabilitar.
+  #announce-format: ''
+  announce-format: '&d¡Bienvenido {DISPLAYNAME}&d al servidor!'
+
+  # Cuando los jugadores aparecen por primera vez, ¿qué punto de aparición debe usarse?
+  # Establécelo en 'none' para usar el punto de aparición del mundo.
+  # Se pueden establecer diferentes nombres de aparición usando '/setspawn <grupo>'.
+  spawnpoint: newbies
+
+  # ¿Deben los jugadores recibir objetos en su primera conexión?
+  # Este kit se entregará independientemente del costo y los permisos y no activará ningún retraso (cooldown) del kit.
+  # Establécelo en '' para deshabilitar.
+  #kit: ''
+  kit: tools
+
+# ¿Qué prioridad debe usar Essentials para manejar los reapariciones?
+# Establécelo en 'none' si quieres el comportamiento de reaparición de vainilla.
+# Establécelo en 'lowest' si quieres que los plugins de mundo manejen la reaparición.
+# Establécelo en 'high' si quieres que Essentials Spawn maneje la reaparición.
+# Establécelo en 'highest' si quieres forzar a Essentials Spawn a manejar la reaparición.
+# Nota: Los cambios no se aplicarán hasta que se reinicie el servidor.
+respawn-listener-priority: high
+
+# ¿Qué prioridad debe usar Essentials para manejar la aparición al unirse al servidor?
+# Consulta 'respawn-listener-priority' arriba para los valores posibles.
+# Nota: Cambiar esto puede afectar o romper la funcionalidad de 'spawn-on-join' a continuación.
+# Nota: Los cambios no se aplicarán hasta que se reinicie el servidor.
+spawn-join-listener-priority: high
+
+# Cuando los jugadores mueren, ¿deberían reaparecer en su primer hogar o cama en lugar del punto de aparición?
+respawn-at-home: false
+
+# Cuando los jugadores mueren, ¿deberían reaparecer en su cama en lugar de su primer hogar o el punto de aparición?
+# La configuración 'respawn-at-home' anterior también debe ser true para que esto tenga efecto.
+respawn-at-home-bed: true
+
+# Cuando los jugadores mueren, ¿debe Essentials respetar sus anclas de reaparición?
+respawn-at-anchor: false
+
+# Si está configurado, los jugadores aparecerán en una ubicación aleatoria en lugar de su punto de aparición.
+# Esto anulará el punto de aparición de novatos establecido anteriormente.
+#
+# La ubicación debe establecerse primero usando el comando /settpr o en 'tpr.yml'.
+# Después de que se cree una ubicación tpr, establece el nombre del mundo (o el nombre definido en 'tpr.yml') a continuación.
+random-spawn-location: "none"
+
+# Si está configurado, los jugadores reaparecerán en la ubicación de reaparición aleatoria cuando mueran.
+# Consulta 'random-spawn-location' arriba para obtener información adicional sobre la ubicación.
+random-respawn-location: "none"
+
+# Teletransporta a todos los jugadores que se unan a su punto de aparición.
+spawn-on-join: false
+# El siguiente valor de 'guests' indica que todos los jugadores del grupo 'guests' serán teletransportados al spawn al unirse.
+#spawn-on-join: guests
+# El siguiente valor de lista indica que todos los jugadores de los grupos 'guests' o 'admin' serán teletransportados al spawn al unirse.
+#spawn-on-join:
+#  - guests
+#  - admin
+
+# Fin del archivo <-- No, en serio, has terminado con la configuración.
