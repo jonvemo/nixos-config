@@ -85,22 +85,16 @@
 
       SearchEngines.Add = [
         {
-          Name = "Nix Packages";
-          URLTemplate = "https://search.nixos.org/packages?channel=unstable&query={searchTerms}";
+          Name = "NixOS";
+          URLTemplate = "https://mynixos.com/search?q={searchTerms}";
           Method = "GET";
-          Alias = "@np";
-        }
-        {
-          Name = "Nix Options";
-          URLTemplate = "https://search.nixos.org/options?channel=unstable&query={searchTerms}";
-          Method = "GET";
-          Alias = "@no";
+          Alias = "@n";
         }
         {
           Name = "YouTube";
           URLTemplate = "https://youtube.com/results?q={searchTerms}";
           Method = "GET";
-          Alias = "@yt";
+          Alias = "@y";
         }
       ];
 
