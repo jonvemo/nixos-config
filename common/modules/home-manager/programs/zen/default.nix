@@ -45,6 +45,14 @@
         "places.history.expiration.max_pages" = {
           Value = 2000;
         };
+        "privacy.fingerprintingProtection" = {
+          Value = true;
+        };
+      };
+
+      EnableTrackingProtection = {
+        Value = true;
+        EmailTracking = true;
       };
 
       SanitizeOnShutdown = {
