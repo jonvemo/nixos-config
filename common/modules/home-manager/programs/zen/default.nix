@@ -68,7 +68,6 @@
           "https://discord.com/"
         ];
         AllowSession = [
-          "https://namecheap.com/"
           "https://vercel.com/"
           "https://github.com/"
           "https://linkedin.com/"
