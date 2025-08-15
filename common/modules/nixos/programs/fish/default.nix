@@ -27,7 +27,6 @@
       npac = "cd /etc/nixos/common/modules/nixos/packages && hx default.nix";
       hpac = "cd /etc/nixos/common/modules/home-manager/packages && hx default.nix";
 
-      jhome = "cd /etc/nixos/host/jonvemo && hx default.nix";
       jhpac = "cd /etc/nixos/home/jonvemo/modules/packages && hx default.nix";
 
       d = "hx default.nix";
