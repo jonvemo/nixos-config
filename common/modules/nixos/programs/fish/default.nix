@@ -31,6 +31,8 @@
 
       d = "hx default.nix";
       b = "cd ..";
+      
+      y = "yazi";
 
       pkgs = "nix-store --query --requisites /run/current-system | cut -d- -f2- | sort -u";
 
