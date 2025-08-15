@@ -28,7 +28,6 @@
       hpac = "cd /etc/nixos/common/modules/home-manager/packages && hx default.nix";
 
       jhome = "cd /etc/nixos/host/jonvemo && hx default.nix";
-      
       jhpac = "cd /etc/nixos/home/jonvemo/modules/packages && hx default.nix";
 
       d = "hx default.nix";
@@ -43,7 +42,6 @@
       gi = "git init";
       ga = "git add";
       gaa = "git add --all";                                     # NOTE Añade todos los cambios en el repositorio al área de preparación
-      gco = "git checkout";                                      # NOTE Cambia de rama
       
       gc = "git commit --verbose";                               # NOTE Crea un commit y muestra el diff de los cambios
       gca = "git commit --verbose --all";                        # NOTE Añade todos los cambios y crea un commit mostrando el diff
@@ -93,7 +91,6 @@
 
       t = "touch";
 
-      build = "sudo nixos-rebuild switch --flake /etc/nixos#";
       flakeupdti = "nix flake update --flake /etc/nixos";
       
       vpkg = "nix-store --query --requisites /run/current-system | cut -d- -f2- | sort -u | grep";
