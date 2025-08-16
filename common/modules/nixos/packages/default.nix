@@ -1,4 +1,4 @@
-{lib,pkgs,pkgs-small,...}:
+{lib,pkgs,pkgs-next,...}:
 {
   environment.systemPackages = lib.concatLists [ 
   
@@ -34,14 +34,14 @@
       lazygit
 
       
-      # Broken on small  
+      # Broken in staging  
 
     ])
     
-    # Last Update (nixos-unstable-small)
-    (with pkgs-small; [
+    # Last Update (staging next)
+    (with pkgs-next; [
 
-      # Temporal; in case an unstable package (nixos-unstable) fails
+      # Temporal; in case an unstable package (nixos-unstable-small) fails
     
     ])  
   ];

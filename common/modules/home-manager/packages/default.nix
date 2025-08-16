@@ -1,4 +1,4 @@
-{lib,pkgs,pkgs-small,...}:
+{lib,pkgs,pkgs-next,...}:
 {
   home.packages = lib.concatLists [ 
   
@@ -8,12 +8,12 @@
       prismlauncher
       mindustry
       
-      # Broken on small  
+      # Broken in staging-next
 
     ])
     
-    # Last Update (nixos-unstable-small)
-    (with pkgs-small; [
+    # Last Update (staging-next)
+    (with pkgs-next; [
 
       # Temporal; in case an unstable package (nixos-unstable) fails
     

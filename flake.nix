@@ -3,8 +3,8 @@
 
   inputs = {
     # NixOS
-    nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
-    nixpkgs-small.url = "github:NixOS/nixpkgs/nixos-unstable-small";
+    nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable-small";
+    nixpkgs-next.url = "github:NixOS/nixpkgs/staging-next";
 
     # HomeManager
     home-manager = {
@@ -56,11 +56,11 @@
     };
 
     pkgs = import inputs.nixpkgs common;
-    pkgs-small = import inputs.nixpkgs-small common;
+    pkgs-next = import inputs.nixpkgs-next common;
 
   in {
     nixosConfigurations = {
-      "${hosts.primary.name}" = import ./host/${hosts.primary.name} { inherit system hosts stateVersion inputs pkgs pkgs-small; };
+      "${hosts.primary.name}" = import ./host/${hosts.primary.name} { inherit system hosts stateVersion inputs pkgs pkgs-next; };
     };
 
   };

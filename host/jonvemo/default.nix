@@ -1,9 +1,9 @@
-{ system,hosts,stateVersion,inputs,pkgs,pkgs-small,... }:
+{ system,hosts,stateVersion,inputs,pkgs,pkgs-next,... }:
 
 inputs.nixpkgs.lib.nixosSystem {
 
   inherit pkgs;
-  specialArgs = { inherit system hosts stateVersion inputs pkgs-small; };
+  specialArgs = { inherit system hosts stateVersion inputs pkgs-next; };
   
   modules = [
     ./configuration.nix
@@ -22,7 +22,7 @@ inputs.nixpkgs.lib.nixosSystem {
             services = "/etc/nixos/common/modules/home-manager/services/";
           };
 
-          inherit system hosts stateVersion inputs pkgs-small;
+          inherit system hosts stateVersion inputs pkgs-next;
         };
         
         users = {
