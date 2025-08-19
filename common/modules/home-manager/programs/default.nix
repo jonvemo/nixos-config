@@ -11,10 +11,9 @@
     ./btop
 
     ./niri
-    ./hyprlock
+    ./swaylock
     ./way-edges
 
     ./zen
-    ./swaylock
   ];
 }
