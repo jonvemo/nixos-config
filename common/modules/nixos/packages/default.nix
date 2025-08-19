@@ -8,7 +8,6 @@
       kooha lact
       brightnessctl playerctl
       wiremix bluetui impala
-      internetarchive
       rmpc /* Music Player */
 
       # Tools
