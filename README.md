@@ -50,7 +50,7 @@ git clone https://github.com/jonvemo/nixos-config.git
 | **Operating System**    | [NixOS Unstable](https://github.com/NixOS/nixpkgs/tree/nixos-unstable)                                                      |
 | **Window Manager**      | [Niri](https://github.com/YaLTeR/niri)                                                                                      |
 | **Theme Manager**       | [Stylix](https://github.com/danth/stylix)                                                                                   |
-| **File Manager**        | [Nautilus](https://gitlab.gnome.org/GNOME/nautilus)                                                                         |
+| **File Manager**        | [Yazy](https://github.com/sxyazi/yazi)                                                                                      |
 | **Status Bar**          | [Way-edges](https://github.com/way-edges/way-edges)                                                                         |
 | **App Launcher**        | [Walker](https://github.com/abenz1267/walker)                                                                               |
 | **Terminal Emulator(s)**| [Kitty](https://github.com/kovidgoyal/kitty), [Foot](https://codeberg.org/dnkl/foot)                                        |

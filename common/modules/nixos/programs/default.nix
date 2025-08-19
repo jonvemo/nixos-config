@@ -5,7 +5,6 @@
     ./nh
     ./niri
     ./xwayland
-    ./nautilus
     ./steam
     ./starship
     ./obs

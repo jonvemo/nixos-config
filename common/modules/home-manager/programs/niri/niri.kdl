@@ -145,11 +145,11 @@ binds {
     Mod+Shift+W { spawn "footclient" "-T=impala" "impala"; }
     Mod+Shift+B { spawn "footclient" "-T=bluetui" "bluetui"; }
     Mod+Shift+T { spawn "footclient" "-T=btop" "btop"; }
+    Mod+E { spawn "foot" "-T=yazi" "yazi"; }
     Mod+Shift+K { spawn "kooha"; }
     Mod+B { spawn "zen"; }
     Mod+T { spawn "kitty"; }
     Mod+Y { spawn "foot"; }
-    Mod+E { spawn "nautilus"; }
     Mod+D { spawn "walker"; }
     Mod+Shift+D { spawn "walker" "-m" "custom_commands"; }
     Super+Alt+L { spawn "swaylock"; }
