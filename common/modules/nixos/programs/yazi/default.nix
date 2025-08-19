@@ -8,6 +8,7 @@
           show_symlink = true;
         };
         open.rules = [
+          { mime = "text/*"; use = "edit"; }
           { mime = "*"; use = "open"; }
         ];
       };
