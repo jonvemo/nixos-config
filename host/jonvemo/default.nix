@@ -1,9 +1,8 @@
-{ system,hosts,stateVersion,inputs,pkgs,pkgs-next,... }:
-
+{ hosts,users,system,stateVersion,inputs,pkgs,pkgs-next,... }:
 inputs.nixpkgs.lib.nixosSystem {
 
   inherit pkgs;
-  specialArgs = { inherit system hosts stateVersion inputs pkgs-next; };
+  specialArgs = { inherit hosts users system stateVersion inputs pkgs-next; };
   
   modules = [
     ./configuration.nix
@@ -12,7 +11,6 @@ inputs.nixpkgs.lib.nixosSystem {
     {
       home-manager = {
         backupFileExtension = "backup";
-
         useGlobalPkgs = true;
         useUserPackages = true;
 
@@ -22,12 +20,12 @@ inputs.nixpkgs.lib.nixosSystem {
             services = "/etc/nixos/common/modules/home-manager/services/";
           };
 
-          inherit system hosts stateVersion inputs pkgs-next;
+          inherit hosts users system stateVersion inputs pkgs-next;
         };
         
         users = {
-          "${hosts.primary.users.primary.name}".imports = [
-            ../../home/${hosts.primary.users.primary.name}
+          "${users.primary.name}".imports = [
+            ../../home/${users.primary.name}
             ../../common/modules/home-manager
           ]; 
         };

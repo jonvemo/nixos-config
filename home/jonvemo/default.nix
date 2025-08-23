@@ -1,11 +1,11 @@
-{ hosts,stateVersion,... }:
+{ users,stateVersion,... }:
 {
   imports = [ 
     ./modules
   ];
 
   home = {
-    username = "${hosts.primary.users.primary.name}";
+    username = "${users.primary.name}";
     stateVersion = "${stateVersion}"; 
   };
 

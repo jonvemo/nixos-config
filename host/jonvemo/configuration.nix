@@ -1,4 +1,4 @@
-{ inputs,hosts,stateVersion,pkgs,... }:
+{ inputs,users,stateVersion,pkgs,... }:
 
 {
   imports = [
@@ -7,9 +7,9 @@
   ];  
 
   users.users = {
-    ${hosts.primary.users.primary.name} = {
+    ${users.primary.name} = {
       isNormalUser = true;
-      description = "${hosts.primary.users.primary.description}";
+      description = "${users.primary.description}";
       extraGroups = [ "wheel" ];
       shell = pkgs.fish;
     };    

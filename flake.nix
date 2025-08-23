@@ -36,18 +36,17 @@
   };
 
   outputs = inputs: let
-    system = "x86_64-linux";
     hosts = {
+      primary.name = "jonvemo";
+    };
+    users = {
       primary = {
         name = "jonvemo";
-        users = {
-          primary = {
-            name = "jonvemo";
-            description = "John Verdugo";
-          };
-        };
+        description = "John Verdugo";
       };
     };
+
+    system = "x86_64-linux";
     stateVersion = "24.05";
 
     common = {
@@ -60,7 +59,7 @@
 
   in {
     nixosConfigurations = {
-      "${hosts.primary.name}" = import ./host/${hosts.primary.name} { inherit system hosts stateVersion inputs pkgs pkgs-next; };
+      "${hosts.primary.name}" = import ./host/${hosts.primary.name} { inherit hosts users system stateVersion inputs pkgs pkgs-next; };
     };
 
   };

@@ -1,11 +1,11 @@
-{ inputs,pkgs,hosts,... }:
+{ inputs,pkgs,users,... }:
 {
   imports = [ inputs.zen-browser.homeModules.beta ];
 
   programs.zen-browser = {
     enable = true;
 
-    profiles."${hosts.primary.users.primary.name}" = {
+    profiles."${users.primary.name}" = {
       containers = {
         "personal" = {
           id = 1;
