@@ -3,7 +3,7 @@
 
   inputs = {
     # NixOS
-    nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable-small";
+    nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
     nixpkgs-next.url = "github:NixOS/nixpkgs/staging-next";
 
     # HomeManager
