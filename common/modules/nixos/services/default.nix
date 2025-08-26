@@ -9,5 +9,6 @@
     ./gnome-keyring
     ./resolved
     ./ssh
+    ./minecraft
   ];
 }
