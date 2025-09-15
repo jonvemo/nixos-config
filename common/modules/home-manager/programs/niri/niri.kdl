@@ -43,10 +43,6 @@ layout {
 
 spawn-at-startup "way-edges"
 
-environment {
-    DISPLAY ":0"
-}
-
 screenshot-path "~/Pictures/Screenshots/%Y-%m-%d, %H%M%S.png"
 
 prefer-no-csd

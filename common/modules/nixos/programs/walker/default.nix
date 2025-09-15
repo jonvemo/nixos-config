@@ -9,12 +9,6 @@
     config = {
       theme = "nixos";
       terminal_title_flag = "foot";
-      builtins.custom_commands.commands = [
-        {
-          name = "XWayland Support";
-          cmd = "xwayland-satellite";
-        }
-      ];
     };
 
     theme = {
