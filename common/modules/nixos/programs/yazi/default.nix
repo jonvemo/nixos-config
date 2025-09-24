@@ -9,6 +9,7 @@
         };
         open.rules = [
           { mime = "text/*"; use = "edit"; }
+          { mime = "application/*"; use = "edit"; }
           { mime = "*"; use = "open"; }
         ];
       };
