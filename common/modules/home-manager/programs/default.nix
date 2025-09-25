@@ -15,5 +15,6 @@
     ./way-edges
 
     ./zen
+    ./wofi
   ];
 }
