@@ -2,10 +2,10 @@
   programs.wofi = {
     enable = true;
     settings = {
-      height = 384;
-      width = 640;
-      term = "foot";
+      width = 576;
+      height = 256;
       mode = "drun";
+      matching = "fuzzy";
       prompt = "Search...";
       allow_images = true;
       no_actions = true;
