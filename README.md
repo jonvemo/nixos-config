@@ -1,6 +1,6 @@
 # NixOS Dotfiles
 
-![Main Desktop with Walker Preview](assets/desktop-walker.png)
+![Main Desktop with Wofi Preview](assets/desktop-wofi.png)
 
 ## Installation
 1. Install Git and enable flakes in `configuration.nix`
@@ -52,7 +52,7 @@ git clone https://github.com/jonvemo/nixos-config.git
 | **Theme Manager**       | [Stylix](https://github.com/danth/stylix)                                                                                   |
 | **File Manager**        | [Yazy](https://github.com/sxyazi/yazi)                                                                                      |
 | **Status Bar**          | [Way-edges](https://github.com/way-edges/way-edges)                                                                         |
-| **App Launcher**        | [Walker](https://github.com/abenz1267/walker)                                                                               |
+| **App Launcher**        | [Wofi](https://hg.sr.ht/~scoopta/wofi)                                                                                      |
 | **Terminal Emulator(s)**| [Kitty](https://github.com/kovidgoyal/kitty), [Foot](https://codeberg.org/dnkl/foot)                                        |
 | **Shell**               | [Fish](https://github.com/fish-shell/fish-shell)                                                                            |
 | **Shell Prompt**        | [Starship](https://github.com/starship/starship)                                                                            |
