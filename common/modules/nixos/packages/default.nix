@@ -4,11 +4,11 @@
   
     (with pkgs; [ 
     
-      # GUI & CTL & TUI
+      # GUI & CTL & TUI & CLI
       kooha lact
       brightnessctl playerctl
-      wiremix bluetui impala
-      rmpc /* Music Player */
+      wiremix bluetui impala rmpc /* Music Player */
+      gemini-cli
 
       # Tools
       parabolic /* Download Music */
