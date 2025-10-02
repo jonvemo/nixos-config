@@ -137,11 +137,11 @@ hotkey-overlay {
 
 binds {
     Mod+Shift+Slash { show-hotkey-overlay; }
-    Mod+Shift+A { spawn "footclient" "-T=wiremix" "wiremix"; }
-    Mod+Shift+W { spawn "footclient" "-T=impala" "impala"; }
-    Mod+Shift+B { spawn "footclient" "-T=bluetui" "bluetui"; }
-    Mod+Shift+T { spawn "footclient" "-T=btop" "btop"; }
-    Mod+E { spawn "foot" "-T=yazi" "yazi"; }
+    Mod+Shift+A { spawn "footclient" "-T wiremix" "wiremix"; }
+    Mod+Shift+W { spawn "footclient" "-T impala" "impala"; }
+    Mod+Shift+B { spawn "footclient" "-T bluetui" "bluetui"; }
+    Mod+Shift+T { spawn "footclient" "-T btop" "btop"; }
+    Mod+E { spawn "foot" "-T yazi" "yazi"; }
     Mod+Shift+K { spawn "kooha"; }
     Mod+B { spawn "zen"; }
     Mod+T { spawn "kitty"; }
