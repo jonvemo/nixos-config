@@ -7,7 +7,7 @@
       # GUI & CTL & TUI & CLI
       kooha lact
       brightnessctl playerctl
-      wiremix bluetui impala rmpc /* Music Player */
+      wiremix bluetui impala kew /* Music Player */
       gemini-cli
 
       # Tools

@@ -101,6 +101,14 @@ window-rule {
 }
 
 window-rule {
+    match title="kew"
+    open-floating true
+    default-floating-position x=4 y=4 relative-to="right"
+    default-column-width { fixed 416; }
+    default-window-height { fixed 704; }
+}
+
+window-rule {
     match app-id="com.vixalien.sticky"
     open-floating true
     default-floating-position x=4 y=4 relative-to="bottom-right"
@@ -141,8 +149,9 @@ binds {
     Mod+Shift+W { spawn "footclient" "-T impala" "impala"; }
     Mod+Shift+B { spawn "footclient" "-T bluetui" "bluetui"; }
     Mod+Shift+T { spawn "footclient" "-T btop" "btop"; }
-    Mod+E { spawn "foot" "-T yazi" "yazi"; }
+    Mod+Shift+M { spawn "footclient" "-T kew" "kew"; }
     Mod+Shift+K { spawn "kooha"; }
+    Mod+E { spawn "foot" "-T yazi" "yazi"; }
     Mod+B { spawn "zen"; }
     Mod+T { spawn "kitty"; }
     Mod+Y { spawn "foot"; }

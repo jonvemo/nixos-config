@@ -3,6 +3,5 @@
     ./mpris-proxy
     ./mako
     ./swww
-    ./mpd
   ];
 }
