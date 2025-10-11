@@ -24,10 +24,6 @@
       url = "github:way-edges/way-edges";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    walker = {
-      url = "github:abenz1267/walker?ref=v0.13.26";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
     zed-editor = {
       url = "github:jonvemo/zed-editor-flake";
       inputs.nixpkgs.follows = "nixpkgs";
