@@ -101,6 +101,13 @@ window-rule {
 }
 
 window-rule {
+    match title="fsel"
+    open-floating true
+    default-column-width { fixed 480; }
+    default-window-height { fixed 512; }
+}
+
+window-rule {
     match title="kew"
     open-floating true
     default-floating-position x=4 y=4 relative-to="right"
@@ -151,11 +158,11 @@ binds {
     Mod+Shift+T { spawn "footclient" "-T btop" "btop"; }
     Mod+Shift+M { spawn "footclient" "-T kew" "kew"; }
     Mod+Shift+K { spawn "kooha"; }
+    Mod+D { spawn "footclient" "-T fsel" "fsel"; }
     Mod+E { spawn "foot" "-T yazi" "yazi"; }
-    Mod+B { spawn "zen"; }
     Mod+T { spawn "kitty"; }
     Mod+Y { spawn "foot"; }
-    Mod+D { spawn "wofi"; }
+    Mod+B { spawn "zen"; }
     Super+Alt+L { spawn "swaylock"; }
 
     XF86AudioRaiseVolume  allow-when-locked=true { spawn "wpctl" "set-volume" "@DEFAULT_AUDIO_SINK@" "0.1+"; }

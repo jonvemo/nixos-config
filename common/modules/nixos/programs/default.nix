@@ -9,6 +9,7 @@
     ./starship
     ./obs
     ./yazi
+    ./fsel
   ];
 
   programs = {
