@@ -14,7 +14,7 @@
       parabolic /* Download Music */
 
       # Desktop 
-      loupe /* Image Viewer*/ showtime g4music
+      loupe /* Image Viewer*/ showtime
       sticky-notes pomodoro-gtk
     
       gnome-sound-recorder gnome-calculator # gnome-connections

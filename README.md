@@ -64,7 +64,7 @@ git clone https://github.com/jonvemo/nixos-config.git
 | **Screen Recorder**     | [Kooha](https://github.com/SeaDve/Kooha)                                                                                    |
 | **Cloud Storage**       | One Drive ( Unofficial client: [abraunegg/onedrive](https://github.com/abraunegg/onedrive))                                 |
 | **Web Browser**         | [Zen Browser](https://github.com/zen-browser)                                                                               |
-| **Music Player(s)**     | [G4Music](https://gitlab.gnome.org/neithern/g4music), [KEW](https://github.com/ravachol/kew)                                |
+| **Music Player**        | [KEW](https://github.com/ravachol/kew)                                                                                      |
 | **Video Player**        | [Showtime](https://gitlab.gnome.org/GNOME/showtime)                                                                         |
 | **Image Viewer**        | [Loupe](https://gitlab.gnome.org/GNOME/loupe)                                                                               |
 | **Notes**               | [Sticky](https://github.com/vixalien/sticky)                                                                                |
