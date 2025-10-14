@@ -1,6 +1,6 @@
 # NixOS Dotfiles
 
-![Main Desktop with Wofi Preview](assets/desktop-wofi.png)
+![Main Desktop with Fsel Preview](assets/desktop-fsel.png)
 
 ## Installation
 1. Install Git and enable flakes in `configuration.nix`
@@ -39,8 +39,8 @@ git clone https://github.com/jonvemo/nixos-config.git
 <summary>View Screenshots</summary>
 
 ![FastFetch Preview](assets/fastfetch.png)
-![Nautilus, Loupe, Sticky Notes and PomodoroGTK Preview](assets/nautilus-loupe-sticky-pomodoro.png)
-![Gnome Calculator, Gapless and Kooha Preview](assets/calculator-kooha-gapless.png)
+![Yazi, Loupe, Sticky Notes and PomodoroGTK Preview](assets/yazi-loupe-pomodoro-sticky.png)
+![Gnome Calculator, Kew and Kooha Preview](assets/calculator-kooha-kew.png)
 
 </details>
 
@@ -64,7 +64,7 @@ git clone https://github.com/jonvemo/nixos-config.git
 | **Screen Recorder**     | [Kooha](https://github.com/SeaDve/Kooha)                                                                                    |
 | **Cloud Storage**       | One Drive ( Unofficial client: [abraunegg/onedrive](https://github.com/abraunegg/onedrive))                                 |
 | **Web Browser**         | [Zen Browser](https://github.com/zen-browser)                                                                               |
-| **Music Player**        | [KEW](https://github.com/ravachol/kew)                                                                                      |
+| **Music Player**        | [Kew](https://github.com/ravachol/kew)                                                                                      |
 | **Video Player**        | [Showtime](https://gitlab.gnome.org/GNOME/showtime)                                                                         |
 | **Image Viewer**        | [Loupe](https://gitlab.gnome.org/GNOME/loupe)                                                                               |
 | **Notes**               | [Sticky](https://github.com/vixalien/sticky)                                                                                |
