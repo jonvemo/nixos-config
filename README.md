@@ -52,7 +52,7 @@ git clone https://github.com/jonvemo/nixos-config.git
 | **Theme Manager**       | [Stylix](https://github.com/danth/stylix)                                                                                   |
 | **File Manager**        | [Yazy](https://github.com/sxyazi/yazi)                                                                                      |
 | **Status Bar**          | [Way-edges](https://github.com/way-edges/way-edges)                                                                         |
-| **App Launcher**        | [Wofi](https://hg.sr.ht/~scoopta/wofi)                                                                                      |
+| **App Launcher**        | [Fsel](https://github.com/Mjoyufull/fsel)                                                                                   |
 | **Terminal Emulator(s)**| [Kitty](https://github.com/kovidgoyal/kitty), [Foot](https://codeberg.org/dnkl/foot)                                        |
 | **Shell**               | [Fish](https://github.com/fish-shell/fish-shell)                                                                            |
 | **Shell Prompt**        | [Starship](https://github.com/starship/starship)                                                                            |
