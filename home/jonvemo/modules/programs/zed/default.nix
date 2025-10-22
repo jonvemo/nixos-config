@@ -1,9 +1,8 @@
-{inputs,pkgs,system,...}:
+{inputs,pkgs,...}:
 {
-  #imports = [ inputs.zed-editor.packages.${system}.zed-editor-bin ];
   programs.zed-editor = {
     enable = true;
-    package = inputs.zed-editor.packages.${system}.zed-editor-preview-bin;
+    package = inputs.zed-editor.packages.${pkgs.system}.zed-editor-preview-bin;
 
     extensions = [
       "html" "nix" "fish" "toml"

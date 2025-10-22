@@ -1,12 +1,14 @@
-{ users,stateVersion,... }:
+{user,stateVersion,...}:
 {
   imports = [ 
     ./modules
   ];
 
   home = {
-    username = "${users.primary.name}";
-    stateVersion = "${stateVersion}"; 
+    username = user.name;
+    homeDirectory =  "/home/${user.name}";
+    stateVersion = stateVersion;
   };
 
+  programs.home-manager.enable = true;
 }

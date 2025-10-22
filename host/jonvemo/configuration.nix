@@ -12,7 +12,7 @@
       description = "${users.primary.description}";
       extraGroups = [ "wheel" ];
       shell = pkgs.fish;
-    };    
+    };
   };
 
   system.stateVersion = "${stateVersion}";

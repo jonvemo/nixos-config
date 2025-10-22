@@ -16,7 +16,9 @@
 
     shellAliases = {
       clean = "nh clean all";
-      bnh = "nh os switch --ask /etc/nixos";
+      nho = "nh os switch --ask";
+      nhh = "nh home switch --ask";
+      bnh = "nho && nhh";
 
       fbuild = "flakeupdate && bnh && clean";
       cbuild = "bnh && clean";
@@ -26,8 +28,6 @@
                
       npac = "cd /etc/nixos/common/modules/nixos/packages && hx default.nix";
       hpac = "cd /etc/nixos/common/modules/home-manager/packages && hx default.nix";
-
-      jhpac = "cd /etc/nixos/home/jonvemo/modules/packages && hx default.nix";
 
       d = "hx default.nix";
       b = "cd ..";
@@ -83,7 +83,6 @@
       hpro = "cd /etc/nixos/common/modules/home-manager/programs/";
       
       jhpro = "cd /etc/nixos/home/jonvemo/modules/programs/";
-      jhset = "cd /etc/nixos/home/jonvemo/modules/settings/";
 
       wp = "cd Documents/Work/GitHub/";
       wpa = "cd Desktop/GitHub/";

@@ -36,32 +36,24 @@
   };
 
   outputs = inputs: let
-    hosts = {
-      primary.name = "jonvemo";
-    };
-    users = {
-      primary = {
-        name = "jonvemo";
-        description = "John Verdugo";
+    specialArgs = {
+      inherit inputs;
+      stateVersion = "25.05";
+      hosts = {
+        primary = {
+          name = "jonvemo";
+          system = "x86_64-linux";
+        };
+      };
+      users = {
+        primary = {
+          name = "jonvemo";
+          description = "John Verdugo";
+        };
       };
     };
-
-    system = "x86_64-linux";
-    stateVersion = "24.05";
-
-    common = {
-      inherit system;
-      config.allowUnfree = true;
-    };
-
-    pkgs = import inputs.nixpkgs common;
-    pkgs-next = import inputs.nixpkgs-next common;
-
   in {
-    nixosConfigurations = {
-      "${hosts.primary.name}" = import ./host/${hosts.primary.name} { inherit hosts users system stateVersion inputs pkgs pkgs-next; };
-    };
-
+    nixosConfigurations = import ./host specialArgs;
+    homeConfigurations = import ./home specialArgs;
   };
-
 }
