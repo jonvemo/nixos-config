@@ -2,9 +2,13 @@
   programs = {
     git = {
       enable = true;
-      userName = "Jonvemo";
-      userEmail = "rettouseisama@gmail.com";
-      extraConfig.init.defaultBranch = "main";
+      settings = {
+        user = {
+          name = "Jonvemo";
+          email = "rettouseisama@gmail.com";
+        };
+        init.defaultBranch = "main";
+      };
     };
 
     gh.enable = true;
