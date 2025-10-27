@@ -8,7 +8,7 @@
       kooha lact
       brightnessctl playerctl
       wiremix bluetui impala kew /* Music Player */
-      gemini-cli
+      crush /* AI */
 
       # Tools
       parabolic /* Download Music */
