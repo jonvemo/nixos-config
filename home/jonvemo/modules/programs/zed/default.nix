@@ -20,7 +20,7 @@
         metrics = false;
       };
 
-      vim_mode = false;
+      helix_mode = true;
 
       prettier.allowed = true;
 
