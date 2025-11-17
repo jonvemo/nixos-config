@@ -111,7 +111,7 @@ window-rule {
     match title="kew"
     open-floating true
     default-floating-position x=4 y=4 relative-to="bottom-right"
-    default-column-width { fixed 592; }
+    default-column-width { fixed 608; }
     default-window-height { fixed 256; }
 }
 
