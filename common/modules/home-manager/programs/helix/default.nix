@@ -36,8 +36,6 @@
 
         m.g = ":sh kitty @ launch --type=window --cwd=current lazygit && kitty @ resize-window --match title:lazygit --axis=horizontal --increment=-20"; 
         m.c = ":sh kitty @ close-window --match title:lazygit";
-        m.l = ":sh live-server";
-        m.z = ":sh pkill live-server";
       };
       
     };
@@ -50,7 +48,6 @@
        ])
   
       (with pkgs.nodePackages; [
-        live-server
         vscode-langservers-extracted
   
       ])  
