@@ -1,4 +1,4 @@
-{inputs,pkgs,...}:
+{inputs,pkgs,user,...}:
 {
   imports = [ inputs.stylix.homeModules.default ]; 
   stylix = {
@@ -33,6 +33,12 @@
       
     };
 
+    icons = {
+      enable = true;
+      package = pkgs.adwaita-icon-theme;
+      dark = "Adwaita";
+    };
+
     polarity = "dark";
 
     opacity = {
@@ -43,7 +49,11 @@
     };
     
     targets = {
+      zen-browser.profileNames = [ "${user.name}" ];
       helix.enable = false;
+      blender.enable = false;
+      vencord.enable = false;
+      
     };
   };
 }
