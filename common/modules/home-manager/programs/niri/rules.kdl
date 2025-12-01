@@ -1,0 +1,88 @@
+window-rule {
+    open-maximized true
+    geometry-corner-radius 8
+    clip-to-geometry true
+}
+
+window-rule {
+    match app-id="zen" title="Picture-in-Picture"
+    open-floating true
+    default-floating-position x=4 y=4 relative-to="top-right"
+    default-column-width { fixed 320; }
+    default-window-height { fixed 180; }
+
+}
+
+window-rule {
+    match app-id="zen" title="Developer Tools"
+    open-floating true
+    default-column-width { fixed 348; }
+    default-window-height { fixed 512; }
+}
+
+window-rule {
+    match title="wiremix"
+    open-floating true
+    default-column-width { fixed 704; }
+    default-window-height { fixed 512; }
+}
+
+window-rule {
+    match title="impala"
+    open-floating true
+    default-column-width { fixed 576; }
+    default-window-height { fixed 704; }
+}
+
+window-rule {
+    match title="bluetui"
+    open-floating true
+    default-column-width { fixed 512; }
+    default-window-height { fixed 512; }
+}
+
+window-rule {
+    match title="fsel"
+    open-floating true
+    default-column-width { fixed 480; }
+    default-window-height { fixed 512; }
+}
+
+window-rule {
+    match title="kew"
+    open-floating true
+    default-floating-position x=4 y=4 relative-to="bottom-right"
+    default-column-width { fixed 608; }
+    default-window-height { fixed 256; }
+}
+
+window-rule {
+    match app-id="com.vixalien.sticky"
+    open-floating true
+    default-floating-position x=4 y=4 relative-to="bottom-right"
+    default-column-width { fixed 416; }
+    default-window-height { fixed 348; }
+}
+
+window-rule {
+    match app-id="io.gitlab.idevecore.Pomodoro"
+    open-floating true
+    default-floating-position x=4 y=4 relative-to="top-right"
+    default-column-width { fixed 302; }
+    default-window-height { fixed 418; }
+}
+
+window-rule {
+    match app-id="org.gnome.Calculator"
+    open-floating true
+}
+
+window-rule {
+    match app-id=r#"^org\.gnome\.World\.Secrets$"#
+    block-out-from "screencast"
+}
+
+layer-rule {
+    match namespace="^notifications$"
+    block-out-from "screencast"
+}
