@@ -42,7 +42,6 @@
 
     extraPackages = lib.concatLists [ 
       (with pkgs; [
-        helix-gpt
         dprint
         
        ])
