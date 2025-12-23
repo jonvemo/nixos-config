@@ -17,7 +17,7 @@ let
         pkgs-next = pkgsForSystem host.system inputs.nixpkgs-next;
       };
 
-      modules = modules;
+      inherit modules;
     };
 
   mkHostSystem = host: mkSystem {
