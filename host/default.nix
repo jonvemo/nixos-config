@@ -1,17 +1,17 @@
 { inputs, hosts, users, stateVersion, ... }:
 
 let
-  pkgsForSystem = system: import inputs.nixpkgs {
+  pkgsForSystem = system: pkgsInput: import pkgsInput {
     inherit system;
     config.allowUnfree = true;
   };
-
+  
   mkSystem = { host, modules }:
     inputs.nixpkgs.lib.nixosSystem {
       system = host.system;
 
-      pkgs = pkgsForSystem host.system;
-
+      pkgs = pkgsForSystem host.system inputs.nixpkgs;
+      
       specialArgs = {
         inherit inputs hosts host users stateVersion;
         pkgs-next = pkgsForSystem host.system inputs.nixpkgs-next;
