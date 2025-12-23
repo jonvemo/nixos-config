@@ -10,6 +10,7 @@
     ./obs
     ./yazi
     ./fsel
+    ./crush
   ];
 
   programs = {
