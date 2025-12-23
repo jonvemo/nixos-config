@@ -5,6 +5,10 @@
     # NixOS
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
     nixpkgs-next.url = "github:NixOS/nixpkgs/staging-next";
+    nur = {
+      url = "github:nix-community/NUR";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
 
     # HomeManager
     home-manager = {
