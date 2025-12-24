@@ -1,6 +1,6 @@
 # NixOS Dotfiles
 
-![Main Desktop with Fsel Preview](assets/desktop-fsel.png)
+![Main Desktop with Fsel Preview](assets/desktop-fsel.avif)
 
 ## Installation
 1. Install Git and enable flakes in `configuration.nix`
@@ -38,9 +38,9 @@ git clone https://github.com/jonvemo/nixos-config.git
 <details>
 <summary>View Screenshots</summary>
 
-![FastFetch Preview](assets/fastfetch.png)
-![Yazi, Loupe, Sticky Notes and PomodoroGTK Preview](assets/yazi-loupe-pomodoro-sticky.png)
-![Gnome Calculator, Kew and Kooha Preview](assets/calculator-kooha-kew.png)
+![FastFetch Preview](assets/fastfetch.avif)
+![Yazi, Loupe, Sticky Notes and PomodoroGTK Preview](assets/yazi-loupe-pomodoro-sticky.avif)
+![Gnome Calculator, Kew and Kooha Preview](assets/calculator-kooha-kew.avif)
 
 </details>
 
