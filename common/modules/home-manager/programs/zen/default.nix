@@ -31,6 +31,7 @@
       DisableFirefoxStudies = true;
       DisableTelemetry = true;
       DisableAppUpdate = true;
+      DisableAccessibilityServices = true;
       BlockAboutSupport = true;
       DontCheckDefaultBrowser = true;
       OfferToSaveLogins = false;
