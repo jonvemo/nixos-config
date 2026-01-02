@@ -8,5 +8,6 @@
     ./tlp
     ./resolved
     ./ssh
+    ./speechd
   ];
 }
