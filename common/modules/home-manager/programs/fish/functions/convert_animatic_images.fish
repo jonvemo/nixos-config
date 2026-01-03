@@ -3,7 +3,7 @@
 function convert_animatic_images
     if test (count $argv) -ne 2
         echo 'Usage: convert_animations "<input_formats>" <output_format>'
-        echo 'Example: convert_animations "mp4 webm gif" webm'
+        echo 'Example: convert_animations "mp4 webm gif avif" webp'
         return 1
     end
 
@@ -11,11 +11,11 @@ function convert_animatic_images
     set OUTPUT_FORMAT $argv[2]
 
     # Supported formats (animated)
-    set ANIMATED_FORMATS webm mp4 gif webp
+    set ANIMATED_FORMATS webm mp4 gif webp avif
 
     # Check output format
     if not contains -- $OUTPUT_FORMAT $ANIMATED_FORMATS
-        echo "Error: Output format must be animated (webm/mp4/gif/webp)"
+        echo "Error: Output format must be animated (webm/mp4/gif/webp/avif)"
         return 1
     end
 
@@ -79,6 +79,19 @@ function convert_animatic_images
                         -preset default \
                         -an \
                         "$OUTPUT"
+
+                case avif
+                    # Avif animated
+                    ffmpeg -i "$FILE" \
+                        -c:v libaom-av1 \
+                        -crf 23 \
+                        -cpu-used 4 \
+                        -f avif \
+                        -movflags +faststart \
+                        -still-picture 0 \
+                        -loop 0 \
+                        "$OUTPUT"
+
             end
 
             # Preserve basic metadata
