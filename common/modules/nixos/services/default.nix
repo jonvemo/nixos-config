@@ -9,5 +9,7 @@
     ./resolved
     ./ssh
     ./speechd
+    ./minecraft
+    ./gnome-keyring
   ];
 }
