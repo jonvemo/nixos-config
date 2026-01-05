@@ -1,7 +1,21 @@
-hotkey-overlay {
-    skip-at-startup
-}
+spawn-at-startup "way-edges"
 
 screenshot-path "~/Pictures/Screenshots/%Y-%m-%d, %H%M%S.png"
 
 prefer-no-csd
+
+cursor {
+    xcursor-theme "Anya"
+    xcursor-size 32
+
+    hide-when-typing
+    hide-after-inactive-ms 5000
+}
+
+xwayland-satellite {
+    // off
+}
+
+hotkey-overlay {
+    skip-at-startup
+}

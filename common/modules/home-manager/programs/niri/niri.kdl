@@ -1,5 +1,3 @@
-spawn-at-startup "way-edges"
-
 input {
     keyboard {
         xkb {
@@ -18,37 +16,6 @@ output "eDP-1" {
     scale 1
     transform "normal"
     position x=1280 y=0
-}
-
-layout {
-    gaps 4
-    center-focused-column "never"
-    preset-column-widths {
-        proportion 0.33333
-        proportion 0.5
-        proportion 0.66667
-    }
-    default-column-width { proportion 0.5; }
-    focus-ring {
-        off
-        width 2
-        active-color "#7fc8ff"
-        inactive-color "#505050"
-    }
-    border {
-        off
-        width 2
-        active-color "#ffc87f"
-        inactive-color "#505050"
-    }
-}
-
-cursor {
-    xcursor-theme "Anya"
-    xcursor-size 32
-
-    hide-when-typing
-    hide-after-inactive-ms 5000
 }
 
 recent-windows {
@@ -82,5 +49,6 @@ recent-windows {
 }
 
 include "misc.kdl"
+include "layout.kdl"
 include "rules.kdl"
 include "binds.kdl"
