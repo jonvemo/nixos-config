@@ -4,5 +4,6 @@
     ./host
     ./wireless
     ./dhcpcd
+    ./nameservers
   ];
 }
