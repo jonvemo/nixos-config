@@ -5,5 +5,6 @@
     ./wireless
     ./dhcpcd
     ./nameservers
+    ./firewall
   ];
 }
