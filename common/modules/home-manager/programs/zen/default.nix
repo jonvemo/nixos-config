@@ -49,6 +49,9 @@
         "privacy.fingerprintingProtection" = {
           Value = true;
         };
+        "privacy.resistFingerprinting" = {
+          Value = true;
+        };
       };
 
       EnableTrackingProtection = {
