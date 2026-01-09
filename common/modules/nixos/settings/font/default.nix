@@ -8,7 +8,7 @@
     
       (with pkgs; [
         font-awesome
-        noto-fonts
+        noto-fonts-lgc-plus
         noto-fonts-cjk-sans
         noto-fonts-cjk-serif
         noto-fonts-emoji-blob-bin
