@@ -5,7 +5,6 @@
     (with pkgs; [ 
     
       # Games
-      prismlauncher
       mindustry
       
       # Broken in staging-next
