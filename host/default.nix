@@ -1,31 +1,27 @@
 { inputs, hosts, users, stateVersion, ... }:
 
 let
-  pkgsForSystem = system: pkgsInput: import pkgsInput {
+  inherit (inputs.nixpkgs) lib;
+
+  mkPkgs = system: input: import input {
     inherit system;
     config.allowUnfree = true;
   };
-  
-  mkSystem = { host, modules }:
-    inputs.nixpkgs.lib.nixosSystem {
-      system = host.system;
 
-      pkgs = pkgsForSystem host.system inputs.nixpkgs;
-      
-      specialArgs = {
-        inherit inputs hosts host users stateVersion;
-        pkgs-next = pkgsForSystem host.system inputs.nixpkgs-next;
-      };
+  mkSystem = host: lib.nixosSystem {
+    pkgs = mkPkgs host.system inputs.nixpkgs;
 
-      inherit modules;
+    specialArgs = {
+      inherit inputs hosts host users stateVersion; 
+      pkgs-next = mkPkgs host.system inputs.nixpkgs-next;
     };
 
-  mkHostSystem = host: mkSystem {
-    inherit host;
-    modules = [ ./${host.name} ];
+    modules = [
+      ./${host.name} 
+    ];
   };
 
 in
-  inputs.nixpkgs.lib.mapAttrs'
-    (name: host: inputs.nixpkgs.lib.nameValuePair host.name (mkHostSystem host))
-    hosts
+lib.mapAttrs' (key: host: 
+  lib.nameValuePair host.name (mkSystem host)
+) hosts
