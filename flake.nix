@@ -36,6 +36,10 @@
       url = "github:Mjoyufull/fsel";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    pumpkin = {
+      url = "github:Pumpkin-MC/Pumpkin";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
 
   };
 

@@ -10,5 +10,6 @@
     ./ssh
     ./speechd
     ./gnome-keyring
+    ./pumpkin
   ];
 }
