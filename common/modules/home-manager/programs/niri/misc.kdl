@@ -12,6 +12,10 @@ cursor {
     hide-after-inactive-ms 5000
 }
 
+switch-events {
+    lid-close { spawn "swaylock"; }
+}
+
 xwayland-satellite {
     // off
 }
