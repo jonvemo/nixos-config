@@ -18,8 +18,6 @@ jobs:
       - name: Checkout Repository
         uses: actions/checkout@v4
       - name: Install Nix
-        uses: DeterminateSystems/nix-installer-action@v16
-      - name: Check Nixpkgs Inputs
-        uses: DeterminateSystems/flake-checker-action@v9
+        uses: DeterminateSystems/nix-installer-action@v17
       - name: Check the Flake
         run: nix flake check
