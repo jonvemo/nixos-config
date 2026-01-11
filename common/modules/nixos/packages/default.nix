@@ -14,7 +14,7 @@
 
       # Desktop 
       loupe /* Image Viewer*/ showtime
-      sticky-notes pomodoro-gtk
+      sticky-notes timr-tui
     
       gnome-sound-recorder gnome-calculator # gnome-connections
       snapshot ouch

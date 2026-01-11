@@ -65,11 +65,11 @@ window-rule {
 }
 
 window-rule {
-    match app-id="io.gitlab.idevecore.Pomodoro"
+    match title="pomodoro"
     open-floating true
     default-floating-position x=4 y=4 relative-to="top-right"
-    default-column-width { fixed 302; }
-    default-window-height { fixed 418; }
+    default-column-width { fixed 258; }
+    default-window-height { fixed 258; }
 }
 
 window-rule {

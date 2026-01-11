@@ -7,7 +7,8 @@ binds {
     Mod+Shift+M { spawn "footclient" "-T kew" "kew"; }
     Mod+Shift+K { spawn "kooha"; }
     Mod+D { spawn "footclient" "-T fsel" "fsel"; }
-    Mod+E { spawn "foot" "-T yazi" "yazi"; }
+    Mod+E { spawn "footclient" "-T yazi" "yazi"; }
+    Mod+P { spawn "footclient" "-T pomodoro" "timr-tui" "-m" "pomodoro" "-n" "on"; }
     Mod+T { spawn "kitty"; }
     Mod+Y { spawn "foot"; }
     Mod+B { spawn "zen"; }
