@@ -1,7 +1,7 @@
 { config, ... }: let
   image = [ "org.gnome.Loupe.desktop" ];
   video = [ "org.gnome.Showtime.desktop" ];
-  browser = [ "zen-beta.desktop" ];
+  browser = [ "zen-twilight.desktop" ];
   editor = [ "dev.zed.Zed-Preview.desktop" ];
 in {
   xdg = {
