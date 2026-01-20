@@ -7,7 +7,6 @@
     packages = lib.concatLists [ 
     
       (with pkgs; [
-        font-awesome
         noto-fonts-lgc-plus
         noto-fonts-cjk-sans
         noto-fonts-cjk-serif
