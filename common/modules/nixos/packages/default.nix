@@ -19,9 +19,6 @@
       gnome-sound-recorder gnome-calculator # gnome-connections
       snapshot ouch
 
-      # Browsers & Chatting
-      microsoft-edge # google-chrome # vivaldi # brave
-
       # Media & Draw
       krita
       
