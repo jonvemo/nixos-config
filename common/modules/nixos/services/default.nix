@@ -6,7 +6,6 @@
     ./onedrive
     ./ollama
     ./tlp
-    ./resolved
     ./ssh
     ./speechd
     ./gnome-keyring
