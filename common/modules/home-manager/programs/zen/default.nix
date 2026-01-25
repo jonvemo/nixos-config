@@ -52,6 +52,16 @@
         "privacy.resistFingerprinting" = {
           Value = true;
         };
+
+        # DoH Mode 3 = "Max Protection"
+        "network.trr.mode" = { 
+          Value = 3; 
+          Status = "locked"; 
+        };
+        "network.trr.uri" = { 
+          Value = "https://dns.adguard-dns.com/dns-query"; 
+          Status = "locked"; 
+        };
       };
 
       EnableTrackingProtection = {
