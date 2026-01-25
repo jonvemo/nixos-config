@@ -1,7 +1,10 @@
 {
-  networking.dhcpcd = {
-    enable = true;
-    wait = "background";
-    extraConfig = "nohook resolv.conf";
+  networking = {
+    useDHCP = false;
+    dhcpcd = {
+      enable = false;
+      wait = "background";
+      extraConfig = "nohook resolv.conf";
+    };
   };
 }
