@@ -20,7 +20,7 @@
         name = "JetBrainsMono Nerd Font";
       };
       serif = {
-        package = pkgs.noto-fonts;
+        package = pkgs.noto-fonts-lgc-plus;
         name = "Noto Serif";
       };
       sansSerif = {
