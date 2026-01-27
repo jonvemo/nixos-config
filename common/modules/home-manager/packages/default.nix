@@ -3,10 +3,7 @@
   home.packages = lib.concatLists [ 
   
     (with pkgs; [ 
-    
-      # Games
-      mindustry
-      
+          
       # Broken in staging-next
 
     ])
