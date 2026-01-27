@@ -23,7 +23,7 @@
       krita
       
       # DevTools
-      ffmpeg exiftool opusTools
+      ffmpeg exiv2 opusTools
       libheif libavif
       libaom svt-av1 rav1e
       woff2
