@@ -33,9 +33,6 @@
         
         m.w = ":w";
         m.q = ":q";
-
-        m.g = ":sh kitty @ launch --type=window --cwd=current lazygit && kitty @ resize-window --match title:lazygit --axis=horizontal --increment=-20"; 
-        m.c = ":sh kitty @ close-window --match title:lazygit";
       };
       
     };
