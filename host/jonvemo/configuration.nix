@@ -12,7 +12,7 @@
       isNormalUser = true;
       description = "${users.primary.description}";
       extraGroups = [ "wheel" ];
-      shell = pkgs.fish;
+      shell = pkgs.fishMinimal;
     };
   };
 

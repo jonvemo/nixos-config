@@ -1,7 +1,10 @@
+{pkgs,...}:
 {
   programs.fish = {
     enable = true;
+    package = pkgs.fishMinimal;
 
+    generateCompletions = false;
     vendor = {
       completions.enable = false;
       config.enable = false;
