@@ -1,8 +1,5 @@
 # NOTE LANGUAGE SERVER
 
-[language-server.gpt]
-command = "helix-gpt"
-
 [language-server.vscode-html-language-server]
 args = ["--stdio"]
 command = "vscode-html-language-server"
@@ -16,7 +13,7 @@ command = "vscode-css-language-server"
 
 [[language]]
 name = "typescript"
-language-servers = [ "dprint", "gpt" ]
+language-servers = [ "dprint" ]
 auto-format = true
 
 [[language]]
@@ -32,7 +29,7 @@ auto-format = true
 
 [[language]]
 name = "javascript"
-language-servers = [ "dprint", "gpt" ]
+language-servers = [ "dprint" ]
 auto-format = true
 
 [[language]]

@@ -11,10 +11,9 @@
       functions.enable = false;
     };
     
-    # NOTE Remove Fish greeting and add HelixGPT env Handler
+    # NOTE Remove Fish greeting
     interactiveShellInit = "
       set -g fish_greeting
-      set -gx HANDLER codeium
     ";
 
     shellAliases = {
