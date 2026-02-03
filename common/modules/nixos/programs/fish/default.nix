@@ -117,5 +117,5 @@
     };
     
   };
-  
+  environment.etc."fish/functions".source = ./functions;
 }
