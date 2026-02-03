@@ -17,7 +17,10 @@
     };
 
     # Theme
-    stylix.url = "github:nix-community/stylix";
+    stylix = {
+      url = "github:nix-community/stylix";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
 
     # APPs
     zen-browser = {
