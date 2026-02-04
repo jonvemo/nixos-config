@@ -15,7 +15,6 @@
 
   programs = {
     command-not-found.enable = false;
-    appimage.enable = true;
     nix-ld.enable = true;
   };
 
