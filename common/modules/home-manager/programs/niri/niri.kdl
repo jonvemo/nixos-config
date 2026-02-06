@@ -12,10 +12,10 @@ input {
 }
 
 output "eDP-1" {
-    mode "1366x769@60.059"
+    mode "1366x768@60.059"
     scale 1
     transform "normal"
-    position x=1280 y=0
+    position x=0 y=0
 }
 
 recent-windows {
