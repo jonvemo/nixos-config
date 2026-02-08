@@ -5,9 +5,9 @@
     (with pkgs; [ 
     
       # GUI & CTL & TUI & CLI
-      kooha lact
-      brightnessctl playerctl
-      wiremix bluetui impala kew /* Music Player */
+      lact
+      brightnessctl playerctl libnotify
+      wiremix bluetui impala kew
 
       # Tools
       parabolic /* Download Music */
