@@ -11,9 +11,9 @@
       functions.enable = false;
     };
     
-    # NOTE Remove Fish greeting
     interactiveShellInit = "
       set -g fish_greeting
+      set -p fish_function_path ${./functions}
     ";
 
     shellAliases = {
@@ -117,5 +117,4 @@
     };
     
   };
-  environment.etc."fish/functions".source = ./functions;
 }
