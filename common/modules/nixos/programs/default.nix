@@ -11,6 +11,7 @@
     ./yazi
     ./fsel
     ./crush
+    ./screenrec
   ];
 
   programs = {

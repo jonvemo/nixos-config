@@ -5,7 +5,6 @@ binds {
     Mod+Shift+B { spawn "footclient" "-T bluetui" "bluetui"; }
     Mod+Shift+T { spawn "footclient" "-T btop" "btop"; }
     Mod+Shift+M { spawn "footclient" "-T kew" "kew"; }
-    Mod+Shift+K { spawn "kooha"; }
     Mod+D { spawn "footclient" "-T fsel" "fsel"; }
     Mod+E { spawn "footclient" "-T yazi" "yazi"; }
     Mod+P { spawn "footclient" "-T pomodoro" "timr-tui" "-m" "pomodoro" "-n" "on"; }
@@ -152,6 +151,8 @@ binds {
     Mod+Shift+S { screenshot; }
     Print { screenshot-screen; }
     Alt+Print { screenshot-window; }
+    Alt+S repeat=false { spawn "screenrec"; }
+    Ctrl+Alt+S repeat=false { spawn "pkill" "wl-screenrec"; }
 
     Mod+Escape allow-inhibiting=false { toggle-keyboard-shortcuts-inhibit; }
 
