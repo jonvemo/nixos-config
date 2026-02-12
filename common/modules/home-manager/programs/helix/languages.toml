@@ -6,12 +6,8 @@ command = "nil"
 command = "biome"
 args = ["lsp-proxy"]
 
-[language-server.vscode-html-language-server]
-command = "vscode-html-language-server"
-args = ["--stdio"]
-
-[language-server.vscode-css-language-server]
-command = "vscode-css-language-server"
+[language-server.emmet-lsp]
+command = "emmet-language-server"
 args = ["--stdio"]
 
 # --- LANGUAGES CONFIGURATION ---
@@ -21,31 +17,21 @@ language-servers = [ "nil" ]
 auto-format = false
 
 [[language]]
+name = "html"
+language-servers = [ "biome", "emmet-lsp" ]
+auto-format = false
+
+[[language]]
+name = "css"
+language-servers = [ "biome", "emmet-lsp" ]
+auto-format = false
+
+[[language]]
 name = "javascript"
-language-servers = [ "biome" ]
-auto-format = false
-
-[[language]]
-name = "typescript"
-language-servers = [ "biome" ]
-auto-format = false
-
-[[language]]
-name = "tsx"
 language-servers = [ "biome" ]
 auto-format = false
 
 [[language]]
 name = "json"
 language-servers = [ "biome" ]
-auto-format = false
-
-[[language]]
-name = "html"
-language-servers = [ "vscode-html-language-server", "biome" ]
-auto-format = false
-
-[[language]]
-name = "css"
-language-servers = [ "vscode-css-language-server", "biome" ]
 auto-format = false

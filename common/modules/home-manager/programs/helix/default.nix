@@ -1,4 +1,4 @@
-{ pkgs, lib, ... }:
+{ pkgs, ... }:
 
 {
   programs.helix = {
@@ -34,15 +34,10 @@
       
     };
 
-    extraPackages = lib.concatLists [ 
-      (with pkgs; [
-        nil alejandra
-        biome
-       ])
-  
-      (with pkgs.nodePackages; [
-        vscode-langservers-extracted
-      ])
+    extraPackages = with pkgs; [
+      nil alejandra
+      biome
+      emmet-language-server
     ];
     
   };
