@@ -1,53 +1,51 @@
-# NOTE LANGUAGE SERVER
+# --- LANGUAGE SERVERS DEFINITION ---
+[language-server.nil]
+command = "nil"
+
+[language-server.biome]
+command = "biome"
+args = ["lsp-proxy"]
 
 [language-server.vscode-html-language-server]
-args = ["--stdio"]
 command = "vscode-html-language-server"
+args = ["--stdio"]
 
 [language-server.vscode-css-language-server]
-args = ["--stdio"]
 command = "vscode-css-language-server"
+args = ["--stdio"]
 
-
-# NOTE LANGUAGE
-
+# --- LANGUAGES CONFIGURATION ---
 [[language]]
-name = "typescript"
-language-servers = [ "dprint" ]
-auto-format = true
-
-[[language]]
-name = "tsx"
-language-servers = [ "dprint" ]
-auto-format = true
-
-[[language]]
-name = "jsx"
-language-servers = [ "dprint" ]
-grammar = "javascript"
-auto-format = true
+name = "nix"
+language-servers = [ "nil" ]
+auto-format = false
 
 [[language]]
 name = "javascript"
-language-servers = [ "dprint" ]
-auto-format = true
+language-servers = [ "biome" ]
+auto-format = false
+
+[[language]]
+name = "typescript"
+language-servers = [ "biome" ]
+auto-format = false
+
+[[language]]
+name = "tsx"
+language-servers = [ "biome" ]
+auto-format = false
 
 [[language]]
 name = "json"
-language-servers = [ "dprint" ]
-auto-format = true
+language-servers = [ "biome" ]
+auto-format = false
 
 [[language]]
 name = "html"
-language-servers = [ "dprint", "vscode-html-language-server" ]
+language-servers = [ "vscode-html-language-server", "biome" ]
 auto-format = false
 
 [[language]]
 name = "css"
-language-servers = [ "dprint", "vscode-css-language-server" ]
+language-servers = [ "vscode-css-language-server", "biome" ]
 auto-format = false
-
-[[language]]
-name = "scss"
-language-servers = [ "dprint", "vscode-css-language-server" ]
-auto-format = true

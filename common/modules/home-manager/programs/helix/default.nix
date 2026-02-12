@@ -29,24 +29,20 @@
       };
       
       keys.normal = {
-        esc = [ "collapse_selection" "keep_primary_selection" ];
-        
-        m.w = ":w";
-        m.q = ":q";
+        esc = [ "collapse_selection" "keep_primary_selection" ];        
       };
       
     };
 
     extraPackages = lib.concatLists [ 
       (with pkgs; [
-        dprint
-        
+        nil alejandra
+        biome
        ])
   
       (with pkgs.nodePackages; [
         vscode-langservers-extracted
-  
-      ])  
+      ])
     ];
     
   };
