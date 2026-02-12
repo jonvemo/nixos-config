@@ -5,13 +5,15 @@
     package = inputs.zed-editor.packages.${pkgs.system}.zed-editor-preview-bin;
 
     extensions = [
-      "html" "nix" "fish" "toml"
-      "biome" "liveserver" "emmet" "marksman" "markdown-oxide"
-      "log" "git-firefly"
+      "nix" "fish" "toml" "html"
+      "biome" "emmet" "markdown-oxide" "liveserver"
+      "log"
     ];
 
     extraPackages = with pkgs; [
-      nixd nil
+      nil alejandra
+      biome
+      markdown-oxide
     ];
 
     userSettings = {
@@ -22,11 +24,11 @@
 
       helix_mode = true;
 
-      prettier.allowed = true;
+      prettier.allowed = false;
+      format_on_save = "on";
 
-      #formatter = import ./formatter.nix;
-      #lsp = import ./lsp.nix
-      #languages = import ./languages.nix;
+      lsp = import ./lsp.nix;
+      languages = import ./languages.nix;
       agent = import ./agent.nix;
     };
   };

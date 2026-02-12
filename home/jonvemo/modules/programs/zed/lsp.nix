@@ -1,2 +1,7 @@
 {
+  nil = {
+    formatting = {
+      command = [ "alejandra" ];
+    };
+  };
 }
