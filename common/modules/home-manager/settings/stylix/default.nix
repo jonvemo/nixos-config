@@ -53,7 +53,6 @@
       helix.enable = false;
       blender.enable = false;
       vencord.enable = false;
-      
     };
   };
 }

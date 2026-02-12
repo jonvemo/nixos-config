@@ -52,6 +52,10 @@
       terminal = 0.9;
     };
 
+    targets = {
+      chromium.enable = false;
+    };
+
   };
     
 }
