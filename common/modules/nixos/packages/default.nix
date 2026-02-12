@@ -7,14 +7,13 @@
       # GUI & CTL & TUI & CLI
       lact
       brightnessctl playerctl libnotify
-      wiremix bluetui impala kew
+      wiremix bluetui impala kew timr-tui
 
       # Tools
       parabolic /* Download Music */
 
       # Desktop 
       loupe /* Image Viewer*/ showtime
-      sticky-notes timr-tui
     
       gnome-sound-recorder gnome-calculator # gnome-connections
       snapshot ouch
@@ -29,7 +28,6 @@
       woff2
       lazygit
 
-      
       # Broken in staging  
 
     ])
