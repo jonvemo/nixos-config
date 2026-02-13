@@ -93,6 +93,7 @@
           "https://matrix.to/"
           "https://facebook.com/"
           "https://x.com/"
+          "https://anikai.to/"
           "https://pornhub.com/"
           "https://nhentai.net/"
         ];
