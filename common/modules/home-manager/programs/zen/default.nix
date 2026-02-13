@@ -1,4 +1,4 @@
-{ inputs,pkgs,user,... }:
+{ inputs,user,... }:
 {
   imports = [ inputs.zen-browser.homeModules.beta ];
 
@@ -88,7 +88,6 @@
           "https://huggingface.co/"
           "https://yahoo.com/"
           "https://hapi.trade/"
-          "https://www.remnote.com/"
           "https://cinny.in/"
           "https://matrix.org/"
           "https://matrix.to/"
@@ -96,7 +95,6 @@
           "https://x.com/"
           "https://pornhub.com/"
           "https://nhentai.net/"
-          "https://modrinth.com/"
         ];
       };      
 
