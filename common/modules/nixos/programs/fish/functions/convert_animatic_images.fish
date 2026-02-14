@@ -8,36 +8,30 @@ function convert_animatic_images
 
     set INPUT_FORMATS (string split ' ' $argv[1])
     set OUTPUT_FORMAT $argv[2]
-    set ANIMATED_FORMATS webm mp4 gif webp avif
-
-    if not contains -- $OUTPUT_FORMAT $ANIMATED_FORMATS
-        return 1
-    end
-
     set FOLDER "animated_$OUTPUT_FORMAT"
     mkdir -p $FOLDER
 
-    for FORMAT in $INPUT_FORMATS
-        for FILE in *.$FORMAT
-            set OUTPUT "$FOLDER/"(basename $FILE .$FORMAT).$OUTPUT_FORMAT
+    for FILE in *.{$INPUT_FORMATS}
+        set OUTPUT "$FOLDER/"(string replace -r '\.[^.]+$' ".$OUTPUT_FORMAT" $FILE)
 
-            switch $OUTPUT_FORMAT
-                case webm
-                    ffmpeg -i "$FILE" -c:v libaom-av1 -crf 30 -b:v 0 -cpu-used 4 -row-mt 1 -movflags +faststart -an "$OUTPUT"
-                case mp4
-                    ffmpeg -i "$FILE" -c:v libx265 -crf 24 -preset slow -tag:v hvc1 -movflags +faststart -an "$OUTPUT"
-                case gif
-                    ffmpeg -i "$FILE" -vf "fps=15,split[s0][s1];[s0]palettegen[p];[s1][p]paletteuse" -loop 0 "$OUTPUT"
-                case webp
-                    ffmpeg -i "$FILE" -c:v libwebp -loop 0 -lossless 0 -qscale 75 -preset default -an "$OUTPUT"
-                case avif
-                    ffmpeg -i "$FILE" -c:v libaom-av1 -crf 23 -cpu-used 4 -f avif -movflags +faststart -still-picture 0 -loop 0 "$OUTPUT"
-            end
+        switch $OUTPUT_FORMAT
+            case webm
+                ffmpeg -i "$FILE" -c:v libaom-av1 -crf 30 -b:v 0 -cpu-used 4 -row-mt 1 -movflags +faststart -an "$OUTPUT"
+            case mp4
+                ffmpeg -i "$FILE" -c:v libx265 -crf 24 -preset slow -tag:v hvc1 -movflags +faststart -an "$OUTPUT"
+            case gif
+                ffmpeg -i "$FILE" -vf "fps=15,split[s0][s1];[s0]palettegen[p];[s1][p]paletteuse" -loop 0 "$OUTPUT"
+            case webp
+                ffmpeg -i "$FILE" -c:v libwebp -loop 0 -lossless 0 -qscale 75 -preset default -an "$OUTPUT"
+            case avif
+                ffmpeg -i "$FILE" -c:v libaom-av1 -crf 23 -cpu-used 4 -f avif -movflags +faststart -still-picture 0 -loop 0 "$OUTPUT"
+            case '*'
+                continue
+        end
 
-            if test -f "$OUTPUT"
-                exiv2 -it "$OUTPUT" "$FILE" 2>/dev/null
-                echo "Successfully converted: $OUTPUT"
-            end
+        if test -f "$OUTPUT"
+            exiv2 -it "$OUTPUT" "$FILE" 2>/dev/null
+            echo "Successfully converted: $OUTPUT"
         end
     end
 end
