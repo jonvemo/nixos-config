@@ -3,23 +3,19 @@
   environment.systemPackages = lib.concatLists [ 
   
     (with pkgs; [ 
-    
-      # GUI & CTL & TUI & CLI
-      lact
+          
+      # Desktop 
       brightnessctl playerctl libnotify
       wiremix bluetui impala kew timr-tui
 
-      # Tools
-      yt-dlp
-
-      # Desktop 
-      loupe /* Image Viewer*/ showtime
-    
+      lact
+      loupe /* Image Viewer*/ showtime snapshot
       gnome-calculator # gnome-connections
-      snapshot ouch
 
-      # Media & Draw
       krita
+
+      # Tools
+      yt-dlp ouch
       
       # DevTools
       ffmpeg exiv2 opusTools
