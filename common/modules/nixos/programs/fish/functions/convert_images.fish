@@ -2,73 +2,40 @@
 
 function convert_images
     if test (count $argv) -ne 2
-        echo 'Usage: convert_images "<input_formats>" <output_format>'
+        echo 'Usage: convert_images "<inputs>" <out_ext>'
         return 1
     end
 
-    set INPUT_FORMATS (string split ' ' $argv[1])
-    set OUTPUT_FORMAT $argv[2]
-    set ALLOW_FORMATS png jpg jpeg webp avif heic
-    set RESTRICTED_INPUTS heic avif
-    set RESTRICTED_OUTPUTS heic avif
-    set SUPPORTED_ENCODER_INPUTS png jpg jpeg
-    set INTERMEDIATE_FORMAT png
-
-    set FOLDER converted_$OUTPUT_FORMAT
+    set IN_EXTS (string split ' ' $argv[1])
+    set OUT $argv[2]
+    set FOLDER "converted_$OUT"
     mkdir -p $FOLDER
 
-    for FORMAT in $INPUT_FORMATS
-        for FILE in *.$FORMAT
-            set FILE_CONVERTED "$FOLDER/"(string replace ".$FORMAT" ".$OUTPUT_FORMAT" -- $FILE)
+    for F in *.{$IN_EXTS}
+        set BASE (string replace -r '\.[^.]+$' '' $F)
+        set EXT (string lower (string split -r -m1 . $F)[2])
+        set TARGET "$FOLDER/$BASE.$OUT"
 
-            if contains -- $FORMAT $RESTRICTED_INPUTS; or begin
-                    contains -- $OUTPUT_FORMAT $RESTRICTED_OUTPUTS
-                    and not contains -- $FORMAT $SUPPORTED_ENCODER_INPUTS
-                end
-                set INTERMEDIATE_FILE "$FOLDER/"(string replace ".$FORMAT" ".$INTERMEDIATE_FORMAT" -- $FILE)
-
-                if contains -- $FORMAT heic
-                    heif-dec "$FILE" "$INTERMEDIATE_FILE"
-                else if contains -- $FORMAT avif
-                    avifdec "$FILE" "$INTERMEDIATE_FILE"
-                else
-                    ffmpeg -i "$FILE" "$INTERMEDIATE_FILE"
-                end
-
-                if not test -f "$INTERMEDIATE_FILE"
-                    continue
-                end
-
-                if not contains -- $OUTPUT_FORMAT png
-                    if contains -- $OUTPUT_FORMAT heic
-                        heif-enc "$INTERMEDIATE_FILE" "$FILE_CONVERTED"
-                    else if contains -- $OUTPUT_FORMAT avif
-                        avifenc "$INTERMEDIATE_FILE" "$FILE_CONVERTED"
-                    else
-                        ffmpeg -i "$INTERMEDIATE_FILE" "$FILE_CONVERTED"
-                    end
-                    rm -f "$INTERMEDIATE_FILE"
-                else
-                    set FILE_CONVERTED "$INTERMEDIATE_FILE"
-                end
+        if contains $OUT heic avif
+            if test "$EXT" = png
+                test $OUT = heic; and heif-enc "$F" "$TARGET"; or avifenc "$F" "$TARGET"
             else
-                if contains -- $OUTPUT_FORMAT $RESTRICTED_OUTPUTS
-                    if contains -- $OUTPUT_FORMAT heic
-                        heif-enc "$FILE" "$FILE_CONVERTED"
-                    else if contains -- $OUTPUT_FORMAT avif
-                        avifenc "$FILE" "$FILE_CONVERTED"
-                    else
-                        ffmpeg -i "$FILE" "$FILE_CONVERTED"
-                    end
-                else
-                    ffmpeg -i "$FILE" "$FILE_CONVERTED"
+                set TMP "$FOLDER/$BASE.tmp.png"
+                switch $EXT
+                    case heic
+                        heif-dec "$F" "$TMP"
+                    case avif
+                        avifdec "$F" "$TMP"
+                    case '*'
+                        ffmpeg -i "$F" -vquiet "$TMP"
                 end
+                test $OUT = heic; and heif-enc "$TMP" "$TARGET"; or avifenc "$TMP" "$TARGET"
+                rm -f "$TMP"
             end
-
-            if test -f "$FILE_CONVERTED"
-                exiv2 -it "$FILE_CONVERTED" "$FILE" 2>/dev/null
-                echo "Converted: $FILE -> $FILE_CONVERTED"
-            end
+        else
+            ffmpeg -i "$F" "$TARGET"
         end
+
+        test -f "$TARGET"; and exiv2 -it "$TARGET" "$F" 2>/dev/null; and echo "Done: $F"
     end
 end
