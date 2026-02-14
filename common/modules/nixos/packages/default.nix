@@ -10,7 +10,7 @@
       wiremix bluetui impala kew timr-tui
 
       # Tools
-      parabolic /* Download Music */
+      yt-dlp
 
       # Desktop 
       loupe /* Image Viewer*/ showtime
