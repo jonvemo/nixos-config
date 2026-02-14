@@ -15,7 +15,7 @@
       # Desktop 
       loupe /* Image Viewer*/ showtime
     
-      gnome-sound-recorder gnome-calculator # gnome-connections
+      gnome-calculator # gnome-connections
       snapshot ouch
 
       # Media & Draw
