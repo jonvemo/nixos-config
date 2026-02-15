@@ -57,14 +57,6 @@ window-rule {
 }
 
 window-rule {
-    match app-id="com.vixalien.sticky"
-    open-floating true
-    default-floating-position x=4 y=4 relative-to="bottom-right"
-    default-column-width { fixed 416; }
-    default-window-height { fixed 348; }
-}
-
-window-rule {
     match title="pomodoro"
     open-floating true
     default-floating-position x=4 y=4 relative-to="top-right"
