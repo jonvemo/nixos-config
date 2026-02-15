@@ -3,7 +3,7 @@
     enable = true;
 
     settings = {
-      confirm_os_window_close = 0; 
+      confirm_os_window_close = 0;
       allow_remote_control = "no";
       copy_on_select = "yes";
       enabled_layouts = "grid";
@@ -17,14 +17,11 @@
     };
 
     keybindings = {
-      # "ctrl+shift+c" = "copy_or_interrupt";
-      # "ctrl+shift+v" = "paste_from_clipboard"
       "ctrl+alt+left" = "previous_window";
       "ctrl+alt+right" = "next_window";
       "f1" = "launch --type=window --cwd=current";
       "f2" = "launch --type=window --cwd=current lazygit";
-      
     };
-    
+
   };
 }
