@@ -12,7 +12,8 @@ input {
 }
 
 output "eDP-1" {
-    mode "1366x768@60.059"
+    // mode "1366x768@60.059"
+    mode "1366x768@40.042"
     scale 1
     transform "normal"
     position x=0 y=0
