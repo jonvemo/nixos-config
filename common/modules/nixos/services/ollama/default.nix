@@ -1,11 +1,8 @@
 {
   services.ollama = {
     enable = false;
-    
     loadModels = [
-      "deepseek-r1:1.5b"
-      "deepseek-r1:7b"
+      "lfm2.5-thinking:1.2b"
     ];
-    
   };
 }
