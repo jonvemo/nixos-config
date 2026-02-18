@@ -13,7 +13,6 @@ let
 
     specialArgs = {
       inherit inputs hosts host users stateVersion; 
-      pkgs-next = mkPkgs host.system inputs.nixpkgs-next;
     };
 
     modules = [

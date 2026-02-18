@@ -333,22 +333,6 @@
         "type": "github"
       }
     },
-    "nixpkgs-next": {
-      "locked": {
-        "lastModified": 1771320897,
-        "narHash": "sha256-UpiTWaUh7oUxix83YHCuEsxbYYlqNx9FNa5w/NpfPL0=",
-        "owner": "NixOS",
-        "repo": "nixpkgs",
-        "rev": "00003a9ca7f5dc2565c09f847253a0485a92dc79",
-        "type": "github"
-      },
-      "original": {
-        "owner": "NixOS",
-        "ref": "staging-next",
-        "repo": "nixpkgs",
-        "type": "github"
-      }
-    },
     "nixpkgs_2": {
       "locked": {
         "lastModified": 1771008912,
@@ -416,7 +400,6 @@
         "fsel": "fsel",
         "home-manager": "home-manager",
         "nixpkgs": "nixpkgs_2",
-        "nixpkgs-next": "nixpkgs-next",
         "nur": "nur",
         "stylix": "stylix",
         "way-edges": "way-edges",

@@ -1,39 +1,26 @@
-{lib,pkgs,pkgs-next,...}:
+{pkgs,...}:
 {
-  environment.systemPackages = lib.concatLists [ 
-  
-    (with pkgs; [ 
+  environment.systemPackages = with pkgs; [ 
           
-      # Desktop 
-      brightnessctl playerctl libnotify
-      wiremix bluetui impala kew timr-tui
+    # Desktop 
+    brightnessctl playerctl libnotify
+    wiremix bluetui impala kew timr-tui
 
-      lact
-      loupe /* Image Viewer*/ showtime snapshot
-      gnome-calculator # gnome-connections
+    lact
+    loupe /* Image Viewer*/ showtime snapshot
+    gnome-calculator # gnome-connections
 
-      krita
+    krita
 
-      # Tools
-      yt-dlp ouch
-      
-      # DevTools
-      ffmpeg exiv2 opusTools
-      libheif libavif
-      libaom svt-av1 rav1e
-      woff2
-      lazygit
-
-      # Broken in staging  
-
-    ])
+    # Tools
+    yt-dlp ouch
     
-    # Last Update (staging next)
-    (with pkgs-next; [
+    # DevTools
+    ffmpeg exiv2 opusTools
+    libheif libavif
+    libaom svt-av1 rav1e
+    woff2
+    lazygit
 
-      # Temporal; in case an unstable package (nixos-unstable-small) fails
-    
-    ])  
   ];
-
 }
