@@ -1,25 +1,17 @@
-{ lib, pkgs, ... }:
+{ pkgs, ... }:
 {
   fonts = {
     enableDefaultPackages = false;
 
-    packages = lib.concatLists [
+    packages = with pkgs; [
+      noto-fonts-lgc-plus
+      noto-fonts-cjk-sans
+      noto-fonts-cjk-serif
+      noto-fonts-emoji-blob-bin
 
-      (with pkgs; [
-        noto-fonts-lgc-plus
-        noto-fonts-cjk-sans
-        noto-fonts-cjk-serif
-        noto-fonts-emoji-blob-bin
-      ])
+      nerd-fonts.jetbrains-mono
 
-      (with pkgs.nerd-fonts; [
-        jetbrains-mono
-      ])
-
-      (with pkgs.texlivePackages; [
-        nunito
-      ])
-
+      texlivePackages.nunito
     ];
 
     fontconfig = {
