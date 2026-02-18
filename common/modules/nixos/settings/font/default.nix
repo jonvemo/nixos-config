@@ -2,7 +2,6 @@
 let
   sansSerif = [
     "Nunito"
-    "Noto Sans"
     "Noto Sans CJK JP"
     "Noto Sans CJK KR"
     "Noto Sans CJK SC"
@@ -15,7 +14,6 @@ in
     enableDefaultPackages = false;
 
     packages = with pkgs; [
-      noto-fonts-lgc-plus
       noto-fonts-cjk-sans
       noto-fonts-emoji-blob-bin
       nunito-sans
