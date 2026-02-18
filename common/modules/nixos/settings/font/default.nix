@@ -1,7 +1,7 @@
 { pkgs, ... }:
 let
   sansSerif = [
-    "Nunito Sans"
+    "Inter"
     "Noto Sans CJK JP"
     "Noto Sans CJK KR"
     "Noto Sans CJK SC"
@@ -16,7 +16,7 @@ in
     packages = with pkgs; [
       noto-fonts-cjk-sans
       noto-fonts-emoji-blob-bin
-      nunito-sans
+      inter
 
       nerd-fonts.jetbrains-mono
     ];

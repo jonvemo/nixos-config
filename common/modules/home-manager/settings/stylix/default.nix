@@ -17,8 +17,8 @@
       };
       serif = config.stylix.fonts.sansSerif;
       sansSerif = {
-        package = pkgs.nunito-sans;
-        name = "Nunito";
+        package = pkgs.inter;
+        name = "Inter";
       };
 
       sizes = {
