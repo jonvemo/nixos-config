@@ -1,7 +1,7 @@
 { pkgs, ... }:
 let
   sansSerif = [
-    "Nunito"
+    "Nunito Sans"
     "Noto Sans CJK JP"
     "Noto Sans CJK KR"
     "Noto Sans CJK SC"
