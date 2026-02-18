@@ -16,7 +16,7 @@
     yt-dlp ouch
     
     # DevTools
-    ffmpeg exiv2 opusTools
+    ffmpeg exiv2 opus-tools
     libheif libavif
     libaom svt-av1 rav1e
     woff2
