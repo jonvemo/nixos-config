@@ -18,9 +18,9 @@ in
       noto-fonts-lgc-plus
       noto-fonts-cjk-sans
       noto-fonts-emoji-blob-bin
+      nunito-sans
 
       nerd-fonts.jetbrains-mono
-      texlivePackages.nunito
     ];
 
     fontconfig = {

@@ -1,4 +1,4 @@
-{inputs,pkgs,user,...}:
+{ inputs, pkgs, user, config, ...}:
 {
   imports = [ inputs.stylix.homeModules.default ]; 
   stylix = {
@@ -15,12 +15,9 @@
         package = pkgs.nerd-fonts.jetbrains-mono;
         name = "JetBrainsMono Nerd Font";
       };
-      serif = {
-        package = pkgs.noto-fonts-lgc-plus;
-        name = "Noto Serif";
-      };
+      serif = config.stylix.fonts.sansSerif;
       sansSerif = {
-        package = pkgs.texlivePackages.nunito;
+        package = pkgs.nunito-sans;
         name = "Nunito";
       };
 
