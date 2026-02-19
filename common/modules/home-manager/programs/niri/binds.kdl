@@ -10,7 +10,7 @@ binds {
     Mod+P { spawn "footclient" "-T pomodoro" "timr-tui" "-m" "pomodoro" "-n" "on"; }
     Mod+T { spawn "kitty"; }
     Mod+Y { spawn "foot"; }
-    Mod+B { spawn "zen"; }
+    Mod+B { spawn "zen-beta"; }
     Super+Alt+L { spawn "swaylock"; }
 
     XF86AudioRaiseVolume  allow-when-locked=true { spawn "wpctl" "set-volume" "@DEFAULT_AUDIO_SINK@" "0.1+"; }
