@@ -21,9 +21,6 @@
       nho = "nh os switch --ask";
       nhh = "nh home switch --ask";
       bnh = "nho && nhh";
-
-      fbuild = "flakeupdate && bnh && clean";
-      cbuild = "bnh && clean";
     
       flake = "cd /etc/nixos/ && hx flake.nix";
       flakeupdt = "nix flake update --flake /etc/nixos";
