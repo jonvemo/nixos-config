@@ -29,7 +29,6 @@
       flakeupdt = "nix flake update --flake /etc/nixos";
                
       npac = "cd /etc/nixos/common/modules/nixos/packages && hx default.nix";
-      hpac = "cd /etc/nixos/common/modules/home-manager/packages && hx default.nix";
 
       d = "hx default.nix";
       b = "cd ..";
