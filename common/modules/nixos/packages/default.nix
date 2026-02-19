@@ -7,7 +7,7 @@
     wiremix bluetui impala kew timr-tui
 
     lact
-    loupe /* Image Viewer*/ showtime snapshot
+    loupe /* Image Viewer*/ showtime
     gnome-calculator # gnome-connections
 
     krita
