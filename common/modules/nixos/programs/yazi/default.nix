@@ -17,6 +17,20 @@
           { mime = "*"; use = "open"; }
         ];
       };
+      keymap = {
+        mgr.prepend_keymap = [
+          {
+            on = [ "<A-d>" ];
+            run = "shell -- ouch decompress %s";
+            desc = "Decompress with ouch";
+          }
+          {
+            on = [ "<A-c>" ];
+            run = "shell 'ouch compress %s ' --interactive";
+            desc = "Compress with ouch";
+          }
+        ];
+      };
     };
   };
 }
