@@ -12,6 +12,7 @@
     ./fsel
     ./crush
     ./screenrec
+    ./bottom
   ];
 
   programs = {

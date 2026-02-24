@@ -7,8 +7,6 @@
     ./helix
     ./git
 
-    ./btop
-
     ./niri
     ./swaylock
     ./way-edges
