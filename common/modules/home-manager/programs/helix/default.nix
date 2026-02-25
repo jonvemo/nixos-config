@@ -35,7 +35,7 @@
     };
 
     extraPackages = with pkgs; [
-      nil alejandra
+      nil
       biome
       emmet-language-server
     ];
