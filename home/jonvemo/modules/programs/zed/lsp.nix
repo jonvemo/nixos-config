@@ -1,7 +1,0 @@
-{
-  nil = {
-    formatting = {
-      command = [ "alejandra" ];
-    };
-  };
-}

@@ -11,7 +11,7 @@
     ];
 
     extraPackages = with pkgs; [
-      nil alejandra
+      nil
       biome
       markdown-oxide
     ];
@@ -27,7 +27,6 @@
       prettier.allowed = false;
       format_on_save = "on";
 
-      lsp = import ./lsp.nix;
       languages = import ./languages.nix;
       agent = import ./agent.nix;
     };
