@@ -27,7 +27,7 @@ function convert_images
                     case avif
                         avifdec "$F" "$TMP"
                     case '*'
-                        ffmpeg -i "$F" -vquiet "$TMP"
+                        ffmpeg -i "$F" "$TMP"
                 end
                 test $OUT = heic; and heif-enc "$TMP" "$TARGET"; or avifenc "$TMP" "$TARGET"
                 rm -f "$TMP"
