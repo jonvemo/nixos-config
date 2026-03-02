@@ -1,9 +1,9 @@
 name: Update Flake
 
 on:
-  workflow_dispatch: # allows manual triggering
+  workflow_dispatch:
   schedule:
-    - cron: '0 10 * * 2,5' # Tuesday and Friday 5:00 AM COT (10:00 AM UTC)
+    - cron: '0 10 * * 2,5'
 
 permissions:
   contents: write
@@ -17,51 +17,54 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
+        with:
+          persist-credentials: false
+
       - name: Install Nix
         uses: DeterminateSystems/nix-installer-action@v17
+
+      - name: Magic Nix Cache
+        uses: DeterminateSystems/magic-nix-cache-action@v9
+
       - name: Update flake.lock
         uses: DeterminateSystems/update-flake-lock@v24
         id: update
         with:
           commit-msg: "chore(flake): update inputs"
-          pr-title: "chore(flake): update inputs" # Title of PR to be created
-          pr-labels: |                  # Labels to be set on the PR
+          pr-title: "chore(flake): update inputs"
+          pr-labels: |
             dependencies
             automated
           pr-body: |
-            Automated changes by the [update-flake-lock](https://github.com/DeterminateSystems/update-flake-lock) GitHub Action.
+            Automated flake update.
+            
+            ```
+            ${{ env.GIT_COMMIT_MESSAGE }}
+            ```
 
-            ```
-            {{ env.GIT_COMMIT_MESSAGE }}
-            ```
       - name: Check the Flake
+        if: steps.update.outputs.pull-request-operation == 'created'
         id: check
         run: nix flake check
+
       - name: Update Check Status
         uses: LouisBrunner/checks-action@v2.0.0
-        if: always()
+        if: always() && steps.update.outputs.pull-request-operation == 'created'
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
-          name: Update Flake
+          name: Update Flake Status
           conclusion: ${{ job.status }}
-          output: |
-            {"summary":"${{ steps.check.outputs.stdout }}"}
-      - name: Enable Pull Request Automerge
-        if: success()
-        run: |
-          gh pr merge \
-            --rebase \
-            --auto \
-            ${{ steps.update.outputs.pull-request-number }}
+          sha: ${{ steps.update.outputs.pull-request-head-sha }}
+
+      - name: Auto-Merge or Close
+        if: steps.update.outputs.pull-request-operation == 'created'
         env:
           GH_TOKEN: ${{ github.token }}
-      - name: Close Pull Request If Failed
-        if: failure()
+          PR_NUMBER: ${{ steps.update.outputs.pull-request-number }}
         run: |
-          gh pr close \
-            --comment "Auto-closing pull request" \
-            --delete-branch \
-            ${{ steps.update.outputs.pull-request-number }}
-        env:
-          GH_TOKEN: ${{ github.token }}
+          if [ "${{ job.status }}" == "success" ]; then
+            gh pr merge $PR_NUMBER --rebase --auto
+          else
+            gh pr close $PR_NUMBER --comment "Auto-closing: Flake check failed. Check logs." --delete-branch
+          fi
