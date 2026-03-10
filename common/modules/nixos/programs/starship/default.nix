@@ -20,13 +20,6 @@
         "[](white)"
       ];
 
-      /* Takes the colors from the terminal if it is commented */
-      # palette = "monochrome";
-      # palettes.monochrome = {
-      #   white = "#cbced0";
-      #   black = "#2e303e";  
-      # };
-
       username = {
         show_always = true;
         style_user = "fg:black bg:white";
@@ -40,7 +33,6 @@
         format = "[ $path ]($style)";
         truncation_length = 2;
         home_symbol = "  ";
-        fish_style_pwd_dir_length = 3;
 
         substitutions = {
           "Documents" = " 󰈙 ";
