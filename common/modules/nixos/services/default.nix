@@ -8,5 +8,6 @@
     ./speechd
     ./gnome-keyring
     ./ntp
+    ./dbus
   ];
 }
