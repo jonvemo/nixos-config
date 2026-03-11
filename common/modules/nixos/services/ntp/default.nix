@@ -1,5 +1,3 @@
 {
-  services = {
-    ntpd-rs.enable = true;
-  };
+  services.ntpd-rs.enable = true;
 }
