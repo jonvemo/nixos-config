@@ -1,7 +1,6 @@
 {
   imports = [
     ./sound
-    ./login
     ./onedrive
     ./ollama
     ./ssh

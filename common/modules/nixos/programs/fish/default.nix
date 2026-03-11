@@ -17,6 +17,8 @@
     ";
 
     shellAliases = {
+      start = "exec niri-session";
+      
       clean = "nh clean all";
       nho = "nh os switch --ask";
       nhh = "nh home switch --ask";
