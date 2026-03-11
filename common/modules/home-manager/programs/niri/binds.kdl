@@ -3,7 +3,7 @@ binds {
     Mod+Shift+A { spawn "footclient" "-T wiremix" "wiremix"; }
     Mod+Shift+W { spawn "footclient" "-T impala" "impala"; }
     Mod+Shift+B { spawn "footclient" "-T bluetui" "bluetui"; }
-    Mod+Shift+T { spawn "footclient" "-T btop" "btop"; }
+    Mod+Shift+T { spawn "footclient" "-T btm" "btm"; }
     Mod+Shift+M { spawn "footclient" "-T kew" "kew"; }
     Mod+D { spawn "footclient" "-T fsel" "fsel"; }
     Mod+E { spawn "footclient" "-T yazi" "yazi"; }
