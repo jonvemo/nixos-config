@@ -8,7 +8,7 @@
 
     lact
     loupe /* Image Viewer*/ showtime
-    gnome-calculator # gnome-connections
+    gnome-calculator rustdesk-flutter
 
     krita
 
