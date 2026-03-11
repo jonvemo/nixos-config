@@ -2,7 +2,6 @@
   imports = [
     ./sound
     ./login
-    ./trash
     ./onedrive
     ./ollama
     ./tlp
