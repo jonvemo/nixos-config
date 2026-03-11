@@ -7,5 +7,6 @@
     ./ssh
     ./speechd
     ./gnome-keyring
+    ./ntp
   ];
 }
