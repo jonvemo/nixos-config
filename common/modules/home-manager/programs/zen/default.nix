@@ -87,7 +87,6 @@
           "https://vercel.com/"
           "https://huggingface.co/"
           "https://yahoo.com/"
-          "https://hapi.trade/"
           "https://cinny.in/"
           "https://matrix.org/"
           "https://matrix.to/"
