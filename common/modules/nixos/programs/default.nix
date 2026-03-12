@@ -4,7 +4,7 @@
     ./fish
     ./nh
     ./niri
-    ./xwayland
+    # ./xwayland
     ./steam
     ./starship
     ./obs
