@@ -10,8 +10,6 @@
     loupe /* Image Viewer*/ showtime
     gnome-calculator rustdesk-flutter
 
-    krita
-
     # Tools
     yt-dlp ouch
     
