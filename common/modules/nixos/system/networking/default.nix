@@ -6,5 +6,6 @@
     ./dhcpcd
     ./nameservers
     ./firewall
+    ./nftables
   ];
 }
