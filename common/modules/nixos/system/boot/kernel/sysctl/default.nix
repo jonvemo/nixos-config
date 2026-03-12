@@ -24,6 +24,8 @@
     # Incomplete protection again TIME-WAIT assassination
     "net.ipv4.tcp_rfc1337" = 1;
     # And other stuff
+    "net.core.fb_tunnels_only_for_init_net" = 1;
+    "net.ipv4.conf.all.drop_gratuitous_arp" = 1;
     "net.ipv4.conf.all.log_martians" = true;
     "net.ipv4.conf.default.log_martians" = true;
     "net.ipv4.icmp_echo_ignore_broadcasts" = true;
