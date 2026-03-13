@@ -1,12 +1,6 @@
-# NOTE
-#   Preferred Providers and Models
-#     google       :    gemini-2.5-pro, gemini-2.5-flash
-#     ollama       :    deepseek-r1:1.5b, deepseek-r1:7b
-#
-
 let
   provider = "google";
-  model = "gemini-2.5-flash";
+  model = "gemini-3.1-flash-lite-preview";
 
 in {
   enabled = true;
