@@ -8,5 +8,6 @@
     ./gnome-keyring
     ./ntp
     ./dbus
+    ./journald
   ];
 }
