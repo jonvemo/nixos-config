@@ -17,7 +17,7 @@ function convert_images
         set TARGET "$FOLDER/$BASE.$OUT"
 
         if contains $OUT heic avif
-            if test "$EXT" = png
+            if contains $EXT png jpg jpeg
                 test $OUT = heic; and heif-enc "$F" "$TARGET"; or avifenc "$F" "$TARGET"
             else
                 set TMP "$FOLDER/$BASE.tmp.png"
