@@ -29,8 +29,17 @@
     };
 
   swapDevices =
-    [ { device = "/dev/disk/by-uuid/a362a45c-c5f4-4017-9dbe-ec430af860b9"; }
+    [ { device = "/dev/disk/by-uuid/a362a45c-c5f4-4017-9dbe-ec430af860b9";
+        priority = 0;
+      }
     ];
+
+  zramSwap = {
+    enable = true;
+    algorithm = "zstd";
+    memoryPercent = 25; 
+    priority = 100;
+  };
 
   nixpkgs.hostPlatform = lib.mkDefault "x86_64-linux";
   hardware.cpu.amd.updateMicrocode = lib.mkDefault config.hardware.enableRedistributableFirmware;
