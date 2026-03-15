@@ -12,6 +12,8 @@ function convert_images
     mkdir -p $FOLDER
 
     for F in *.{$IN_EXTS}
+        test -f "$F"; or continue
+
         set BASE (string replace -r '\.[^.]+$' '' $F)
         set EXT (string lower (string split -r -m1 . $F)[2])
         set TARGET "$FOLDER/$BASE.$OUT"
@@ -21,21 +23,30 @@ function convert_images
                 test $OUT = heic; and heif-enc "$F" "$TARGET"; or avifenc "$F" "$TARGET"
             else
                 set TMP "$FOLDER/$BASE.tmp.png"
-                switch $EXT
-                    case heic
-                        heif-dec "$F" "$TMP"
-                    case avif
-                        avifdec "$F" "$TMP"
-                    case '*'
-                        ffmpeg -i "$F" "$TMP"
+                if test "$EXT" = heic
+                    heif-dec "$F" "$TMP"
+                else if test "$EXT" = avif
+                    avifdec "$F" "$TMP"
+                else
+                    ffmpeg -i "$F" "$TMP" -y
                 end
+
                 test $OUT = heic; and heif-enc "$TMP" "$TARGET"; or avifenc "$TMP" "$TARGET"
                 rm -f "$TMP"
             end
         else
-            ffmpeg -i "$F" "$TARGET"
+            ffmpeg -i "$F" "$TARGET" -y
         end
 
-        test -f "$TARGET"; and exiv2 -it "$TARGET" "$F" 2>/dev/null; and echo "Done: $F"
+        if test -f "$TARGET"
+            exiv2 extract -ea "$F" 2>/dev/null
+            if test -f "$BASE.exv"
+                exiv2 insert -ia -l . "$TARGET" 2>/dev/null
+                rm -f "$BASE.exv"
+            end
+
+            touch -r "$F" "$TARGET"
+            echo "Done: $F"
+        end
     end
 end
