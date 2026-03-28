@@ -17,10 +17,10 @@
   };
 
   systemd.user.timers.onedrive-sync = {
-    description = "Timer for OneDrive synchronization every 15 minutes";
+    description = "Timer for OneDrive synchronization every 10 minutes";
     timerConfig = {
       OnBootSec = "2m";
-      OnUnitActiveSec = "15m";
+      OnUnitActiveSec = "10m";
       Persistent = true;
     };
     wantedBy = [ "timers.target" ];
