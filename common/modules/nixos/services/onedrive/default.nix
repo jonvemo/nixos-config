@@ -14,6 +14,7 @@
       IOWeight = 20;
       IOSchedulingClass = "idle";
     };
+    wantedBy = [ "default.target" ];
   };
 
   systemd.user.timers.onedrive-sync = {
@@ -23,6 +24,6 @@
       OnUnitActiveSec = "10m";
       Persistent = true;
     };
-    wantedBy = [ "timers.target" ];
+    wantedBy = [ "default.target" ];
   };
 }
