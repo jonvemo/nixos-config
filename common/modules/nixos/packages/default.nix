@@ -15,7 +15,7 @@
     
     # DevTools
     ffmpeg exiv2 opus-tools
-    libheif libavif
+    libheif libavif libjxl
     libaom svt-av1 rav1e
     woff2
     lazygit
