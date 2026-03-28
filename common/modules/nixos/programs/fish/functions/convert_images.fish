@@ -17,18 +17,14 @@ function convert_images
         set BASE (string replace -r '\.[^.]+$' '' $F)
         set EXT (string lower (string split -r -m1 . $F)[2])
         set TARGET "$FOLDER/$BASE.$OUT"
+        set SOURCE "$F"
+        set TMP ""
 
         if contains $OUT heic avif jxl
-            if contains $EXT png jpg jpeg
-                if test "$OUT" = heic
-                    heif-enc "$F" "$TARGET"
-                else if test "$OUT" = avif
-                    avifenc "$F" "$TARGET"
-                else if test "$OUT" = jxl
-                    cjxl -e 7 "$F" "$TARGET"
-                end
-            else
+            if not contains $EXT png jpg jpeg
                 set TMP "$FOLDER/$BASE.tmp.png"
+                set SOURCE "$TMP"
+
                 if test "$EXT" = heic
                     heif-dec "$F" "$TMP"
                 else if test "$EXT" = avif
@@ -38,14 +34,17 @@ function convert_images
                 else
                     ffmpeg -i "$F" "$TMP" -y
                 end
+            end
 
-                if test "$OUT" = heic
-                    heif-enc "$TMP" "$TARGET"
-                else if test "$OUT" = avif
-                    avifenc "$TMP" "$TARGET"
-                else if test "$OUT" = jxl
-                    cjxl -e 7 "$TMP" "$TARGET"
-                end
+            if test "$OUT" = heic
+                heif-enc -q 40 "$SOURCE" "$TARGET"
+            else if test "$OUT" = avif
+                avifenc --jobs all --speed 4 -q 55 "$SOURCE" "$TARGET"
+            else if test "$OUT" = jxl
+                cjxl -e 7 -d 1.0 "$SOURCE" "$TARGET"
+            end
+
+            if test -n "$TMP"
                 rm -f "$TMP"
             end
         else
