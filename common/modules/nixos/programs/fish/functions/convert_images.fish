@@ -18,20 +18,34 @@ function convert_images
         set EXT (string lower (string split -r -m1 . $F)[2])
         set TARGET "$FOLDER/$BASE.$OUT"
 
-        if contains $OUT heic avif
+        if contains $OUT heic avif jxl
             if contains $EXT png jpg jpeg
-                test $OUT = heic; and heif-enc "$F" "$TARGET"; or avifenc "$F" "$TARGET"
+                if test "$OUT" = heic
+                    heif-enc "$F" "$TARGET"
+                else if test "$OUT" = avif
+                    avifenc "$F" "$TARGET"
+                else if test "$OUT" = jxl
+                    cjxl -e 7 "$F" "$TARGET"
+                end
             else
                 set TMP "$FOLDER/$BASE.tmp.png"
                 if test "$EXT" = heic
                     heif-dec "$F" "$TMP"
                 else if test "$EXT" = avif
                     avifdec "$F" "$TMP"
+                else if test "$EXT" = jxl
+                    djxl "$F" "$TMP"
                 else
                     ffmpeg -i "$F" "$TMP" -y
                 end
 
-                test $OUT = heic; and heif-enc "$TMP" "$TARGET"; or avifenc "$TMP" "$TARGET"
+                if test "$OUT" = heic
+                    heif-enc "$TMP" "$TARGET"
+                else if test "$OUT" = avif
+                    avifenc "$TMP" "$TARGET"
+                else if test "$OUT" = jxl
+                    cjxl -e 7 "$TMP" "$TARGET"
+                end
                 rm -f "$TMP"
             end
         else
