@@ -4,5 +4,10 @@
   
   programs.crush = {
     enable = true;
+    settings = {
+      options = {
+        skills_paths = [ "./skills" ];
+      };
+    };
   };
 }
