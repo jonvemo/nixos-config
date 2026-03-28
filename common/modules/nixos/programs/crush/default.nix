@@ -1,7 +1,8 @@
-{inputs,pkgs,...}:
+{inputs,...}:
 {
-  environment.systemPackages = [
-    pkgs.nur.repos.charmbracelet.crush
-  ];
-
+  imports = [ inputs.nur.nixosModules.crush ];
+  
+  programs.crush = {
+    enable = true;
+  };
 }

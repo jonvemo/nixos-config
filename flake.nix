@@ -5,7 +5,7 @@
     # NixOS
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
     nur = {
-      url = "github:nix-community/NUR";
+      url = "github:charmbracelet/nur";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
