@@ -2,6 +2,6 @@
   hardware.bluetooth = {
     enable = true;
     powerOnBoot = false;
-    disabledPlugins = [ "sap" "network" ];
+    disabledPlugins = [ "sap" "network" "health" "neard" ];
   };
 }
