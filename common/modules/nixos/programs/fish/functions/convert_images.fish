@@ -39,7 +39,7 @@ function convert_images
             if test "$OUT" = heic
                 heif-enc -q 40 "$SOURCE" "$TARGET"
             else if test "$OUT" = avif
-                avifenc --jobs all --speed 4 -q 55 "$SOURCE" "$TARGET"
+                avifenc --jobs all --speed 4 -q 52 "$SOURCE" "$TARGET"
             else if test "$OUT" = jxl
                 cjxl -e 7 -d 1.0 "$SOURCE" "$TARGET"
             end
