@@ -1,7 +1,5 @@
 {
   imports = [
-    ./fastfetch
-    
     ./terminal
     
     ./helix
