@@ -2,6 +2,6 @@
   imports = [
     ./mpris-proxy
     ./mako
-    ./swww
+    ./awww
   ];
 }
